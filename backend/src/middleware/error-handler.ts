@@ -8,6 +8,7 @@ import {
 } from "../lib/errors";
 
 type PgError = Error & { code?: string; constraint?: string };
+type BodyParserError = Error & { type?: string; status?: number };
 
 /** Postgres errors we can translate into safe client responses. */
 function fromPgError(error: PgError): AppError | null {
@@ -63,6 +64,17 @@ export function errorHandler(
         code: error.code,
         message: error.message,
         ...(error.details === undefined ? {} : { details: error.details }),
+      },
+    });
+    return;
+  }
+
+  const bodyError = error instanceof Error ? (error as BodyParserError) : null;
+  if (bodyError?.type === "entity.too.large" || bodyError?.status === 413) {
+    res.status(413).json({
+      error: {
+        code: "PAYLOAD_TOO_LARGE",
+        message: "Request body is too large",
       },
     });
     return;

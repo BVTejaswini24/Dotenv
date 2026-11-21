@@ -22,6 +22,25 @@ const nextConfig = {
         port: "",
         pathname: "/**",
       },
+      // AI virtual try-on provider output URLs.
+      {
+        protocol: "https",
+        hostname: "cdn.fashn.ai",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "replicate.delivery",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "*.replicate.delivery",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 

@@ -8,6 +8,7 @@ import cartRouter from "./modules/cart/cart.routes";
 import categoriesRouter from "./modules/categories/categories.routes";
 import ordersRouter from "./modules/orders/orders.routes";
 import productsRouter from "./modules/products/products.routes";
+import tryonRouter from "./modules/tryon/tryon.routes";
 import healthRouter from "./routes/health";
 
 export function createApp() {
@@ -31,14 +32,20 @@ export function createApp() {
       allowedHeaders: ["Content-Type", "Authorization", "Idempotency-Key"],
     })
   );
-  app.use(express.json({ limit: "1mb" }));
   app.use(cookieParser());
+
+  // Virtual try-on accepts two base64 images (up to 5 MB each). That is the
+  // only endpoint allowed a large body; everything else stays at 1 MB.
+  app.use("/api/tryon", express.json({ limit: "16mb" }));
+  app.use("/api/tryon", tryonRouter);
+  app.use(express.json({ limit: "1mb" }));
 
   app.get("/", (_req, res) => {
     res.json({
       service: "shopsphere-backend",
       health: "/api/health",
       products: "/api/products",
+      tryon: "/api/tryon/products",
     });
   });
 
