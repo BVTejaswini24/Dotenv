@@ -2,7 +2,7 @@
 
 import { useAppSelector } from "@/lib/hooks/redux";
 import { RootState } from "@/lib/store";
-import Image from "next/image";
+import { ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -10,18 +10,15 @@ const CartBtn = () => {
   const { cart } = useAppSelector((state: RootState) => state.carts);
 
   return (
-    <Link href="/cart" className="relative mr-[14px] p-1">
-      <Image
-        priority
-        src="/icons/cart.svg"
-        height={100}
-        width={100}
-        alt="cart"
-        className="max-w-[22px] max-h-[22px]"
-      />
+    <Link
+      href="/cart"
+      aria-label={`Cart${cart && cart.totalQuantities > 0 ? `, ${cart.totalQuantities} items` : ""}`}
+      className="relative flex items-center justify-center w-9 h-9 rounded-full hover:bg-black/5 transition-colors"
+    >
+      <ShoppingCart size={20} className="text-black" />
       {cart && cart.totalQuantities > 0 && (
-        <span className="border bg-black text-white rounded-full w-fit-h-fit px-1 text-xs absolute -top-3 left-1/2 -translate-x-1/2">
-          {cart.totalQuantities}
+        <span className="absolute -top-0.5 -right-0.5 bg-black text-white rounded-full min-w-[18px] h-[18px] flex items-center justify-center px-0.5 text-[10px] font-bold leading-none">
+          {cart.totalQuantities > 99 ? "99+" : cart.totalQuantities}
         </span>
       )}
     </Link>

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "@/styles/globals.css";
 import { satoshi } from "@/styles/fonts";
+import { cn } from "@/lib/utils";
 import TopBannerClient from "@/components/layout/Banner/TopBannerClient";
 import TopNavbar from "@/components/layout/Navbar/TopNavbar";
 import Footer from "@/components/layout/Footer";
@@ -8,8 +9,8 @@ import HolyLoader from "holy-loader";
 import Providers from "./providers";
 
 export const metadata: Metadata = {
-  title: "LUXE",
-  description: "LUXE - Premium Fashion E-Commerce",
+  title: "ShopSphere",
+  description: "ShopSphere - Your Modern Fashion Destination",
 };
 
 export const viewport: Viewport = {
@@ -22,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={satoshi.className}>
+    <html lang="en" className="overflow-x-hidden">
+      <body className={cn(satoshi.className, "overflow-x-hidden")}>
         <HolyLoader color="#868686" />
         <Providers>
           <TopBannerClient />

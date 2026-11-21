@@ -19,21 +19,21 @@ type ProductListSecProps = {
 
 const ProductListSec = ({ title, data, viewAllLink }: ProductListSecProps) => {
   return (
-    <section className="max-w-frame mx-auto text-center">
+    <section className="max-w-frame mx-auto text-center overflow-hidden">
       <motion.h2
-        initial={{ y: "100px", opacity: 0 }}
+        initial={{ y: "60px", opacity: 0 }}
         whileInView={{ y: "0", opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         className={cn([
           integralCF.className,
-          "text-[32px] md:text-5xl mb-8 md:mb-14 capitalize",
+          "text-2xl sm:text-[32px] md:text-5xl mb-6 md:mb-14 capitalize px-4 xl:px-0",
         ])}
       >
         {title}
       </motion.h2>
       <motion.div
-        initial={{ y: "100px", opacity: 0 }}
+        initial={{ y: "60px", opacity: 0 }}
         whileInView={{ y: "0", opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.6, duration: 0.6 }}
@@ -41,14 +41,15 @@ const ProductListSec = ({ title, data, viewAllLink }: ProductListSecProps) => {
         <Carousel
           opts={{
             align: "start",
+            dragFree: true,
           }}
           className="w-full mb-6 md:mb-9"
         >
-          <CarouselContent className="mx-4 xl:mx-0 space-x-4 sm:space-x-5">
+          <CarouselContent className="ml-4 xl:ml-0 mr-4 xl:mr-0">
             {data.map((product) => (
               <CarouselItem
                 key={product.id}
-                className="w-full max-w-[198px] sm:max-w-[295px] pl-0"
+                className="basis-[160px] xs:basis-[185px] sm:basis-[220px] md:basis-[260px] lg:basis-[295px] pl-3 sm:pl-4 xl:pl-5 first:pl-0"
               >
                 <ProductCard data={product} />
               </CarouselItem>
@@ -59,7 +60,7 @@ const ProductListSec = ({ title, data, viewAllLink }: ProductListSecProps) => {
           <div className="w-full px-4 sm:px-0 text-center">
             <Link
               href={viewAllLink}
-              className="w-full inline-block sm:w-[218px] px-[54px] py-4 border rounded-full hover:bg-black hover:text-white text-black transition-all font-medium text-sm sm:text-base border-black/10"
+              className="inline-block w-full sm:w-[218px] px-10 py-3.5 sm:py-4 border rounded-full hover:bg-black hover:text-white text-black transition-all font-medium text-sm sm:text-base border-black/10"
             >
               View All
             </Link>

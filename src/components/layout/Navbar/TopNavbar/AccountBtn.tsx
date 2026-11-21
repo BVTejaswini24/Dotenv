@@ -2,7 +2,7 @@
 
 import { useAppSelector } from "@/lib/hooks/redux";
 import { selectIsAuthenticated, selectCurrentUser } from "@/lib/features/auth/authSlice";
-import Image from "next/image";
+import { User } from "lucide-react";
 import Link from "next/link";
 
 const AccountBtn = () => {
@@ -10,17 +10,14 @@ const AccountBtn = () => {
   const user = useAppSelector(selectCurrentUser);
 
   return (
-    <Link href="/account" className="p-1 relative group" aria-label="Account">
-      <Image
-        priority
-        src="/icons/user.svg"
-        height={100}
-        width={100}
-        alt="account"
-        className="max-w-[22px] max-h-[22px]"
-      />
+    <Link
+      href="/account"
+      aria-label={isAuthenticated && user ? `Account: ${user.firstName}` : "Sign in"}
+      className="relative flex items-center justify-center w-9 h-9 rounded-full hover:bg-black/5 transition-colors"
+    >
+      <User size={20} className="text-black" />
       {isAuthenticated && user && (
-        <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-green-500" />
+        <span className="absolute bottom-0.5 right-0.5 w-2 h-2 rounded-full bg-green-500 border border-white" />
       )}
     </Link>
   );

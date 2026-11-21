@@ -25,6 +25,7 @@ import {
   Heart,
   Loader2,
   Package,
+  Bell,
 } from "lucide-react";
 
 type FormErrors = {
@@ -387,6 +388,16 @@ export default function AccountPage() {
                 <Package size={18} className="text-black/60" />
                 <span className="text-sm font-medium text-black">
                   My Orders
+                </span>
+              </Link>
+
+              <Link
+                href="/watchlist"
+                className="flex items-center gap-3 p-3 rounded-lg hover:bg-black/5 transition-colors"
+              >
+                <Bell size={18} className="text-black/60" />
+                <span className="text-sm font-medium text-black">
+                  My Price Watchlist
                 </span>
               </Link>
 

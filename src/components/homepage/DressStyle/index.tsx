@@ -7,55 +7,98 @@ import DressStyleCard from "./DressStyleCard";
 const DressStyle = () => {
   return (
     <div className="px-4 xl:px-0">
-      <section className="max-w-frame mx-auto bg-[#F0F0F0] px-6 pb-6 pt-10 md:p-[70px] rounded-[40px] text-center">
+      <section className="max-w-frame mx-auto bg-[#F0F0F0] rounded-[20px] sm:rounded-[40px] px-4 sm:px-6 md:px-[70px] pt-8 sm:pt-10 md:pt-[70px] pb-6 sm:pb-8 md:pb-[70px]">
+
+        {/* ── Heading ── */}
         <motion.h2
-          initial={{ y: "100px", opacity: 0 }}
+          initial={{ y: "60px", opacity: 0 }}
           whileInView={{ y: "0", opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className={cn([
+          className={cn(
             integralCF.className,
-            "text-[32px] leading-[36px] md:text-5xl mb-8 md:mb-14 capitalize",
-          ])}
+            "text-xl xs:text-2xl sm:text-[32px] md:text-5xl",
+            "leading-tight text-center capitalize",
+            "mb-6 sm:mb-8 md:mb-14"
+          )}
         >
-          BROWSE BY dress STYLE
+          BROWSE BY DRESS STYLE
         </motion.h2>
+
+        {/* ── Row 1: Casual + Formal ── */}
         <motion.div
-          initial={{ y: "100px", opacity: 0 }}
+          initial={{ y: "60px", opacity: 0 }}
           whileInView={{ y: "0", opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-          className="flex flex-col sm:flex-row md:h-[289px] space-y-4 sm:space-y-0 sm:space-x-5 mb-4 sm:mb-5"
+          transition={{ delay: 0.4, duration: 0.6 }}
+          className="grid grid-cols-2 md:flex md:flex-row gap-3 sm:gap-4 mb-3 sm:mb-4"
         >
+          {/* Casual */}
           <DressStyleCard
             title="Casual"
-            url="/shop#casual"
-            className="md:max-w-[260px] lg:max-w-[360px] xl:max-w-[407px] h-[190px] bg-[url('/images/dress-style-1.png')]"
+            url="/shop?style=Casual"
+            imageSrc="/images/dress-style-1.png"
+            imageWidth={407}
+            imageHeight={289}
+            imagePosition="object-right object-top"
+            className={cn(
+              /* mobile: equal half-width, fixed height */
+              "h-[130px] xs:h-[150px] sm:h-[180px]",
+              /* desktop: original narrow proportions */
+              "md:h-[289px] md:max-w-[260px] lg:max-w-[360px] xl:max-w-[407px] md:flex-shrink-0"
+            )}
           />
+          {/* Formal */}
           <DressStyleCard
             title="Formal"
-            url="/shop#formal"
-            className="md:max-w-[684px] h-[190px] bg-[url('/images/dress-style-2.png')]"
+            url="/shop?style=Formal"
+            imageSrc="/images/dress-style-2.png"
+            imageWidth={684}
+            imageHeight={289}
+            imagePosition="object-right object-top"
+            className={cn(
+              "h-[130px] xs:h-[150px] sm:h-[180px]",
+              "md:h-[289px] md:flex-1"
+            )}
           />
         </motion.div>
+
+        {/* ── Row 2: Party + Gym ── */}
         <motion.div
-          initial={{ y: "100px", opacity: 0 }}
+          initial={{ y: "60px", opacity: 0 }}
           whileInView={{ y: "0", opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 1, duration: 0.6 }}
-          className="flex flex-col sm:flex-row md:h-[289px] space-y-5 sm:space-y-0 sm:space-x-5"
+          transition={{ delay: 0.7, duration: 0.6 }}
+          className="grid grid-cols-2 md:flex md:flex-row gap-3 sm:gap-4"
         >
+          {/* Party */}
           <DressStyleCard
             title="Party"
-            url="/shop#party"
-            className="md:max-w-[684px] h-[190px] bg-[url('/images/dress-style-3.png')]"
+            url="/shop?style=Party"
+            imageSrc="/images/dress-style-3.png"
+            imageWidth={642}
+            imageHeight={289}
+            imagePosition="object-right object-top"
+            className={cn(
+              "h-[130px] xs:h-[150px] sm:h-[180px]",
+              "md:h-[289px] md:flex-1"
+            )}
           />
+          {/* Gym */}
           <DressStyleCard
             title="Gym"
-            url="/shop#gym"
-            className="md:max-w-[260px] lg:max-w-[360px] xl:max-w-[407px] h-[190px] bg-[url('/images/dress-style-4.png')]"
+            url="/shop?style=Gym"
+            imageSrc="/images/dress-style-4.png"
+            imageWidth={354}
+            imageHeight={289}
+            imagePosition="object-right object-top"
+            className={cn(
+              "h-[130px] xs:h-[150px] sm:h-[180px]",
+              "md:h-[289px] md:max-w-[260px] lg:max-w-[360px] xl:max-w-[407px] md:flex-shrink-0"
+            )}
           />
         </motion.div>
+
       </section>
     </div>
   );

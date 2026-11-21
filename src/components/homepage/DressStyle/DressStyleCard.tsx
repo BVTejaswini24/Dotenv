@@ -1,23 +1,61 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 type DressStyleCardProps = {
   title: string;
   url: string;
+  /** src path for the background image */
+  imageSrc: string;
+  /** Natural image width (used by Next.js Image) */
+  imageWidth: number;
+  /** Natural image height (used by Next.js Image) */
+  imageHeight: number;
+  /** Tailwind object-position override e.g. "object-right" */
+  imagePosition?: string;
   className?: string;
 };
 
-const DressStyleCard = ({ title, url, className }: DressStyleCardProps) => {
+const DressStyleCard = ({
+  title,
+  url,
+  imageSrc,
+  imageWidth,
+  imageHeight,
+  imagePosition = "object-right",
+  className,
+}: DressStyleCardProps) => {
   return (
     <Link
       href={url}
-      className={cn([
-        "w-full md:h-full rounded-[20px] bg-white bg-top text-2xl md:text-4xl font-bold text-left py-4 md:py-[25px] px-6 md:px-9 bg-no-repeat bg-cover",
-        className,
-      ])}
+      className={cn(
+        "relative w-full overflow-hidden rounded-[20px] bg-white",
+        "flex items-start",
+        "transition-transform hover:scale-[1.01] active:scale-100",
+        className
+      )}
     >
-      {title}
+      {/* Title — always top-left, above the image */}
+      <span
+        className={cn(
+          "relative z-10 font-bold leading-tight",
+          "text-lg xs:text-xl sm:text-2xl md:text-[28px] lg:text-4xl",
+          "pt-4 pl-4 md:pt-[25px] md:pl-9"
+        )}
+      >
+        {title}
+      </span>
+
+      {/* Background image — absolutely fills the card */}
+      <Image
+        src={imageSrc}
+        alt={title}
+        fill
+        sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+        className={cn("object-cover", imagePosition)}
+        priority
+      />
     </Link>
   );
 };

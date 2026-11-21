@@ -43,7 +43,7 @@ const OrderSummary = ({
   const productDiscount = Math.round(subtotal - adjustedTotal);
 
   return (
-    <div className="bg-white rounded-[20px] border border-black/10 p-5 md:p-6 space-y-5 sticky top-24">
+    <div className="bg-white rounded-[20px] border border-black/10 p-4 sm:p-5 md:p-6 space-y-4 md:sticky md:top-24">
       <h3 className="text-xl font-bold text-black">Order Summary</h3>
 
       <div className="space-y-4 max-h-[300px] overflow-y-auto pr-2">

@@ -106,7 +106,7 @@ export default function SignUpPage() {
     dispatch(applySignupDiscount());
 
     setIsSubmitting(false);
-    toast.success("Account created! Welcome to LUXE.");
+    toast.success("Account created! Welcome to ShopSphere.");
     router.push("/account");
   };
 
@@ -133,7 +133,7 @@ export default function SignUpPage() {
                 Create Account
               </h1>
               <p className="text-black/60 text-sm">
-                Join LUXE and get 20% off your first order
+                Join ShopSphere and get 20% off your first order
               </p>
             </div>
 

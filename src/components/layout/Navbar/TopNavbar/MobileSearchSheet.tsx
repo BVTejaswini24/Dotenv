@@ -150,15 +150,12 @@ export default function MobileSearchSheet() {
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild className="md:hidden cursor-pointer">
-        <button type="button" className="mr-[14px] p-1" aria-label="Search">
-          <Image
-            priority
-            src="/icons/search-black.svg"
-            height={100}
-            width={100}
-            alt="search"
-            className="max-w-[22px] max-h-[22px]"
-          />
+        <button
+          type="button"
+          aria-label="Search"
+          className="flex items-center justify-center w-9 h-9 rounded-full hover:bg-black/5 transition-colors"
+        >
+          <Search size={20} className="text-black" />
         </button>
       </SheetTrigger>
       <SheetContent side="top" className="h-auto max-h-[85vh] overflow-y-auto">
@@ -166,23 +163,16 @@ export default function MobileSearchSheet() {
           <SheetTitle>Search Products</SheetTitle>
         </SheetHeader>
         <form onSubmit={handleSubmit} className="mb-4">
-          <div className="input-group focus-within:shadow-lg pl-4 transition-all relative flex items-center w-full rounded-full overflow-hidden bg-[#F0F0F0]">
-            <div className="input-group-text mr-3">
-              <Image
-                priority
-                src="/icons/search.svg"
-                height={20}
-                width={20}
-                alt="search"
-                className="min-w-5 min-h-5"
-              />
+          <div className="focus-within:shadow-lg pl-4 transition-all relative flex items-center w-full rounded-full overflow-hidden bg-[#F0F0F0]">
+            <div className="mr-3 shrink-0">
+              <Search size={18} className="text-black/50" />
             </div>
             <input
               ref={inputRef}
               type="text"
               name="search"
               placeholder="Search for products..."
-              className="input-control w-full py-3 pr-4 outline-none placeholder:font-normal placeholder:text-sm bg-transparent placeholder:text-black/40"
+              className="w-full py-3 pr-4 outline-none placeholder:font-normal placeholder:text-sm bg-transparent placeholder:text-black/40"
               autoComplete="off"
               autoCorrect="off"
               spellCheck={false}

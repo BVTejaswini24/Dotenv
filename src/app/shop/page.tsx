@@ -131,7 +131,7 @@ function ShopContent() {
         <hr className="h-[1px] border-t-black/10 mb-5 sm:mb-6" />
         <BreadcrumbShop />
 
-        <div className="flex items-center gap-2 sm:gap-3 mb-6 overflow-x-auto pb-1">
+        <div className="flex items-center gap-2 sm:gap-3 mb-6 overflow-x-auto pb-2 scrollbar-none -mx-4 px-4 xl:mx-0 xl:px-0">
           {GENDER_TABS.map((tab) => {
             const isActive =
               tab.value === ""
@@ -351,7 +351,7 @@ function ShopContent() {
             )}
 
             {displayProducts.length > 0 ? (
-              <div className="w-full grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
+              <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5">
                 {displayProducts.map((product) => (
                   <ProductCard key={product.id} data={product} />
                 ))}

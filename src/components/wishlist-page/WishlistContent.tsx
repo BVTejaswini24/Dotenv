@@ -35,7 +35,7 @@ export default function WishlistContent() {
           <p className="text-black/60 mb-6">
             {wishlistProducts.length} {wishlistProducts.length === 1 ? "item" : "items"}
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8">
+          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8">
             {wishlistProducts.map((product) => (
               <WishlistProductCard key={product.id} data={product} />
             ))}

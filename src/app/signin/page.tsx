@@ -110,7 +110,7 @@ export default function SignInPage() {
                 Welcome Back
               </h1>
               <p className="text-black/60 text-sm">
-                Sign in to your LUXE account
+                Sign in to your ShopSphere account
               </p>
             </div>
 

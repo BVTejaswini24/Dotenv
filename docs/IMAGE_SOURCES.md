@@ -1,6 +1,6 @@
 # Image Sources
 
-Product images for the LUXE ecommerce demo project.
+Product images for the ShopSphere ecommerce demo project.
 
 ## New Product Images (Women & Kids)
 

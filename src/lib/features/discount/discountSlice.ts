@@ -2,7 +2,8 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "@/lib/store";
 
 const VALID_PROMO_CODES: Record<string, number> = {
-  LUXE10: 10,
+  SPHERE10: 10,
+  SHOPSPHERE: 15,
 };
 
 interface DiscountState {
