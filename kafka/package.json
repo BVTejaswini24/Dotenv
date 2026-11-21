@@ -1,0 +1,26 @@
+{
+  "name": "@shopsphere/kafka",
+  "version": "1.0.0",
+  "description": "ShopSphere Kafka producer and consumer module (Team Dotenv)",
+  "private": true,
+  "scripts": {
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "dev:producer": "ts-node src/producer/order-producer.ts",
+    "dev:consumer": "ts-node src/consumer/order-consumer.ts",
+    "test:producer": "ts-node src/scripts/test-producer.ts",
+    "test:consumer": "ts-node src/scripts/test-consumer.ts",
+    "test:local": "ts-node src/scripts/test-local.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "kafkajs": "^2.2.4",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/uuid": "^9.0.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.0"
+  }
+}
