@@ -740,7 +740,7 @@ const legacyProducts: Product[] = [
     subcategory: "casual",
     gender: "women",
     srcUrl: "/images/product-20.jpg",
-    gallery: ["/images/product-20.jpg"],
+    gallery: ["/images/product-20.jpg", "/images/pic20.jpg"],
     price: 175,
     originalPrice: 175,
     discount: {
@@ -786,7 +786,7 @@ const legacyProducts: Product[] = [
     subcategory: "casual",
     gender: "women",
     srcUrl: "/images/product-21.jpg",
-    gallery: ["/images/product-21.jpg"],
+    gallery: ["/images/product-21.jpg", "/images/pic21.jpg"],
     price: 285,
     originalPrice: 340,
     discount: {
@@ -832,7 +832,7 @@ const legacyProducts: Product[] = [
     subcategory: "graphic",
     gender: "kids",
     srcUrl: "/images/product-22.jpg",
-    gallery: ["/images/product-22.jpg"],
+    gallery: ["/images/product-22.jpg", "/images/pic22.jpg"],
     price: 55,
     originalPrice: 55,
     discount: {
@@ -883,7 +883,7 @@ const legacyProducts: Product[] = [
     subcategory: "casual",
     gender: "kids",
     srcUrl: "/images/product-23.jpg",
-    gallery: ["/images/product-23.jpg"],
+    gallery: ["/images/product-23.jpg", "/images/pic23.jpg"],
     price: 65,
     originalPrice: 65,
     discount: {
@@ -934,7 +934,7 @@ const legacyProducts: Product[] = [
     subcategory: "skinny",
     gender: "kids",
     srcUrl: "/images/product-24.jpg",
-    gallery: ["/images/product-24.jpg"],
+    gallery: ["/images/product-24.jpg", "/images/pic24.jpg"],
     price: 85,
     originalPrice: 85,
     discount: {
@@ -985,7 +985,7 @@ const legacyProducts: Product[] = [
     subcategory: "casual",
     gender: "kids",
     srcUrl: "/images/product-25.jpg",
-    gallery: ["/images/product-25.jpg"],
+    gallery: ["/images/product-25.jpg", "/images/pic25.jpg"],
     price: 70,
     originalPrice: 70,
     discount: {
@@ -1036,7 +1036,7 @@ const legacyProducts: Product[] = [
     subcategory: "casual",
     gender: "kids",
     srcUrl: "/images/product-26.jpg",
-    gallery: ["/images/product-26.jpg"],
+    gallery: ["/images/product-26.jpg", "/images/pic26.jpg"],
     price: 90,
     originalPrice: 90,
     discount: {
@@ -1087,7 +1087,7 @@ const legacyProducts: Product[] = [
     subcategory: "casual",
     gender: "kids",
     srcUrl: "/images/product-27.jpg",
-    gallery: ["/images/product-27.jpg"],
+    gallery: ["/images/product-27.jpg", "/images/pic27.jpg"],
     price: 110,
     originalPrice: 140,
     discount: {
@@ -1138,7 +1138,7 @@ const legacyProducts: Product[] = [
     subcategory: "bags",
     gender: "women",
     srcUrl: "/images/product-28.jpg",
-    gallery: ["/images/product-28.jpg"],
+    gallery: ["/images/product-28.jpg", "/images/pic28.jpg"],
     price: 145,
     originalPrice: 180,
     discount: {
@@ -1178,7 +1178,7 @@ const legacyProducts: Product[] = [
     subcategory: "belts",
     gender: "men",
     srcUrl: "/images/product-29.jpg",
-    gallery: ["/images/product-29.jpg"],
+    gallery: ["/images/product-29.jpg", "/images/pic29.jpg"],
     price: 65,
     originalPrice: 65,
     discount: {
@@ -1223,7 +1223,7 @@ const legacyProducts: Product[] = [
     subcategory: "bags",
     gender: "women",
     srcUrl: "/images/product-30.jpg",
-    gallery: ["/images/product-30.jpg"],
+    gallery: ["/images/product-30.jpg", "/images/pic30.jpg"],
     price: 120,
     originalPrice: 120,
     discount: {
@@ -1264,7 +1264,7 @@ const legacyProducts: Product[] = [
     subcategory: "hats",
     gender: "men",
     srcUrl: "/images/product-31.jpg",
-    gallery: ["/images/product-31.jpg"],
+    gallery: ["/images/product-31.jpg", "/images/pic31.jpg"],
     price: 40,
     originalPrice: 40,
     discount: {
@@ -1305,7 +1305,7 @@ const legacyProducts: Product[] = [
     subcategory: "bags",
     gender: "kids",
     srcUrl: "/images/product-32.jpg",
-    gallery: ["/images/product-32.jpg"],
+    gallery: ["/images/product-32.jpg", "/images/pic32.jpg"],
     price: 45,
     originalPrice: 55,
     discount: {
@@ -1346,7 +1346,7 @@ const legacyProducts: Product[] = [
     subcategory: "eyewear",
     gender: "unisex",
     srcUrl: "/images/product-33.jpg",
-    gallery: ["/images/product-33.jpg"],
+    gallery: ["/images/product-33.jpg", "/images/pic33.jpg"],
     price: 85,
     originalPrice: 110,
     discount: {
@@ -1386,7 +1386,7 @@ const legacyProducts: Product[] = [
     subcategory: "jewelry",
     gender: "women",
     srcUrl: "/images/product-34.jpg",
-    gallery: ["/images/product-34.jpg"],
+    gallery: ["/images/product-34.jpg", "/images/pic34.jpg"],
     price: 75,
     originalPrice: 75,
     discount: {
@@ -1425,7 +1425,7 @@ const legacyProducts: Product[] = [
     subcategory: "jewelry",
     gender: "men",
     srcUrl: "/images/product-35.jpg",
-    gallery: ["/images/product-35.jpg"],
+    gallery: ["/images/product-35.jpg", "/images/pic35.jpg"],
     price: 95,
     originalPrice: 120,
     discount: {
@@ -1464,7 +1464,7 @@ const legacyProducts: Product[] = [
     subcategory: "jewelry",
     gender: "women",
     srcUrl: "/images/product-36.jpg",
-    gallery: ["/images/product-36.jpg"],
+    gallery: ["/images/product-36.jpg", "/images/pic36.jpg"],
     price: 85,
     originalPrice: 85,
     discount: {
@@ -1504,7 +1504,7 @@ const legacyProducts: Product[] = [
     subcategory: "jewelry",
     gender: "women",
     srcUrl: "/images/product-37.jpg",
-    gallery: ["/images/product-37.jpg"],
+    gallery: ["/images/product-37.jpg", "/images/pic37.jpg"],
     price: 55,
     originalPrice: 55,
     discount: {
@@ -1543,7 +1543,7 @@ const legacyProducts: Product[] = [
     subcategory: "jewelry",
     gender: "men",
     srcUrl: "/images/product-38.jpg",
-    gallery: ["/images/product-38.jpg"],
+    gallery: ["/images/product-38.jpg", "/images/pic38.jpg"],
     price: 60,
     originalPrice: 60,
     discount: {
@@ -1582,7 +1582,7 @@ const legacyProducts: Product[] = [
     subcategory: "jewelry",
     gender: "men",
     srcUrl: "/images/product-39.jpg",
-    gallery: ["/images/product-39.jpg"],
+    gallery: ["/images/product-39.jpg", "/images/pic39.jpg"],
     price: 70,
     originalPrice: 90,
     discount: {
@@ -1626,7 +1626,7 @@ const legacyProducts: Product[] = [
     subcategory: "jewelry",
     gender: "women",
     srcUrl: "/images/product-40.jpg",
-    gallery: ["/images/product-40.jpg"],
+    gallery: ["/images/product-40.jpg", "/images/pic40.jpg"],
     price: 90,
     originalPrice: 90,
     discount: {
@@ -1665,7 +1665,7 @@ const legacyProducts: Product[] = [
     subcategory: "jewelry",
     gender: "unisex",
     srcUrl: "/images/product-41.jpg",
-    gallery: ["/images/product-41.jpg"],
+    gallery: ["/images/product-41.jpg", "/images/pic41.jpg"],
     price: 50,
     originalPrice: 65,
     discount: {
@@ -1697,6 +1697,12264 @@ const legacyProducts: Product[] = [
 ];
 
 // Demo product: out-of-stock to showcase Smart Alternatives feature
+
+
+const expandedCatalogue: Product[] = [
+{
+  "id": 43,
+  "slug": "luxe-oversized-vintage-heavyweight-tee",
+  "title": "LUXE Oversized Vintage Heavyweight Tee",
+  "description": "Constructed from 280 GSM combed organic cotton, this dropped-shoulder tee features a relaxed boxy cut and subtle tonal LUXE branding.",
+  "brand": "LUXE Studio",
+  "category": "t-shirts",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/t-shirts/product-43.jpg",
+  "gallery": [
+    "/images/products/t-shirts/product-43.jpg",
+    "/images/products/t-shirts/product-43-1.jpg"
+  ],
+  "price": 110,
+  "originalPrice": 130,
+  "discount": {
+    "amount": 20,
+    "percentage": 15
+  },
+  "rating": 4.8,
+  "reviewCount": 74,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    },
+    {
+      "id": "white",
+      "name": "White",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "100% Organic Heavyweight Cotton",
+  "careInstructions": "Machine wash cold inside out, hang dry",
+  "fit": "Oversized Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "heavyweight",
+    "vintage",
+    "oversized",
+    "tee",
+    "unisex"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 35,
+  "sku": "LX-TS-043",
+  "createdAt": "2024-03-01",
+  "variants": [
+    {
+      "id": "var-43-s-black",
+      "sku": "LX-TS-043-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 110,
+      "stock": 4,
+      "image": "/images/products/t-shirts/product-43.jpg"
+    },
+    {
+      "id": "var-43-s-white",
+      "sku": "LX-TS-043-S-WHITE",
+      "size": "Small",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 110,
+      "stock": 4,
+      "image": "/images/products/t-shirts/product-43.jpg"
+    },
+    {
+      "id": "var-43-m-black",
+      "sku": "LX-TS-043-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 110,
+      "stock": 4,
+      "image": "/images/products/t-shirts/product-43.jpg"
+    },
+    {
+      "id": "var-43-m-white",
+      "sku": "LX-TS-043-M-WHITE",
+      "size": "Medium",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 110,
+      "stock": 4,
+      "image": "/images/products/t-shirts/product-43.jpg"
+    },
+    {
+      "id": "var-43-l-black",
+      "sku": "LX-TS-043-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 110,
+      "stock": 4,
+      "image": "/images/products/t-shirts/product-43.jpg"
+    },
+    {
+      "id": "var-43-l-white",
+      "sku": "LX-TS-043-L-WHITE",
+      "size": "Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 110,
+      "stock": 4,
+      "image": "/images/products/t-shirts/product-43.jpg"
+    },
+    {
+      "id": "var-43-xl-black",
+      "sku": "LX-TS-043-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 110,
+      "stock": 4,
+      "image": "/images/products/t-shirts/product-43.jpg"
+    },
+    {
+      "id": "var-43-xl-white",
+      "sku": "LX-TS-043-XL-WHITE",
+      "size": "X-Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 110,
+      "stock": 4,
+      "image": "/images/products/t-shirts/product-43.jpg"
+    }
+  ]
+},
+{
+  "id": 44,
+  "slug": "calvin-klein-minimalist-supima-crewneck",
+  "title": "Calvin Klein Minimalist Supima Crewneck",
+  "description": "Crafted from long-staple Supima cotton for an ultra-soft handle and luxurious drape. Finished with a ribbed collar and tailored sleeves.",
+  "brand": "Calvin Klein",
+  "category": "t-shirts",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/t-shirts/product-44.jpg",
+  "gallery": [
+    "/images/products/t-shirts/product-44.jpg",
+    "/images/products/t-shirts/product-44-1.jpg"
+  ],
+  "price": 95,
+  "originalPrice": 95,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.6,
+  "reviewCount": 52,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    },
+    {
+      "id": "blue",
+      "name": "Blue",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    }
+  ],
+  "material": "100% Supima Cotton",
+  "careInstructions": "Machine wash warm, tumble dry low",
+  "fit": "Classic Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "supima",
+    "minimalist",
+    "crewneck",
+    "calvin klein"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 28,
+  "sku": "CK-TS-044",
+  "createdAt": "2024-02-15",
+  "variants": [
+    {
+      "id": "var-44-s-black",
+      "sku": "CK-TS-044-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 95,
+      "stock": 3,
+      "image": "/images/products/t-shirts/product-44.jpg"
+    },
+    {
+      "id": "var-44-s-blue",
+      "sku": "CK-TS-044-S-BLUE",
+      "size": "Small",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 95,
+      "stock": 3,
+      "image": "/images/products/t-shirts/product-44.jpg"
+    },
+    {
+      "id": "var-44-m-black",
+      "sku": "CK-TS-044-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 95,
+      "stock": 3,
+      "image": "/images/products/t-shirts/product-44.jpg"
+    },
+    {
+      "id": "var-44-m-blue",
+      "sku": "CK-TS-044-M-BLUE",
+      "size": "Medium",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 95,
+      "stock": 3,
+      "image": "/images/products/t-shirts/product-44.jpg"
+    },
+    {
+      "id": "var-44-l-black",
+      "sku": "CK-TS-044-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 95,
+      "stock": 3,
+      "image": "/images/products/t-shirts/product-44.jpg"
+    },
+    {
+      "id": "var-44-l-blue",
+      "sku": "CK-TS-044-L-BLUE",
+      "size": "Large",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 95,
+      "stock": 3,
+      "image": "/images/products/t-shirts/product-44.jpg"
+    },
+    {
+      "id": "var-44-xl-black",
+      "sku": "CK-TS-044-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 95,
+      "stock": 3,
+      "image": "/images/products/t-shirts/product-44.jpg"
+    },
+    {
+      "id": "var-44-xl-blue",
+      "sku": "CK-TS-044-XL-BLUE",
+      "size": "X-Large",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 95,
+      "stock": 3,
+      "image": "/images/products/t-shirts/product-44.jpg"
+    }
+  ]
+},
+{
+  "id": 45,
+  "slug": "versace-barocco-embroidered-medusa-tee",
+  "title": "Versace Embroidered Medusa Logo Tee",
+  "description": "High-fashion statement t-shirt featuring intricate gold-thread Medusa embroidery and iconic Barocco accents on fine mercerized cotton jersey.",
+  "brand": "Versace",
+  "category": "t-shirts",
+  "subcategory": "graphic",
+  "gender": "men",
+  "srcUrl": "/images/products/t-shirts/product-45.jpg",
+  "gallery": [
+    "/images/products/t-shirts/product-45.jpg",
+    "/images/products/t-shirts/product-45-1.jpg"
+  ],
+  "price": 340,
+  "originalPrice": 425,
+  "discount": {
+    "amount": 85,
+    "percentage": 20
+  },
+  "rating": 4.9,
+  "reviewCount": 39,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    },
+    {
+      "id": "white",
+      "name": "White",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "100% Mercerized Cotton",
+  "careInstructions": "Dry clean or gentle hand wash",
+  "fit": "Regular Fit",
+  "pattern": "Graphic",
+  "style": "Party",
+  "tags": [
+    "versace",
+    "medusa",
+    "luxury",
+    "embroidery",
+    "statement"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": true,
+  "stock": 14,
+  "sku": "VS-TS-045",
+  "createdAt": "2024-03-10",
+  "variants": [
+    {
+      "id": "var-45-s-black",
+      "sku": "VS-TS-045-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 340,
+      "stock": 1,
+      "image": "/images/products/t-shirts/product-45.jpg"
+    },
+    {
+      "id": "var-45-s-white",
+      "sku": "VS-TS-045-S-WHITE",
+      "size": "Small",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 340,
+      "stock": 1,
+      "image": "/images/products/t-shirts/product-45.jpg"
+    },
+    {
+      "id": "var-45-m-black",
+      "sku": "VS-TS-045-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 340,
+      "stock": 1,
+      "image": "/images/products/t-shirts/product-45.jpg"
+    },
+    {
+      "id": "var-45-m-white",
+      "sku": "VS-TS-045-M-WHITE",
+      "size": "Medium",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 340,
+      "stock": 1,
+      "image": "/images/products/t-shirts/product-45.jpg"
+    },
+    {
+      "id": "var-45-l-black",
+      "sku": "VS-TS-045-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 340,
+      "stock": 1,
+      "image": "/images/products/t-shirts/product-45.jpg"
+    },
+    {
+      "id": "var-45-l-white",
+      "sku": "VS-TS-045-L-WHITE",
+      "size": "Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 340,
+      "stock": 1,
+      "image": "/images/products/t-shirts/product-45.jpg"
+    },
+    {
+      "id": "var-45-xl-black",
+      "sku": "VS-TS-045-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 340,
+      "stock": 1,
+      "image": "/images/products/t-shirts/product-45.jpg"
+    },
+    {
+      "id": "var-45-xl-white",
+      "sku": "VS-TS-045-XL-WHITE",
+      "size": "X-Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 340,
+      "stock": 1,
+      "image": "/images/products/t-shirts/product-45.jpg"
+    }
+  ]
+},
+{
+  "id": 46,
+  "slug": "zara-cropped-boxy-graphic-tee",
+  "title": "Zara Cropped Boxy Graphic Tee",
+  "description": "Contemporary cropped silhouette with distressed hem detailing and vintage typography. Pair with high-waisted denim for an effortless look.",
+  "brand": "Zara",
+  "category": "t-shirts",
+  "subcategory": "graphic",
+  "gender": "women",
+  "srcUrl": "/images/products/t-shirts/product-46.jpg",
+  "gallery": [
+    "/images/products/t-shirts/product-46.jpg",
+    "/images/products/t-shirts/product-46-1.jpg"
+  ],
+  "price": 65,
+  "originalPrice": 65,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.5,
+  "reviewCount": 68,
+  "sizes": [
+    {
+      "id": "xs",
+      "name": "X-Small",
+      "label": "XS"
+    },
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "white",
+      "name": "White",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    },
+    {
+      "id": "pink",
+      "name": "Pink",
+      "code": "bg-[#ec4899]",
+      "hex": "#ec4899"
+    }
+  ],
+  "material": "100% Washed Cotton",
+  "careInstructions": "Machine wash cold with like colors",
+  "fit": "Relaxed Fit",
+  "pattern": "Graphic",
+  "style": "Casual",
+  "tags": [
+    "cropped",
+    "graphic",
+    "vintage",
+    "streetwear",
+    "zara"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 40,
+  "sku": "ZR-TS-046",
+  "createdAt": "2024-02-28",
+  "variants": [
+    {
+      "id": "var-46-xs-white",
+      "sku": "ZR-TS-046-XS-WHITE",
+      "size": "X-Small",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 65,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-46.jpg"
+    },
+    {
+      "id": "var-46-xs-pink",
+      "sku": "ZR-TS-046-XS-PINK",
+      "size": "X-Small",
+      "color": "Pink",
+      "colorCode": "bg-[#ec4899]",
+      "price": 65,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-46.jpg"
+    },
+    {
+      "id": "var-46-s-white",
+      "sku": "ZR-TS-046-S-WHITE",
+      "size": "Small",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 65,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-46.jpg"
+    },
+    {
+      "id": "var-46-s-pink",
+      "sku": "ZR-TS-046-S-PINK",
+      "size": "Small",
+      "color": "Pink",
+      "colorCode": "bg-[#ec4899]",
+      "price": 65,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-46.jpg"
+    },
+    {
+      "id": "var-46-m-white",
+      "sku": "ZR-TS-046-M-WHITE",
+      "size": "Medium",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 65,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-46.jpg"
+    },
+    {
+      "id": "var-46-m-pink",
+      "sku": "ZR-TS-046-M-PINK",
+      "size": "Medium",
+      "color": "Pink",
+      "colorCode": "bg-[#ec4899]",
+      "price": 65,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-46.jpg"
+    },
+    {
+      "id": "var-46-l-white",
+      "sku": "ZR-TS-046-L-WHITE",
+      "size": "Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 65,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-46.jpg"
+    },
+    {
+      "id": "var-46-l-pink",
+      "sku": "ZR-TS-046-L-PINK",
+      "size": "Large",
+      "color": "Pink",
+      "colorCode": "bg-[#ec4899]",
+      "price": 65,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-46.jpg"
+    }
+  ]
+},
+{
+  "id": 47,
+  "slug": "prada-silk-blend-ribbed-fitted-tee",
+  "title": "Prada Silk-Blend Ribbed Fitted Tee",
+  "description": "Elevated Italian craftsmanship. A fine-ribbed tee blended with mulberry silk for a second-skin feel, subtle triangle emblem at the nape.",
+  "brand": "Prada",
+  "category": "t-shirts",
+  "subcategory": "casual",
+  "gender": "women",
+  "srcUrl": "/images/products/t-shirts/product-47.jpg",
+  "gallery": [
+    "/images/products/t-shirts/product-47.jpg",
+    "/images/products/t-shirts/product-47-1.jpg"
+  ],
+  "price": 380,
+  "originalPrice": 450,
+  "discount": {
+    "amount": 70,
+    "percentage": 15
+  },
+  "rating": 4.9,
+  "reviewCount": 28,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "yellow",
+      "name": "Yellow",
+      "code": "bg-[#facc15]",
+      "hex": "#facc15"
+    },
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "70% Silk, 30% Cotton",
+  "careInstructions": "Dry clean only",
+  "fit": "Slim Fit",
+  "pattern": "Ribbed",
+  "style": "Formal",
+  "tags": [
+    "prada",
+    "silk",
+    "ribbed",
+    "luxury",
+    "fitted"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": true,
+  "stock": 12,
+  "sku": "PR-TS-047",
+  "createdAt": "2024-01-20",
+  "variants": [
+    {
+      "id": "var-47-s-yellow",
+      "sku": "PR-TS-047-S-YELLOW",
+      "size": "Small",
+      "color": "Yellow",
+      "colorCode": "bg-[#facc15]",
+      "price": 380,
+      "stock": 2,
+      "image": "/images/products/t-shirts/product-47.jpg"
+    },
+    {
+      "id": "var-47-s-black",
+      "sku": "PR-TS-047-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 380,
+      "stock": 2,
+      "image": "/images/products/t-shirts/product-47.jpg"
+    },
+    {
+      "id": "var-47-m-yellow",
+      "sku": "PR-TS-047-M-YELLOW",
+      "size": "Medium",
+      "color": "Yellow",
+      "colorCode": "bg-[#facc15]",
+      "price": 380,
+      "stock": 2,
+      "image": "/images/products/t-shirts/product-47.jpg"
+    },
+    {
+      "id": "var-47-m-black",
+      "sku": "PR-TS-047-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 380,
+      "stock": 2,
+      "image": "/images/products/t-shirts/product-47.jpg"
+    },
+    {
+      "id": "var-47-l-yellow",
+      "sku": "PR-TS-047-L-YELLOW",
+      "size": "Large",
+      "color": "Yellow",
+      "colorCode": "bg-[#facc15]",
+      "price": 380,
+      "stock": 2,
+      "image": "/images/products/t-shirts/product-47.jpg"
+    },
+    {
+      "id": "var-47-l-black",
+      "sku": "PR-TS-047-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 380,
+      "stock": 2,
+      "image": "/images/products/t-shirts/product-47.jpg"
+    }
+  ]
+},
+{
+  "id": 48,
+  "slug": "luxe-acid-wash-distressed-band-tee",
+  "title": "LUXE Acid Wash Distressed Band Tee",
+  "description": "Individually hand-treated for an authentic sun-faded wash with micro-distressing at the neckline and sleeve cuffs.",
+  "brand": "LUXE Studio",
+  "category": "t-shirts",
+  "subcategory": "graphic",
+  "gender": "unisex",
+  "srcUrl": "/images/products/t-shirts/product-48.jpg",
+  "gallery": [
+    "/images/products/t-shirts/product-48.jpg",
+    "/images/products/t-shirts/product-48-1.jpg"
+  ],
+  "price": 125,
+  "originalPrice": 125,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.7,
+  "reviewCount": 43,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Cotton",
+  "careInstructions": "Machine wash cold, air dry",
+  "fit": "Oversized Fit",
+  "pattern": "Graphic",
+  "style": "Casual",
+  "tags": [
+    "acid wash",
+    "distressed",
+    "band tee",
+    "rock",
+    "streetwear"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 22,
+  "sku": "LX-TS-048",
+  "createdAt": "2024-03-05",
+  "variants": [
+    {
+      "id": "var-48-s-black",
+      "sku": "LX-TS-048-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 125,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-48.jpg"
+    },
+    {
+      "id": "var-48-m-black",
+      "sku": "LX-TS-048-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 125,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-48.jpg"
+    },
+    {
+      "id": "var-48-l-black",
+      "sku": "LX-TS-048-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 125,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-48.jpg"
+    },
+    {
+      "id": "var-48-xl-black",
+      "sku": "LX-TS-048-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 125,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-48.jpg"
+    }
+  ]
+},
+{
+  "id": 49,
+  "slug": "shopsphere-performance-seamless-athletic-tee",
+  "title": "ShopSphere Performance Seamless Athletic Tee",
+  "description": "Engineered 4-way stretch fabric with targeted ventilation zones for moisture-wicking comfort during high-intensity training.",
+  "brand": "ShopSphere",
+  "category": "t-shirts",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/t-shirts/product-49.jpg",
+  "gallery": [
+    "/images/products/t-shirts/product-49.jpg",
+    "/images/products/t-shirts/product-49-1.jpg"
+  ],
+  "price": 75,
+  "originalPrice": 95,
+  "discount": {
+    "amount": 20,
+    "percentage": 20
+  },
+  "rating": 4.6,
+  "reviewCount": 89,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Blue",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    },
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "88% Polyester, 12% Spandex",
+  "careInstructions": "Machine wash cold, do not bleach",
+  "fit": "Athletic Fit",
+  "pattern": "Solid",
+  "style": "Gym",
+  "tags": [
+    "seamless",
+    "athletic",
+    "gym",
+    "dry fit",
+    "training"
+  ],
+  "isNew": false,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 45,
+  "sku": "SS-TS-049",
+  "createdAt": "2024-01-15",
+  "variants": [
+    {
+      "id": "var-49-s-blue",
+      "sku": "SS-TS-049-S-BLUE",
+      "size": "Small",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 75,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-49.jpg"
+    },
+    {
+      "id": "var-49-s-black",
+      "sku": "SS-TS-049-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 75,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-49.jpg"
+    },
+    {
+      "id": "var-49-m-blue",
+      "sku": "SS-TS-049-M-BLUE",
+      "size": "Medium",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 75,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-49.jpg"
+    },
+    {
+      "id": "var-49-m-black",
+      "sku": "SS-TS-049-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 75,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-49.jpg"
+    },
+    {
+      "id": "var-49-l-blue",
+      "sku": "SS-TS-049-L-BLUE",
+      "size": "Large",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 75,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-49.jpg"
+    },
+    {
+      "id": "var-49-l-black",
+      "sku": "SS-TS-049-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 75,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-49.jpg"
+    },
+    {
+      "id": "var-49-xl-blue",
+      "sku": "SS-TS-049-XL-BLUE",
+      "size": "X-Large",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 75,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-49.jpg"
+    },
+    {
+      "id": "var-49-xl-black",
+      "sku": "SS-TS-049-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 75,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-49.jpg"
+    }
+  ]
+},
+{
+  "id": 50,
+  "slug": "ralph-lauren-breton-striped-tee",
+  "title": "Ralph Lauren Organic Breton Striped Tee",
+  "description": "The timeless nautical icon recreated in 100% certified organic cotton with a boatneck collar and embroidered chest pony.",
+  "brand": "Ralph Lauren",
+  "category": "t-shirts",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/t-shirts/product-50.jpg",
+  "gallery": [
+    "/images/products/t-shirts/product-50.jpg",
+    "/images/products/t-shirts/product-50-1.jpg"
+  ],
+  "price": 135,
+  "originalPrice": 135,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.8,
+  "reviewCount": 61,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "white",
+      "name": "White",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    },
+    {
+      "id": "blue",
+      "name": "Blue",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    }
+  ],
+  "material": "100% Organic Cotton",
+  "careInstructions": "Machine wash warm with like colors",
+  "fit": "Regular Fit",
+  "pattern": "Striped",
+  "style": "Casual",
+  "tags": [
+    "striped",
+    "breton",
+    "nautical",
+    "ralph lauren",
+    "classic"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": false,
+  "stock": 19,
+  "sku": "RL-TS-050",
+  "createdAt": "2024-02-05",
+  "variants": [
+    {
+      "id": "var-50-s-white",
+      "sku": "RL-TS-050-S-WHITE",
+      "size": "Small",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 135,
+      "stock": 2,
+      "image": "/images/products/t-shirts/product-50.jpg"
+    },
+    {
+      "id": "var-50-s-blue",
+      "sku": "RL-TS-050-S-BLUE",
+      "size": "Small",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 135,
+      "stock": 2,
+      "image": "/images/products/t-shirts/product-50.jpg"
+    },
+    {
+      "id": "var-50-m-white",
+      "sku": "RL-TS-050-M-WHITE",
+      "size": "Medium",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 135,
+      "stock": 2,
+      "image": "/images/products/t-shirts/product-50.jpg"
+    },
+    {
+      "id": "var-50-m-blue",
+      "sku": "RL-TS-050-M-BLUE",
+      "size": "Medium",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 135,
+      "stock": 2,
+      "image": "/images/products/t-shirts/product-50.jpg"
+    },
+    {
+      "id": "var-50-l-white",
+      "sku": "RL-TS-050-L-WHITE",
+      "size": "Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 135,
+      "stock": 2,
+      "image": "/images/products/t-shirts/product-50.jpg"
+    },
+    {
+      "id": "var-50-l-blue",
+      "sku": "RL-TS-050-L-BLUE",
+      "size": "Large",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 135,
+      "stock": 2,
+      "image": "/images/products/t-shirts/product-50.jpg"
+    },
+    {
+      "id": "var-50-xl-white",
+      "sku": "RL-TS-050-XL-WHITE",
+      "size": "X-Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 135,
+      "stock": 2,
+      "image": "/images/products/t-shirts/product-50.jpg"
+    },
+    {
+      "id": "var-50-xl-blue",
+      "sku": "RL-TS-050-XL-BLUE",
+      "size": "X-Large",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 135,
+      "stock": 2,
+      "image": "/images/products/t-shirts/product-50.jpg"
+    }
+  ]
+},
+{
+  "id": 51,
+  "slug": "gucci-graphic-monogram-print-tee",
+  "title": "Gucci Graphic Monogram Print Tee",
+  "description": "Heritage luxury meets modern streetwear. Oversized silhouette adorned with interlocking monogram typography across the chest.",
+  "brand": "Gucci",
+  "category": "t-shirts",
+  "subcategory": "graphic",
+  "gender": "unisex",
+  "srcUrl": "/images/products/t-shirts/product-51.jpg",
+  "gallery": [
+    "/images/products/t-shirts/product-51.jpg",
+    "/images/products/t-shirts/product-51-1.jpg"
+  ],
+  "price": 490,
+  "originalPrice": 490,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.9,
+  "reviewCount": 47,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "white",
+      "name": "White",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    },
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Heavy Cotton Jersey",
+  "careInstructions": "Dry clean recommended",
+  "fit": "Relaxed Fit",
+  "pattern": "Graphic",
+  "style": "Party",
+  "tags": [
+    "gucci",
+    "monogram",
+    "luxury",
+    "high-end",
+    "streetwear"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 11,
+  "sku": "GC-TS-051",
+  "createdAt": "2024-03-12",
+  "variants": [
+    {
+      "id": "var-51-s-white",
+      "sku": "GC-TS-051-S-WHITE",
+      "size": "Small",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 490,
+      "stock": 1,
+      "image": "/images/products/t-shirts/product-51.jpg"
+    },
+    {
+      "id": "var-51-s-black",
+      "sku": "GC-TS-051-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 490,
+      "stock": 1,
+      "image": "/images/products/t-shirts/product-51.jpg"
+    },
+    {
+      "id": "var-51-m-white",
+      "sku": "GC-TS-051-M-WHITE",
+      "size": "Medium",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 490,
+      "stock": 1,
+      "image": "/images/products/t-shirts/product-51.jpg"
+    },
+    {
+      "id": "var-51-m-black",
+      "sku": "GC-TS-051-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 490,
+      "stock": 1,
+      "image": "/images/products/t-shirts/product-51.jpg"
+    },
+    {
+      "id": "var-51-l-white",
+      "sku": "GC-TS-051-L-WHITE",
+      "size": "Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 490,
+      "stock": 1,
+      "image": "/images/products/t-shirts/product-51.jpg"
+    },
+    {
+      "id": "var-51-l-black",
+      "sku": "GC-TS-051-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 490,
+      "stock": 1,
+      "image": "/images/products/t-shirts/product-51.jpg"
+    },
+    {
+      "id": "var-51-xl-white",
+      "sku": "GC-TS-051-XL-WHITE",
+      "size": "X-Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 490,
+      "stock": 1,
+      "image": "/images/products/t-shirts/product-51.jpg"
+    },
+    {
+      "id": "var-51-xl-black",
+      "sku": "GC-TS-051-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 490,
+      "stock": 1,
+      "image": "/images/products/t-shirts/product-51.jpg"
+    }
+  ]
+},
+{
+  "id": 52,
+  "slug": "shopsphere-active-dry-fit-training-tee",
+  "title": "ShopSphere Active Dry-Fit Training Tee",
+  "description": "Lightweight, breathable sports top cut from recycled performance poly with anti-chafing flatlock seams and reflective accents.",
+  "brand": "ShopSphere",
+  "category": "t-shirts",
+  "subcategory": "casual",
+  "gender": "women",
+  "srcUrl": "/images/products/t-shirts/product-52.jpg",
+  "gallery": [
+    "/images/products/t-shirts/product-52.jpg",
+    "/images/products/t-shirts/product-52-1.jpg"
+  ],
+  "price": 70,
+  "originalPrice": 85,
+  "discount": {
+    "amount": 15,
+    "percentage": 17
+  },
+  "rating": 4.6,
+  "reviewCount": 38,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "cyan",
+      "name": "Cyan",
+      "code": "bg-[#22d3ee]",
+      "hex": "#22d3ee"
+    },
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "90% Recycled Poly, 10% Elastane",
+  "careInstructions": "Machine wash cold",
+  "fit": "Athletic Fit",
+  "pattern": "Solid",
+  "style": "Gym",
+  "tags": [
+    "active",
+    "gym",
+    "dry fit",
+    "fitness",
+    "running"
+  ],
+  "isNew": false,
+  "isFeatured": false,
+  "isBestSeller": false,
+  "isOnSale": true,
+  "stock": 32,
+  "sku": "SS-TS-052",
+  "createdAt": "2024-02-18",
+  "variants": [
+    {
+      "id": "var-52-s-cyan",
+      "sku": "SS-TS-052-S-CYAN",
+      "size": "Small",
+      "color": "Cyan",
+      "colorCode": "bg-[#22d3ee]",
+      "price": 70,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-52.jpg"
+    },
+    {
+      "id": "var-52-s-black",
+      "sku": "SS-TS-052-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 70,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-52.jpg"
+    },
+    {
+      "id": "var-52-m-cyan",
+      "sku": "SS-TS-052-M-CYAN",
+      "size": "Medium",
+      "color": "Cyan",
+      "colorCode": "bg-[#22d3ee]",
+      "price": 70,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-52.jpg"
+    },
+    {
+      "id": "var-52-m-black",
+      "sku": "SS-TS-052-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 70,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-52.jpg"
+    },
+    {
+      "id": "var-52-l-cyan",
+      "sku": "SS-TS-052-L-CYAN",
+      "size": "Large",
+      "color": "Cyan",
+      "colorCode": "bg-[#22d3ee]",
+      "price": 70,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-52.jpg"
+    },
+    {
+      "id": "var-52-l-black",
+      "sku": "SS-TS-052-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 70,
+      "stock": 5,
+      "image": "/images/products/t-shirts/product-52.jpg"
+    }
+  ]
+},
+{
+  "id": 53,
+  "slug": "luxe-kids-premium-cotton-pocket-tee",
+  "title": "LUXE Kids Premium Cotton Pocket Tee",
+  "description": "Ultra-comfortable combed cotton t-shirt with functional patch chest pocket and reinforced neckband built for everyday play.",
+  "brand": "LUXE Studio",
+  "category": "t-shirts",
+  "subcategory": "casual",
+  "gender": "kids",
+  "srcUrl": "/images/products/t-shirts/product-53.jpg",
+  "gallery": [
+    "/images/products/t-shirts/product-53.jpg",
+    "/images/products/t-shirts/product-53-1.jpg"
+  ],
+  "price": 45,
+  "originalPrice": 45,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.8,
+  "reviewCount": 29,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "yellow",
+      "name": "Yellow",
+      "code": "bg-[#facc15]",
+      "hex": "#facc15"
+    },
+    {
+      "id": "blue",
+      "name": "Blue",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    }
+  ],
+  "material": "100% Combed Cotton",
+  "careInstructions": "Machine wash warm, tumble dry",
+  "fit": "Regular Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "kids",
+    "cotton",
+    "pocket tee",
+    "everyday"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 25,
+  "sku": "LX-TS-053",
+  "createdAt": "2024-03-01",
+  "variants": [
+    {
+      "id": "var-53-s-yellow",
+      "sku": "LX-TS-053-S-YELLOW",
+      "size": "Small",
+      "color": "Yellow",
+      "colorCode": "bg-[#facc15]",
+      "price": 45,
+      "stock": 4,
+      "image": "/images/products/t-shirts/product-53.jpg"
+    },
+    {
+      "id": "var-53-s-blue",
+      "sku": "LX-TS-053-S-BLUE",
+      "size": "Small",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 45,
+      "stock": 4,
+      "image": "/images/products/t-shirts/product-53.jpg"
+    },
+    {
+      "id": "var-53-m-yellow",
+      "sku": "LX-TS-053-M-YELLOW",
+      "size": "Medium",
+      "color": "Yellow",
+      "colorCode": "bg-[#facc15]",
+      "price": 45,
+      "stock": 4,
+      "image": "/images/products/t-shirts/product-53.jpg"
+    },
+    {
+      "id": "var-53-m-blue",
+      "sku": "LX-TS-053-M-BLUE",
+      "size": "Medium",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 45,
+      "stock": 4,
+      "image": "/images/products/t-shirts/product-53.jpg"
+    },
+    {
+      "id": "var-53-l-yellow",
+      "sku": "LX-TS-053-L-YELLOW",
+      "size": "Large",
+      "color": "Yellow",
+      "colorCode": "bg-[#facc15]",
+      "price": 45,
+      "stock": 4,
+      "image": "/images/products/t-shirts/product-53.jpg"
+    },
+    {
+      "id": "var-53-l-blue",
+      "sku": "LX-TS-053-L-BLUE",
+      "size": "Large",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 45,
+      "stock": 4,
+      "image": "/images/products/t-shirts/product-53.jpg"
+    }
+  ]
+},
+{
+  "id": 54,
+  "slug": "prada-tailored-italian-poplin-dress-shirt",
+  "title": "Prada Tailored Italian Poplin Dress Shirt",
+  "description": "Impeccably tailored in Italy from 120-two-ply Egyptian cotton poplin with mother-of-pearl buttons and crisp spread collar.",
+  "brand": "Prada",
+  "category": "shirts",
+  "subcategory": "formal",
+  "gender": "men",
+  "srcUrl": "/images/products/shirts/product-54.jpg",
+  "gallery": [
+    "/images/products/shirts/product-54.jpg",
+    "/images/products/shirts/product-54-1.jpg"
+  ],
+  "price": 460,
+  "originalPrice": 460,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.9,
+  "reviewCount": 56,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "white",
+      "name": "White",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    },
+    {
+      "id": "blue",
+      "name": "Blue",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    }
+  ],
+  "material": "100% Egyptian Cotton Poplin",
+  "careInstructions": "Professional dry clean or warm iron",
+  "fit": "Tailored Fit",
+  "pattern": "Solid",
+  "style": "Formal",
+  "tags": [
+    "prada",
+    "poplin",
+    "dress shirt",
+    "italian",
+    "formal"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 16,
+  "sku": "PR-SH-054",
+  "createdAt": "2024-01-28",
+  "variants": [
+    {
+      "id": "var-54-s-white",
+      "sku": "PR-SH-054-S-WHITE",
+      "size": "Small",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 460,
+      "stock": 2,
+      "image": "/images/products/shirts/product-54.jpg"
+    },
+    {
+      "id": "var-54-s-blue",
+      "sku": "PR-SH-054-S-BLUE",
+      "size": "Small",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 460,
+      "stock": 2,
+      "image": "/images/products/shirts/product-54.jpg"
+    },
+    {
+      "id": "var-54-m-white",
+      "sku": "PR-SH-054-M-WHITE",
+      "size": "Medium",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 460,
+      "stock": 2,
+      "image": "/images/products/shirts/product-54.jpg"
+    },
+    {
+      "id": "var-54-m-blue",
+      "sku": "PR-SH-054-M-BLUE",
+      "size": "Medium",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 460,
+      "stock": 2,
+      "image": "/images/products/shirts/product-54.jpg"
+    },
+    {
+      "id": "var-54-l-white",
+      "sku": "PR-SH-054-L-WHITE",
+      "size": "Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 460,
+      "stock": 2,
+      "image": "/images/products/shirts/product-54.jpg"
+    },
+    {
+      "id": "var-54-l-blue",
+      "sku": "PR-SH-054-L-BLUE",
+      "size": "Large",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 460,
+      "stock": 2,
+      "image": "/images/products/shirts/product-54.jpg"
+    },
+    {
+      "id": "var-54-xl-white",
+      "sku": "PR-SH-054-XL-WHITE",
+      "size": "X-Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 460,
+      "stock": 2,
+      "image": "/images/products/shirts/product-54.jpg"
+    },
+    {
+      "id": "var-54-xl-blue",
+      "sku": "PR-SH-054-XL-BLUE",
+      "size": "X-Large",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 460,
+      "stock": 2,
+      "image": "/images/products/shirts/product-54.jpg"
+    }
+  ]
+},
+{
+  "id": 55,
+  "slug": "versace-silk-camp-collar-resort-shirt",
+  "title": "Versace Silk Camp-Collar Resort Shirt",
+  "description": "Flowing 100% pure silk twill adorned with signature heritage gold filigree and relaxed camp-collar styling for luxury leisure.",
+  "brand": "Versace",
+  "category": "shirts",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/shirts/product-55.jpg",
+  "gallery": [
+    "/images/products/shirts/product-55.jpg",
+    "/images/products/shirts/product-55-1.jpg"
+  ],
+  "price": 680,
+  "originalPrice": 850,
+  "discount": {
+    "amount": 170,
+    "percentage": 20
+  },
+  "rating": 4.9,
+  "reviewCount": 31,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "yellow",
+      "name": "Gold",
+      "code": "bg-[#facc15]",
+      "hex": "#facc15"
+    },
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Pure Silk Twill",
+  "careInstructions": "Dry clean only",
+  "fit": "Relaxed Fit",
+  "pattern": "Graphic",
+  "style": "Party",
+  "tags": [
+    "versace",
+    "silk",
+    "resort",
+    "camp collar",
+    "luxury"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": true,
+  "stock": 9,
+  "sku": "VS-SH-055",
+  "createdAt": "2024-03-08",
+  "variants": [
+    {
+      "id": "var-55-s-yellow",
+      "sku": "VS-SH-055-S-YELLOW",
+      "size": "Small",
+      "color": "Gold",
+      "colorCode": "bg-[#facc15]",
+      "price": 680,
+      "stock": 1,
+      "image": "/images/products/shirts/product-55.jpg"
+    },
+    {
+      "id": "var-55-s-black",
+      "sku": "VS-SH-055-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 680,
+      "stock": 1,
+      "image": "/images/products/shirts/product-55.jpg"
+    },
+    {
+      "id": "var-55-m-yellow",
+      "sku": "VS-SH-055-M-YELLOW",
+      "size": "Medium",
+      "color": "Gold",
+      "colorCode": "bg-[#facc15]",
+      "price": 680,
+      "stock": 1,
+      "image": "/images/products/shirts/product-55.jpg"
+    },
+    {
+      "id": "var-55-m-black",
+      "sku": "VS-SH-055-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 680,
+      "stock": 1,
+      "image": "/images/products/shirts/product-55.jpg"
+    },
+    {
+      "id": "var-55-l-yellow",
+      "sku": "VS-SH-055-L-YELLOW",
+      "size": "Large",
+      "color": "Gold",
+      "colorCode": "bg-[#facc15]",
+      "price": 680,
+      "stock": 1,
+      "image": "/images/products/shirts/product-55.jpg"
+    },
+    {
+      "id": "var-55-l-black",
+      "sku": "VS-SH-055-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 680,
+      "stock": 1,
+      "image": "/images/products/shirts/product-55.jpg"
+    },
+    {
+      "id": "var-55-xl-yellow",
+      "sku": "VS-SH-055-XL-YELLOW",
+      "size": "X-Large",
+      "color": "Gold",
+      "colorCode": "bg-[#facc15]",
+      "price": 680,
+      "stock": 1,
+      "image": "/images/products/shirts/product-55.jpg"
+    },
+    {
+      "id": "var-55-xl-black",
+      "sku": "VS-SH-055-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 680,
+      "stock": 1,
+      "image": "/images/products/shirts/product-55.jpg"
+    }
+  ]
+},
+{
+  "id": 56,
+  "slug": "zara-relaxed-washed-linen-button-down",
+  "title": "Zara Relaxed Washed Linen Button-Down",
+  "description": "Breathable pure European flax linen pre-washed for effortless drape and relaxed texture. Ideal for warm weather layering.",
+  "brand": "Zara",
+  "category": "shirts",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/shirts/product-56.jpg",
+  "gallery": [
+    "/images/products/shirts/product-56.jpg",
+    "/images/products/shirts/product-56-1.jpg"
+  ],
+  "price": 85,
+  "originalPrice": 85,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.6,
+  "reviewCount": 78,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "white",
+      "name": "White",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "100% European Linen",
+  "careInstructions": "Machine wash cold gentle cycle, line dry",
+  "fit": "Relaxed Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "linen",
+    "summer",
+    "relaxed",
+    "breathable",
+    "zara"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 42,
+  "sku": "ZR-SH-056",
+  "createdAt": "2024-02-22",
+  "variants": [
+    {
+      "id": "var-56-s-white",
+      "sku": "ZR-SH-056-S-WHITE",
+      "size": "Small",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 85,
+      "stock": 10,
+      "image": "/images/products/shirts/product-56.jpg"
+    },
+    {
+      "id": "var-56-m-white",
+      "sku": "ZR-SH-056-M-WHITE",
+      "size": "Medium",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 85,
+      "stock": 10,
+      "image": "/images/products/shirts/product-56.jpg"
+    },
+    {
+      "id": "var-56-l-white",
+      "sku": "ZR-SH-056-L-WHITE",
+      "size": "Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 85,
+      "stock": 10,
+      "image": "/images/products/shirts/product-56.jpg"
+    },
+    {
+      "id": "var-56-xl-white",
+      "sku": "ZR-SH-056-XL-WHITE",
+      "size": "X-Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 85,
+      "stock": 10,
+      "image": "/images/products/shirts/product-56.jpg"
+    }
+  ]
+},
+{
+  "id": 57,
+  "slug": "ralph-lauren-striped-oxford-boyfriend-shirt",
+  "title": "Ralph Lauren Oversized Striped Oxford Shirt",
+  "description": "Borrowed from the boys but tailored for her. Heavyweight pinpoint oxford with classic blue-and-white butcher stripes.",
+  "brand": "Ralph Lauren",
+  "category": "shirts",
+  "subcategory": "casual",
+  "gender": "women",
+  "srcUrl": "/images/products/shirts/product-57.jpg",
+  "gallery": [
+    "/images/products/shirts/product-57.jpg",
+    "/images/products/shirts/product-57-1.jpg"
+  ],
+  "price": 175,
+  "originalPrice": 210,
+  "discount": {
+    "amount": 35,
+    "percentage": 17
+  },
+  "rating": 4.8,
+  "reviewCount": 46,
+  "sizes": [
+    {
+      "id": "xs",
+      "name": "X-Small",
+      "label": "XS"
+    },
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Blue",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    },
+    {
+      "id": "white",
+      "name": "White",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "100% Cotton Oxford",
+  "careInstructions": "Machine wash warm, tumble dry",
+  "fit": "Oversized Fit",
+  "pattern": "Striped",
+  "style": "Casual",
+  "tags": [
+    "oxford",
+    "striped",
+    "ralph lauren",
+    "boyfriend shirt"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 24,
+  "sku": "RL-SH-057",
+  "createdAt": "2024-02-10",
+  "variants": [
+    {
+      "id": "var-57-xs-blue",
+      "sku": "RL-SH-057-XS-BLUE",
+      "size": "X-Small",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 175,
+      "stock": 3,
+      "image": "/images/products/shirts/product-57.jpg"
+    },
+    {
+      "id": "var-57-xs-white",
+      "sku": "RL-SH-057-XS-WHITE",
+      "size": "X-Small",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 175,
+      "stock": 3,
+      "image": "/images/products/shirts/product-57.jpg"
+    },
+    {
+      "id": "var-57-s-blue",
+      "sku": "RL-SH-057-S-BLUE",
+      "size": "Small",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 175,
+      "stock": 3,
+      "image": "/images/products/shirts/product-57.jpg"
+    },
+    {
+      "id": "var-57-s-white",
+      "sku": "RL-SH-057-S-WHITE",
+      "size": "Small",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 175,
+      "stock": 3,
+      "image": "/images/products/shirts/product-57.jpg"
+    },
+    {
+      "id": "var-57-m-blue",
+      "sku": "RL-SH-057-M-BLUE",
+      "size": "Medium",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 175,
+      "stock": 3,
+      "image": "/images/products/shirts/product-57.jpg"
+    },
+    {
+      "id": "var-57-m-white",
+      "sku": "RL-SH-057-M-WHITE",
+      "size": "Medium",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 175,
+      "stock": 3,
+      "image": "/images/products/shirts/product-57.jpg"
+    },
+    {
+      "id": "var-57-l-blue",
+      "sku": "RL-SH-057-L-BLUE",
+      "size": "Large",
+      "color": "Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 175,
+      "stock": 3,
+      "image": "/images/products/shirts/product-57.jpg"
+    },
+    {
+      "id": "var-57-l-white",
+      "sku": "RL-SH-057-L-WHITE",
+      "size": "Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 175,
+      "stock": 3,
+      "image": "/images/products/shirts/product-57.jpg"
+    }
+  ]
+},
+{
+  "id": 58,
+  "slug": "gucci-crisp-pinstripe-executive-shirt",
+  "title": "Gucci Crisp Pinstripe Executive Shirt",
+  "description": "Refined boardroom elegance featuring subtle navy micro-stripes, point collar, and custom horn buttons with Gucci engraving.",
+  "brand": "Gucci",
+  "category": "shirts",
+  "subcategory": "formal",
+  "gender": "men",
+  "srcUrl": "/images/products/shirts/product-58.jpg",
+  "gallery": [
+    "/images/products/shirts/product-58.jpg",
+    "/images/products/shirts/product-58-1.jpg"
+  ],
+  "price": 520,
+  "originalPrice": 520,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.9,
+  "reviewCount": 35,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Navy",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    },
+    {
+      "id": "white",
+      "name": "White",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "100% Sea Island Cotton",
+  "careInstructions": "Dry clean or warm iron",
+  "fit": "Tailored Fit",
+  "pattern": "Striped",
+  "style": "Formal",
+  "tags": [
+    "gucci",
+    "pinstripe",
+    "executive",
+    "luxury",
+    "formal"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": false,
+  "stock": 15,
+  "sku": "GC-SH-058",
+  "createdAt": "2024-03-01",
+  "variants": [
+    {
+      "id": "var-58-s-blue",
+      "sku": "GC-SH-058-S-BLUE",
+      "size": "Small",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 520,
+      "stock": 1,
+      "image": "/images/products/shirts/product-58.jpg"
+    },
+    {
+      "id": "var-58-s-white",
+      "sku": "GC-SH-058-S-WHITE",
+      "size": "Small",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 520,
+      "stock": 1,
+      "image": "/images/products/shirts/product-58.jpg"
+    },
+    {
+      "id": "var-58-m-blue",
+      "sku": "GC-SH-058-M-BLUE",
+      "size": "Medium",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 520,
+      "stock": 1,
+      "image": "/images/products/shirts/product-58.jpg"
+    },
+    {
+      "id": "var-58-m-white",
+      "sku": "GC-SH-058-M-WHITE",
+      "size": "Medium",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 520,
+      "stock": 1,
+      "image": "/images/products/shirts/product-58.jpg"
+    },
+    {
+      "id": "var-58-l-blue",
+      "sku": "GC-SH-058-L-BLUE",
+      "size": "Large",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 520,
+      "stock": 1,
+      "image": "/images/products/shirts/product-58.jpg"
+    },
+    {
+      "id": "var-58-l-white",
+      "sku": "GC-SH-058-L-WHITE",
+      "size": "Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 520,
+      "stock": 1,
+      "image": "/images/products/shirts/product-58.jpg"
+    },
+    {
+      "id": "var-58-xl-blue",
+      "sku": "GC-SH-058-XL-BLUE",
+      "size": "X-Large",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 520,
+      "stock": 1,
+      "image": "/images/products/shirts/product-58.jpg"
+    },
+    {
+      "id": "var-58-xl-white",
+      "sku": "GC-SH-058-XL-WHITE",
+      "size": "X-Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 520,
+      "stock": 1,
+      "image": "/images/products/shirts/product-58.jpg"
+    }
+  ]
+},
+{
+  "id": 59,
+  "slug": "luxe-mandarin-collar-linen-shirt",
+  "title": "LUXE Mandarin Collar Linen Shirt",
+  "description": "Sleek collarless silhouette made from airy Belgian linen. Designed with clean French seams and minimalist concealed placket.",
+  "brand": "LUXE Studio",
+  "category": "shirts",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/shirts/product-59.jpg",
+  "gallery": [
+    "/images/products/shirts/product-59.jpg",
+    "/images/products/shirts/product-59-1.jpg"
+  ],
+  "price": 140,
+  "originalPrice": 175,
+  "discount": {
+    "amount": 35,
+    "percentage": 20
+  },
+  "rating": 4.7,
+  "reviewCount": 51,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "white",
+      "name": "White",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    },
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Belgian Linen",
+  "careInstructions": "Machine wash cold, hang dry",
+  "fit": "Regular Fit",
+  "pattern": "Solid",
+  "style": "Formal",
+  "tags": [
+    "mandarin collar",
+    "linen",
+    "smart casual",
+    "luxe studio"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 26,
+  "sku": "LX-SH-059",
+  "createdAt": "2024-03-04",
+  "variants": [
+    {
+      "id": "var-59-s-white",
+      "sku": "LX-SH-059-S-WHITE",
+      "size": "Small",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 140,
+      "stock": 3,
+      "image": "/images/products/shirts/product-59.jpg"
+    },
+    {
+      "id": "var-59-s-black",
+      "sku": "LX-SH-059-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 140,
+      "stock": 3,
+      "image": "/images/products/shirts/product-59.jpg"
+    },
+    {
+      "id": "var-59-m-white",
+      "sku": "LX-SH-059-M-WHITE",
+      "size": "Medium",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 140,
+      "stock": 3,
+      "image": "/images/products/shirts/product-59.jpg"
+    },
+    {
+      "id": "var-59-m-black",
+      "sku": "LX-SH-059-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 140,
+      "stock": 3,
+      "image": "/images/products/shirts/product-59.jpg"
+    },
+    {
+      "id": "var-59-l-white",
+      "sku": "LX-SH-059-L-WHITE",
+      "size": "Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 140,
+      "stock": 3,
+      "image": "/images/products/shirts/product-59.jpg"
+    },
+    {
+      "id": "var-59-l-black",
+      "sku": "LX-SH-059-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 140,
+      "stock": 3,
+      "image": "/images/products/shirts/product-59.jpg"
+    },
+    {
+      "id": "var-59-xl-white",
+      "sku": "LX-SH-059-XL-WHITE",
+      "size": "X-Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 140,
+      "stock": 3,
+      "image": "/images/products/shirts/product-59.jpg"
+    },
+    {
+      "id": "var-59-xl-black",
+      "sku": "LX-SH-059-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 140,
+      "stock": 3,
+      "image": "/images/products/shirts/product-59.jpg"
+    }
+  ]
+},
+{
+  "id": 60,
+  "slug": "zara-satin-draped-evening-blouse",
+  "title": "Zara Satin Draped Evening Blouse",
+  "description": "Lustrous high-shine satin shirt with exaggerated cuffs and fluid cowl drape. A versatile statement for cocktail evenings.",
+  "brand": "Zara",
+  "category": "shirts",
+  "subcategory": "formal",
+  "gender": "women",
+  "srcUrl": "/images/products/shirts/product-60.jpg",
+  "gallery": [
+    "/images/products/shirts/product-60.jpg",
+    "/images/products/shirts/product-60-1.jpg"
+  ],
+  "price": 95,
+  "originalPrice": 95,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.6,
+  "reviewCount": 62,
+  "sizes": [
+    {
+      "id": "xs",
+      "name": "X-Small",
+      "label": "XS"
+    },
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "pink",
+      "name": "Rose",
+      "code": "bg-[#ec4899]",
+      "hex": "#ec4899"
+    },
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "97% Polyester Satin, 3% Elastane",
+  "careInstructions": "Gentle machine wash inside a laundry bag",
+  "fit": "Regular Fit",
+  "pattern": "Solid",
+  "style": "Party",
+  "tags": [
+    "satin",
+    "blouse",
+    "evening",
+    "party",
+    "draped"
+  ],
+  "isNew": false,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 33,
+  "sku": "ZR-SH-060",
+  "createdAt": "2024-02-14",
+  "variants": [
+    {
+      "id": "var-60-xs-pink",
+      "sku": "ZR-SH-060-XS-PINK",
+      "size": "X-Small",
+      "color": "Rose",
+      "colorCode": "bg-[#ec4899]",
+      "price": 95,
+      "stock": 4,
+      "image": "/images/products/shirts/product-60.jpg"
+    },
+    {
+      "id": "var-60-xs-black",
+      "sku": "ZR-SH-060-XS-BLACK",
+      "size": "X-Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 95,
+      "stock": 4,
+      "image": "/images/products/shirts/product-60.jpg"
+    },
+    {
+      "id": "var-60-s-pink",
+      "sku": "ZR-SH-060-S-PINK",
+      "size": "Small",
+      "color": "Rose",
+      "colorCode": "bg-[#ec4899]",
+      "price": 95,
+      "stock": 4,
+      "image": "/images/products/shirts/product-60.jpg"
+    },
+    {
+      "id": "var-60-s-black",
+      "sku": "ZR-SH-060-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 95,
+      "stock": 4,
+      "image": "/images/products/shirts/product-60.jpg"
+    },
+    {
+      "id": "var-60-m-pink",
+      "sku": "ZR-SH-060-M-PINK",
+      "size": "Medium",
+      "color": "Rose",
+      "colorCode": "bg-[#ec4899]",
+      "price": 95,
+      "stock": 4,
+      "image": "/images/products/shirts/product-60.jpg"
+    },
+    {
+      "id": "var-60-m-black",
+      "sku": "ZR-SH-060-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 95,
+      "stock": 4,
+      "image": "/images/products/shirts/product-60.jpg"
+    },
+    {
+      "id": "var-60-l-pink",
+      "sku": "ZR-SH-060-L-PINK",
+      "size": "Large",
+      "color": "Rose",
+      "colorCode": "bg-[#ec4899]",
+      "price": 95,
+      "stock": 4,
+      "image": "/images/products/shirts/product-60.jpg"
+    },
+    {
+      "id": "var-60-l-black",
+      "sku": "ZR-SH-060-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 95,
+      "stock": 4,
+      "image": "/images/products/shirts/product-60.jpg"
+    }
+  ]
+},
+{
+  "id": 61,
+  "slug": "shopsphere-utility-multi-pocket-overshirt",
+  "title": "ShopSphere Utility Multi-Pocket Overshirt",
+  "description": "Rugged military-inspired cotton twill overshirt with dual accordion flap pockets and reinforced elbow patches.",
+  "brand": "ShopSphere",
+  "category": "shirts",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/shirts/product-61.jpg",
+  "gallery": [
+    "/images/products/shirts/product-61.jpg",
+    "/images/products/shirts/product-61-1.jpg"
+  ],
+  "price": 130,
+  "originalPrice": 155,
+  "discount": {
+    "amount": 25,
+    "percentage": 16
+  },
+  "rating": 4.7,
+  "reviewCount": 44,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "green",
+      "name": "Olive",
+      "code": "bg-[#16a34a]",
+      "hex": "#16a34a"
+    },
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Heavy Cotton Twill",
+  "careInstructions": "Machine wash warm, tumble dry low",
+  "fit": "Relaxed Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "overshirt",
+    "utility",
+    "shacket",
+    "workwear",
+    "casual"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 29,
+  "sku": "SS-SH-061",
+  "createdAt": "2024-03-02",
+  "variants": [
+    {
+      "id": "var-61-s-green",
+      "sku": "SS-SH-061-S-GREEN",
+      "size": "Small",
+      "color": "Olive",
+      "colorCode": "bg-[#16a34a]",
+      "price": 130,
+      "stock": 3,
+      "image": "/images/products/shirts/product-61.jpg"
+    },
+    {
+      "id": "var-61-s-black",
+      "sku": "SS-SH-061-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 130,
+      "stock": 3,
+      "image": "/images/products/shirts/product-61.jpg"
+    },
+    {
+      "id": "var-61-m-green",
+      "sku": "SS-SH-061-M-GREEN",
+      "size": "Medium",
+      "color": "Olive",
+      "colorCode": "bg-[#16a34a]",
+      "price": 130,
+      "stock": 3,
+      "image": "/images/products/shirts/product-61.jpg"
+    },
+    {
+      "id": "var-61-m-black",
+      "sku": "SS-SH-061-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 130,
+      "stock": 3,
+      "image": "/images/products/shirts/product-61.jpg"
+    },
+    {
+      "id": "var-61-l-green",
+      "sku": "SS-SH-061-L-GREEN",
+      "size": "Large",
+      "color": "Olive",
+      "colorCode": "bg-[#16a34a]",
+      "price": 130,
+      "stock": 3,
+      "image": "/images/products/shirts/product-61.jpg"
+    },
+    {
+      "id": "var-61-l-black",
+      "sku": "SS-SH-061-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 130,
+      "stock": 3,
+      "image": "/images/products/shirts/product-61.jpg"
+    },
+    {
+      "id": "var-61-xl-green",
+      "sku": "SS-SH-061-XL-GREEN",
+      "size": "X-Large",
+      "color": "Olive",
+      "colorCode": "bg-[#16a34a]",
+      "price": 130,
+      "stock": 3,
+      "image": "/images/products/shirts/product-61.jpg"
+    },
+    {
+      "id": "var-61-xl-black",
+      "sku": "SS-SH-061-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 130,
+      "stock": 3,
+      "image": "/images/products/shirts/product-61.jpg"
+    }
+  ]
+},
+{
+  "id": 62,
+  "slug": "calvin-klein-flannel-brushed-plaid-overshirt",
+  "title": "Calvin Klein Flannel Brushed Plaid Overshirt",
+  "description": "Double-brushed cotton flannel offering sublime warmth and softness. Features a yarn-dyed shadow plaid check pattern.",
+  "brand": "Calvin Klein",
+  "category": "shirts",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/shirts/product-62.jpg",
+  "gallery": [
+    "/images/products/shirts/product-62.jpg",
+    "/images/products/shirts/product-62-1.jpg"
+  ],
+  "price": 145,
+  "originalPrice": 145,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.8,
+  "reviewCount": 57,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "red",
+      "name": "Burgundy",
+      "code": "bg-[#dc2626]",
+      "hex": "#dc2626"
+    },
+    {
+      "id": "blue",
+      "name": "Navy",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    }
+  ],
+  "material": "100% Brushed Cotton Flannel",
+  "careInstructions": "Machine wash cold with like colors",
+  "fit": "Regular Fit",
+  "pattern": "Plaid",
+  "style": "Casual",
+  "tags": [
+    "flannel",
+    "plaid",
+    "calvin klein",
+    "warm",
+    "winter"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 21,
+  "sku": "CK-SH-062",
+  "createdAt": "2024-01-10",
+  "variants": [
+    {
+      "id": "var-62-s-red",
+      "sku": "CK-SH-062-S-RED",
+      "size": "Small",
+      "color": "Burgundy",
+      "colorCode": "bg-[#dc2626]",
+      "price": 145,
+      "stock": 2,
+      "image": "/images/products/shirts/product-62.jpg"
+    },
+    {
+      "id": "var-62-s-blue",
+      "sku": "CK-SH-062-S-BLUE",
+      "size": "Small",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 145,
+      "stock": 2,
+      "image": "/images/products/shirts/product-62.jpg"
+    },
+    {
+      "id": "var-62-m-red",
+      "sku": "CK-SH-062-M-RED",
+      "size": "Medium",
+      "color": "Burgundy",
+      "colorCode": "bg-[#dc2626]",
+      "price": 145,
+      "stock": 2,
+      "image": "/images/products/shirts/product-62.jpg"
+    },
+    {
+      "id": "var-62-m-blue",
+      "sku": "CK-SH-062-M-BLUE",
+      "size": "Medium",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 145,
+      "stock": 2,
+      "image": "/images/products/shirts/product-62.jpg"
+    },
+    {
+      "id": "var-62-l-red",
+      "sku": "CK-SH-062-L-RED",
+      "size": "Large",
+      "color": "Burgundy",
+      "colorCode": "bg-[#dc2626]",
+      "price": 145,
+      "stock": 2,
+      "image": "/images/products/shirts/product-62.jpg"
+    },
+    {
+      "id": "var-62-l-blue",
+      "sku": "CK-SH-062-L-BLUE",
+      "size": "Large",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 145,
+      "stock": 2,
+      "image": "/images/products/shirts/product-62.jpg"
+    },
+    {
+      "id": "var-62-xl-red",
+      "sku": "CK-SH-062-XL-RED",
+      "size": "X-Large",
+      "color": "Burgundy",
+      "colorCode": "bg-[#dc2626]",
+      "price": 145,
+      "stock": 2,
+      "image": "/images/products/shirts/product-62.jpg"
+    },
+    {
+      "id": "var-62-xl-blue",
+      "sku": "CK-SH-062-XL-BLUE",
+      "size": "X-Large",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 145,
+      "stock": 2,
+      "image": "/images/products/shirts/product-62.jpg"
+    }
+  ]
+},
+{
+  "id": 63,
+  "slug": "versace-cuban-collar-printed-short-sleeve",
+  "title": "Versace Cuban Collar Printed Short-Sleeve",
+  "description": "Vibrant high-contrast baroque print adorned on fluid viscose. Cut with a boxy silhouette and vintage open Cuban collar.",
+  "brand": "Versace",
+  "category": "shirts",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/shirts/product-63.jpg",
+  "gallery": [
+    "/images/products/shirts/product-63.jpg",
+    "/images/products/shirts/product-63-1.jpg"
+  ],
+  "price": 490,
+  "originalPrice": 590,
+  "discount": {
+    "amount": 100,
+    "percentage": 17
+  },
+  "rating": 4.9,
+  "reviewCount": 27,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black / Gold",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Fluid Viscose",
+  "careInstructions": "Dry clean only",
+  "fit": "Boxy Fit",
+  "pattern": "Graphic",
+  "style": "Party",
+  "tags": [
+    "versace",
+    "cuban collar",
+    "printed",
+    "party",
+    "resort"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": true,
+  "stock": 13,
+  "sku": "VS-SH-063",
+  "createdAt": "2024-03-09",
+  "variants": [
+    {
+      "id": "var-63-s-black",
+      "sku": "VS-SH-063-S-BLACK",
+      "size": "Small",
+      "color": "Black / Gold",
+      "colorCode": "bg-black",
+      "price": 490,
+      "stock": 4,
+      "image": "/images/products/shirts/product-63.jpg"
+    },
+    {
+      "id": "var-63-m-black",
+      "sku": "VS-SH-063-M-BLACK",
+      "size": "Medium",
+      "color": "Black / Gold",
+      "colorCode": "bg-black",
+      "price": 490,
+      "stock": 4,
+      "image": "/images/products/shirts/product-63.jpg"
+    },
+    {
+      "id": "var-63-l-black",
+      "sku": "VS-SH-063-L-BLACK",
+      "size": "Large",
+      "color": "Black / Gold",
+      "colorCode": "bg-black",
+      "price": 490,
+      "stock": 4,
+      "image": "/images/products/shirts/product-63.jpg"
+    }
+  ]
+},
+{
+  "id": 64,
+  "slug": "prada-formal-spread-collar-tuxedo-shirt",
+  "title": "Prada Formal Spread Collar Tuxedo Shirt",
+  "description": "Black-tie perfection with bib-pleated front panel, French cuffs, and detachable studs for white-tie and gala dressing.",
+  "brand": "Prada",
+  "category": "shirts",
+  "subcategory": "formal",
+  "gender": "men",
+  "srcUrl": "/images/products/shirts/product-64.jpg",
+  "gallery": [
+    "/images/products/shirts/product-64.jpg",
+    "/images/products/shirts/product-64-1.jpg"
+  ],
+  "price": 580,
+  "originalPrice": 580,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.9,
+  "reviewCount": 33,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "white",
+      "name": "White",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "100% Giza Cotton Poplin",
+  "careInstructions": "Professional dry clean only",
+  "fit": "Slim Fit",
+  "pattern": "Solid",
+  "style": "Formal",
+  "tags": [
+    "tuxedo",
+    "black tie",
+    "gala",
+    "prada",
+    "formal"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": false,
+  "stock": 10,
+  "sku": "PR-SH-064",
+  "createdAt": "2024-01-05",
+  "variants": [
+    {
+      "id": "var-64-s-white",
+      "sku": "PR-SH-064-S-WHITE",
+      "size": "Small",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 580,
+      "stock": 2,
+      "image": "/images/products/shirts/product-64.jpg"
+    },
+    {
+      "id": "var-64-m-white",
+      "sku": "PR-SH-064-M-WHITE",
+      "size": "Medium",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 580,
+      "stock": 2,
+      "image": "/images/products/shirts/product-64.jpg"
+    },
+    {
+      "id": "var-64-l-white",
+      "sku": "PR-SH-064-L-WHITE",
+      "size": "Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 580,
+      "stock": 2,
+      "image": "/images/products/shirts/product-64.jpg"
+    },
+    {
+      "id": "var-64-xl-white",
+      "sku": "PR-SH-064-XL-WHITE",
+      "size": "X-Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 580,
+      "stock": 2,
+      "image": "/images/products/shirts/product-64.jpg"
+    }
+  ]
+},
+{
+  "id": 65,
+  "slug": "zara-high-waisted-wide-leg-rigid-jeans",
+  "title": "Zara High-Waisted Wide Leg Rigid Jeans",
+  "description": "Retro 70s-inspired architectural wide-leg cut in 100% non-stretch authentic vintage denim. Hugs high at the waist with sweeping volume.",
+  "brand": "Zara",
+  "category": "jeans",
+  "subcategory": "casual",
+  "gender": "women",
+  "srcUrl": "/images/products/jeans/product-65.jpg",
+  "gallery": [
+    "/images/products/jeans/product-65.jpg",
+    "/images/products/jeans/product-65-1.jpg"
+  ],
+  "price": 110,
+  "originalPrice": 110,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.7,
+  "reviewCount": 82,
+  "sizes": [
+    {
+      "id": "26",
+      "name": "26",
+      "label": "26"
+    },
+    {
+      "id": "28",
+      "name": "28",
+      "label": "28"
+    },
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "label": "32"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Light Blue",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    }
+  ],
+  "material": "100% Cotton Rigid Denim",
+  "careInstructions": "Machine wash cold inside out, line dry",
+  "fit": "Wide Leg",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "wide leg",
+    "high waist",
+    "rigid denim",
+    "retro",
+    "zara"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 35,
+  "sku": "ZR-JN-065",
+  "createdAt": "2024-03-01",
+  "variants": [
+    {
+      "id": "var-65-26-blue",
+      "sku": "ZR-JN-065-26-BLUE",
+      "size": "26",
+      "color": "Light Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 110,
+      "stock": 8,
+      "image": "/images/products/jeans/product-65.jpg"
+    },
+    {
+      "id": "var-65-28-blue",
+      "sku": "ZR-JN-065-28-BLUE",
+      "size": "28",
+      "color": "Light Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 110,
+      "stock": 8,
+      "image": "/images/products/jeans/product-65.jpg"
+    },
+    {
+      "id": "var-65-30-blue",
+      "sku": "ZR-JN-065-30-BLUE",
+      "size": "30",
+      "color": "Light Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 110,
+      "stock": 8,
+      "image": "/images/products/jeans/product-65.jpg"
+    },
+    {
+      "id": "var-65-32-blue",
+      "sku": "ZR-JN-065-32-BLUE",
+      "size": "32",
+      "color": "Light Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 110,
+      "stock": 8,
+      "image": "/images/products/jeans/product-65.jpg"
+    }
+  ]
+},
+{
+  "id": 66,
+  "slug": "shopsphere-selvedge-raw-denim-slim-jeans",
+  "title": "ShopSphere Selvedge Raw Denim Slim Jeans",
+  "description": "Crafted on vintage shuttle looms from 14 oz red-line Japanese selvedge denim. Develops unique personalized fades over time.",
+  "brand": "ShopSphere",
+  "category": "jeans",
+  "subcategory": "skinny",
+  "gender": "men",
+  "srcUrl": "/images/products/jeans/product-66.jpg",
+  "gallery": [
+    "/images/products/jeans/product-66.jpg",
+    "/images/products/jeans/product-66-1.jpg"
+  ],
+  "price": 210,
+  "originalPrice": 250,
+  "discount": {
+    "amount": 40,
+    "percentage": 16
+  },
+  "rating": 4.9,
+  "reviewCount": 65,
+  "sizes": [
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "label": "32"
+    },
+    {
+      "id": "34",
+      "name": "34",
+      "label": "34"
+    },
+    {
+      "id": "36",
+      "name": "36",
+      "label": "36"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Indigo",
+      "code": "bg-[#31344F]",
+      "hex": "#31344F"
+    }
+  ],
+  "material": "100% Japanese Selvedge Cotton",
+  "careInstructions": "Wash infrequently, soak in cold water",
+  "fit": "Slim Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "selvedge",
+    "raw denim",
+    "japanese denim",
+    "indigo"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 20,
+  "sku": "SS-JN-066",
+  "createdAt": "2024-01-18",
+  "variants": [
+    {
+      "id": "var-66-30-blue",
+      "sku": "SS-JN-066-30-BLUE",
+      "size": "30",
+      "color": "Indigo",
+      "colorCode": "bg-[#31344F]",
+      "price": 210,
+      "stock": 5,
+      "image": "/images/products/jeans/product-66.jpg"
+    },
+    {
+      "id": "var-66-32-blue",
+      "sku": "SS-JN-066-32-BLUE",
+      "size": "32",
+      "color": "Indigo",
+      "colorCode": "bg-[#31344F]",
+      "price": 210,
+      "stock": 5,
+      "image": "/images/products/jeans/product-66.jpg"
+    },
+    {
+      "id": "var-66-34-blue",
+      "sku": "SS-JN-066-34-BLUE",
+      "size": "34",
+      "color": "Indigo",
+      "colorCode": "bg-[#31344F]",
+      "price": 210,
+      "stock": 5,
+      "image": "/images/products/jeans/product-66.jpg"
+    },
+    {
+      "id": "var-66-36-blue",
+      "sku": "SS-JN-066-36-BLUE",
+      "size": "36",
+      "color": "Indigo",
+      "colorCode": "bg-[#31344F]",
+      "price": 210,
+      "stock": 5,
+      "image": "/images/products/jeans/product-66.jpg"
+    }
+  ]
+},
+{
+  "id": 67,
+  "slug": "versace-distressed-tapered-biker-jeans",
+  "title": "Versace Distressed Tapered Biker Jeans",
+  "description": "Bold Italian attitude with rib-quilted knee panels, zippered ankle gussets, and gold-finish Medusa rivets on washed black denim.",
+  "brand": "Versace",
+  "category": "jeans",
+  "subcategory": "skinny",
+  "gender": "men",
+  "srcUrl": "/images/products/jeans/product-67.jpg",
+  "gallery": [
+    "/images/products/jeans/product-67.jpg",
+    "/images/products/jeans/product-67-1.jpg"
+  ],
+  "price": 590,
+  "originalPrice": 720,
+  "discount": {
+    "amount": 130,
+    "percentage": 18
+  },
+  "rating": 4.8,
+  "reviewCount": 38,
+  "sizes": [
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "label": "32"
+    },
+    {
+      "id": "34",
+      "name": "34",
+      "label": "34"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Washed Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "98% Cotton, 2% Elastane",
+  "careInstructions": "Machine wash cold gentle",
+  "fit": "Tapered Fit",
+  "pattern": "Distressed",
+  "style": "Party",
+  "tags": [
+    "versace",
+    "biker jeans",
+    "distressed",
+    "luxury",
+    "party"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": true,
+  "stock": 14,
+  "sku": "VS-JN-067",
+  "createdAt": "2024-03-07",
+  "variants": [
+    {
+      "id": "var-67-30-black",
+      "sku": "VS-JN-067-30-BLACK",
+      "size": "30",
+      "color": "Washed Black",
+      "colorCode": "bg-black",
+      "price": 590,
+      "stock": 4,
+      "image": "/images/products/jeans/product-67.jpg"
+    },
+    {
+      "id": "var-67-32-black",
+      "sku": "VS-JN-067-32-BLACK",
+      "size": "32",
+      "color": "Washed Black",
+      "colorCode": "bg-black",
+      "price": 590,
+      "stock": 4,
+      "image": "/images/products/jeans/product-67.jpg"
+    },
+    {
+      "id": "var-67-34-black",
+      "sku": "VS-JN-067-34-BLACK",
+      "size": "34",
+      "color": "Washed Black",
+      "colorCode": "bg-black",
+      "price": 590,
+      "stock": 4,
+      "image": "/images/products/jeans/product-67.jpg"
+    }
+  ]
+},
+{
+  "id": 68,
+  "slug": "calvin-klein-relaxed-90s-vintage-straight-jeans",
+  "title": "Calvin Klein Relaxed 90s Vintage Straight Jeans",
+  "description": "The definitive 90s aesthetic. Sits at the natural waist with an easy straight leg from thigh to hem in stonewashed blue denim.",
+  "brand": "Calvin Klein",
+  "category": "jeans",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/jeans/product-68.jpg",
+  "gallery": [
+    "/images/products/jeans/product-68.jpg",
+    "/images/products/jeans/product-68-1.jpg"
+  ],
+  "price": 165,
+  "originalPrice": 165,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.7,
+  "reviewCount": 91,
+  "sizes": [
+    {
+      "id": "28",
+      "name": "28",
+      "label": "28"
+    },
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "label": "32"
+    },
+    {
+      "id": "34",
+      "name": "34",
+      "label": "34"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Stonewash Blue",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    }
+  ],
+  "material": "100% Cotton",
+  "careInstructions": "Machine wash warm, tumble dry",
+  "fit": "Straight Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "90s",
+    "vintage",
+    "straight leg",
+    "calvin klein",
+    "stonewash"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 38,
+  "sku": "CK-JN-068",
+  "createdAt": "2024-02-01",
+  "variants": [
+    {
+      "id": "var-68-28-blue",
+      "sku": "CK-JN-068-28-BLUE",
+      "size": "28",
+      "color": "Stonewash Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 165,
+      "stock": 9,
+      "image": "/images/products/jeans/product-68.jpg"
+    },
+    {
+      "id": "var-68-30-blue",
+      "sku": "CK-JN-068-30-BLUE",
+      "size": "30",
+      "color": "Stonewash Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 165,
+      "stock": 9,
+      "image": "/images/products/jeans/product-68.jpg"
+    },
+    {
+      "id": "var-68-32-blue",
+      "sku": "CK-JN-068-32-BLUE",
+      "size": "32",
+      "color": "Stonewash Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 165,
+      "stock": 9,
+      "image": "/images/products/jeans/product-68.jpg"
+    },
+    {
+      "id": "var-68-34-blue",
+      "sku": "CK-JN-068-34-BLUE",
+      "size": "34",
+      "color": "Stonewash Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 165,
+      "stock": 9,
+      "image": "/images/products/jeans/product-68.jpg"
+    }
+  ]
+},
+{
+  "id": 69,
+  "slug": "saint-laurent-jet-black-coated-skinny-jeans",
+  "title": "Saint Laurent Jet Black Coated Skinny Jeans",
+  "description": "Rock-and-roll icon. Ultra-slim skinny jeans finished with a wax-coated sheen resembling second-skin leather.",
+  "brand": "Saint Laurent",
+  "category": "jeans",
+  "subcategory": "skinny",
+  "gender": "women",
+  "srcUrl": "/images/products/jeans/product-69.jpg",
+  "gallery": [
+    "/images/products/jeans/product-69.jpg",
+    "/images/products/jeans/product-69-1.jpg"
+  ],
+  "price": 690,
+  "originalPrice": 850,
+  "discount": {
+    "amount": 160,
+    "percentage": 19
+  },
+  "rating": 4.9,
+  "reviewCount": 42,
+  "sizes": [
+    {
+      "id": "25",
+      "name": "25",
+      "label": "25"
+    },
+    {
+      "id": "26",
+      "name": "26",
+      "label": "26"
+    },
+    {
+      "id": "27",
+      "name": "27",
+      "label": "27"
+    },
+    {
+      "id": "28",
+      "name": "28",
+      "label": "28"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Waxed Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "95% Cotton, 5% Polyurethane",
+  "careInstructions": "Specialist clean only",
+  "fit": "Skinny Fit",
+  "pattern": "Solid",
+  "style": "Party",
+  "tags": [
+    "saint laurent",
+    "coated",
+    "skinny",
+    "leather look",
+    "party"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": true,
+  "stock": 12,
+  "sku": "SL-JN-069",
+  "createdAt": "2024-03-02",
+  "variants": [
+    {
+      "id": "var-69-25-black",
+      "sku": "SL-JN-069-25-BLACK",
+      "size": "25",
+      "color": "Waxed Black",
+      "colorCode": "bg-black",
+      "price": 690,
+      "stock": 3,
+      "image": "/images/products/jeans/product-69.jpg"
+    },
+    {
+      "id": "var-69-26-black",
+      "sku": "SL-JN-069-26-BLACK",
+      "size": "26",
+      "color": "Waxed Black",
+      "colorCode": "bg-black",
+      "price": 690,
+      "stock": 3,
+      "image": "/images/products/jeans/product-69.jpg"
+    },
+    {
+      "id": "var-69-27-black",
+      "sku": "SL-JN-069-27-BLACK",
+      "size": "27",
+      "color": "Waxed Black",
+      "colorCode": "bg-black",
+      "price": 690,
+      "stock": 3,
+      "image": "/images/products/jeans/product-69.jpg"
+    },
+    {
+      "id": "var-69-28-black",
+      "sku": "SL-JN-069-28-BLACK",
+      "size": "28",
+      "color": "Waxed Black",
+      "colorCode": "bg-black",
+      "price": 690,
+      "stock": 3,
+      "image": "/images/products/jeans/product-69.jpg"
+    }
+  ]
+},
+{
+  "id": 70,
+  "slug": "luxe-carpenter-heavyweight-denim-pants",
+  "title": "LUXE Carpenter Heavyweight Denim Pants",
+  "description": "Workwear utility upgraded with luxury tailoring. Dual utility side pockets, hammer loop, and triple-stitched felled seams.",
+  "brand": "LUXE Studio",
+  "category": "jeans",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/jeans/product-70.jpg",
+  "gallery": [
+    "/images/products/jeans/product-70.jpg",
+    "/images/products/jeans/product-70-1.jpg"
+  ],
+  "price": 185,
+  "originalPrice": 220,
+  "discount": {
+    "amount": 35,
+    "percentage": 16
+  },
+  "rating": 4.8,
+  "reviewCount": 54,
+  "sizes": [
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "label": "32"
+    },
+    {
+      "id": "34",
+      "name": "34",
+      "label": "34"
+    },
+    {
+      "id": "36",
+      "name": "36",
+      "label": "36"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Medium Wash",
+      "code": "bg-[#31344F]",
+      "hex": "#31344F"
+    }
+  ],
+  "material": "100% Cotton Denim",
+  "careInstructions": "Machine wash cold inside out",
+  "fit": "Relaxed Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "carpenter",
+    "workwear",
+    "utility",
+    "heavyweight",
+    "denim"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 27,
+  "sku": "LX-JN-070",
+  "createdAt": "2024-02-25",
+  "variants": [
+    {
+      "id": "var-70-30-blue",
+      "sku": "LX-JN-070-30-BLUE",
+      "size": "30",
+      "color": "Medium Wash",
+      "colorCode": "bg-[#31344F]",
+      "price": 185,
+      "stock": 6,
+      "image": "/images/products/jeans/product-70.jpg"
+    },
+    {
+      "id": "var-70-32-blue",
+      "sku": "LX-JN-070-32-BLUE",
+      "size": "32",
+      "color": "Medium Wash",
+      "colorCode": "bg-[#31344F]",
+      "price": 185,
+      "stock": 6,
+      "image": "/images/products/jeans/product-70.jpg"
+    },
+    {
+      "id": "var-70-34-blue",
+      "sku": "LX-JN-070-34-BLUE",
+      "size": "34",
+      "color": "Medium Wash",
+      "colorCode": "bg-[#31344F]",
+      "price": 185,
+      "stock": 6,
+      "image": "/images/products/jeans/product-70.jpg"
+    },
+    {
+      "id": "var-70-36-blue",
+      "sku": "LX-JN-070-36-BLUE",
+      "size": "36",
+      "color": "Medium Wash",
+      "colorCode": "bg-[#31344F]",
+      "price": 185,
+      "stock": 6,
+      "image": "/images/products/jeans/product-70.jpg"
+    }
+  ]
+},
+{
+  "id": 71,
+  "slug": "prada-flare-hem-flattering-stretch-jeans",
+  "title": "Prada Flare Hem Flattering Stretch Jeans",
+  "description": "Sartorial high-rise denim with a subtle flare from knee to hem that elongates the silhouette, finished with enameled triangle logo.",
+  "brand": "Prada",
+  "category": "jeans",
+  "subcategory": "casual",
+  "gender": "women",
+  "srcUrl": "/images/products/jeans/product-71.jpg",
+  "gallery": [
+    "/images/products/jeans/product-71.jpg",
+    "/images/products/jeans/product-71-1.jpg"
+  ],
+  "price": 620,
+  "originalPrice": 620,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.9,
+  "reviewCount": 36,
+  "sizes": [
+    {
+      "id": "26",
+      "name": "26",
+      "label": "26"
+    },
+    {
+      "id": "28",
+      "name": "28",
+      "label": "28"
+    },
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Deep Indigo",
+      "code": "bg-[#31344F]",
+      "hex": "#31344F"
+    }
+  ],
+  "material": "97% Cotton, 3% Elastane",
+  "careInstructions": "Machine wash cold delicate, hang dry",
+  "fit": "Flare",
+  "pattern": "Solid",
+  "style": "Formal",
+  "tags": [
+    "flare",
+    "prada",
+    "high rise",
+    "luxury",
+    "elongating"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": false,
+  "stock": 15,
+  "sku": "PR-JN-071",
+  "createdAt": "2024-01-30",
+  "variants": [
+    {
+      "id": "var-71-26-blue",
+      "sku": "PR-JN-071-26-BLUE",
+      "size": "26",
+      "color": "Deep Indigo",
+      "colorCode": "bg-[#31344F]",
+      "price": 620,
+      "stock": 5,
+      "image": "/images/products/jeans/product-71.jpg"
+    },
+    {
+      "id": "var-71-28-blue",
+      "sku": "PR-JN-071-28-BLUE",
+      "size": "28",
+      "color": "Deep Indigo",
+      "colorCode": "bg-[#31344F]",
+      "price": 620,
+      "stock": 5,
+      "image": "/images/products/jeans/product-71.jpg"
+    },
+    {
+      "id": "var-71-30-blue",
+      "sku": "PR-JN-071-30-BLUE",
+      "size": "30",
+      "color": "Deep Indigo",
+      "colorCode": "bg-[#31344F]",
+      "price": 620,
+      "stock": 5,
+      "image": "/images/products/jeans/product-71.jpg"
+    }
+  ]
+},
+{
+  "id": 72,
+  "slug": "zara-light-wash-slouchy-boyfriend-jeans",
+  "title": "Zara Light Wash Slouchy Boyfriend Jeans",
+  "description": "Relaxed slouchy cut with cuffed ankles and subtle whisker fading across the lap. Soft cotton with broken-in softness.",
+  "brand": "Zara",
+  "category": "jeans",
+  "subcategory": "casual",
+  "gender": "women",
+  "srcUrl": "/images/products/jeans/product-72.jpg",
+  "gallery": [
+    "/images/products/jeans/product-72.jpg",
+    "/images/products/jeans/product-72-1.jpg"
+  ],
+  "price": 90,
+  "originalPrice": 90,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.6,
+  "reviewCount": 77,
+  "sizes": [
+    {
+      "id": "26",
+      "name": "26",
+      "label": "26"
+    },
+    {
+      "id": "28",
+      "name": "28",
+      "label": "28"
+    },
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "label": "32"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Light Wash",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    }
+  ],
+  "material": "100% BCI Cotton",
+  "careInstructions": "Machine wash warm, tumble dry",
+  "fit": "Boyfriend Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "boyfriend",
+    "light wash",
+    "slouchy",
+    "casual",
+    "zara"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 44,
+  "sku": "ZR-JN-072",
+  "createdAt": "2024-03-03",
+  "variants": [
+    {
+      "id": "var-72-26-blue",
+      "sku": "ZR-JN-072-26-BLUE",
+      "size": "26",
+      "color": "Light Wash",
+      "colorCode": "bg-[#2563eb]",
+      "price": 90,
+      "stock": 11,
+      "image": "/images/products/jeans/product-72.jpg"
+    },
+    {
+      "id": "var-72-28-blue",
+      "sku": "ZR-JN-072-28-BLUE",
+      "size": "28",
+      "color": "Light Wash",
+      "colorCode": "bg-[#2563eb]",
+      "price": 90,
+      "stock": 11,
+      "image": "/images/products/jeans/product-72.jpg"
+    },
+    {
+      "id": "var-72-30-blue",
+      "sku": "ZR-JN-072-30-BLUE",
+      "size": "30",
+      "color": "Light Wash",
+      "colorCode": "bg-[#2563eb]",
+      "price": 90,
+      "stock": 11,
+      "image": "/images/products/jeans/product-72.jpg"
+    },
+    {
+      "id": "var-72-32-blue",
+      "sku": "ZR-JN-072-32-BLUE",
+      "size": "32",
+      "color": "Light Wash",
+      "colorCode": "bg-[#2563eb]",
+      "price": 90,
+      "stock": 11,
+      "image": "/images/products/jeans/product-72.jpg"
+    }
+  ]
+},
+{
+  "id": 73,
+  "slug": "shopsphere-japanese-denim-straight-leg",
+  "title": "ShopSphere Japanese Denim Straight Leg",
+  "description": "Minimalist purity. Clean lines, zero distressing, and premium 13.5 oz kurashiki denim dyed in deep vegetable indigo.",
+  "brand": "ShopSphere",
+  "category": "jeans",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/jeans/product-73.jpg",
+  "gallery": [
+    "/images/products/jeans/product-73.jpg",
+    "/images/products/jeans/product-73-1.jpg"
+  ],
+  "price": 195,
+  "originalPrice": 230,
+  "discount": {
+    "amount": 35,
+    "percentage": 15
+  },
+  "rating": 4.8,
+  "reviewCount": 49,
+  "sizes": [
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "label": "32"
+    },
+    {
+      "id": "34",
+      "name": "34",
+      "label": "34"
+    },
+    {
+      "id": "36",
+      "name": "36",
+      "label": "36"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Dark Indigo",
+      "code": "bg-[#31344F]",
+      "hex": "#31344F"
+    }
+  ],
+  "material": "100% Cotton",
+  "careInstructions": "Cold wash inside out",
+  "fit": "Straight Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "japanese denim",
+    "minimalist",
+    "straight leg",
+    "raw"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 22,
+  "sku": "SS-JN-073",
+  "createdAt": "2024-02-12",
+  "variants": [
+    {
+      "id": "var-73-30-blue",
+      "sku": "SS-JN-073-30-BLUE",
+      "size": "30",
+      "color": "Dark Indigo",
+      "colorCode": "bg-[#31344F]",
+      "price": 195,
+      "stock": 5,
+      "image": "/images/products/jeans/product-73.jpg"
+    },
+    {
+      "id": "var-73-32-blue",
+      "sku": "SS-JN-073-32-BLUE",
+      "size": "32",
+      "color": "Dark Indigo",
+      "colorCode": "bg-[#31344F]",
+      "price": 195,
+      "stock": 5,
+      "image": "/images/products/jeans/product-73.jpg"
+    },
+    {
+      "id": "var-73-34-blue",
+      "sku": "SS-JN-073-34-BLUE",
+      "size": "34",
+      "color": "Dark Indigo",
+      "colorCode": "bg-[#31344F]",
+      "price": 195,
+      "stock": 5,
+      "image": "/images/products/jeans/product-73.jpg"
+    },
+    {
+      "id": "var-73-36-blue",
+      "sku": "SS-JN-073-36-BLUE",
+      "size": "36",
+      "color": "Dark Indigo",
+      "colorCode": "bg-[#31344F]",
+      "price": 195,
+      "stock": 5,
+      "image": "/images/products/jeans/product-73.jpg"
+    }
+  ]
+},
+{
+  "id": 74,
+  "slug": "luxe-acid-washed-baggy-skate-jeans",
+  "title": "LUXE Acid Washed Baggy Skate Jeans",
+  "description": "Exaggerated 90s skater proportions with an ultra-wide leg that stacks naturally over chunky sneakers or luxury boots.",
+  "brand": "LUXE Studio",
+  "category": "jeans",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/jeans/product-74.jpg",
+  "gallery": [
+    "/images/products/jeans/product-74.jpg",
+    "/images/products/jeans/product-74-1.jpg"
+  ],
+  "price": 170,
+  "originalPrice": 170,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.7,
+  "reviewCount": 58,
+  "sizes": [
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "label": "32"
+    },
+    {
+      "id": "34",
+      "name": "34",
+      "label": "34"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Acid Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Heavy Cotton",
+  "careInstructions": "Machine wash cold",
+  "fit": "Oversized Fit",
+  "pattern": "Washed",
+  "style": "Casual",
+  "tags": [
+    "baggy",
+    "skate",
+    "acid wash",
+    "streetwear",
+    "wide"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 31,
+  "sku": "LX-JN-074",
+  "createdAt": "2024-03-06",
+  "variants": [
+    {
+      "id": "var-74-30-black",
+      "sku": "LX-JN-074-30-BLACK",
+      "size": "30",
+      "color": "Acid Black",
+      "colorCode": "bg-black",
+      "price": 170,
+      "stock": 10,
+      "image": "/images/products/jeans/product-74.jpg"
+    },
+    {
+      "id": "var-74-32-black",
+      "sku": "LX-JN-074-32-BLACK",
+      "size": "32",
+      "color": "Acid Black",
+      "colorCode": "bg-black",
+      "price": 170,
+      "stock": 10,
+      "image": "/images/products/jeans/product-74.jpg"
+    },
+    {
+      "id": "var-74-34-black",
+      "sku": "LX-JN-074-34-BLACK",
+      "size": "34",
+      "color": "Acid Black",
+      "colorCode": "bg-black",
+      "price": 170,
+      "stock": 10,
+      "image": "/images/products/jeans/product-74.jpg"
+    }
+  ]
+},
+{
+  "id": 75,
+  "slug": "calvin-klein-mid-rise-classic-bootcut-jeans",
+  "title": "Calvin Klein Mid-Rise Classic Bootcut Jeans",
+  "description": "Flattering mid-rise with a gentle bootcut hem that pairs seamlessly with heels or boots. Sculpting stretch denim retain its shape.",
+  "brand": "Calvin Klein",
+  "category": "jeans",
+  "subcategory": "casual",
+  "gender": "women",
+  "srcUrl": "/images/products/jeans/product-75.jpg",
+  "gallery": [
+    "/images/products/jeans/product-75.jpg",
+    "/images/products/jeans/product-75-1.jpg"
+  ],
+  "price": 155,
+  "originalPrice": 185,
+  "discount": {
+    "amount": 30,
+    "percentage": 16
+  },
+  "rating": 4.6,
+  "reviewCount": 64,
+  "sizes": [
+    {
+      "id": "26",
+      "name": "26",
+      "label": "26"
+    },
+    {
+      "id": "28",
+      "name": "28",
+      "label": "28"
+    },
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Medium Blue",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    }
+  ],
+  "material": "92% Cotton, 6% Poly, 2% Elastane",
+  "careInstructions": "Machine wash cold, tumble dry low",
+  "fit": "Bootcut",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "bootcut",
+    "calvin klein",
+    "mid rise",
+    "classic"
+  ],
+  "isNew": false,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 25,
+  "sku": "CK-JN-075",
+  "createdAt": "2024-01-22",
+  "variants": [
+    {
+      "id": "var-75-26-blue",
+      "sku": "CK-JN-075-26-BLUE",
+      "size": "26",
+      "color": "Medium Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 155,
+      "stock": 8,
+      "image": "/images/products/jeans/product-75.jpg"
+    },
+    {
+      "id": "var-75-28-blue",
+      "sku": "CK-JN-075-28-BLUE",
+      "size": "28",
+      "color": "Medium Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 155,
+      "stock": 8,
+      "image": "/images/products/jeans/product-75.jpg"
+    },
+    {
+      "id": "var-75-30-blue",
+      "sku": "CK-JN-075-30-BLUE",
+      "size": "30",
+      "color": "Medium Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 155,
+      "stock": 8,
+      "image": "/images/products/jeans/product-75.jpg"
+    }
+  ]
+},
+{
+  "id": 76,
+  "slug": "zara-cropped-ankle-stretch-denim",
+  "title": "Zara Cropped Ankle Stretch Denim",
+  "description": "Ankle-skimming slim jeans crafted with flexible recovery stretch. Styled with clean tonal stitching and brushed nickel hardware.",
+  "brand": "Zara",
+  "category": "jeans",
+  "subcategory": "skinny",
+  "gender": "women",
+  "srcUrl": "/images/products/jeans/product-76.jpg",
+  "gallery": [
+    "/images/products/jeans/product-76.jpg",
+    "/images/products/jeans/product-76-1.jpg"
+  ],
+  "price": 85,
+  "originalPrice": 85,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.5,
+  "reviewCount": 53,
+  "sizes": [
+    {
+      "id": "26",
+      "name": "26",
+      "label": "26"
+    },
+    {
+      "id": "28",
+      "name": "28",
+      "label": "28"
+    },
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    }
+  ],
+  "colors": [
+    {
+      "id": "white",
+      "name": "Optic White",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "98% Cotton, 2% Spandex",
+  "careInstructions": "Machine wash warm with like whites",
+  "fit": "Slim Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "white jeans",
+    "cropped",
+    "ankle",
+    "summer",
+    "zara"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": false,
+  "isOnSale": false,
+  "stock": 36,
+  "sku": "ZR-JN-076",
+  "createdAt": "2024-02-27",
+  "variants": [
+    {
+      "id": "var-76-26-white",
+      "sku": "ZR-JN-076-26-WHITE",
+      "size": "26",
+      "color": "Optic White",
+      "colorCode": "bg-white",
+      "price": 85,
+      "stock": 12,
+      "image": "/images/products/jeans/product-76.jpg"
+    },
+    {
+      "id": "var-76-28-white",
+      "sku": "ZR-JN-076-28-WHITE",
+      "size": "28",
+      "color": "Optic White",
+      "colorCode": "bg-white",
+      "price": 85,
+      "stock": 12,
+      "image": "/images/products/jeans/product-76.jpg"
+    },
+    {
+      "id": "var-76-30-white",
+      "sku": "ZR-JN-076-30-WHITE",
+      "size": "30",
+      "color": "Optic White",
+      "colorCode": "bg-white",
+      "price": 85,
+      "stock": 12,
+      "image": "/images/products/jeans/product-76.jpg"
+    }
+  ]
+},
+{
+  "id": 77,
+  "slug": "luxe-two-tone-panelled-denim-trousers",
+  "title": "LUXE Two-Tone Panelled Denim Trousers",
+  "description": "Runway-inspired design contrasting light and medium indigo denim panels down the exterior legs for a high-concept architectural effect.",
+  "brand": "LUXE Studio",
+  "category": "jeans",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/jeans/product-77.jpg",
+  "gallery": [
+    "/images/products/jeans/product-77.jpg",
+    "/images/products/jeans/product-77-1.jpg"
+  ],
+  "price": 240,
+  "originalPrice": 300,
+  "discount": {
+    "amount": 60,
+    "percentage": 20
+  },
+  "rating": 4.8,
+  "reviewCount": 31,
+  "sizes": [
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "label": "32"
+    },
+    {
+      "id": "34",
+      "name": "34",
+      "label": "34"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Dual Indigo",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    }
+  ],
+  "material": "100% Cotton",
+  "careInstructions": "Dry clean or gentle cold wash",
+  "fit": "Straight Fit",
+  "pattern": "Panels",
+  "style": "Party",
+  "tags": [
+    "two tone",
+    "panelled",
+    "designer",
+    "runway",
+    "statement"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": true,
+  "stock": 18,
+  "sku": "LX-JN-077",
+  "createdAt": "2024-03-08",
+  "variants": [
+    {
+      "id": "var-77-30-blue",
+      "sku": "LX-JN-077-30-BLUE",
+      "size": "30",
+      "color": "Dual Indigo",
+      "colorCode": "bg-[#2563eb]",
+      "price": 240,
+      "stock": 6,
+      "image": "/images/products/jeans/product-77.jpg"
+    },
+    {
+      "id": "var-77-32-blue",
+      "sku": "LX-JN-077-32-BLUE",
+      "size": "32",
+      "color": "Dual Indigo",
+      "colorCode": "bg-[#2563eb]",
+      "price": 240,
+      "stock": 6,
+      "image": "/images/products/jeans/product-77.jpg"
+    },
+    {
+      "id": "var-77-34-blue",
+      "sku": "LX-JN-077-34-BLUE",
+      "size": "34",
+      "color": "Dual Indigo",
+      "colorCode": "bg-[#2563eb]",
+      "price": 240,
+      "stock": 6,
+      "image": "/images/products/jeans/product-77.jpg"
+    }
+  ]
+},
+{
+  "id": 78,
+  "slug": "shopsphere-stretch-athletic-comfort-jeans",
+  "title": "ShopSphere Stretch Athletic Comfort Jeans",
+  "description": "Designed for muscular athletic builds with extra room in the seat and thighs tapering down to a clean 14-inch leg opening.",
+  "brand": "ShopSphere",
+  "category": "jeans",
+  "subcategory": "skinny",
+  "gender": "men",
+  "srcUrl": "/images/products/jeans/product-78.jpg",
+  "gallery": [
+    "/images/products/jeans/product-78.jpg",
+    "/images/products/jeans/product-78-1.jpg"
+  ],
+  "price": 140,
+  "originalPrice": 140,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.7,
+  "reviewCount": 69,
+  "sizes": [
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "label": "32"
+    },
+    {
+      "id": "34",
+      "name": "34",
+      "label": "34"
+    },
+    {
+      "id": "36",
+      "name": "36",
+      "label": "36"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Dark Blue",
+      "code": "bg-[#31344F]",
+      "hex": "#31344F"
+    },
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "94% Cotton, 5% Poly, 1% Spandex",
+  "careInstructions": "Machine wash warm, tumble dry",
+  "fit": "Athletic Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "athletic fit",
+    "comfort stretch",
+    "everyday",
+    "shopsphere"
+  ],
+  "isNew": false,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 40,
+  "sku": "SS-JN-078",
+  "createdAt": "2024-01-25",
+  "variants": [
+    {
+      "id": "var-78-30-blue",
+      "sku": "SS-JN-078-30-BLUE",
+      "size": "30",
+      "color": "Dark Blue",
+      "colorCode": "bg-[#31344F]",
+      "price": 140,
+      "stock": 5,
+      "image": "/images/products/jeans/product-78.jpg"
+    },
+    {
+      "id": "var-78-30-black",
+      "sku": "SS-JN-078-30-BLACK",
+      "size": "30",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 140,
+      "stock": 5,
+      "image": "/images/products/jeans/product-78.jpg"
+    },
+    {
+      "id": "var-78-32-blue",
+      "sku": "SS-JN-078-32-BLUE",
+      "size": "32",
+      "color": "Dark Blue",
+      "colorCode": "bg-[#31344F]",
+      "price": 140,
+      "stock": 5,
+      "image": "/images/products/jeans/product-78.jpg"
+    },
+    {
+      "id": "var-78-32-black",
+      "sku": "SS-JN-078-32-BLACK",
+      "size": "32",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 140,
+      "stock": 5,
+      "image": "/images/products/jeans/product-78.jpg"
+    },
+    {
+      "id": "var-78-34-blue",
+      "sku": "SS-JN-078-34-BLUE",
+      "size": "34",
+      "color": "Dark Blue",
+      "colorCode": "bg-[#31344F]",
+      "price": 140,
+      "stock": 5,
+      "image": "/images/products/jeans/product-78.jpg"
+    },
+    {
+      "id": "var-78-34-black",
+      "sku": "SS-JN-078-34-BLACK",
+      "size": "34",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 140,
+      "stock": 5,
+      "image": "/images/products/jeans/product-78.jpg"
+    },
+    {
+      "id": "var-78-36-blue",
+      "sku": "SS-JN-078-36-BLUE",
+      "size": "36",
+      "color": "Dark Blue",
+      "colorCode": "bg-[#31344F]",
+      "price": 140,
+      "stock": 5,
+      "image": "/images/products/jeans/product-78.jpg"
+    },
+    {
+      "id": "var-78-36-black",
+      "sku": "SS-JN-078-36-BLACK",
+      "size": "36",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 140,
+      "stock": 5,
+      "image": "/images/products/jeans/product-78.jpg"
+    }
+  ]
+},
+{
+  "id": 79,
+  "slug": "prada-pleated-tailored-wool-trousers",
+  "title": "Prada Pleated Tailored Wool Trousers",
+  "description": "Tailored in Biella from Super 130s virgin wool. Features sharp double reverse pleats, side adjusters, and a clean tapered hem.",
+  "brand": "Prada",
+  "category": "pants",
+  "subcategory": "formal",
+  "gender": "men",
+  "srcUrl": "/images/products/pants/product-79.jpg",
+  "gallery": [
+    "/images/products/pants/product-79.jpg",
+    "/images/products/pants/product-79-1.jpg"
+  ],
+  "price": 720,
+  "originalPrice": 720,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.9,
+  "reviewCount": 45,
+  "sizes": [
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "label": "32"
+    },
+    {
+      "id": "34",
+      "name": "34",
+      "label": "34"
+    },
+    {
+      "id": "36",
+      "name": "36",
+      "label": "36"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Charcoal",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Super 130s Virgin Wool",
+  "careInstructions": "Professional dry clean only",
+  "fit": "Tailored Fit",
+  "pattern": "Solid",
+  "style": "Formal",
+  "tags": [
+    "prada",
+    "wool",
+    "pleated",
+    "trousers",
+    "formal",
+    "luxury"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 15,
+  "sku": "PR-PT-079",
+  "createdAt": "2024-03-01",
+  "variants": [
+    {
+      "id": "var-79-30-black",
+      "sku": "PR-PT-079-30-BLACK",
+      "size": "30",
+      "color": "Charcoal",
+      "colorCode": "bg-black",
+      "price": 720,
+      "stock": 3,
+      "image": "/images/products/pants/product-79.jpg"
+    },
+    {
+      "id": "var-79-32-black",
+      "sku": "PR-PT-079-32-BLACK",
+      "size": "32",
+      "color": "Charcoal",
+      "colorCode": "bg-black",
+      "price": 720,
+      "stock": 3,
+      "image": "/images/products/pants/product-79.jpg"
+    },
+    {
+      "id": "var-79-34-black",
+      "sku": "PR-PT-079-34-BLACK",
+      "size": "34",
+      "color": "Charcoal",
+      "colorCode": "bg-black",
+      "price": 720,
+      "stock": 3,
+      "image": "/images/products/pants/product-79.jpg"
+    },
+    {
+      "id": "var-79-36-black",
+      "sku": "PR-PT-079-36-BLACK",
+      "size": "36",
+      "color": "Charcoal",
+      "colorCode": "bg-black",
+      "price": 720,
+      "stock": 3,
+      "image": "/images/products/pants/product-79.jpg"
+    }
+  ]
+},
+{
+  "id": 80,
+  "slug": "gucci-high-rise-wide-leg-palazzo-pants",
+  "title": "Gucci High-Rise Wide-Leg Palazzo Pants",
+  "description": "Fluid cady silk trousers that create majestic movement with every step. Embellished with horsebit metal detail at the waistband.",
+  "brand": "Gucci",
+  "category": "pants",
+  "subcategory": "formal",
+  "gender": "women",
+  "srcUrl": "/images/products/pants/product-80.jpg",
+  "gallery": [
+    "/images/products/pants/product-80.jpg",
+    "/images/products/pants/product-80-1.jpg"
+  ],
+  "price": 850,
+  "originalPrice": 1050,
+  "discount": {
+    "amount": 200,
+    "percentage": 19
+  },
+  "rating": 4.9,
+  "reviewCount": 26,
+  "sizes": [
+    {
+      "id": "xs",
+      "name": "X-Small",
+      "label": "XS"
+    },
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    }
+  ],
+  "colors": [
+    {
+      "id": "white",
+      "name": "Ivory",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    },
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "60% Silk, 40% Wool Cady",
+  "careInstructions": "Dry clean only",
+  "fit": "Wide Leg",
+  "pattern": "Solid",
+  "style": "Formal",
+  "tags": [
+    "gucci",
+    "palazzo",
+    "silk",
+    "high rise",
+    "luxury"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": true,
+  "stock": 8,
+  "sku": "GC-PT-080",
+  "createdAt": "2024-01-14",
+  "variants": [
+    {
+      "id": "var-80-xs-white",
+      "sku": "GC-PT-080-XS-WHITE",
+      "size": "X-Small",
+      "color": "Ivory",
+      "colorCode": "bg-white",
+      "price": 850,
+      "stock": 1,
+      "image": "/images/products/pants/product-80.jpg"
+    },
+    {
+      "id": "var-80-xs-black",
+      "sku": "GC-PT-080-XS-BLACK",
+      "size": "X-Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 850,
+      "stock": 1,
+      "image": "/images/products/pants/product-80.jpg"
+    },
+    {
+      "id": "var-80-s-white",
+      "sku": "GC-PT-080-S-WHITE",
+      "size": "Small",
+      "color": "Ivory",
+      "colorCode": "bg-white",
+      "price": 850,
+      "stock": 1,
+      "image": "/images/products/pants/product-80.jpg"
+    },
+    {
+      "id": "var-80-s-black",
+      "sku": "GC-PT-080-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 850,
+      "stock": 1,
+      "image": "/images/products/pants/product-80.jpg"
+    },
+    {
+      "id": "var-80-m-white",
+      "sku": "GC-PT-080-M-WHITE",
+      "size": "Medium",
+      "color": "Ivory",
+      "colorCode": "bg-white",
+      "price": 850,
+      "stock": 1,
+      "image": "/images/products/pants/product-80.jpg"
+    },
+    {
+      "id": "var-80-m-black",
+      "sku": "GC-PT-080-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 850,
+      "stock": 1,
+      "image": "/images/products/pants/product-80.jpg"
+    }
+  ]
+},
+{
+  "id": 81,
+  "slug": "luxe-relaxed-linen-drawstring-pants",
+  "title": "LUXE Relaxed Linen Drawstring Pants",
+  "description": "The epitome of resort sophistication. Breathable pre-washed pure flax linen with an elasticized drawstring waist and deep slash pockets.",
+  "brand": "LUXE Studio",
+  "category": "pants",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/pants/product-81.jpg",
+  "gallery": [
+    "/images/products/pants/product-81.jpg",
+    "/images/products/pants/product-81-1.jpg"
+  ],
+  "price": 150,
+  "originalPrice": 150,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.8,
+  "reviewCount": 71,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "white",
+      "name": "Sand",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "100% Pure Flax Linen",
+  "careInstructions": "Machine wash cold gentle, air dry",
+  "fit": "Relaxed Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "linen",
+    "drawstring",
+    "resort",
+    "relaxed",
+    "summer"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 35,
+  "sku": "LX-PT-081",
+  "createdAt": "2024-02-28",
+  "variants": [
+    {
+      "id": "var-81-s-white",
+      "sku": "LX-PT-081-S-WHITE",
+      "size": "Small",
+      "color": "Sand",
+      "colorCode": "bg-white",
+      "price": 150,
+      "stock": 8,
+      "image": "/images/products/pants/product-81.jpg"
+    },
+    {
+      "id": "var-81-m-white",
+      "sku": "LX-PT-081-M-WHITE",
+      "size": "Medium",
+      "color": "Sand",
+      "colorCode": "bg-white",
+      "price": 150,
+      "stock": 8,
+      "image": "/images/products/pants/product-81.jpg"
+    },
+    {
+      "id": "var-81-l-white",
+      "sku": "LX-PT-081-L-WHITE",
+      "size": "Large",
+      "color": "Sand",
+      "colorCode": "bg-white",
+      "price": 150,
+      "stock": 8,
+      "image": "/images/products/pants/product-81.jpg"
+    },
+    {
+      "id": "var-81-xl-white",
+      "sku": "LX-PT-081-XL-WHITE",
+      "size": "X-Large",
+      "color": "Sand",
+      "colorCode": "bg-white",
+      "price": 150,
+      "stock": 8,
+      "image": "/images/products/pants/product-81.jpg"
+    }
+  ]
+},
+{
+  "id": 82,
+  "slug": "calvin-klein-stretch-slim-fit-chino-pants",
+  "title": "Calvin Klein Stretch Slim-Fit Chino Pants",
+  "description": "Premium garment-dyed stretch cotton twill designed for seamless day-to-night versatility. Smooth flat front and welt back pockets.",
+  "brand": "Calvin Klein",
+  "category": "pants",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/pants/product-82.jpg",
+  "gallery": [
+    "/images/products/pants/product-82.jpg",
+    "/images/products/pants/product-82-1.jpg"
+  ],
+  "price": 120,
+  "originalPrice": 150,
+  "discount": {
+    "amount": 30,
+    "percentage": 20
+  },
+  "rating": 4.7,
+  "reviewCount": 88,
+  "sizes": [
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "label": "32"
+    },
+    {
+      "id": "34",
+      "name": "34",
+      "label": "34"
+    },
+    {
+      "id": "36",
+      "name": "36",
+      "label": "36"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Khaki",
+      "code": "bg-black",
+      "hex": "#000000"
+    },
+    {
+      "id": "blue",
+      "name": "Navy",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    }
+  ],
+  "material": "97% Cotton, 3% Elastane",
+  "careInstructions": "Machine wash warm, tumble dry",
+  "fit": "Slim Fit",
+  "pattern": "Solid",
+  "style": "Formal",
+  "tags": [
+    "chino",
+    "slim fit",
+    "calvin klein",
+    "smart casual",
+    "versatile"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 45,
+  "sku": "CK-PT-082",
+  "createdAt": "2024-01-20",
+  "variants": [
+    {
+      "id": "var-82-30-black",
+      "sku": "CK-PT-082-30-BLACK",
+      "size": "30",
+      "color": "Khaki",
+      "colorCode": "bg-black",
+      "price": 120,
+      "stock": 5,
+      "image": "/images/products/pants/product-82.jpg"
+    },
+    {
+      "id": "var-82-30-blue",
+      "sku": "CK-PT-082-30-BLUE",
+      "size": "30",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 120,
+      "stock": 5,
+      "image": "/images/products/pants/product-82.jpg"
+    },
+    {
+      "id": "var-82-32-black",
+      "sku": "CK-PT-082-32-BLACK",
+      "size": "32",
+      "color": "Khaki",
+      "colorCode": "bg-black",
+      "price": 120,
+      "stock": 5,
+      "image": "/images/products/pants/product-82.jpg"
+    },
+    {
+      "id": "var-82-32-blue",
+      "sku": "CK-PT-082-32-BLUE",
+      "size": "32",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 120,
+      "stock": 5,
+      "image": "/images/products/pants/product-82.jpg"
+    },
+    {
+      "id": "var-82-34-black",
+      "sku": "CK-PT-082-34-BLACK",
+      "size": "34",
+      "color": "Khaki",
+      "colorCode": "bg-black",
+      "price": 120,
+      "stock": 5,
+      "image": "/images/products/pants/product-82.jpg"
+    },
+    {
+      "id": "var-82-34-blue",
+      "sku": "CK-PT-082-34-BLUE",
+      "size": "34",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 120,
+      "stock": 5,
+      "image": "/images/products/pants/product-82.jpg"
+    },
+    {
+      "id": "var-82-36-black",
+      "sku": "CK-PT-082-36-BLACK",
+      "size": "36",
+      "color": "Khaki",
+      "colorCode": "bg-black",
+      "price": 120,
+      "stock": 5,
+      "image": "/images/products/pants/product-82.jpg"
+    },
+    {
+      "id": "var-82-36-blue",
+      "sku": "CK-PT-082-36-BLUE",
+      "size": "36",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 120,
+      "stock": 5,
+      "image": "/images/products/pants/product-82.jpg"
+    }
+  ]
+},
+{
+  "id": 83,
+  "slug": "shopsphere-tech-utility-tactical-cargo-pants",
+  "title": "ShopSphere Tech Utility Tactical Cargo Pants",
+  "description": "Modern streetwear silhouette equipped with six ergonomic snap pockets, D-ring attachment, and toggle bungee cord cuffs.",
+  "brand": "ShopSphere",
+  "category": "pants",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/pants/product-83.jpg",
+  "gallery": [
+    "/images/products/pants/product-83.jpg",
+    "/images/products/pants/product-83-1.jpg"
+  ],
+  "price": 135,
+  "originalPrice": 135,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.7,
+  "reviewCount": 63,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    },
+    {
+      "id": "green",
+      "name": "Olive",
+      "code": "bg-[#16a34a]",
+      "hex": "#16a34a"
+    }
+  ],
+  "material": "100% Water-Resistant Ripstop Nylon",
+  "careInstructions": "Machine wash cold",
+  "fit": "Relaxed Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "cargo",
+    "tactical",
+    "techwear",
+    "streetwear",
+    "ripstop"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 30,
+  "sku": "SS-PT-083",
+  "createdAt": "2024-03-05",
+  "variants": [
+    {
+      "id": "var-83-s-black",
+      "sku": "SS-PT-083-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 135,
+      "stock": 3,
+      "image": "/images/products/pants/product-83.jpg"
+    },
+    {
+      "id": "var-83-s-green",
+      "sku": "SS-PT-083-S-GREEN",
+      "size": "Small",
+      "color": "Olive",
+      "colorCode": "bg-[#16a34a]",
+      "price": 135,
+      "stock": 3,
+      "image": "/images/products/pants/product-83.jpg"
+    },
+    {
+      "id": "var-83-m-black",
+      "sku": "SS-PT-083-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 135,
+      "stock": 3,
+      "image": "/images/products/pants/product-83.jpg"
+    },
+    {
+      "id": "var-83-m-green",
+      "sku": "SS-PT-083-M-GREEN",
+      "size": "Medium",
+      "color": "Olive",
+      "colorCode": "bg-[#16a34a]",
+      "price": 135,
+      "stock": 3,
+      "image": "/images/products/pants/product-83.jpg"
+    },
+    {
+      "id": "var-83-l-black",
+      "sku": "SS-PT-083-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 135,
+      "stock": 3,
+      "image": "/images/products/pants/product-83.jpg"
+    },
+    {
+      "id": "var-83-l-green",
+      "sku": "SS-PT-083-L-GREEN",
+      "size": "Large",
+      "color": "Olive",
+      "colorCode": "bg-[#16a34a]",
+      "price": 135,
+      "stock": 3,
+      "image": "/images/products/pants/product-83.jpg"
+    },
+    {
+      "id": "var-83-xl-black",
+      "sku": "SS-PT-083-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 135,
+      "stock": 3,
+      "image": "/images/products/pants/product-83.jpg"
+    },
+    {
+      "id": "var-83-xl-green",
+      "sku": "SS-PT-083-XL-GREEN",
+      "size": "X-Large",
+      "color": "Olive",
+      "colorCode": "bg-[#16a34a]",
+      "price": 135,
+      "stock": 3,
+      "image": "/images/products/pants/product-83.jpg"
+    }
+  ]
+},
+{
+  "id": 84,
+  "slug": "zara-tailored-cigarette-ankle-pants",
+  "title": "Zara Tailored Cigarette Ankle Pants",
+  "description": "Sleek tailored trousers with pressed front creases and concealed zip fly. Cut to graze right at the ankle bone.",
+  "brand": "Zara",
+  "category": "pants",
+  "subcategory": "formal",
+  "gender": "women",
+  "srcUrl": "/images/products/pants/product-84.jpg",
+  "gallery": [
+    "/images/products/pants/product-84.jpg",
+    "/images/products/pants/product-84-1.jpg"
+  ],
+  "price": 95,
+  "originalPrice": 95,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.6,
+  "reviewCount": 57,
+  "sizes": [
+    {
+      "id": "xs",
+      "name": "X-Small",
+      "label": "XS"
+    },
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "64% Polyester, 32% Viscose, 4% Elastane",
+  "careInstructions": "Machine wash cold gentle",
+  "fit": "Slim Fit",
+  "pattern": "Solid",
+  "style": "Formal",
+  "tags": [
+    "cigarette pants",
+    "tailored",
+    "office",
+    "formal",
+    "zara"
+  ],
+  "isNew": false,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 40,
+  "sku": "ZR-PT-084",
+  "createdAt": "2024-02-16",
+  "variants": [
+    {
+      "id": "var-84-xs-black",
+      "sku": "ZR-PT-084-XS-BLACK",
+      "size": "X-Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 95,
+      "stock": 10,
+      "image": "/images/products/pants/product-84.jpg"
+    },
+    {
+      "id": "var-84-s-black",
+      "sku": "ZR-PT-084-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 95,
+      "stock": 10,
+      "image": "/images/products/pants/product-84.jpg"
+    },
+    {
+      "id": "var-84-m-black",
+      "sku": "ZR-PT-084-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 95,
+      "stock": 10,
+      "image": "/images/products/pants/product-84.jpg"
+    },
+    {
+      "id": "var-84-l-black",
+      "sku": "ZR-PT-084-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 95,
+      "stock": 10,
+      "image": "/images/products/pants/product-84.jpg"
+    }
+  ]
+},
+{
+  "id": 85,
+  "slug": "prada-wool-blend-houndstooth-dress-pants",
+  "title": "Prada Wool-Blend Houndstooth Dress Pants",
+  "description": "Heritage pattern rendered with contemporary Italian precision. Micro houndstooth motif on woven wool-silk twill.",
+  "brand": "Prada",
+  "category": "pants",
+  "subcategory": "formal",
+  "gender": "men",
+  "srcUrl": "/images/products/pants/product-85.jpg",
+  "gallery": [
+    "/images/products/pants/product-85.jpg",
+    "/images/products/pants/product-85-1.jpg"
+  ],
+  "price": 680,
+  "originalPrice": 800,
+  "discount": {
+    "amount": 120,
+    "percentage": 15
+  },
+  "rating": 4.9,
+  "reviewCount": 22,
+  "sizes": [
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "label": "32"
+    },
+    {
+      "id": "34",
+      "name": "34",
+      "label": "34"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black / Grey",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "85% Wool, 15% Silk",
+  "careInstructions": "Professional dry clean only",
+  "fit": "Classic Fit",
+  "pattern": "Houndstooth",
+  "style": "Formal",
+  "tags": [
+    "houndstooth",
+    "prada",
+    "wool",
+    "dress pants",
+    "luxury"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": true,
+  "stock": 11,
+  "sku": "PR-PT-085",
+  "createdAt": "2024-03-08",
+  "variants": [
+    {
+      "id": "var-85-30-black",
+      "sku": "PR-PT-085-30-BLACK",
+      "size": "30",
+      "color": "Black / Grey",
+      "colorCode": "bg-black",
+      "price": 680,
+      "stock": 3,
+      "image": "/images/products/pants/product-85.jpg"
+    },
+    {
+      "id": "var-85-32-black",
+      "sku": "PR-PT-085-32-BLACK",
+      "size": "32",
+      "color": "Black / Grey",
+      "colorCode": "bg-black",
+      "price": 680,
+      "stock": 3,
+      "image": "/images/products/pants/product-85.jpg"
+    },
+    {
+      "id": "var-85-34-black",
+      "sku": "PR-PT-085-34-BLACK",
+      "size": "34",
+      "color": "Black / Grey",
+      "colorCode": "bg-black",
+      "price": 680,
+      "stock": 3,
+      "image": "/images/products/pants/product-85.jpg"
+    }
+  ]
+},
+{
+  "id": 86,
+  "slug": "luxe-heavyweight-fleece-jogger-pants",
+  "title": "LUXE Heavyweight Fleece Jogger Pants",
+  "description": "450 GSM luxury brushed cotton fleece with elongated drawstrings, deep zip pockets, and thick ribbed ankle cuffs.",
+  "brand": "LUXE Studio",
+  "category": "pants",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/pants/product-86.jpg",
+  "gallery": [
+    "/images/products/pants/product-86.jpg",
+    "/images/products/pants/product-86-1.jpg"
+  ],
+  "price": 130,
+  "originalPrice": 130,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.8,
+  "reviewCount": 94,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Washed Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    },
+    {
+      "id": "white",
+      "name": "Cream",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "100% Heavyweight Cotton Fleece",
+  "careInstructions": "Machine wash cold inside out",
+  "fit": "Tapered Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "jogger",
+    "fleece",
+    "heavyweight",
+    "lounge",
+    "streetwear"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 36,
+  "sku": "LX-PT-086",
+  "createdAt": "2024-02-27",
+  "variants": [
+    {
+      "id": "var-86-s-black",
+      "sku": "LX-PT-086-S-BLACK",
+      "size": "Small",
+      "color": "Washed Black",
+      "colorCode": "bg-black",
+      "price": 130,
+      "stock": 4,
+      "image": "/images/products/pants/product-86.jpg"
+    },
+    {
+      "id": "var-86-s-white",
+      "sku": "LX-PT-086-S-WHITE",
+      "size": "Small",
+      "color": "Cream",
+      "colorCode": "bg-white",
+      "price": 130,
+      "stock": 4,
+      "image": "/images/products/pants/product-86.jpg"
+    },
+    {
+      "id": "var-86-m-black",
+      "sku": "LX-PT-086-M-BLACK",
+      "size": "Medium",
+      "color": "Washed Black",
+      "colorCode": "bg-black",
+      "price": 130,
+      "stock": 4,
+      "image": "/images/products/pants/product-86.jpg"
+    },
+    {
+      "id": "var-86-m-white",
+      "sku": "LX-PT-086-M-WHITE",
+      "size": "Medium",
+      "color": "Cream",
+      "colorCode": "bg-white",
+      "price": 130,
+      "stock": 4,
+      "image": "/images/products/pants/product-86.jpg"
+    },
+    {
+      "id": "var-86-l-black",
+      "sku": "LX-PT-086-L-BLACK",
+      "size": "Large",
+      "color": "Washed Black",
+      "colorCode": "bg-black",
+      "price": 130,
+      "stock": 4,
+      "image": "/images/products/pants/product-86.jpg"
+    },
+    {
+      "id": "var-86-l-white",
+      "sku": "LX-PT-086-L-WHITE",
+      "size": "Large",
+      "color": "Cream",
+      "colorCode": "bg-white",
+      "price": 130,
+      "stock": 4,
+      "image": "/images/products/pants/product-86.jpg"
+    },
+    {
+      "id": "var-86-xl-black",
+      "sku": "LX-PT-086-XL-BLACK",
+      "size": "X-Large",
+      "color": "Washed Black",
+      "colorCode": "bg-black",
+      "price": 130,
+      "stock": 4,
+      "image": "/images/products/pants/product-86.jpg"
+    },
+    {
+      "id": "var-86-xl-white",
+      "sku": "LX-PT-086-XL-WHITE",
+      "size": "X-Large",
+      "color": "Cream",
+      "colorCode": "bg-white",
+      "price": 130,
+      "stock": 4,
+      "image": "/images/products/pants/product-86.jpg"
+    }
+  ]
+},
+{
+  "id": 87,
+  "slug": "versace-premium-silk-wide-flowing-trousers",
+  "title": "Versace Premium Silk Wide Flowing Trousers",
+  "description": "Spectacular evening trousers crafted from pure Italian silk. Features an elasticized high-rise waistband and Barocco border trim.",
+  "brand": "Versace",
+  "category": "pants",
+  "subcategory": "formal",
+  "gender": "women",
+  "srcUrl": "/images/products/pants/product-87.jpg",
+  "gallery": [
+    "/images/products/pants/product-87.jpg",
+    "/images/products/pants/product-87-1.jpg"
+  ],
+  "price": 790,
+  "originalPrice": 950,
+  "discount": {
+    "amount": 160,
+    "percentage": 17
+  },
+  "rating": 4.9,
+  "reviewCount": 19,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black / Gold",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Italian Silk Twill",
+  "careInstructions": "Dry clean only",
+  "fit": "Wide Leg",
+  "pattern": "Graphic",
+  "style": "Party",
+  "tags": [
+    "versace",
+    "silk",
+    "evening",
+    "party",
+    "luxury",
+    "barocco"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": true,
+  "stock": 9,
+  "sku": "VS-PT-087",
+  "createdAt": "2024-03-10",
+  "variants": [
+    {
+      "id": "var-87-s-black",
+      "sku": "VS-PT-087-S-BLACK",
+      "size": "Small",
+      "color": "Black / Gold",
+      "colorCode": "bg-black",
+      "price": 790,
+      "stock": 3,
+      "image": "/images/products/pants/product-87.jpg"
+    },
+    {
+      "id": "var-87-m-black",
+      "sku": "VS-PT-087-M-BLACK",
+      "size": "Medium",
+      "color": "Black / Gold",
+      "colorCode": "bg-black",
+      "price": 790,
+      "stock": 3,
+      "image": "/images/products/pants/product-87.jpg"
+    },
+    {
+      "id": "var-87-l-black",
+      "sku": "VS-PT-087-L-BLACK",
+      "size": "Large",
+      "color": "Black / Gold",
+      "colorCode": "bg-black",
+      "price": 790,
+      "stock": 3,
+      "image": "/images/products/pants/product-87.jpg"
+    }
+  ]
+},
+{
+  "id": 88,
+  "slug": "shopsphere-active-stretch-performance-golf-pants",
+  "title": "ShopSphere Active Performance Golf Pants",
+  "description": "Engineered stretch woven fabric with water-repellent DWR coating, gripper waistband, and articulated knees.",
+  "brand": "ShopSphere",
+  "category": "pants",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/pants/product-88.jpg",
+  "gallery": [
+    "/images/products/pants/product-88.jpg",
+    "/images/products/pants/product-88-1.jpg"
+  ],
+  "price": 110,
+  "originalPrice": 110,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.7,
+  "reviewCount": 41,
+  "sizes": [
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "label": "32"
+    },
+    {
+      "id": "34",
+      "name": "34",
+      "label": "34"
+    },
+    {
+      "id": "36",
+      "name": "36",
+      "label": "36"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "90% Recycled Nylon, 10% Spandex",
+  "careInstructions": "Machine wash cold, tumble dry low",
+  "fit": "Slim Fit",
+  "pattern": "Solid",
+  "style": "Gym",
+  "tags": [
+    "golf",
+    "performance",
+    "gym",
+    "stretch",
+    "water repellent"
+  ],
+  "isNew": false,
+  "isFeatured": false,
+  "isBestSeller": false,
+  "isOnSale": false,
+  "stock": 28,
+  "sku": "SS-PT-088",
+  "createdAt": "2024-01-29",
+  "variants": [
+    {
+      "id": "var-88-30-black",
+      "sku": "SS-PT-088-30-BLACK",
+      "size": "30",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 110,
+      "stock": 7,
+      "image": "/images/products/pants/product-88.jpg"
+    },
+    {
+      "id": "var-88-32-black",
+      "sku": "SS-PT-088-32-BLACK",
+      "size": "32",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 110,
+      "stock": 7,
+      "image": "/images/products/pants/product-88.jpg"
+    },
+    {
+      "id": "var-88-34-black",
+      "sku": "SS-PT-088-34-BLACK",
+      "size": "34",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 110,
+      "stock": 7,
+      "image": "/images/products/pants/product-88.jpg"
+    },
+    {
+      "id": "var-88-36-black",
+      "sku": "SS-PT-088-36-BLACK",
+      "size": "36",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 110,
+      "stock": 7,
+      "image": "/images/products/pants/product-88.jpg"
+    }
+  ]
+},
+{
+  "id": 89,
+  "slug": "zara-cropped-flared-crepe-trousers",
+  "title": "Zara Cropped Flared Crepe Trousers",
+  "description": "Flowy textured crepe fabric cut in a modern flared crop. Elevates blouses and jackets with subtle Parisienne flair.",
+  "brand": "Zara",
+  "category": "pants",
+  "subcategory": "formal",
+  "gender": "women",
+  "srcUrl": "/images/products/pants/product-89.jpg",
+  "gallery": [
+    "/images/products/pants/product-89.jpg",
+    "/images/products/pants/product-89-1.jpg"
+  ],
+  "price": 85,
+  "originalPrice": 105,
+  "discount": {
+    "amount": 20,
+    "percentage": 19
+  },
+  "rating": 4.6,
+  "reviewCount": 52,
+  "sizes": [
+    {
+      "id": "xs",
+      "name": "X-Small",
+      "label": "XS"
+    },
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "white",
+      "name": "Ecru",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "100% Polyester Crepe",
+  "careInstructions": "Machine wash cold gentle",
+  "fit": "Flare",
+  "pattern": "Solid",
+  "style": "Formal",
+  "tags": [
+    "crepe",
+    "flared",
+    "cropped",
+    "smart casual",
+    "zara"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 33,
+  "sku": "ZR-PT-089",
+  "createdAt": "2024-02-20",
+  "variants": [
+    {
+      "id": "var-89-xs-white",
+      "sku": "ZR-PT-089-XS-WHITE",
+      "size": "X-Small",
+      "color": "Ecru",
+      "colorCode": "bg-white",
+      "price": 85,
+      "stock": 8,
+      "image": "/images/products/pants/product-89.jpg"
+    },
+    {
+      "id": "var-89-s-white",
+      "sku": "ZR-PT-089-S-WHITE",
+      "size": "Small",
+      "color": "Ecru",
+      "colorCode": "bg-white",
+      "price": 85,
+      "stock": 8,
+      "image": "/images/products/pants/product-89.jpg"
+    },
+    {
+      "id": "var-89-m-white",
+      "sku": "ZR-PT-089-M-WHITE",
+      "size": "Medium",
+      "color": "Ecru",
+      "colorCode": "bg-white",
+      "price": 85,
+      "stock": 8,
+      "image": "/images/products/pants/product-89.jpg"
+    },
+    {
+      "id": "var-89-l-white",
+      "sku": "ZR-PT-089-L-WHITE",
+      "size": "Large",
+      "color": "Ecru",
+      "colorCode": "bg-white",
+      "price": 85,
+      "stock": 8,
+      "image": "/images/products/pants/product-89.jpg"
+    }
+  ]
+},
+{
+  "id": 90,
+  "slug": "ralph-lauren-double-pleated-heritage-khakis",
+  "title": "Ralph Lauren Double-Pleated Heritage Khakis",
+  "description": "Traditional American tailoring cut from washed cotton chino cloth with vintage horn buttons and coin pocket.",
+  "brand": "Ralph Lauren",
+  "category": "pants",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/pants/product-90.jpg",
+  "gallery": [
+    "/images/products/pants/product-90.jpg",
+    "/images/products/pants/product-90-1.jpg"
+  ],
+  "price": 165,
+  "originalPrice": 165,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.8,
+  "reviewCount": 75,
+  "sizes": [
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "label": "32"
+    },
+    {
+      "id": "34",
+      "name": "34",
+      "label": "34"
+    },
+    {
+      "id": "36",
+      "name": "36",
+      "label": "36"
+    }
+  ],
+  "colors": [
+    {
+      "id": "yellow",
+      "name": "Classic Tan",
+      "code": "bg-[#facc15]",
+      "hex": "#facc15"
+    }
+  ],
+  "material": "100% Cotton Chino",
+  "careInstructions": "Machine wash warm, tumble dry",
+  "fit": "Classic Fit",
+  "pattern": "Solid",
+  "style": "Formal",
+  "tags": [
+    "khakis",
+    "pleated",
+    "ralph lauren",
+    "heritage",
+    "ivy"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 24,
+  "sku": "RL-PT-090",
+  "createdAt": "2024-01-18",
+  "variants": [
+    {
+      "id": "var-90-30-yellow",
+      "sku": "RL-PT-090-30-YELLOW",
+      "size": "30",
+      "color": "Classic Tan",
+      "colorCode": "bg-[#facc15]",
+      "price": 165,
+      "stock": 6,
+      "image": "/images/products/pants/product-90.jpg"
+    },
+    {
+      "id": "var-90-32-yellow",
+      "sku": "RL-PT-090-32-YELLOW",
+      "size": "32",
+      "color": "Classic Tan",
+      "colorCode": "bg-[#facc15]",
+      "price": 165,
+      "stock": 6,
+      "image": "/images/products/pants/product-90.jpg"
+    },
+    {
+      "id": "var-90-34-yellow",
+      "sku": "RL-PT-090-34-YELLOW",
+      "size": "34",
+      "color": "Classic Tan",
+      "colorCode": "bg-[#facc15]",
+      "price": 165,
+      "stock": 6,
+      "image": "/images/products/pants/product-90.jpg"
+    },
+    {
+      "id": "var-90-36-yellow",
+      "sku": "RL-PT-090-36-YELLOW",
+      "size": "36",
+      "color": "Classic Tan",
+      "colorCode": "bg-[#facc15]",
+      "price": 165,
+      "stock": 6,
+      "image": "/images/products/pants/product-90.jpg"
+    }
+  ]
+},
+{
+  "id": 91,
+  "slug": "luxe-elastic-waist-poplin-lounge-trousers",
+  "title": "LUXE Elastic Waist Poplin Lounge Trousers",
+  "description": "Crisp organic cotton poplin shaped into a relaxed, easy-wearing silhouette with an internal drawstring and clean hem.",
+  "brand": "LUXE Studio",
+  "category": "pants",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/pants/product-91.jpg",
+  "gallery": [
+    "/images/products/pants/product-91.jpg",
+    "/images/products/pants/product-91-1.jpg"
+  ],
+  "price": 125,
+  "originalPrice": 125,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.7,
+  "reviewCount": 39,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Organic Cotton Poplin",
+  "careInstructions": "Machine wash cold, line dry",
+  "fit": "Relaxed Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "poplin",
+    "lounge",
+    "elastic waist",
+    "comfortable"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": false,
+  "isOnSale": false,
+  "stock": 30,
+  "sku": "LX-PT-091",
+  "createdAt": "2024-03-04",
+  "variants": [
+    {
+      "id": "var-91-s-black",
+      "sku": "LX-PT-091-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 125,
+      "stock": 7,
+      "image": "/images/products/pants/product-91.jpg"
+    },
+    {
+      "id": "var-91-m-black",
+      "sku": "LX-PT-091-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 125,
+      "stock": 7,
+      "image": "/images/products/pants/product-91.jpg"
+    },
+    {
+      "id": "var-91-l-black",
+      "sku": "LX-PT-091-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 125,
+      "stock": 7,
+      "image": "/images/products/pants/product-91.jpg"
+    },
+    {
+      "id": "var-91-xl-black",
+      "sku": "LX-PT-091-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 125,
+      "stock": 7,
+      "image": "/images/products/pants/product-91.jpg"
+    }
+  ]
+},
+{
+  "id": 92,
+  "slug": "shopsphere-tapered-athletic-track-pants",
+  "title": "ShopSphere Tapered Athletic Track Pants",
+  "description": "Sleek poly-tricot track pants with contrast side striping and concealed ankle zippers for quick changing over training shoes.",
+  "brand": "ShopSphere",
+  "category": "pants",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/pants/product-92.jpg",
+  "gallery": [
+    "/images/products/pants/product-92.jpg",
+    "/images/products/pants/product-92-1.jpg"
+  ],
+  "price": 85,
+  "originalPrice": 105,
+  "discount": {
+    "amount": 20,
+    "percentage": 19
+  },
+  "rating": 4.6,
+  "reviewCount": 58,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black / White",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Poly Tricot",
+  "careInstructions": "Machine wash warm with like colors",
+  "fit": "Tapered Fit",
+  "pattern": "Striped",
+  "style": "Gym",
+  "tags": [
+    "track pants",
+    "athletic",
+    "gym",
+    "tapered",
+    "training"
+  ],
+  "isNew": false,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 37,
+  "sku": "SS-PT-092",
+  "createdAt": "2024-02-11",
+  "variants": [
+    {
+      "id": "var-92-s-black",
+      "sku": "SS-PT-092-S-BLACK",
+      "size": "Small",
+      "color": "Black / White",
+      "colorCode": "bg-black",
+      "price": 85,
+      "stock": 9,
+      "image": "/images/products/pants/product-92.jpg"
+    },
+    {
+      "id": "var-92-m-black",
+      "sku": "SS-PT-092-M-BLACK",
+      "size": "Medium",
+      "color": "Black / White",
+      "colorCode": "bg-black",
+      "price": 85,
+      "stock": 9,
+      "image": "/images/products/pants/product-92.jpg"
+    },
+    {
+      "id": "var-92-l-black",
+      "sku": "SS-PT-092-L-BLACK",
+      "size": "Large",
+      "color": "Black / White",
+      "colorCode": "bg-black",
+      "price": 85,
+      "stock": 9,
+      "image": "/images/products/pants/product-92.jpg"
+    },
+    {
+      "id": "var-92-xl-black",
+      "sku": "SS-PT-092-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black / White",
+      "colorCode": "bg-black",
+      "price": 85,
+      "stock": 9,
+      "image": "/images/products/pants/product-92.jpg"
+    }
+  ]
+},
+{
+  "id": 93,
+  "slug": "prada-satin-fluid-evening-trousers",
+  "title": "Prada Satin Fluid Evening Trousers",
+  "description": "Luxe high-waisted evening trousers in heavy silk satin that drape with liquid luster. Styled with tuxedo-inspired side stripes.",
+  "brand": "Prada",
+  "category": "pants",
+  "subcategory": "formal",
+  "gender": "women",
+  "srcUrl": "/images/products/pants/product-93.jpg",
+  "gallery": [
+    "/images/products/pants/product-93.jpg",
+    "/images/products/pants/product-93-1.jpg"
+  ],
+  "price": 760,
+  "originalPrice": 760,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.9,
+  "reviewCount": 23,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Midnight Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Heavy Silk Satin",
+  "careInstructions": "Dry clean only",
+  "fit": "Regular Fit",
+  "pattern": "Solid",
+  "style": "Party",
+  "tags": [
+    "satin",
+    "prada",
+    "evening",
+    "tuxedo",
+    "party",
+    "luxury"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": false,
+  "stock": 10,
+  "sku": "PR-PT-093",
+  "createdAt": "2024-03-06",
+  "variants": [
+    {
+      "id": "var-93-s-black",
+      "sku": "PR-PT-093-S-BLACK",
+      "size": "Small",
+      "color": "Midnight Black",
+      "colorCode": "bg-black",
+      "price": 760,
+      "stock": 3,
+      "image": "/images/products/pants/product-93.jpg"
+    },
+    {
+      "id": "var-93-m-black",
+      "sku": "PR-PT-093-M-BLACK",
+      "size": "Medium",
+      "color": "Midnight Black",
+      "colorCode": "bg-black",
+      "price": 760,
+      "stock": 3,
+      "image": "/images/products/pants/product-93.jpg"
+    },
+    {
+      "id": "var-93-l-black",
+      "sku": "PR-PT-093-L-BLACK",
+      "size": "Large",
+      "color": "Midnight Black",
+      "colorCode": "bg-black",
+      "price": 760,
+      "stock": 3,
+      "image": "/images/products/pants/product-93.jpg"
+    }
+  ]
+},
+{
+  "id": 94,
+  "slug": "calvin-klein-corduroy-relaxed-straight-trousers",
+  "title": "Calvin Klein Corduroy Relaxed Straight Trousers",
+  "description": "Fine 14-wale cotton corduroy offering plush velvety tactile texture and rich saturated color for transitional dressing.",
+  "brand": "Calvin Klein",
+  "category": "pants",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/pants/product-94.jpg",
+  "gallery": [
+    "/images/products/pants/product-94.jpg",
+    "/images/products/pants/product-94-1.jpg"
+  ],
+  "price": 140,
+  "originalPrice": 175,
+  "discount": {
+    "amount": 35,
+    "percentage": 20
+  },
+  "rating": 4.7,
+  "reviewCount": 47,
+  "sizes": [
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "label": "32"
+    },
+    {
+      "id": "34",
+      "name": "34",
+      "label": "34"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Espresso",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Cotton Corduroy",
+  "careInstructions": "Machine wash cold inside out, hang dry",
+  "fit": "Straight Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "corduroy",
+    "calvin klein",
+    "autumn",
+    "casual",
+    "textured"
+  ],
+  "isNew": false,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 22,
+  "sku": "CK-PT-094",
+  "createdAt": "2024-01-27",
+  "variants": [
+    {
+      "id": "var-94-30-black",
+      "sku": "CK-PT-094-30-BLACK",
+      "size": "30",
+      "color": "Espresso",
+      "colorCode": "bg-black",
+      "price": 140,
+      "stock": 7,
+      "image": "/images/products/pants/product-94.jpg"
+    },
+    {
+      "id": "var-94-32-black",
+      "sku": "CK-PT-094-32-BLACK",
+      "size": "32",
+      "color": "Espresso",
+      "colorCode": "bg-black",
+      "price": 140,
+      "stock": 7,
+      "image": "/images/products/pants/product-94.jpg"
+    },
+    {
+      "id": "var-94-34-black",
+      "sku": "CK-PT-094-34-BLACK",
+      "size": "34",
+      "color": "Espresso",
+      "colorCode": "bg-black",
+      "price": 140,
+      "stock": 7,
+      "image": "/images/products/pants/product-94.jpg"
+    }
+  ]
+},
+{
+  "id": 95,
+  "slug": "zara-tailored-linen-blend-pleated-shorts",
+  "title": "Zara Tailored Linen Blend Pleated Shorts",
+  "description": "Sophisticated warm-weather tailoring with single pleats, extended tab waistband, and a mid-thigh finish.",
+  "brand": "Zara",
+  "category": "shorts",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/shorts/product-95.jpg",
+  "gallery": [
+    "/images/products/shorts/product-95.jpg",
+    "/images/products/shorts/product-95-1.jpg"
+  ],
+  "price": 75,
+  "originalPrice": 75,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.6,
+  "reviewCount": 63,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "white",
+      "name": "Cream",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "55% Linen, 45% Cotton",
+  "careInstructions": "Machine wash cold gentle",
+  "fit": "Regular Fit",
+  "pattern": "Solid",
+  "style": "Formal",
+  "tags": [
+    "pleated",
+    "linen",
+    "smart casual",
+    "summer",
+    "zara"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 35,
+  "sku": "ZR-SR-095",
+  "createdAt": "2024-03-02",
+  "variants": [
+    {
+      "id": "var-95-s-white",
+      "sku": "ZR-SR-095-S-WHITE",
+      "size": "Small",
+      "color": "Cream",
+      "colorCode": "bg-white",
+      "price": 75,
+      "stock": 8,
+      "image": "/images/products/shorts/product-95.jpg"
+    },
+    {
+      "id": "var-95-m-white",
+      "sku": "ZR-SR-095-M-WHITE",
+      "size": "Medium",
+      "color": "Cream",
+      "colorCode": "bg-white",
+      "price": 75,
+      "stock": 8,
+      "image": "/images/products/shorts/product-95.jpg"
+    },
+    {
+      "id": "var-95-l-white",
+      "sku": "ZR-SR-095-L-WHITE",
+      "size": "Large",
+      "color": "Cream",
+      "colorCode": "bg-white",
+      "price": 75,
+      "stock": 8,
+      "image": "/images/products/shorts/product-95.jpg"
+    },
+    {
+      "id": "var-95-xl-white",
+      "sku": "ZR-SR-095-XL-WHITE",
+      "size": "X-Large",
+      "color": "Cream",
+      "colorCode": "bg-white",
+      "price": 75,
+      "stock": 8,
+      "image": "/images/products/shorts/product-95.jpg"
+    }
+  ]
+},
+{
+  "id": 96,
+  "slug": "luxe-heavy-french-terry-sweat-shorts",
+  "title": "LUXE Heavy French Terry Sweat Shorts",
+  "description": "Crafted from 420 GSM unbrushed French terry with an elasticized waistband, raw rolled hem, and deep jersey-lined pockets.",
+  "brand": "LUXE Studio",
+  "category": "shorts",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/shorts/product-96.jpg",
+  "gallery": [
+    "/images/products/shorts/product-96.jpg",
+    "/images/products/shorts/product-96-1.jpg"
+  ],
+  "price": 95,
+  "originalPrice": 115,
+  "discount": {
+    "amount": 20,
+    "percentage": 17
+  },
+  "rating": 4.8,
+  "reviewCount": 84,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Vintage Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% French Terry Cotton",
+  "careInstructions": "Machine wash cold, tumble dry low",
+  "fit": "Relaxed Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "sweat shorts",
+    "french terry",
+    "heavyweight",
+    "loungewear"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 42,
+  "sku": "LX-SR-096",
+  "createdAt": "2024-02-24",
+  "variants": [
+    {
+      "id": "var-96-s-black",
+      "sku": "LX-SR-096-S-BLACK",
+      "size": "Small",
+      "color": "Vintage Black",
+      "colorCode": "bg-black",
+      "price": 95,
+      "stock": 10,
+      "image": "/images/products/shorts/product-96.jpg"
+    },
+    {
+      "id": "var-96-m-black",
+      "sku": "LX-SR-096-M-BLACK",
+      "size": "Medium",
+      "color": "Vintage Black",
+      "colorCode": "bg-black",
+      "price": 95,
+      "stock": 10,
+      "image": "/images/products/shorts/product-96.jpg"
+    },
+    {
+      "id": "var-96-l-black",
+      "sku": "LX-SR-096-L-BLACK",
+      "size": "Large",
+      "color": "Vintage Black",
+      "colorCode": "bg-black",
+      "price": 95,
+      "stock": 10,
+      "image": "/images/products/shorts/product-96.jpg"
+    },
+    {
+      "id": "var-96-xl-black",
+      "sku": "LX-SR-096-XL-BLACK",
+      "size": "X-Large",
+      "color": "Vintage Black",
+      "colorCode": "bg-black",
+      "price": 95,
+      "stock": 10,
+      "image": "/images/products/shorts/product-96.jpg"
+    }
+  ]
+},
+{
+  "id": 97,
+  "slug": "calvin-klein-distressed-raw-hem-denim-shorts",
+  "title": "Calvin Klein Raw Hem Denim Shorts",
+  "description": "High-waist cutoffs crafted from classic non-stretch cotton denim with intentional thigh fraying and iconic back patch.",
+  "brand": "Calvin Klein",
+  "category": "shorts",
+  "subcategory": "casual",
+  "gender": "women",
+  "srcUrl": "/images/products/shorts/product-97.jpg",
+  "gallery": [
+    "/images/products/shorts/product-97.jpg",
+    "/images/products/shorts/product-97-1.jpg"
+  ],
+  "price": 85,
+  "originalPrice": 85,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.6,
+  "reviewCount": 59,
+  "sizes": [
+    {
+      "id": "25",
+      "name": "25",
+      "label": "25"
+    },
+    {
+      "id": "26",
+      "name": "26",
+      "label": "26"
+    },
+    {
+      "id": "28",
+      "name": "28",
+      "label": "28"
+    },
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Vintage Indigo",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    }
+  ],
+  "material": "100% Cotton",
+  "careInstructions": "Machine wash warm, line dry",
+  "fit": "Regular Fit",
+  "pattern": "Distressed",
+  "style": "Casual",
+  "tags": [
+    "denim shorts",
+    "cutoffs",
+    "calvin klein",
+    "summer",
+    "frayed"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 31,
+  "sku": "CK-SR-097",
+  "createdAt": "2024-01-28",
+  "variants": [
+    {
+      "id": "var-97-25-blue",
+      "sku": "CK-SR-097-25-BLUE",
+      "size": "25",
+      "color": "Vintage Indigo",
+      "colorCode": "bg-[#2563eb]",
+      "price": 85,
+      "stock": 7,
+      "image": "/images/products/shorts/product-97.jpg"
+    },
+    {
+      "id": "var-97-26-blue",
+      "sku": "CK-SR-097-26-BLUE",
+      "size": "26",
+      "color": "Vintage Indigo",
+      "colorCode": "bg-[#2563eb]",
+      "price": 85,
+      "stock": 7,
+      "image": "/images/products/shorts/product-97.jpg"
+    },
+    {
+      "id": "var-97-28-blue",
+      "sku": "CK-SR-097-28-BLUE",
+      "size": "28",
+      "color": "Vintage Indigo",
+      "colorCode": "bg-[#2563eb]",
+      "price": 85,
+      "stock": 7,
+      "image": "/images/products/shorts/product-97.jpg"
+    },
+    {
+      "id": "var-97-30-blue",
+      "sku": "CK-SR-097-30-BLUE",
+      "size": "30",
+      "color": "Vintage Indigo",
+      "colorCode": "bg-[#2563eb]",
+      "price": 85,
+      "stock": 7,
+      "image": "/images/products/shorts/product-97.jpg"
+    }
+  ]
+},
+{
+  "id": 98,
+  "slug": "shopsphere-performance-2-in-1-running-shorts",
+  "title": "ShopSphere Performance 2-in-1 Running Shorts",
+  "description": "Ultralight outer shell paired with a compression liner that prevents friction. Includes a discreet bounce-free phone pocket.",
+  "brand": "ShopSphere",
+  "category": "shorts",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/shorts/product-98.jpg",
+  "gallery": [
+    "/images/products/shorts/product-98.jpg",
+    "/images/products/shorts/product-98-1.jpg"
+  ],
+  "price": 65,
+  "originalPrice": 80,
+  "discount": {
+    "amount": 15,
+    "percentage": 19
+  },
+  "rating": 4.7,
+  "reviewCount": 92,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Stealth Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "86% Poly, 14% Spandex",
+  "careInstructions": "Machine wash cold",
+  "fit": "Athletic Fit",
+  "pattern": "Solid",
+  "style": "Gym",
+  "tags": [
+    "running",
+    "2-in-1",
+    "gym",
+    "compression",
+    "fitness"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 50,
+  "sku": "SS-SR-098",
+  "createdAt": "2024-02-18",
+  "variants": [
+    {
+      "id": "var-98-s-black",
+      "sku": "SS-SR-098-S-BLACK",
+      "size": "Small",
+      "color": "Stealth Black",
+      "colorCode": "bg-black",
+      "price": 65,
+      "stock": 12,
+      "image": "/images/products/shorts/product-98.jpg"
+    },
+    {
+      "id": "var-98-m-black",
+      "sku": "SS-SR-098-M-BLACK",
+      "size": "Medium",
+      "color": "Stealth Black",
+      "colorCode": "bg-black",
+      "price": 65,
+      "stock": 12,
+      "image": "/images/products/shorts/product-98.jpg"
+    },
+    {
+      "id": "var-98-l-black",
+      "sku": "SS-SR-098-L-BLACK",
+      "size": "Large",
+      "color": "Stealth Black",
+      "colorCode": "bg-black",
+      "price": 65,
+      "stock": 12,
+      "image": "/images/products/shorts/product-98.jpg"
+    },
+    {
+      "id": "var-98-xl-black",
+      "sku": "SS-SR-098-XL-BLACK",
+      "size": "X-Large",
+      "color": "Stealth Black",
+      "colorCode": "bg-black",
+      "price": 65,
+      "stock": 12,
+      "image": "/images/products/shorts/product-98.jpg"
+    }
+  ]
+},
+{
+  "id": 99,
+  "slug": "zara-high-waisted-paperbag-linen-shorts",
+  "title": "Zara High-Waisted Paperbag Linen Shorts",
+  "description": "Charming paperbag ruffled waistband with a matching fabric tie belt. Made from breezy washed linen for hot summer afternoons.",
+  "brand": "Zara",
+  "category": "shorts",
+  "subcategory": "casual",
+  "gender": "women",
+  "srcUrl": "/images/products/shorts/product-99.jpg",
+  "gallery": [
+    "/images/products/shorts/product-99.jpg",
+    "/images/products/shorts/product-99-1.jpg"
+  ],
+  "price": 70,
+  "originalPrice": 70,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.5,
+  "reviewCount": 48,
+  "sizes": [
+    {
+      "id": "xs",
+      "name": "X-Small",
+      "label": "XS"
+    },
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "white",
+      "name": "White",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "100% Linen",
+  "careInstructions": "Machine wash cold gentle",
+  "fit": "Relaxed Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "paperbag",
+    "linen",
+    "tie waist",
+    "summer",
+    "zara"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": false,
+  "isOnSale": false,
+  "stock": 28,
+  "sku": "ZR-SR-099",
+  "createdAt": "2024-03-04",
+  "variants": [
+    {
+      "id": "var-99-xs-white",
+      "sku": "ZR-SR-099-XS-WHITE",
+      "size": "X-Small",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 70,
+      "stock": 7,
+      "image": "/images/products/shorts/product-99.jpg"
+    },
+    {
+      "id": "var-99-s-white",
+      "sku": "ZR-SR-099-S-WHITE",
+      "size": "Small",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 70,
+      "stock": 7,
+      "image": "/images/products/shorts/product-99.jpg"
+    },
+    {
+      "id": "var-99-m-white",
+      "sku": "ZR-SR-099-M-WHITE",
+      "size": "Medium",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 70,
+      "stock": 7,
+      "image": "/images/products/shorts/product-99.jpg"
+    },
+    {
+      "id": "var-99-l-white",
+      "sku": "ZR-SR-099-L-WHITE",
+      "size": "Large",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 70,
+      "stock": 7,
+      "image": "/images/products/shorts/product-99.jpg"
+    }
+  ]
+},
+{
+  "id": 100,
+  "slug": "versace-baroque-silk-twill-swim-shorts",
+  "title": "Versace Baroque Silk Twill Swim Shorts",
+  "description": "Exquisite poolside luxury. Iconic gold Barocco print across technical quick-dry silk blend with gold-tone drawcord tips.",
+  "brand": "Versace",
+  "category": "shorts",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/shorts/product-100.jpg",
+  "gallery": [
+    "/images/products/shorts/product-100.jpg",
+    "/images/products/shorts/product-100-1.jpg"
+  ],
+  "price": 360,
+  "originalPrice": 450,
+  "discount": {
+    "amount": 90,
+    "percentage": 20
+  },
+  "rating": 4.9,
+  "reviewCount": 34,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "yellow",
+      "name": "Gold / Black",
+      "code": "bg-[#facc15]",
+      "hex": "#facc15"
+    }
+  ],
+  "material": "100% Technical Quick-Dry Poly-Silk",
+  "careInstructions": "Hand rinse after chlorine or salt water",
+  "fit": "Regular Fit",
+  "pattern": "Graphic",
+  "style": "Party",
+  "tags": [
+    "versace",
+    "swim shorts",
+    "baroque",
+    "poolside",
+    "luxury"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 16,
+  "sku": "VS-SR-100",
+  "createdAt": "2024-01-19",
+  "variants": [
+    {
+      "id": "var-100-s-yellow",
+      "sku": "VS-SR-100-S-YELLOW",
+      "size": "Small",
+      "color": "Gold / Black",
+      "colorCode": "bg-[#facc15]",
+      "price": 360,
+      "stock": 5,
+      "image": "/images/products/shorts/product-100.jpg"
+    },
+    {
+      "id": "var-100-m-yellow",
+      "sku": "VS-SR-100-M-YELLOW",
+      "size": "Medium",
+      "color": "Gold / Black",
+      "colorCode": "bg-[#facc15]",
+      "price": 360,
+      "stock": 5,
+      "image": "/images/products/shorts/product-100.jpg"
+    },
+    {
+      "id": "var-100-l-yellow",
+      "sku": "VS-SR-100-L-YELLOW",
+      "size": "Large",
+      "color": "Gold / Black",
+      "colorCode": "bg-[#facc15]",
+      "price": 360,
+      "stock": 5,
+      "image": "/images/products/shorts/product-100.jpg"
+    }
+  ]
+},
+{
+  "id": 101,
+  "slug": "shopsphere-utility-cargo-multi-pocket-shorts",
+  "title": "ShopSphere Utility Cargo Multi-Pocket Shorts",
+  "description": "Durable ripstop construction with dual bellows cargo pockets, reinforced seat seam, and comfortable elasticized waist.",
+  "brand": "ShopSphere",
+  "category": "shorts",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/shorts/product-101.jpg",
+  "gallery": [
+    "/images/products/shorts/product-101.jpg",
+    "/images/products/shorts/product-101-1.jpg"
+  ],
+  "price": 80,
+  "originalPrice": 80,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.6,
+  "reviewCount": 53,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "green",
+      "name": "Army Green",
+      "code": "bg-[#16a34a]",
+      "hex": "#16a34a"
+    },
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Cotton Ripstop",
+  "careInstructions": "Machine wash warm, tumble dry",
+  "fit": "Relaxed Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "cargo shorts",
+    "utility",
+    "ripstop",
+    "outdoor"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 37,
+  "sku": "SS-SR-101",
+  "createdAt": "2024-02-28",
+  "variants": [
+    {
+      "id": "var-101-s-green",
+      "sku": "SS-SR-101-S-GREEN",
+      "size": "Small",
+      "color": "Army Green",
+      "colorCode": "bg-[#16a34a]",
+      "price": 80,
+      "stock": 4,
+      "image": "/images/products/shorts/product-101.jpg"
+    },
+    {
+      "id": "var-101-s-black",
+      "sku": "SS-SR-101-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 80,
+      "stock": 4,
+      "image": "/images/products/shorts/product-101.jpg"
+    },
+    {
+      "id": "var-101-m-green",
+      "sku": "SS-SR-101-M-GREEN",
+      "size": "Medium",
+      "color": "Army Green",
+      "colorCode": "bg-[#16a34a]",
+      "price": 80,
+      "stock": 4,
+      "image": "/images/products/shorts/product-101.jpg"
+    },
+    {
+      "id": "var-101-m-black",
+      "sku": "SS-SR-101-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 80,
+      "stock": 4,
+      "image": "/images/products/shorts/product-101.jpg"
+    },
+    {
+      "id": "var-101-l-green",
+      "sku": "SS-SR-101-L-GREEN",
+      "size": "Large",
+      "color": "Army Green",
+      "colorCode": "bg-[#16a34a]",
+      "price": 80,
+      "stock": 4,
+      "image": "/images/products/shorts/product-101.jpg"
+    },
+    {
+      "id": "var-101-l-black",
+      "sku": "SS-SR-101-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 80,
+      "stock": 4,
+      "image": "/images/products/shorts/product-101.jpg"
+    },
+    {
+      "id": "var-101-xl-green",
+      "sku": "SS-SR-101-XL-GREEN",
+      "size": "X-Large",
+      "color": "Army Green",
+      "colorCode": "bg-[#16a34a]",
+      "price": 80,
+      "stock": 4,
+      "image": "/images/products/shorts/product-101.jpg"
+    },
+    {
+      "id": "var-101-xl-black",
+      "sku": "SS-SR-101-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 80,
+      "stock": 4,
+      "image": "/images/products/shorts/product-101.jpg"
+    }
+  ]
+},
+{
+  "id": 102,
+  "slug": "ralph-lauren-7-inch-chino-stretch-shorts",
+  "title": "Ralph Lauren 7-Inch Chino Stretch Shorts",
+  "description": "The classic preppy standard. Combed cotton twill with a touch of stretch for mobility, hitting right above the knee.",
+  "brand": "Ralph Lauren",
+  "category": "shorts",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/shorts/product-102.jpg",
+  "gallery": [
+    "/images/products/shorts/product-102.jpg",
+    "/images/products/shorts/product-102-1.jpg"
+  ],
+  "price": 110,
+  "originalPrice": 135,
+  "discount": {
+    "amount": 25,
+    "percentage": 19
+  },
+  "rating": 4.8,
+  "reviewCount": 79,
+  "sizes": [
+    {
+      "id": "30",
+      "name": "30",
+      "label": "30"
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "label": "32"
+    },
+    {
+      "id": "34",
+      "name": "34",
+      "label": "34"
+    },
+    {
+      "id": "36",
+      "name": "36",
+      "label": "36"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Nantucket Navy",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    }
+  ],
+  "material": "98% Cotton, 2% Elastane",
+  "careInstructions": "Machine wash warm",
+  "fit": "Classic Fit",
+  "pattern": "Solid",
+  "style": "Formal",
+  "tags": [
+    "chino shorts",
+    "ralph lauren",
+    "classic",
+    "preppy"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 26,
+  "sku": "RL-SR-102",
+  "createdAt": "2024-01-24",
+  "variants": [
+    {
+      "id": "var-102-30-blue",
+      "sku": "RL-SR-102-30-BLUE",
+      "size": "30",
+      "color": "Nantucket Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 110,
+      "stock": 6,
+      "image": "/images/products/shorts/product-102.jpg"
+    },
+    {
+      "id": "var-102-32-blue",
+      "sku": "RL-SR-102-32-BLUE",
+      "size": "32",
+      "color": "Nantucket Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 110,
+      "stock": 6,
+      "image": "/images/products/shorts/product-102.jpg"
+    },
+    {
+      "id": "var-102-34-blue",
+      "sku": "RL-SR-102-34-BLUE",
+      "size": "34",
+      "color": "Nantucket Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 110,
+      "stock": 6,
+      "image": "/images/products/shorts/product-102.jpg"
+    },
+    {
+      "id": "var-102-36-blue",
+      "sku": "RL-SR-102-36-BLUE",
+      "size": "36",
+      "color": "Nantucket Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 110,
+      "stock": 6,
+      "image": "/images/products/shorts/product-102.jpg"
+    }
+  ]
+},
+{
+  "id": 103,
+  "slug": "shopsphere-seamless-high-waist-biker-shorts",
+  "title": "ShopSphere Seamless High-Waist Biker Shorts",
+  "description": "Engineered compressive ribbed knit with an extra-wide tummy-control waistband that stays put through squats and sprints.",
+  "brand": "ShopSphere",
+  "category": "shorts",
+  "subcategory": "casual",
+  "gender": "women",
+  "srcUrl": "/images/products/shorts/product-103.jpg",
+  "gallery": [
+    "/images/products/shorts/product-103.jpg",
+    "/images/products/shorts/product-103-1.jpg"
+  ],
+  "price": 55,
+  "originalPrice": 55,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.8,
+  "reviewCount": 110,
+  "sizes": [
+    {
+      "id": "xs",
+      "name": "X-Small",
+      "label": "XS"
+    },
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "90% Nylon, 10% Spandex",
+  "careInstructions": "Machine wash cold gentle, do not tumble dry",
+  "fit": "Slim Fit",
+  "pattern": "Ribbed",
+  "style": "Gym",
+  "tags": [
+    "biker shorts",
+    "seamless",
+    "gym",
+    "activewear",
+    "high waist"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 55,
+  "sku": "SS-SR-103",
+  "createdAt": "2024-03-01",
+  "variants": [
+    {
+      "id": "var-103-xs-black",
+      "sku": "SS-SR-103-XS-BLACK",
+      "size": "X-Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 55,
+      "stock": 13,
+      "image": "/images/products/shorts/product-103.jpg"
+    },
+    {
+      "id": "var-103-s-black",
+      "sku": "SS-SR-103-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 55,
+      "stock": 13,
+      "image": "/images/products/shorts/product-103.jpg"
+    },
+    {
+      "id": "var-103-m-black",
+      "sku": "SS-SR-103-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 55,
+      "stock": 13,
+      "image": "/images/products/shorts/product-103.jpg"
+    },
+    {
+      "id": "var-103-l-black",
+      "sku": "SS-SR-103-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 55,
+      "stock": 13,
+      "image": "/images/products/shorts/product-103.jpg"
+    }
+  ]
+},
+{
+  "id": 104,
+  "slug": "luxe-vintage-washed-mesh-basketball-shorts",
+  "title": "LUXE Vintage Washed Mesh Basketball Shorts",
+  "description": "Double-layered heavyweight sports mesh with vintage striped rib waistband and extra-long braided drawstrings.",
+  "brand": "LUXE Studio",
+  "category": "shorts",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/shorts/product-104.jpg",
+  "gallery": [
+    "/images/products/shorts/product-104.jpg",
+    "/images/products/shorts/product-104-1.jpg"
+  ],
+  "price": 90,
+  "originalPrice": 110,
+  "discount": {
+    "amount": 20,
+    "percentage": 18
+  },
+  "rating": 4.7,
+  "reviewCount": 46,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Breathable Poly Mesh",
+  "careInstructions": "Machine wash cold",
+  "fit": "Relaxed Fit",
+  "pattern": "Solid",
+  "style": "Gym",
+  "tags": [
+    "mesh",
+    "basketball",
+    "streetwear",
+    "vintage",
+    "gym"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": false,
+  "isOnSale": true,
+  "stock": 29,
+  "sku": "LX-SR-104",
+  "createdAt": "2024-02-15",
+  "variants": [
+    {
+      "id": "var-104-s-black",
+      "sku": "LX-SR-104-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 90,
+      "stock": 7,
+      "image": "/images/products/shorts/product-104.jpg"
+    },
+    {
+      "id": "var-104-m-black",
+      "sku": "LX-SR-104-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 90,
+      "stock": 7,
+      "image": "/images/products/shorts/product-104.jpg"
+    },
+    {
+      "id": "var-104-l-black",
+      "sku": "LX-SR-104-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 90,
+      "stock": 7,
+      "image": "/images/products/shorts/product-104.jpg"
+    },
+    {
+      "id": "var-104-xl-black",
+      "sku": "LX-SR-104-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 90,
+      "stock": 7,
+      "image": "/images/products/shorts/product-104.jpg"
+    }
+  ]
+},
+{
+  "id": 105,
+  "slug": "prada-bermuda-tailored-knee-shorts",
+  "title": "Prada Bermuda Tailored Knee Shorts",
+  "description": "Runway-featured Bermuda shorts in structured re-nylon with front pleats and side buckle fasteners for an architectural finish.",
+  "brand": "Prada",
+  "category": "shorts",
+  "subcategory": "formal",
+  "gender": "women",
+  "srcUrl": "/images/products/shorts/product-105.jpg",
+  "gallery": [
+    "/images/products/shorts/product-105.jpg",
+    "/images/products/shorts/product-105-1.jpg"
+  ],
+  "price": 520,
+  "originalPrice": 520,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.9,
+  "reviewCount": 25,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Recycled Re-Nylon",
+  "careInstructions": "Dry clean only",
+  "fit": "Tailored Fit",
+  "pattern": "Solid",
+  "style": "Formal",
+  "tags": [
+    "bermuda",
+    "prada",
+    "re-nylon",
+    "tailored",
+    "luxury"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": false,
+  "stock": 12,
+  "sku": "PR-SR-105",
+  "createdAt": "2024-03-07",
+  "variants": [
+    {
+      "id": "var-105-s-black",
+      "sku": "PR-SR-105-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 520,
+      "stock": 4,
+      "image": "/images/products/shorts/product-105.jpg"
+    },
+    {
+      "id": "var-105-m-black",
+      "sku": "PR-SR-105-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 520,
+      "stock": 4,
+      "image": "/images/products/shorts/product-105.jpg"
+    },
+    {
+      "id": "var-105-l-black",
+      "sku": "PR-SR-105-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 520,
+      "stock": 4,
+      "image": "/images/products/shorts/product-105.jpg"
+    }
+  ]
+},
+{
+  "id": 106,
+  "slug": "calvin-klein-lightweight-quick-dry-boardshorts",
+  "title": "Calvin Klein Quick-Dry Boardshorts",
+  "description": "Clean minimalist swim trunks engineered with 4-way stretch water-repellent fabric and a soft interior comfort mesh brief.",
+  "brand": "Calvin Klein",
+  "category": "shorts",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/shorts/product-106.jpg",
+  "gallery": [
+    "/images/products/shorts/product-106.jpg",
+    "/images/products/shorts/product-106-1.jpg"
+  ],
+  "price": 75,
+  "originalPrice": 90,
+  "discount": {
+    "amount": 15,
+    "percentage": 17
+  },
+  "rating": 4.6,
+  "reviewCount": 58,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Cobalt Blue",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    },
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "92% Recycled Poly, 8% Elastane",
+  "careInstructions": "Machine wash cold",
+  "fit": "Regular Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "boardshorts",
+    "swimwear",
+    "calvin klein",
+    "quick dry"
+  ],
+  "isNew": false,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 33,
+  "sku": "CK-SR-106",
+  "createdAt": "2024-01-15",
+  "variants": [
+    {
+      "id": "var-106-s-blue",
+      "sku": "CK-SR-106-S-BLUE",
+      "size": "Small",
+      "color": "Cobalt Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 75,
+      "stock": 4,
+      "image": "/images/products/shorts/product-106.jpg"
+    },
+    {
+      "id": "var-106-s-black",
+      "sku": "CK-SR-106-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 75,
+      "stock": 4,
+      "image": "/images/products/shorts/product-106.jpg"
+    },
+    {
+      "id": "var-106-m-blue",
+      "sku": "CK-SR-106-M-BLUE",
+      "size": "Medium",
+      "color": "Cobalt Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 75,
+      "stock": 4,
+      "image": "/images/products/shorts/product-106.jpg"
+    },
+    {
+      "id": "var-106-m-black",
+      "sku": "CK-SR-106-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 75,
+      "stock": 4,
+      "image": "/images/products/shorts/product-106.jpg"
+    },
+    {
+      "id": "var-106-l-blue",
+      "sku": "CK-SR-106-L-BLUE",
+      "size": "Large",
+      "color": "Cobalt Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 75,
+      "stock": 4,
+      "image": "/images/products/shorts/product-106.jpg"
+    },
+    {
+      "id": "var-106-l-black",
+      "sku": "CK-SR-106-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 75,
+      "stock": 4,
+      "image": "/images/products/shorts/product-106.jpg"
+    },
+    {
+      "id": "var-106-xl-blue",
+      "sku": "CK-SR-106-XL-BLUE",
+      "size": "X-Large",
+      "color": "Cobalt Blue",
+      "colorCode": "bg-[#2563eb]",
+      "price": 75,
+      "stock": 4,
+      "image": "/images/products/shorts/product-106.jpg"
+    },
+    {
+      "id": "var-106-xl-black",
+      "sku": "CK-SR-106-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 75,
+      "stock": 4,
+      "image": "/images/products/shorts/product-106.jpg"
+    }
+  ]
+},
+{
+  "id": 107,
+  "slug": "zara-ribbed-knit-lounge-shorts",
+  "title": "Zara Ribbed Knit Lounge Shorts",
+  "description": "Soft cloud-like ribbed knit shorts with wide elastic waistband. The ultimate loungewear piece for slow weekend mornings.",
+  "brand": "Zara",
+  "category": "shorts",
+  "subcategory": "casual",
+  "gender": "women",
+  "srcUrl": "/images/products/shorts/product-107.jpg",
+  "gallery": [
+    "/images/products/shorts/product-107.jpg",
+    "/images/products/shorts/product-107-1.jpg"
+  ],
+  "price": 50,
+  "originalPrice": 50,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.7,
+  "reviewCount": 61,
+  "sizes": [
+    {
+      "id": "xs",
+      "name": "X-Small",
+      "label": "XS"
+    },
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    }
+  ],
+  "colors": [
+    {
+      "id": "white",
+      "name": "Oatmeal",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "70% Viscose, 30% Polyamide",
+  "careInstructions": "Machine wash cold gentle",
+  "fit": "Relaxed Fit",
+  "pattern": "Ribbed",
+  "style": "Casual",
+  "tags": [
+    "knit",
+    "lounge",
+    "ribbed",
+    "cozy",
+    "zara"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 29,
+  "sku": "ZR-SR-107",
+  "createdAt": "2024-03-02",
+  "variants": [
+    {
+      "id": "var-107-xs-white",
+      "sku": "ZR-SR-107-XS-WHITE",
+      "size": "X-Small",
+      "color": "Oatmeal",
+      "colorCode": "bg-white",
+      "price": 50,
+      "stock": 9,
+      "image": "/images/products/shorts/product-107.jpg"
+    },
+    {
+      "id": "var-107-s-white",
+      "sku": "ZR-SR-107-S-WHITE",
+      "size": "Small",
+      "color": "Oatmeal",
+      "colorCode": "bg-white",
+      "price": 50,
+      "stock": 9,
+      "image": "/images/products/shorts/product-107.jpg"
+    },
+    {
+      "id": "var-107-m-white",
+      "sku": "ZR-SR-107-M-WHITE",
+      "size": "Medium",
+      "color": "Oatmeal",
+      "colorCode": "bg-white",
+      "price": 50,
+      "stock": 9,
+      "image": "/images/products/shorts/product-107.jpg"
+    }
+  ]
+},
+{
+  "id": 108,
+  "slug": "shopsphere-nylon-packable-hiking-shorts",
+  "title": "ShopSphere Nylon Packable Hiking Shorts",
+  "description": "DWR water-resistant lightweight nylon trail shorts featuring an integrated webbing belt and packable rear zip pouch.",
+  "brand": "ShopSphere",
+  "category": "shorts",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/shorts/product-108.jpg",
+  "gallery": [
+    "/images/products/shorts/product-108.jpg",
+    "/images/products/shorts/product-108-1.jpg"
+  ],
+  "price": 70,
+  "originalPrice": 70,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.8,
+  "reviewCount": 42,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Recycled Nylon",
+  "careInstructions": "Machine wash cold, tumble dry low",
+  "fit": "Regular Fit",
+  "pattern": "Solid",
+  "style": "Gym",
+  "tags": [
+    "hiking",
+    "outdoor",
+    "packable",
+    "nylon",
+    "active"
+  ],
+  "isNew": false,
+  "isFeatured": false,
+  "isBestSeller": false,
+  "isOnSale": false,
+  "stock": 35,
+  "sku": "SS-SR-108",
+  "createdAt": "2024-02-09",
+  "variants": [
+    {
+      "id": "var-108-s-black",
+      "sku": "SS-SR-108-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 70,
+      "stock": 8,
+      "image": "/images/products/shorts/product-108.jpg"
+    },
+    {
+      "id": "var-108-m-black",
+      "sku": "SS-SR-108-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 70,
+      "stock": 8,
+      "image": "/images/products/shorts/product-108.jpg"
+    },
+    {
+      "id": "var-108-l-black",
+      "sku": "SS-SR-108-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 70,
+      "stock": 8,
+      "image": "/images/products/shorts/product-108.jpg"
+    },
+    {
+      "id": "var-108-xl-black",
+      "sku": "SS-SR-108-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 70,
+      "stock": 8,
+      "image": "/images/products/shorts/product-108.jpg"
+    }
+  ]
+},
+{
+  "id": 109,
+  "slug": "luxe-striped-cotton-beach-shorts",
+  "title": "LUXE Striped Cotton Pull-On Beach Shorts",
+  "description": "Crisp yarn-dyed ticking stripes on pure breathable cotton. Finished with natural twill cord ties and custom brass eyelets.",
+  "brand": "LUXE Studio",
+  "category": "shorts",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/shorts/product-109.jpg",
+  "gallery": [
+    "/images/products/shorts/product-109.jpg",
+    "/images/products/shorts/product-109-1.jpg"
+  ],
+  "price": 85,
+  "originalPrice": 105,
+  "discount": {
+    "amount": 20,
+    "percentage": 19
+  },
+  "rating": 4.7,
+  "reviewCount": 37,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Navy Stripe",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    }
+  ],
+  "material": "100% Cotton Poplin",
+  "careInstructions": "Machine wash cold",
+  "fit": "Relaxed Fit",
+  "pattern": "Striped",
+  "style": "Casual",
+  "tags": [
+    "striped",
+    "beach shorts",
+    "summer",
+    "coastal",
+    "luxe studio"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 24,
+  "sku": "LX-SR-109",
+  "createdAt": "2024-03-05",
+  "variants": [
+    {
+      "id": "var-109-s-blue",
+      "sku": "LX-SR-109-S-BLUE",
+      "size": "Small",
+      "color": "Navy Stripe",
+      "colorCode": "bg-[#2563eb]",
+      "price": 85,
+      "stock": 8,
+      "image": "/images/products/shorts/product-109.jpg"
+    },
+    {
+      "id": "var-109-m-blue",
+      "sku": "LX-SR-109-M-BLUE",
+      "size": "Medium",
+      "color": "Navy Stripe",
+      "colorCode": "bg-[#2563eb]",
+      "price": 85,
+      "stock": 8,
+      "image": "/images/products/shorts/product-109.jpg"
+    },
+    {
+      "id": "var-109-l-blue",
+      "sku": "LX-SR-109-L-BLUE",
+      "size": "Large",
+      "color": "Navy Stripe",
+      "colorCode": "bg-[#2563eb]",
+      "price": 85,
+      "stock": 8,
+      "image": "/images/products/shorts/product-109.jpg"
+    }
+  ]
+},
+{
+  "id": 110,
+  "slug": "luxe-heavyweight-boxy-french-terry-hoodie",
+  "title": "LUXE Heavyweight Boxy French Terry Hoodie",
+  "description": "480 GSM custom-knit loopback cotton. Double-layered hood without drawstrings for a modern clean sculptural drape.",
+  "brand": "LUXE Studio",
+  "category": "hoodies",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/hoodies/product-110.jpg",
+  "gallery": [
+    "/images/products/hoodies/product-110.jpg",
+    "/images/products/hoodies/product-110-1.jpg"
+  ],
+  "price": 180,
+  "originalPrice": 210,
+  "discount": {
+    "amount": 30,
+    "percentage": 14
+  },
+  "rating": 4.9,
+  "reviewCount": 115,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Washed Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    },
+    {
+      "id": "white",
+      "name": "Bone",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "100% Combed Heavy Cotton",
+  "careInstructions": "Machine wash cold inside out, hang dry",
+  "fit": "Oversized Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "heavyweight",
+    "boxy",
+    "french terry",
+    "streetwear",
+    "luxe studio"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 45,
+  "sku": "LX-HD-110",
+  "createdAt": "2024-03-01",
+  "variants": [
+    {
+      "id": "var-110-s-black",
+      "sku": "LX-HD-110-S-BLACK",
+      "size": "Small",
+      "color": "Washed Black",
+      "colorCode": "bg-black",
+      "price": 180,
+      "stock": 5,
+      "image": "/images/products/hoodies/product-110.jpg"
+    },
+    {
+      "id": "var-110-s-white",
+      "sku": "LX-HD-110-S-WHITE",
+      "size": "Small",
+      "color": "Bone",
+      "colorCode": "bg-white",
+      "price": 180,
+      "stock": 5,
+      "image": "/images/products/hoodies/product-110.jpg"
+    },
+    {
+      "id": "var-110-m-black",
+      "sku": "LX-HD-110-M-BLACK",
+      "size": "Medium",
+      "color": "Washed Black",
+      "colorCode": "bg-black",
+      "price": 180,
+      "stock": 5,
+      "image": "/images/products/hoodies/product-110.jpg"
+    },
+    {
+      "id": "var-110-m-white",
+      "sku": "LX-HD-110-M-WHITE",
+      "size": "Medium",
+      "color": "Bone",
+      "colorCode": "bg-white",
+      "price": 180,
+      "stock": 5,
+      "image": "/images/products/hoodies/product-110.jpg"
+    },
+    {
+      "id": "var-110-l-black",
+      "sku": "LX-HD-110-L-BLACK",
+      "size": "Large",
+      "color": "Washed Black",
+      "colorCode": "bg-black",
+      "price": 180,
+      "stock": 5,
+      "image": "/images/products/hoodies/product-110.jpg"
+    },
+    {
+      "id": "var-110-l-white",
+      "sku": "LX-HD-110-L-WHITE",
+      "size": "Large",
+      "color": "Bone",
+      "colorCode": "bg-white",
+      "price": 180,
+      "stock": 5,
+      "image": "/images/products/hoodies/product-110.jpg"
+    },
+    {
+      "id": "var-110-xl-black",
+      "sku": "LX-HD-110-XL-BLACK",
+      "size": "X-Large",
+      "color": "Washed Black",
+      "colorCode": "bg-black",
+      "price": 180,
+      "stock": 5,
+      "image": "/images/products/hoodies/product-110.jpg"
+    },
+    {
+      "id": "var-110-xl-white",
+      "sku": "LX-HD-110-XL-WHITE",
+      "size": "X-Large",
+      "color": "Bone",
+      "colorCode": "bg-white",
+      "price": 180,
+      "stock": 5,
+      "image": "/images/products/hoodies/product-110.jpg"
+    }
+  ]
+},
+{
+  "id": 111,
+  "slug": "versace-barocco-crest-zip-hoodie",
+  "title": "Versace Embroidered Barocco Crest Zip Hoodie",
+  "description": "Opulent Italian streetwear. Full-zip front adorned with an intricate gold-threaded heritage crest and branded Medusa pullers.",
+  "brand": "Versace",
+  "category": "hoodies",
+  "subcategory": "graphic",
+  "gender": "men",
+  "srcUrl": "/images/products/hoodies/product-111.jpg",
+  "gallery": [
+    "/images/products/hoodies/product-111.jpg",
+    "/images/products/hoodies/product-111-1.jpg"
+  ],
+  "price": 650,
+  "originalPrice": 780,
+  "discount": {
+    "amount": 130,
+    "percentage": 17
+  },
+  "rating": 4.9,
+  "reviewCount": 37,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black / Gold",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Mercerized Cotton",
+  "careInstructions": "Professional dry clean",
+  "fit": "Regular Fit",
+  "pattern": "Graphic",
+  "style": "Party",
+  "tags": [
+    "versace",
+    "barocco",
+    "gold crest",
+    "luxury hoodie",
+    "zip up"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": true,
+  "stock": 12,
+  "sku": "VS-HD-111",
+  "createdAt": "2024-03-11",
+  "variants": [
+    {
+      "id": "var-111-s-black",
+      "sku": "VS-HD-111-S-BLACK",
+      "size": "Small",
+      "color": "Black / Gold",
+      "colorCode": "bg-black",
+      "price": 650,
+      "stock": 3,
+      "image": "/images/products/hoodies/product-111.jpg"
+    },
+    {
+      "id": "var-111-m-black",
+      "sku": "VS-HD-111-M-BLACK",
+      "size": "Medium",
+      "color": "Black / Gold",
+      "colorCode": "bg-black",
+      "price": 650,
+      "stock": 3,
+      "image": "/images/products/hoodies/product-111.jpg"
+    },
+    {
+      "id": "var-111-l-black",
+      "sku": "VS-HD-111-L-BLACK",
+      "size": "Large",
+      "color": "Black / Gold",
+      "colorCode": "bg-black",
+      "price": 650,
+      "stock": 3,
+      "image": "/images/products/hoodies/product-111.jpg"
+    },
+    {
+      "id": "var-111-xl-black",
+      "sku": "VS-HD-111-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black / Gold",
+      "colorCode": "bg-black",
+      "price": 650,
+      "stock": 3,
+      "image": "/images/products/hoodies/product-111.jpg"
+    }
+  ]
+},
+{
+  "id": 112,
+  "slug": "luxe-washed-vintage-pullover-hoodie",
+  "title": "LUXE Washed Vintage Pullover Hoodie",
+  "description": "Garment dyed and enzyme-washed for a lived-in patina. Features seamless kangaroo pocket and drop shoulders.",
+  "brand": "LUXE Studio",
+  "category": "hoodies",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/hoodies/product-112.jpg",
+  "gallery": [
+    "/images/products/hoodies/product-112.jpg",
+    "/images/products/hoodies/product-112-1.jpg"
+  ],
+  "price": 160,
+  "originalPrice": 160,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.8,
+  "reviewCount": 78,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Slate Grey",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Organic Cotton",
+  "careInstructions": "Machine wash cold, tumble dry low",
+  "fit": "Oversized Fit",
+  "pattern": "Washed",
+  "style": "Casual",
+  "tags": [
+    "vintage",
+    "pullover",
+    "washed",
+    "oversized",
+    "streetwear"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 38,
+  "sku": "LX-HD-112",
+  "createdAt": "2024-02-14",
+  "variants": [
+    {
+      "id": "var-112-s-black",
+      "sku": "LX-HD-112-S-BLACK",
+      "size": "Small",
+      "color": "Slate Grey",
+      "colorCode": "bg-black",
+      "price": 160,
+      "stock": 9,
+      "image": "/images/products/hoodies/product-112.jpg"
+    },
+    {
+      "id": "var-112-m-black",
+      "sku": "LX-HD-112-M-BLACK",
+      "size": "Medium",
+      "color": "Slate Grey",
+      "colorCode": "bg-black",
+      "price": 160,
+      "stock": 9,
+      "image": "/images/products/hoodies/product-112.jpg"
+    },
+    {
+      "id": "var-112-l-black",
+      "sku": "LX-HD-112-L-BLACK",
+      "size": "Large",
+      "color": "Slate Grey",
+      "colorCode": "bg-black",
+      "price": 160,
+      "stock": 9,
+      "image": "/images/products/hoodies/product-112.jpg"
+    },
+    {
+      "id": "var-112-xl-black",
+      "sku": "LX-HD-112-XL-BLACK",
+      "size": "X-Large",
+      "color": "Slate Grey",
+      "colorCode": "bg-black",
+      "price": 160,
+      "stock": 9,
+      "image": "/images/products/hoodies/product-112.jpg"
+    }
+  ]
+},
+{
+  "id": 113,
+  "slug": "shopsphere-thermal-fleece-technical-hoodie",
+  "title": "ShopSphere Thermal Technical Outdoor Hoodie",
+  "description": "Grid-backed polar fleece engineered for supreme warmth without bulk. Zippered chest stash pocket and articulated thumbholes.",
+  "brand": "ShopSphere",
+  "category": "hoodies",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/hoodies/product-113.jpg",
+  "gallery": [
+    "/images/products/hoodies/product-113.jpg",
+    "/images/products/hoodies/product-113-1.jpg"
+  ],
+  "price": 125,
+  "originalPrice": 150,
+  "discount": {
+    "amount": 25,
+    "percentage": 17
+  },
+  "rating": 4.7,
+  "reviewCount": 64,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "green",
+      "name": "Forest Green",
+      "code": "bg-[#16a34a]",
+      "hex": "#16a34a"
+    },
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Recycled Poly Grid Fleece",
+  "careInstructions": "Machine wash warm, do not iron",
+  "fit": "Athletic Fit",
+  "pattern": "Solid",
+  "style": "Gym",
+  "tags": [
+    "technical",
+    "fleece",
+    "outdoor",
+    "gym",
+    "hiking"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 32,
+  "sku": "SS-HD-113",
+  "createdAt": "2024-03-03",
+  "variants": [
+    {
+      "id": "var-113-s-green",
+      "sku": "SS-HD-113-S-GREEN",
+      "size": "Small",
+      "color": "Forest Green",
+      "colorCode": "bg-[#16a34a]",
+      "price": 125,
+      "stock": 4,
+      "image": "/images/products/hoodies/product-113.jpg"
+    },
+    {
+      "id": "var-113-s-black",
+      "sku": "SS-HD-113-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 125,
+      "stock": 4,
+      "image": "/images/products/hoodies/product-113.jpg"
+    },
+    {
+      "id": "var-113-m-green",
+      "sku": "SS-HD-113-M-GREEN",
+      "size": "Medium",
+      "color": "Forest Green",
+      "colorCode": "bg-[#16a34a]",
+      "price": 125,
+      "stock": 4,
+      "image": "/images/products/hoodies/product-113.jpg"
+    },
+    {
+      "id": "var-113-m-black",
+      "sku": "SS-HD-113-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 125,
+      "stock": 4,
+      "image": "/images/products/hoodies/product-113.jpg"
+    },
+    {
+      "id": "var-113-l-green",
+      "sku": "SS-HD-113-L-GREEN",
+      "size": "Large",
+      "color": "Forest Green",
+      "colorCode": "bg-[#16a34a]",
+      "price": 125,
+      "stock": 4,
+      "image": "/images/products/hoodies/product-113.jpg"
+    },
+    {
+      "id": "var-113-l-black",
+      "sku": "SS-HD-113-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 125,
+      "stock": 4,
+      "image": "/images/products/hoodies/product-113.jpg"
+    },
+    {
+      "id": "var-113-xl-green",
+      "sku": "SS-HD-113-XL-GREEN",
+      "size": "X-Large",
+      "color": "Forest Green",
+      "colorCode": "bg-[#16a34a]",
+      "price": 125,
+      "stock": 4,
+      "image": "/images/products/hoodies/product-113.jpg"
+    },
+    {
+      "id": "var-113-xl-black",
+      "sku": "SS-HD-113-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 125,
+      "stock": 4,
+      "image": "/images/products/hoodies/product-113.jpg"
+    }
+  ]
+},
+{
+  "id": 114,
+  "slug": "zara-cropped-raw-hem-graphic-hoodie",
+  "title": "Zara Cropped Raw-Hem Graphic Hoodie",
+  "description": "Fashion-forward cropped hem with undone raw edges. Detailed with minimal modern back typography print.",
+  "brand": "Zara",
+  "category": "hoodies",
+  "subcategory": "graphic",
+  "gender": "women",
+  "srcUrl": "/images/products/hoodies/product-114.jpg",
+  "gallery": [
+    "/images/products/hoodies/product-114.jpg",
+    "/images/products/hoodies/product-114-1.jpg"
+  ],
+  "price": 75,
+  "originalPrice": 75,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.6,
+  "reviewCount": 81,
+  "sizes": [
+    {
+      "id": "xs",
+      "name": "X-Small",
+      "label": "XS"
+    },
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    }
+  ],
+  "colors": [
+    {
+      "id": "white",
+      "name": "White",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "85% Cotton, 15% Polyester",
+  "careInstructions": "Machine wash cold with like colors",
+  "fit": "Relaxed Fit",
+  "pattern": "Graphic",
+  "style": "Casual",
+  "tags": [
+    "cropped",
+    "raw hem",
+    "zara",
+    "streetwear",
+    "graphic"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 40,
+  "sku": "ZR-HD-114",
+  "createdAt": "2024-02-26",
+  "variants": [
+    {
+      "id": "var-114-xs-white",
+      "sku": "ZR-HD-114-XS-WHITE",
+      "size": "X-Small",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 75,
+      "stock": 13,
+      "image": "/images/products/hoodies/product-114.jpg"
+    },
+    {
+      "id": "var-114-s-white",
+      "sku": "ZR-HD-114-S-WHITE",
+      "size": "Small",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 75,
+      "stock": 13,
+      "image": "/images/products/hoodies/product-114.jpg"
+    },
+    {
+      "id": "var-114-m-white",
+      "sku": "ZR-HD-114-M-WHITE",
+      "size": "Medium",
+      "color": "White",
+      "colorCode": "bg-white",
+      "price": 75,
+      "stock": 13,
+      "image": "/images/products/hoodies/product-114.jpg"
+    }
+  ]
+},
+{
+  "id": 115,
+  "slug": "prada-pure-cashmere-knit-luxury-hoodie",
+  "title": "Prada Cashmere Knit Luxury Hoodie",
+  "description": "Finely spun from 100% two-ply Mongolian cashmere. Ultra-soft touch with ribbed hem, tonal drawstrings, and understated luxury feel.",
+  "brand": "Prada",
+  "category": "hoodies",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/hoodies/product-115.jpg",
+  "gallery": [
+    "/images/products/hoodies/product-115.jpg",
+    "/images/products/hoodies/product-115-1.jpg"
+  ],
+  "price": 890,
+  "originalPrice": 890,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 5,
+  "reviewCount": 28,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Caviar Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Pure Mongolian Cashmere",
+  "careInstructions": "Hand wash cold with cashmere shampoo or dry clean",
+  "fit": "Regular Fit",
+  "pattern": "Solid",
+  "style": "Formal",
+  "tags": [
+    "cashmere",
+    "prada",
+    "luxury knit",
+    "ultra soft",
+    "quiet luxury"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": false,
+  "stock": 10,
+  "sku": "PR-HD-115",
+  "createdAt": "2024-01-10",
+  "variants": [
+    {
+      "id": "var-115-s-black",
+      "sku": "PR-HD-115-S-BLACK",
+      "size": "Small",
+      "color": "Caviar Black",
+      "colorCode": "bg-black",
+      "price": 890,
+      "stock": 3,
+      "image": "/images/products/hoodies/product-115.jpg"
+    },
+    {
+      "id": "var-115-m-black",
+      "sku": "PR-HD-115-M-BLACK",
+      "size": "Medium",
+      "color": "Caviar Black",
+      "colorCode": "bg-black",
+      "price": 890,
+      "stock": 3,
+      "image": "/images/products/hoodies/product-115.jpg"
+    },
+    {
+      "id": "var-115-l-black",
+      "sku": "PR-HD-115-L-BLACK",
+      "size": "Large",
+      "color": "Caviar Black",
+      "colorCode": "bg-black",
+      "price": 890,
+      "stock": 3,
+      "image": "/images/products/hoodies/product-115.jpg"
+    }
+  ]
+},
+{
+  "id": 116,
+  "slug": "calvin-klein-monogram-raglan-hoodie",
+  "title": "Calvin Klein Monogram Raglan Hoodie",
+  "description": "Sporty raglan sleeve construction with iconic CK monogram embroidery at the chest. Plush brushed fleece lining.",
+  "brand": "Calvin Klein",
+  "category": "hoodies",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/hoodies/product-116.jpg",
+  "gallery": [
+    "/images/products/hoodies/product-116.jpg",
+    "/images/products/hoodies/product-116-1.jpg"
+  ],
+  "price": 135,
+  "originalPrice": 160,
+  "discount": {
+    "amount": 25,
+    "percentage": 16
+  },
+  "rating": 4.7,
+  "reviewCount": 67,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Navy",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    },
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "80% Cotton, 20% Polyester",
+  "careInstructions": "Machine wash warm, tumble dry low",
+  "fit": "Classic Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "calvin klein",
+    "raglan",
+    "monogram",
+    "fleece",
+    "hoodie"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 35,
+  "sku": "CK-HD-116",
+  "createdAt": "2024-01-25",
+  "variants": [
+    {
+      "id": "var-116-s-blue",
+      "sku": "CK-HD-116-S-BLUE",
+      "size": "Small",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 135,
+      "stock": 4,
+      "image": "/images/products/hoodies/product-116.jpg"
+    },
+    {
+      "id": "var-116-s-black",
+      "sku": "CK-HD-116-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 135,
+      "stock": 4,
+      "image": "/images/products/hoodies/product-116.jpg"
+    },
+    {
+      "id": "var-116-m-blue",
+      "sku": "CK-HD-116-M-BLUE",
+      "size": "Medium",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 135,
+      "stock": 4,
+      "image": "/images/products/hoodies/product-116.jpg"
+    },
+    {
+      "id": "var-116-m-black",
+      "sku": "CK-HD-116-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 135,
+      "stock": 4,
+      "image": "/images/products/hoodies/product-116.jpg"
+    },
+    {
+      "id": "var-116-l-blue",
+      "sku": "CK-HD-116-L-BLUE",
+      "size": "Large",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 135,
+      "stock": 4,
+      "image": "/images/products/hoodies/product-116.jpg"
+    },
+    {
+      "id": "var-116-l-black",
+      "sku": "CK-HD-116-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 135,
+      "stock": 4,
+      "image": "/images/products/hoodies/product-116.jpg"
+    },
+    {
+      "id": "var-116-xl-blue",
+      "sku": "CK-HD-116-XL-BLUE",
+      "size": "X-Large",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 135,
+      "stock": 4,
+      "image": "/images/products/hoodies/product-116.jpg"
+    },
+    {
+      "id": "var-116-xl-black",
+      "sku": "CK-HD-116-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 135,
+      "stock": 4,
+      "image": "/images/products/hoodies/product-116.jpg"
+    }
+  ]
+},
+{
+  "id": 117,
+  "slug": "gucci-streetwear-backprint-oversized-hoodie",
+  "title": "Gucci Streetwear Backprint Oversized Hoodie",
+  "description": "Substantial 500 GSM loopback cotton jersey featuring prominent arching Gucci typography and web stripe print across the back.",
+  "brand": "Gucci",
+  "category": "hoodies",
+  "subcategory": "graphic",
+  "gender": "unisex",
+  "srcUrl": "/images/products/hoodies/product-117.jpg",
+  "gallery": [
+    "/images/products/hoodies/product-117.jpg",
+    "/images/products/hoodies/product-117-1.jpg"
+  ],
+  "price": 780,
+  "originalPrice": 950,
+  "discount": {
+    "amount": 170,
+    "percentage": 18
+  },
+  "rating": 4.9,
+  "reviewCount": 41,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "white",
+      "name": "Off White",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "100% Cotton Heavy Jersey",
+  "careInstructions": "Dry clean only",
+  "fit": "Oversized Fit",
+  "pattern": "Graphic",
+  "style": "Party",
+  "tags": [
+    "gucci",
+    "streetwear",
+    "backprint",
+    "oversized",
+    "luxury"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": true,
+  "stock": 14,
+  "sku": "GC-HD-117",
+  "createdAt": "2024-03-08",
+  "variants": [
+    {
+      "id": "var-117-s-white",
+      "sku": "GC-HD-117-S-WHITE",
+      "size": "Small",
+      "color": "Off White",
+      "colorCode": "bg-white",
+      "price": 780,
+      "stock": 3,
+      "image": "/images/products/hoodies/product-117.jpg"
+    },
+    {
+      "id": "var-117-m-white",
+      "sku": "GC-HD-117-M-WHITE",
+      "size": "Medium",
+      "color": "Off White",
+      "colorCode": "bg-white",
+      "price": 780,
+      "stock": 3,
+      "image": "/images/products/hoodies/product-117.jpg"
+    },
+    {
+      "id": "var-117-l-white",
+      "sku": "GC-HD-117-L-WHITE",
+      "size": "Large",
+      "color": "Off White",
+      "colorCode": "bg-white",
+      "price": 780,
+      "stock": 3,
+      "image": "/images/products/hoodies/product-117.jpg"
+    },
+    {
+      "id": "var-117-xl-white",
+      "sku": "GC-HD-117-XL-WHITE",
+      "size": "X-Large",
+      "color": "Off White",
+      "colorCode": "bg-white",
+      "price": 780,
+      "stock": 3,
+      "image": "/images/products/hoodies/product-117.jpg"
+    }
+  ]
+},
+{
+  "id": 118,
+  "slug": "shopsphere-moisture-wicking-training-hoodie",
+  "title": "ShopSphere Moisture-Wicking Training Hoodie",
+  "description": "Sleek zip-neck athletic hoodie cut from quick-dry performance stretch knit with thumb loops and ponytail exit hood.",
+  "brand": "ShopSphere",
+  "category": "hoodies",
+  "subcategory": "casual",
+  "gender": "women",
+  "srcUrl": "/images/products/hoodies/product-118.jpg",
+  "gallery": [
+    "/images/products/hoodies/product-118.jpg",
+    "/images/products/hoodies/product-118-1.jpg"
+  ],
+  "price": 90,
+  "originalPrice": 90,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.7,
+  "reviewCount": 52,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "cyan",
+      "name": "Sky Blue",
+      "code": "bg-[#22d3ee]",
+      "hex": "#22d3ee"
+    }
+  ],
+  "material": "88% Polyester, 12% Elastane",
+  "careInstructions": "Machine wash cold",
+  "fit": "Athletic Fit",
+  "pattern": "Solid",
+  "style": "Gym",
+  "tags": [
+    "training",
+    "gym",
+    "dry fit",
+    "active",
+    "workout"
+  ],
+  "isNew": false,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 29,
+  "sku": "SS-HD-118",
+  "createdAt": "2024-02-19",
+  "variants": [
+    {
+      "id": "var-118-s-cyan",
+      "sku": "SS-HD-118-S-CYAN",
+      "size": "Small",
+      "color": "Sky Blue",
+      "colorCode": "bg-[#22d3ee]",
+      "price": 90,
+      "stock": 9,
+      "image": "/images/products/hoodies/product-118.jpg"
+    },
+    {
+      "id": "var-118-m-cyan",
+      "sku": "SS-HD-118-M-CYAN",
+      "size": "Medium",
+      "color": "Sky Blue",
+      "colorCode": "bg-[#22d3ee]",
+      "price": 90,
+      "stock": 9,
+      "image": "/images/products/hoodies/product-118.jpg"
+    },
+    {
+      "id": "var-118-l-cyan",
+      "sku": "SS-HD-118-L-CYAN",
+      "size": "Large",
+      "color": "Sky Blue",
+      "colorCode": "bg-[#22d3ee]",
+      "price": 90,
+      "stock": 9,
+      "image": "/images/products/hoodies/product-118.jpg"
+    }
+  ]
+},
+{
+  "id": 119,
+  "slug": "luxe-double-layer-heavy-cotton-zip-hoodie",
+  "title": "LUXE Double-Layer Heavy Cotton Zip Hoodie",
+  "description": "Fully lined in contrast waffle knit for insulation. Chunky two-way silver riri zipper and ribbed side expansion panels.",
+  "brand": "LUXE Studio",
+  "category": "hoodies",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/hoodies/product-119.jpg",
+  "gallery": [
+    "/images/products/hoodies/product-119.jpg",
+    "/images/products/hoodies/product-119-1.jpg"
+  ],
+  "price": 210,
+  "originalPrice": 250,
+  "discount": {
+    "amount": 40,
+    "percentage": 16
+  },
+  "rating": 4.8,
+  "reviewCount": 63,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Cotton with Waffle Lining",
+  "careInstructions": "Machine wash cold, air dry",
+  "fit": "Relaxed Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "zip hoodie",
+    "double layer",
+    "waffle",
+    "heavyweight",
+    "luxe studio"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 27,
+  "sku": "LX-HD-119",
+  "createdAt": "2024-03-02",
+  "variants": [
+    {
+      "id": "var-119-s-black",
+      "sku": "LX-HD-119-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 210,
+      "stock": 6,
+      "image": "/images/products/hoodies/product-119.jpg"
+    },
+    {
+      "id": "var-119-m-black",
+      "sku": "LX-HD-119-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 210,
+      "stock": 6,
+      "image": "/images/products/hoodies/product-119.jpg"
+    },
+    {
+      "id": "var-119-l-black",
+      "sku": "LX-HD-119-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 210,
+      "stock": 6,
+      "image": "/images/products/hoodies/product-119.jpg"
+    },
+    {
+      "id": "var-119-xl-black",
+      "sku": "LX-HD-119-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 210,
+      "stock": 6,
+      "image": "/images/products/hoodies/product-119.jpg"
+    }
+  ]
+},
+{
+  "id": 120,
+  "slug": "zara-soft-brushed-chenille-velvet-hoodie",
+  "title": "Zara Soft Brushed Chenille Velvet Hoodie",
+  "description": "Sumptuously plush chenille velour hoodie with a soft sheen and relaxed oversized silhouette. Unrivaled loungewear comfort.",
+  "brand": "Zara",
+  "category": "hoodies",
+  "subcategory": "casual",
+  "gender": "women",
+  "srcUrl": "/images/products/hoodies/product-120.jpg",
+  "gallery": [
+    "/images/products/hoodies/product-120.jpg",
+    "/images/products/hoodies/product-120-1.jpg"
+  ],
+  "price": 85,
+  "originalPrice": 85,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.6,
+  "reviewCount": 44,
+  "sizes": [
+    {
+      "id": "xs",
+      "name": "X-Small",
+      "label": "XS"
+    },
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    }
+  ],
+  "colors": [
+    {
+      "id": "pink",
+      "name": "Blush",
+      "code": "bg-[#ec4899]",
+      "hex": "#ec4899"
+    }
+  ],
+  "material": "100% Poly Chenille",
+  "careInstructions": "Machine wash cold gentle",
+  "fit": "Oversized Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "velvet",
+    "chenille",
+    "plush",
+    "cozy",
+    "zara"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": false,
+  "isOnSale": false,
+  "stock": 31,
+  "sku": "ZR-HD-120",
+  "createdAt": "2024-02-28",
+  "variants": [
+    {
+      "id": "var-120-xs-pink",
+      "sku": "ZR-HD-120-XS-PINK",
+      "size": "X-Small",
+      "color": "Blush",
+      "colorCode": "bg-[#ec4899]",
+      "price": 85,
+      "stock": 10,
+      "image": "/images/products/hoodies/product-120.jpg"
+    },
+    {
+      "id": "var-120-s-pink",
+      "sku": "ZR-HD-120-S-PINK",
+      "size": "Small",
+      "color": "Blush",
+      "colorCode": "bg-[#ec4899]",
+      "price": 85,
+      "stock": 10,
+      "image": "/images/products/hoodies/product-120.jpg"
+    },
+    {
+      "id": "var-120-m-pink",
+      "sku": "ZR-HD-120-M-PINK",
+      "size": "Medium",
+      "color": "Blush",
+      "colorCode": "bg-[#ec4899]",
+      "price": 85,
+      "stock": 10,
+      "image": "/images/products/hoodies/product-120.jpg"
+    }
+  ]
+},
+{
+  "id": 121,
+  "slug": "shopsphere-contrast-stitching-relaxed-hoodie",
+  "title": "ShopSphere Contrast Stitching Relaxed Hoodie",
+  "description": "Standout urban look featuring stark white contrast flatlock stitching over a jet-black loopback cotton base.",
+  "brand": "ShopSphere",
+  "category": "hoodies",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/hoodies/product-121.jpg",
+  "gallery": [
+    "/images/products/hoodies/product-121.jpg",
+    "/images/products/hoodies/product-121-1.jpg"
+  ],
+  "price": 110,
+  "originalPrice": 130,
+  "discount": {
+    "amount": 20,
+    "percentage": 15
+  },
+  "rating": 4.7,
+  "reviewCount": 56,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black / White Stitch",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Combed Cotton",
+  "careInstructions": "Machine wash cold inside out",
+  "fit": "Relaxed Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "contrast stitch",
+    "streetwear",
+    "hoodie",
+    "shopsphere"
+  ],
+  "isNew": false,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 34,
+  "sku": "SS-HD-121",
+  "createdAt": "2024-01-31",
+  "variants": [
+    {
+      "id": "var-121-s-black",
+      "sku": "SS-HD-121-S-BLACK",
+      "size": "Small",
+      "color": "Black / White Stitch",
+      "colorCode": "bg-black",
+      "price": 110,
+      "stock": 8,
+      "image": "/images/products/hoodies/product-121.jpg"
+    },
+    {
+      "id": "var-121-m-black",
+      "sku": "SS-HD-121-M-BLACK",
+      "size": "Medium",
+      "color": "Black / White Stitch",
+      "colorCode": "bg-black",
+      "price": 110,
+      "stock": 8,
+      "image": "/images/products/hoodies/product-121.jpg"
+    },
+    {
+      "id": "var-121-l-black",
+      "sku": "SS-HD-121-L-BLACK",
+      "size": "Large",
+      "color": "Black / White Stitch",
+      "colorCode": "bg-black",
+      "price": 110,
+      "stock": 8,
+      "image": "/images/products/hoodies/product-121.jpg"
+    },
+    {
+      "id": "var-121-xl-black",
+      "sku": "SS-HD-121-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black / White Stitch",
+      "colorCode": "bg-black",
+      "price": 110,
+      "stock": 8,
+      "image": "/images/products/hoodies/product-121.jpg"
+    }
+  ]
+},
+{
+  "id": 122,
+  "slug": "ralph-lauren-colorblock-retro-sport-hoodie",
+  "title": "Ralph Lauren Colorblock Retro Sport Hoodie",
+  "description": "90s stadium heritage with bold tri-color blocking, embroidered script logo across the chest, and vintage drawstrings.",
+  "brand": "Ralph Lauren",
+  "category": "hoodies",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/hoodies/product-122.jpg",
+  "gallery": [
+    "/images/products/hoodies/product-122.jpg",
+    "/images/products/hoodies/product-122-1.jpg"
+  ],
+  "price": 175,
+  "originalPrice": 175,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.8,
+  "reviewCount": 49,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Navy / Red / White",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    }
+  ],
+  "material": "84% Cotton, 16% Polyester",
+  "careInstructions": "Machine wash warm with like colors",
+  "fit": "Regular Fit",
+  "pattern": "Colorblock",
+  "style": "Casual",
+  "tags": [
+    "colorblock",
+    "retro",
+    "sportswear",
+    "ralph lauren"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 22,
+  "sku": "RL-HD-122",
+  "createdAt": "2024-02-04",
+  "variants": [
+    {
+      "id": "var-122-s-blue",
+      "sku": "RL-HD-122-S-BLUE",
+      "size": "Small",
+      "color": "Navy / Red / White",
+      "colorCode": "bg-[#2563eb]",
+      "price": 175,
+      "stock": 5,
+      "image": "/images/products/hoodies/product-122.jpg"
+    },
+    {
+      "id": "var-122-m-blue",
+      "sku": "RL-HD-122-M-BLUE",
+      "size": "Medium",
+      "color": "Navy / Red / White",
+      "colorCode": "bg-[#2563eb]",
+      "price": 175,
+      "stock": 5,
+      "image": "/images/products/hoodies/product-122.jpg"
+    },
+    {
+      "id": "var-122-l-blue",
+      "sku": "RL-HD-122-L-BLUE",
+      "size": "Large",
+      "color": "Navy / Red / White",
+      "colorCode": "bg-[#2563eb]",
+      "price": 175,
+      "stock": 5,
+      "image": "/images/products/hoodies/product-122.jpg"
+    },
+    {
+      "id": "var-122-xl-blue",
+      "sku": "RL-HD-122-XL-BLUE",
+      "size": "X-Large",
+      "color": "Navy / Red / White",
+      "colorCode": "bg-[#2563eb]",
+      "price": 175,
+      "stock": 5,
+      "image": "/images/products/hoodies/product-122.jpg"
+    }
+  ]
+},
+{
+  "id": 123,
+  "slug": "zara-cozy-teddy-fleece-oversized-hoodie",
+  "title": "Zara Cozy Teddy Fleece Oversized Hoodie",
+  "description": "Thick sherpa teddy fleece with an oversized snug silhouette, wide hood, and kangaroo handwarmer pocket.",
+  "brand": "Zara",
+  "category": "hoodies",
+  "subcategory": "casual",
+  "gender": "women",
+  "srcUrl": "/images/products/hoodies/product-123.jpg",
+  "gallery": [
+    "/images/products/hoodies/product-123.jpg",
+    "/images/products/hoodies/product-123-1.jpg"
+  ],
+  "price": 90,
+  "originalPrice": 110,
+  "discount": {
+    "amount": 20,
+    "percentage": 18
+  },
+  "rating": 4.7,
+  "reviewCount": 73,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "white",
+      "name": "Cream Teddy",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "100% Poly Teddy Fleece",
+  "careInstructions": "Machine wash cold gentle",
+  "fit": "Oversized Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "teddy fleece",
+    "sherpa",
+    "winter",
+    "cozy",
+    "zara"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 35,
+  "sku": "ZR-HD-123",
+  "createdAt": "2024-03-01",
+  "variants": [
+    {
+      "id": "var-123-s-white",
+      "sku": "ZR-HD-123-S-WHITE",
+      "size": "Small",
+      "color": "Cream Teddy",
+      "colorCode": "bg-white",
+      "price": 90,
+      "stock": 11,
+      "image": "/images/products/hoodies/product-123.jpg"
+    },
+    {
+      "id": "var-123-m-white",
+      "sku": "ZR-HD-123-M-WHITE",
+      "size": "Medium",
+      "color": "Cream Teddy",
+      "colorCode": "bg-white",
+      "price": 90,
+      "stock": 11,
+      "image": "/images/products/hoodies/product-123.jpg"
+    },
+    {
+      "id": "var-123-l-white",
+      "sku": "ZR-HD-123-L-WHITE",
+      "size": "Large",
+      "color": "Cream Teddy",
+      "colorCode": "bg-white",
+      "price": 90,
+      "stock": 11,
+      "image": "/images/products/hoodies/product-123.jpg"
+    }
+  ]
+},
+{
+  "id": 124,
+  "slug": "luxe-garment-dyed-drop-shoulder-hoodie",
+  "title": "LUXE Garment-Dyed Drop-Shoulder Hoodie",
+  "description": "Custom garment dyed in seasonal muted earth tones with an easy slouchy drape and blind-stitched hem.",
+  "brand": "LUXE Studio",
+  "category": "hoodies",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/hoodies/product-124.jpg",
+  "gallery": [
+    "/images/products/hoodies/product-124.jpg",
+    "/images/products/hoodies/product-124-1.jpg"
+  ],
+  "price": 155,
+  "originalPrice": 155,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.8,
+  "reviewCount": 65,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "green",
+      "name": "Sage",
+      "code": "bg-[#16a34a]",
+      "hex": "#16a34a"
+    }
+  ],
+  "material": "100% Combed Cotton",
+  "careInstructions": "Machine wash cold, hang dry",
+  "fit": "Oversized Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "garment dyed",
+    "drop shoulder",
+    "earth tone",
+    "luxe studio"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 28,
+  "sku": "LX-HD-124",
+  "createdAt": "2024-03-05",
+  "variants": [
+    {
+      "id": "var-124-s-green",
+      "sku": "LX-HD-124-S-GREEN",
+      "size": "Small",
+      "color": "Sage",
+      "colorCode": "bg-[#16a34a]",
+      "price": 155,
+      "stock": 7,
+      "image": "/images/products/hoodies/product-124.jpg"
+    },
+    {
+      "id": "var-124-m-green",
+      "sku": "LX-HD-124-M-GREEN",
+      "size": "Medium",
+      "color": "Sage",
+      "colorCode": "bg-[#16a34a]",
+      "price": 155,
+      "stock": 7,
+      "image": "/images/products/hoodies/product-124.jpg"
+    },
+    {
+      "id": "var-124-l-green",
+      "sku": "LX-HD-124-L-GREEN",
+      "size": "Large",
+      "color": "Sage",
+      "colorCode": "bg-[#16a34a]",
+      "price": 155,
+      "stock": 7,
+      "image": "/images/products/hoodies/product-124.jpg"
+    },
+    {
+      "id": "var-124-xl-green",
+      "sku": "LX-HD-124-XL-GREEN",
+      "size": "X-Large",
+      "color": "Sage",
+      "colorCode": "bg-[#16a34a]",
+      "price": 155,
+      "stock": 7,
+      "image": "/images/products/hoodies/product-124.jpg"
+    }
+  ]
+},
+{
+  "id": 125,
+  "slug": "saint-laurent-lambskin-leather-biker-moto-jacket",
+  "title": "Saint Laurent Lambskin Leather Biker Moto Jacket",
+  "description": "The Holy Grail of moto jackets. Crafted in Italy from butter-soft washed lambskin with asymmetric silver zip hardware and belted waist.",
+  "brand": "Saint Laurent",
+  "category": "jackets",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/jackets/product-125.jpg",
+  "gallery": [
+    "/images/products/jackets/product-125.jpg",
+    "/images/products/jackets/product-125-1.jpg"
+  ],
+  "price": 890,
+  "originalPrice": 890,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 5,
+  "reviewCount": 48,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small (46)",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium (48)",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large (50)",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large (52)",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Jet Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Italian Lambskin Leather, Silk Lining",
+  "careInstructions": "Specialist leather dry clean only",
+  "fit": "Slim Fit",
+  "pattern": "Solid",
+  "style": "Party",
+  "tags": [
+    "biker jacket",
+    "leather",
+    "saint laurent",
+    "moto",
+    "luxury"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 10,
+  "sku": "SL-JK-125",
+  "createdAt": "2024-03-01",
+  "variants": [
+    {
+      "id": "var-125-s-black",
+      "sku": "SL-JK-125-S-BLACK",
+      "size": "Small (46)",
+      "color": "Jet Black",
+      "colorCode": "bg-black",
+      "price": 890,
+      "stock": 2,
+      "image": "/images/products/jackets/product-125.jpg"
+    },
+    {
+      "id": "var-125-m-black",
+      "sku": "SL-JK-125-M-BLACK",
+      "size": "Medium (48)",
+      "color": "Jet Black",
+      "colorCode": "bg-black",
+      "price": 890,
+      "stock": 2,
+      "image": "/images/products/jackets/product-125.jpg"
+    },
+    {
+      "id": "var-125-l-black",
+      "sku": "SL-JK-125-L-BLACK",
+      "size": "Large (50)",
+      "color": "Jet Black",
+      "colorCode": "bg-black",
+      "price": 890,
+      "stock": 2,
+      "image": "/images/products/jackets/product-125.jpg"
+    },
+    {
+      "id": "var-125-xl-black",
+      "sku": "SL-JK-125-XL-BLACK",
+      "size": "X-Large (52)",
+      "color": "Jet Black",
+      "colorCode": "bg-black",
+      "price": 890,
+      "stock": 2,
+      "image": "/images/products/jackets/product-125.jpg"
+    }
+  ]
+},
+{
+  "id": 126,
+  "slug": "calvin-klein-oversized-vintage-denim-trucker-jacket",
+  "title": "Calvin Klein Vintage Denim Trucker Jacket",
+  "description": "Classic American denim silhouette with dual chest flap pockets, shank buttons, and adjustable waist tabs in medium vintage stonewash.",
+  "brand": "Calvin Klein",
+  "category": "jackets",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/jackets/product-126.jpg",
+  "gallery": [
+    "/images/products/jackets/product-126.jpg",
+    "/images/products/jackets/product-126-1.jpg"
+  ],
+  "price": 195,
+  "originalPrice": 240,
+  "discount": {
+    "amount": 45,
+    "percentage": 19
+  },
+  "rating": 4.8,
+  "reviewCount": 85,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Stonewash",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    }
+  ],
+  "material": "100% Rigid Cotton Denim",
+  "careInstructions": "Machine wash cold inside out",
+  "fit": "Relaxed Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "denim jacket",
+    "trucker",
+    "calvin klein",
+    "vintage",
+    "unisex"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 32,
+  "sku": "CK-JK-126",
+  "createdAt": "2024-01-20",
+  "variants": [
+    {
+      "id": "var-126-s-blue",
+      "sku": "CK-JK-126-S-BLUE",
+      "size": "Small",
+      "color": "Stonewash",
+      "colorCode": "bg-[#2563eb]",
+      "price": 195,
+      "stock": 8,
+      "image": "/images/products/jackets/product-126.jpg"
+    },
+    {
+      "id": "var-126-m-blue",
+      "sku": "CK-JK-126-M-BLUE",
+      "size": "Medium",
+      "color": "Stonewash",
+      "colorCode": "bg-[#2563eb]",
+      "price": 195,
+      "stock": 8,
+      "image": "/images/products/jackets/product-126.jpg"
+    },
+    {
+      "id": "var-126-l-blue",
+      "sku": "CK-JK-126-L-BLUE",
+      "size": "Large",
+      "color": "Stonewash",
+      "colorCode": "bg-[#2563eb]",
+      "price": 195,
+      "stock": 8,
+      "image": "/images/products/jackets/product-126.jpg"
+    },
+    {
+      "id": "var-126-xl-blue",
+      "sku": "CK-JK-126-XL-BLUE",
+      "size": "X-Large",
+      "color": "Stonewash",
+      "colorCode": "bg-[#2563eb]",
+      "price": 195,
+      "stock": 8,
+      "image": "/images/products/jackets/product-126.jpg"
+    }
+  ]
+},
+{
+  "id": 127,
+  "slug": "prada-tailored-double-breasted-wool-blazer",
+  "title": "Prada Tailored Double-Breasted Wool Blazer",
+  "description": "Power tailoring with strong peaked lapels, structured shoulders, and an immaculate hourglass waistline in virgin wool twill.",
+  "brand": "Prada",
+  "category": "jackets",
+  "subcategory": "formal",
+  "gender": "women",
+  "srcUrl": "/images/products/jackets/product-127.jpg",
+  "gallery": [
+    "/images/products/jackets/product-127.jpg",
+    "/images/products/jackets/product-127-1.jpg"
+  ],
+  "price": 850,
+  "originalPrice": 850,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.9,
+  "reviewCount": 39,
+  "sizes": [
+    {
+      "id": "xs",
+      "name": "X-Small",
+      "label": "XS"
+    },
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Virgin Wool Twill, Cupro Lining",
+  "careInstructions": "Professional dry clean only",
+  "fit": "Tailored Fit",
+  "pattern": "Solid",
+  "style": "Formal",
+  "tags": [
+    "blazer",
+    "double breasted",
+    "prada",
+    "formal",
+    "tailored"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": false,
+  "stock": 14,
+  "sku": "PR-JK-127",
+  "createdAt": "2024-03-04",
+  "variants": [
+    {
+      "id": "var-127-xs-black",
+      "sku": "PR-JK-127-XS-BLACK",
+      "size": "X-Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 850,
+      "stock": 3,
+      "image": "/images/products/jackets/product-127.jpg"
+    },
+    {
+      "id": "var-127-s-black",
+      "sku": "PR-JK-127-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 850,
+      "stock": 3,
+      "image": "/images/products/jackets/product-127.jpg"
+    },
+    {
+      "id": "var-127-m-black",
+      "sku": "PR-JK-127-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 850,
+      "stock": 3,
+      "image": "/images/products/jackets/product-127.jpg"
+    },
+    {
+      "id": "var-127-l-black",
+      "sku": "PR-JK-127-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 850,
+      "stock": 3,
+      "image": "/images/products/jackets/product-127.jpg"
+    }
+  ]
+},
+{
+  "id": 128,
+  "slug": "luxe-down-filled-matte-puffer-jacket",
+  "title": "LUXE Down-Filled Matte Puffer Jacket",
+  "description": "90/10 goose down 750 fill power warmth enclosed in a matte technical micro-ripstop shell with detachable hood and fleece-lined storm pockets.",
+  "brand": "LUXE Studio",
+  "category": "jackets",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/jackets/product-128.jpg",
+  "gallery": [
+    "/images/products/jackets/product-128.jpg",
+    "/images/products/jackets/product-128-1.jpg"
+  ],
+  "price": 320,
+  "originalPrice": 400,
+  "discount": {
+    "amount": 80,
+    "percentage": 20
+  },
+  "rating": 4.9,
+  "reviewCount": 92,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Matte Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "90% Goose Down, 10% Feathers, Nylon Shell",
+  "careInstructions": "Specialist down dry clean",
+  "fit": "Regular Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "puffer",
+    "down jacket",
+    "winter",
+    "warm",
+    "luxe studio"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 25,
+  "sku": "LX-JK-128",
+  "createdAt": "2024-01-15",
+  "variants": [
+    {
+      "id": "var-128-s-black",
+      "sku": "LX-JK-128-S-BLACK",
+      "size": "Small",
+      "color": "Matte Black",
+      "colorCode": "bg-black",
+      "price": 320,
+      "stock": 6,
+      "image": "/images/products/jackets/product-128.jpg"
+    },
+    {
+      "id": "var-128-m-black",
+      "sku": "LX-JK-128-M-BLACK",
+      "size": "Medium",
+      "color": "Matte Black",
+      "colorCode": "bg-black",
+      "price": 320,
+      "stock": 6,
+      "image": "/images/products/jackets/product-128.jpg"
+    },
+    {
+      "id": "var-128-l-black",
+      "sku": "LX-JK-128-L-BLACK",
+      "size": "Large",
+      "color": "Matte Black",
+      "colorCode": "bg-black",
+      "price": 320,
+      "stock": 6,
+      "image": "/images/products/jackets/product-128.jpg"
+    },
+    {
+      "id": "var-128-xl-black",
+      "sku": "LX-JK-128-XL-BLACK",
+      "size": "X-Large",
+      "color": "Matte Black",
+      "colorCode": "bg-black",
+      "price": 320,
+      "stock": 6,
+      "image": "/images/products/jackets/product-128.jpg"
+    }
+  ]
+},
+{
+  "id": 129,
+  "slug": "zara-classic-trench-coat-with-storm-flap",
+  "title": "Zara Classic Trench Coat with Storm Flap",
+  "description": "Timeless double-breasted trench in water-repellent cotton gabardine featuring storm flap, epaulets, and horn buckle waist belt.",
+  "brand": "Zara",
+  "category": "jackets",
+  "subcategory": "formal",
+  "gender": "women",
+  "srcUrl": "/images/products/jackets/product-129.jpg",
+  "gallery": [
+    "/images/products/jackets/product-129.jpg",
+    "/images/products/jackets/product-129-1.jpg"
+  ],
+  "price": 190,
+  "originalPrice": 190,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.7,
+  "reviewCount": 71,
+  "sizes": [
+    {
+      "id": "xs",
+      "name": "X-Small",
+      "label": "XS"
+    },
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "yellow",
+      "name": "Honey Beige",
+      "code": "bg-[#facc15]",
+      "hex": "#facc15"
+    }
+  ],
+  "material": "100% Water-Repellent Cotton Gabardine",
+  "careInstructions": "Dry clean only",
+  "fit": "Regular Fit",
+  "pattern": "Solid",
+  "style": "Formal",
+  "tags": [
+    "trench coat",
+    "outerwear",
+    "classic",
+    "waterproof",
+    "zara"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 28,
+  "sku": "ZR-JK-129",
+  "createdAt": "2024-02-28",
+  "variants": [
+    {
+      "id": "var-129-xs-yellow",
+      "sku": "ZR-JK-129-XS-YELLOW",
+      "size": "X-Small",
+      "color": "Honey Beige",
+      "colorCode": "bg-[#facc15]",
+      "price": 190,
+      "stock": 7,
+      "image": "/images/products/jackets/product-129.jpg"
+    },
+    {
+      "id": "var-129-s-yellow",
+      "sku": "ZR-JK-129-S-YELLOW",
+      "size": "Small",
+      "color": "Honey Beige",
+      "colorCode": "bg-[#facc15]",
+      "price": 190,
+      "stock": 7,
+      "image": "/images/products/jackets/product-129.jpg"
+    },
+    {
+      "id": "var-129-m-yellow",
+      "sku": "ZR-JK-129-M-YELLOW",
+      "size": "Medium",
+      "color": "Honey Beige",
+      "colorCode": "bg-[#facc15]",
+      "price": 190,
+      "stock": 7,
+      "image": "/images/products/jackets/product-129.jpg"
+    },
+    {
+      "id": "var-129-l-yellow",
+      "sku": "ZR-JK-129-L-YELLOW",
+      "size": "Large",
+      "color": "Honey Beige",
+      "colorCode": "bg-[#facc15]",
+      "price": 190,
+      "stock": 7,
+      "image": "/images/products/jackets/product-129.jpg"
+    }
+  ]
+},
+{
+  "id": 130,
+  "slug": "ralph-lauren-suede-bomber-zip-jacket",
+  "title": "Ralph Lauren Suede Bomber Zip Jacket",
+  "description": "Handcrafted from velvety goatskin suede with tonal ribbed wool trims, two-way antique brass zipper, and authentic tartan interior lining.",
+  "brand": "Ralph Lauren",
+  "category": "jackets",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/jackets/product-130.jpg",
+  "gallery": [
+    "/images/products/jackets/product-130.jpg",
+    "/images/products/jackets/product-130-1.jpg"
+  ],
+  "price": 680,
+  "originalPrice": 850,
+  "discount": {
+    "amount": 170,
+    "percentage": 20
+  },
+  "rating": 4.9,
+  "reviewCount": 34,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Chestnut Brown",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Genuine Goatskin Suede",
+  "careInstructions": "Specialist leather clean only",
+  "fit": "Classic Fit",
+  "pattern": "Solid",
+  "style": "Formal",
+  "tags": [
+    "suede",
+    "bomber",
+    "ralph lauren",
+    "luxury",
+    "smart casual"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": true,
+  "stock": 12,
+  "sku": "RL-JK-130",
+  "createdAt": "2024-01-22",
+  "variants": [
+    {
+      "id": "var-130-s-black",
+      "sku": "RL-JK-130-S-BLACK",
+      "size": "Small",
+      "color": "Chestnut Brown",
+      "colorCode": "bg-black",
+      "price": 680,
+      "stock": 3,
+      "image": "/images/products/jackets/product-130.jpg"
+    },
+    {
+      "id": "var-130-m-black",
+      "sku": "RL-JK-130-M-BLACK",
+      "size": "Medium",
+      "color": "Chestnut Brown",
+      "colorCode": "bg-black",
+      "price": 680,
+      "stock": 3,
+      "image": "/images/products/jackets/product-130.jpg"
+    },
+    {
+      "id": "var-130-l-black",
+      "sku": "RL-JK-130-L-BLACK",
+      "size": "Large",
+      "color": "Chestnut Brown",
+      "colorCode": "bg-black",
+      "price": 680,
+      "stock": 3,
+      "image": "/images/products/jackets/product-130.jpg"
+    },
+    {
+      "id": "var-130-xl-black",
+      "sku": "RL-JK-130-XL-BLACK",
+      "size": "X-Large",
+      "color": "Chestnut Brown",
+      "colorCode": "bg-black",
+      "price": 680,
+      "stock": 3,
+      "image": "/images/products/jackets/product-130.jpg"
+    }
+  ]
+},
+{
+  "id": 131,
+  "slug": "shopsphere-technical-waterproof-windbreaker",
+  "title": "ShopSphere Technical Waterproof Windbreaker",
+  "description": "Fully seam-taped 3-layer breathable shell with 20k waterproofing rating, adjustable storm hood, and underarm pit zips.",
+  "brand": "ShopSphere",
+  "category": "jackets",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/jackets/product-131.jpg",
+  "gallery": [
+    "/images/products/jackets/product-131.jpg",
+    "/images/products/jackets/product-131-1.jpg"
+  ],
+  "price": 155,
+  "originalPrice": 155,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.7,
+  "reviewCount": 68,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% 3L Performance Nylon",
+  "careInstructions": "Machine wash cold gentle",
+  "fit": "Regular Fit",
+  "pattern": "Solid",
+  "style": "Gym",
+  "tags": [
+    "windbreaker",
+    "waterproof",
+    "rain jacket",
+    "technical",
+    "gym"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 36,
+  "sku": "SS-JK-131",
+  "createdAt": "2024-02-18",
+  "variants": [
+    {
+      "id": "var-131-s-black",
+      "sku": "SS-JK-131-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 155,
+      "stock": 9,
+      "image": "/images/products/jackets/product-131.jpg"
+    },
+    {
+      "id": "var-131-m-black",
+      "sku": "SS-JK-131-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 155,
+      "stock": 9,
+      "image": "/images/products/jackets/product-131.jpg"
+    },
+    {
+      "id": "var-131-l-black",
+      "sku": "SS-JK-131-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 155,
+      "stock": 9,
+      "image": "/images/products/jackets/product-131.jpg"
+    },
+    {
+      "id": "var-131-xl-black",
+      "sku": "SS-JK-131-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 155,
+      "stock": 9,
+      "image": "/images/products/jackets/product-131.jpg"
+    }
+  ]
+},
+{
+  "id": 132,
+  "slug": "luxe-sherpa-lined-corduroy-trucker-jacket",
+  "title": "LUXE Sherpa-Lined Corduroy Trucker Jacket",
+  "description": "Vintage workwear comfort. Thick wide-wale corduroy lined with warm cream faux-sherpa throughout the body and collar.",
+  "brand": "LUXE Studio",
+  "category": "jackets",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/jackets/product-132.jpg",
+  "gallery": [
+    "/images/products/jackets/product-132.jpg",
+    "/images/products/jackets/product-132-1.jpg"
+  ],
+  "price": 210,
+  "originalPrice": 250,
+  "discount": {
+    "amount": 40,
+    "percentage": 16
+  },
+  "rating": 4.8,
+  "reviewCount": 52,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "yellow",
+      "name": "Camel",
+      "code": "bg-[#facc15]",
+      "hex": "#facc15"
+    }
+  ],
+  "material": "100% Cotton Corduroy, Sherpa Lining",
+  "careInstructions": "Machine wash cold gentle, hang dry",
+  "fit": "Relaxed Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "corduroy",
+    "sherpa",
+    "trucker",
+    "winter",
+    "cozy"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 24,
+  "sku": "LX-JK-132",
+  "createdAt": "2024-03-02",
+  "variants": [
+    {
+      "id": "var-132-s-yellow",
+      "sku": "LX-JK-132-S-YELLOW",
+      "size": "Small",
+      "color": "Camel",
+      "colorCode": "bg-[#facc15]",
+      "price": 210,
+      "stock": 6,
+      "image": "/images/products/jackets/product-132.jpg"
+    },
+    {
+      "id": "var-132-m-yellow",
+      "sku": "LX-JK-132-M-YELLOW",
+      "size": "Medium",
+      "color": "Camel",
+      "colorCode": "bg-[#facc15]",
+      "price": 210,
+      "stock": 6,
+      "image": "/images/products/jackets/product-132.jpg"
+    },
+    {
+      "id": "var-132-l-yellow",
+      "sku": "LX-JK-132-L-YELLOW",
+      "size": "Large",
+      "color": "Camel",
+      "colorCode": "bg-[#facc15]",
+      "price": 210,
+      "stock": 6,
+      "image": "/images/products/jackets/product-132.jpg"
+    },
+    {
+      "id": "var-132-xl-yellow",
+      "sku": "LX-JK-132-XL-YELLOW",
+      "size": "X-Large",
+      "color": "Camel",
+      "colorCode": "bg-[#facc15]",
+      "price": 210,
+      "stock": 6,
+      "image": "/images/products/jackets/product-132.jpg"
+    }
+  ]
+},
+{
+  "id": 133,
+  "slug": "zara-cropped-boucle-tweed-blazer",
+  "title": "Zara Cropped Bouclé Tweed Blazer",
+  "description": "French-chic boxy cropped blazer in textured metallic-flecked bouclé tweed with embossed gold lion buttons and frayed edges.",
+  "brand": "Zara",
+  "category": "jackets",
+  "subcategory": "formal",
+  "gender": "women",
+  "srcUrl": "/images/products/jackets/product-133.jpg",
+  "gallery": [
+    "/images/products/jackets/product-133.jpg",
+    "/images/products/jackets/product-133-1.jpg"
+  ],
+  "price": 135,
+  "originalPrice": 135,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.6,
+  "reviewCount": 59,
+  "sizes": [
+    {
+      "id": "xs",
+      "name": "X-Small",
+      "label": "XS"
+    },
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    }
+  ],
+  "colors": [
+    {
+      "id": "white",
+      "name": "Ivory Tweed",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "80% Acrylic, 20% Wool",
+  "careInstructions": "Dry clean recommended",
+  "fit": "Regular Fit",
+  "pattern": "Tweed",
+  "style": "Formal",
+  "tags": [
+    "boucle",
+    "tweed",
+    "cropped blazer",
+    "elegant",
+    "zara"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 31,
+  "sku": "ZR-JK-133",
+  "createdAt": "2024-02-26",
+  "variants": [
+    {
+      "id": "var-133-xs-white",
+      "sku": "ZR-JK-133-XS-WHITE",
+      "size": "X-Small",
+      "color": "Ivory Tweed",
+      "colorCode": "bg-white",
+      "price": 135,
+      "stock": 10,
+      "image": "/images/products/jackets/product-133.jpg"
+    },
+    {
+      "id": "var-133-s-white",
+      "sku": "ZR-JK-133-S-WHITE",
+      "size": "Small",
+      "color": "Ivory Tweed",
+      "colorCode": "bg-white",
+      "price": 135,
+      "stock": 10,
+      "image": "/images/products/jackets/product-133.jpg"
+    },
+    {
+      "id": "var-133-m-white",
+      "sku": "ZR-JK-133-M-WHITE",
+      "size": "Medium",
+      "color": "Ivory Tweed",
+      "colorCode": "bg-white",
+      "price": 135,
+      "stock": 10,
+      "image": "/images/products/jackets/product-133.jpg"
+    }
+  ]
+},
+{
+  "id": 134,
+  "slug": "versace-reversible-satin-souvenir-bomber",
+  "title": "Versace Reversible Satin Souvenir Bomber",
+  "description": "Reversible collector's piece. One side showcases high-gloss emerald silk with back embroidery; reverse side reveals sleek minimalist black.",
+  "brand": "Versace",
+  "category": "jackets",
+  "subcategory": "casual",
+  "gender": "unisex",
+  "srcUrl": "/images/products/jackets/product-134.jpg",
+  "gallery": [
+    "/images/products/jackets/product-134.jpg",
+    "/images/products/jackets/product-134-1.jpg"
+  ],
+  "price": 790,
+  "originalPrice": 950,
+  "discount": {
+    "amount": 160,
+    "percentage": 17
+  },
+  "rating": 4.9,
+  "reviewCount": 29,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "green",
+      "name": "Emerald / Black",
+      "code": "bg-[#16a34a]",
+      "hex": "#16a34a"
+    }
+  ],
+  "material": "100% Silk Satin",
+  "careInstructions": "Specialist dry clean only",
+  "fit": "Relaxed Fit",
+  "pattern": "Graphic",
+  "style": "Party",
+  "tags": [
+    "bomber",
+    "reversible",
+    "versace",
+    "souvenir jacket",
+    "party"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": true,
+  "stock": 11,
+  "sku": "VS-JK-134",
+  "createdAt": "2024-03-09",
+  "variants": [
+    {
+      "id": "var-134-s-green",
+      "sku": "VS-JK-134-S-GREEN",
+      "size": "Small",
+      "color": "Emerald / Black",
+      "colorCode": "bg-[#16a34a]",
+      "price": 790,
+      "stock": 3,
+      "image": "/images/products/jackets/product-134.jpg"
+    },
+    {
+      "id": "var-134-m-green",
+      "sku": "VS-JK-134-M-GREEN",
+      "size": "Medium",
+      "color": "Emerald / Black",
+      "colorCode": "bg-[#16a34a]",
+      "price": 790,
+      "stock": 3,
+      "image": "/images/products/jackets/product-134.jpg"
+    },
+    {
+      "id": "var-134-l-green",
+      "sku": "VS-JK-134-L-GREEN",
+      "size": "Large",
+      "color": "Emerald / Black",
+      "colorCode": "bg-[#16a34a]",
+      "price": 790,
+      "stock": 3,
+      "image": "/images/products/jackets/product-134.jpg"
+    }
+  ]
+},
+{
+  "id": 135,
+  "slug": "prada-single-breasted-tailored-coat",
+  "title": "Prada Minimalist Single-Breasted Tailored Coat",
+  "description": "Architectural minimalism in heavy melton wool. Clean notch collar, horn three-button closure, and center back vent.",
+  "brand": "Prada",
+  "category": "jackets",
+  "subcategory": "formal",
+  "gender": "men",
+  "srcUrl": "/images/products/jackets/product-135.jpg",
+  "gallery": [
+    "/images/products/jackets/product-135.jpg",
+    "/images/products/jackets/product-135-1.jpg"
+  ],
+  "price": 880,
+  "originalPrice": 880,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.9,
+  "reviewCount": 38,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Melton Wool, Cupro Lining",
+  "careInstructions": "Professional dry clean only",
+  "fit": "Tailored Fit",
+  "pattern": "Solid",
+  "style": "Formal",
+  "tags": [
+    "coat",
+    "overcoat",
+    "prada",
+    "minimalist",
+    "formal"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 14,
+  "sku": "PR-JK-135",
+  "createdAt": "2024-01-12",
+  "variants": [
+    {
+      "id": "var-135-s-black",
+      "sku": "PR-JK-135-S-BLACK",
+      "size": "Small",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 880,
+      "stock": 3,
+      "image": "/images/products/jackets/product-135.jpg"
+    },
+    {
+      "id": "var-135-m-black",
+      "sku": "PR-JK-135-M-BLACK",
+      "size": "Medium",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 880,
+      "stock": 3,
+      "image": "/images/products/jackets/product-135.jpg"
+    },
+    {
+      "id": "var-135-l-black",
+      "sku": "PR-JK-135-L-BLACK",
+      "size": "Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 880,
+      "stock": 3,
+      "image": "/images/products/jackets/product-135.jpg"
+    },
+    {
+      "id": "var-135-xl-black",
+      "sku": "PR-JK-135-XL-BLACK",
+      "size": "X-Large",
+      "color": "Black",
+      "colorCode": "bg-black",
+      "price": 880,
+      "stock": 3,
+      "image": "/images/products/jackets/product-135.jpg"
+    }
+  ]
+},
+{
+  "id": 136,
+  "slug": "ralph-lauren-quilted-utility-vest",
+  "title": "Ralph Lauren Quilted Lightweight Utility Vest",
+  "description": "Diamond-quilted lightweight shell with corduroy inner collar trim, brass snap placket, and two patch hand pockets.",
+  "brand": "Ralph Lauren",
+  "category": "jackets",
+  "subcategory": "casual",
+  "gender": "men",
+  "srcUrl": "/images/products/jackets/product-136.jpg",
+  "gallery": [
+    "/images/products/jackets/product-136.jpg",
+    "/images/products/jackets/product-136-1.jpg"
+  ],
+  "price": 185,
+  "originalPrice": 220,
+  "discount": {
+    "amount": 35,
+    "percentage": 16
+  },
+  "rating": 4.7,
+  "reviewCount": 51,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "blue",
+      "name": "Navy",
+      "code": "bg-[#2563eb]",
+      "hex": "#2563eb"
+    }
+  ],
+  "material": "100% Recycled Polyester",
+  "careInstructions": "Machine wash cold gentle",
+  "fit": "Regular Fit",
+  "pattern": "Quilted",
+  "style": "Formal",
+  "tags": [
+    "vest",
+    "gilet",
+    "quilted",
+    "ralph lauren",
+    "smart casual"
+  ],
+  "isNew": false,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 29,
+  "sku": "RL-JK-136",
+  "createdAt": "2024-02-08",
+  "variants": [
+    {
+      "id": "var-136-s-blue",
+      "sku": "RL-JK-136-S-BLUE",
+      "size": "Small",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 185,
+      "stock": 7,
+      "image": "/images/products/jackets/product-136.jpg"
+    },
+    {
+      "id": "var-136-m-blue",
+      "sku": "RL-JK-136-M-BLUE",
+      "size": "Medium",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 185,
+      "stock": 7,
+      "image": "/images/products/jackets/product-136.jpg"
+    },
+    {
+      "id": "var-136-l-blue",
+      "sku": "RL-JK-136-L-BLUE",
+      "size": "Large",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 185,
+      "stock": 7,
+      "image": "/images/products/jackets/product-136.jpg"
+    },
+    {
+      "id": "var-136-xl-blue",
+      "sku": "RL-JK-136-XL-BLUE",
+      "size": "X-Large",
+      "color": "Navy",
+      "colorCode": "bg-[#2563eb]",
+      "price": 185,
+      "stock": 7,
+      "image": "/images/products/jackets/product-136.jpg"
+    }
+  ]
+},
+{
+  "id": 137,
+  "slug": "zara-faux-shearling-aviator-flight-jacket",
+  "title": "Zara Faux Shearling Aviator Flight Jacket",
+  "description": "Cracked-leather effect exterior lined with thick plush faux shearling. Features buckled throat latch and sleeve cuff straps.",
+  "brand": "Zara",
+  "category": "jackets",
+  "subcategory": "casual",
+  "gender": "women",
+  "srcUrl": "/images/products/jackets/product-137.jpg",
+  "gallery": [
+    "/images/products/jackets/product-137.jpg",
+    "/images/products/jackets/product-137-1.jpg"
+  ],
+  "price": 160,
+  "originalPrice": 195,
+  "discount": {
+    "amount": 35,
+    "percentage": 18
+  },
+  "rating": 4.8,
+  "reviewCount": 66,
+  "sizes": [
+    {
+      "id": "xs",
+      "name": "X-Small",
+      "label": "XS"
+    },
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Dark Brown",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Faux Leather & Faux Shearling",
+  "careInstructions": "Wipe clean with damp cloth",
+  "fit": "Regular Fit",
+  "pattern": "Solid",
+  "style": "Casual",
+  "tags": [
+    "aviator",
+    "shearling",
+    "biker",
+    "winter",
+    "zara"
+  ],
+  "isNew": true,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 26,
+  "sku": "ZR-JK-137",
+  "createdAt": "2024-03-01",
+  "variants": [
+    {
+      "id": "var-137-xs-black",
+      "sku": "ZR-JK-137-XS-BLACK",
+      "size": "X-Small",
+      "color": "Dark Brown",
+      "colorCode": "bg-black",
+      "price": 160,
+      "stock": 8,
+      "image": "/images/products/jackets/product-137.jpg"
+    },
+    {
+      "id": "var-137-s-black",
+      "sku": "ZR-JK-137-S-BLACK",
+      "size": "Small",
+      "color": "Dark Brown",
+      "colorCode": "bg-black",
+      "price": 160,
+      "stock": 8,
+      "image": "/images/products/jackets/product-137.jpg"
+    },
+    {
+      "id": "var-137-m-black",
+      "sku": "ZR-JK-137-M-BLACK",
+      "size": "Medium",
+      "color": "Dark Brown",
+      "colorCode": "bg-black",
+      "price": 160,
+      "stock": 8,
+      "image": "/images/products/jackets/product-137.jpg"
+    }
+  ]
+},
+{
+  "id": 138,
+  "slug": "shopsphere-trackside-athletic-windrunner",
+  "title": "ShopSphere Trackside Athletic Windrunner",
+  "description": "Chevron colorblock windrunner cut from ultra-packable featherlight ripstop with breathable rear ventilation flap.",
+  "brand": "ShopSphere",
+  "category": "jackets",
+  "subcategory": "casual",
+  "gender": "women",
+  "srcUrl": "/images/products/jackets/product-138.jpg",
+  "gallery": [
+    "/images/products/jackets/product-138.jpg",
+    "/images/products/jackets/product-138-1.jpg"
+  ],
+  "price": 95,
+  "originalPrice": 95,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.6,
+  "reviewCount": 42,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "id": "pink",
+      "name": "Lilac / White",
+      "code": "bg-[#ec4899]",
+      "hex": "#ec4899"
+    }
+  ],
+  "material": "100% Polyester",
+  "careInstructions": "Machine wash cold",
+  "fit": "Athletic Fit",
+  "pattern": "Colorblock",
+  "style": "Gym",
+  "tags": [
+    "windrunner",
+    "track",
+    "athletic",
+    "gym",
+    "running"
+  ],
+  "isNew": false,
+  "isFeatured": false,
+  "isBestSeller": false,
+  "isOnSale": false,
+  "stock": 35,
+  "sku": "SS-JK-138",
+  "createdAt": "2024-02-14",
+  "variants": [
+    {
+      "id": "var-138-s-pink",
+      "sku": "SS-JK-138-S-PINK",
+      "size": "Small",
+      "color": "Lilac / White",
+      "colorCode": "bg-[#ec4899]",
+      "price": 95,
+      "stock": 11,
+      "image": "/images/products/jackets/product-138.jpg"
+    },
+    {
+      "id": "var-138-m-pink",
+      "sku": "SS-JK-138-M-PINK",
+      "size": "Medium",
+      "color": "Lilac / White",
+      "colorCode": "bg-[#ec4899]",
+      "price": 95,
+      "stock": 11,
+      "image": "/images/products/jackets/product-138.jpg"
+    },
+    {
+      "id": "var-138-l-pink",
+      "sku": "SS-JK-138-L-PINK",
+      "size": "Large",
+      "color": "Lilac / White",
+      "colorCode": "bg-[#ec4899]",
+      "price": 95,
+      "stock": 11,
+      "image": "/images/products/jackets/product-138.jpg"
+    }
+  ]
+},
+{
+  "id": 139,
+  "slug": "gucci-structured-tuxedo-jacket-silk-lapel",
+  "title": "Gucci Structured Tuxedo Jacket with Silk Lapel",
+  "description": "Pure formal grandeur. Impeccably cut wool barathea jacket finished with glossy silk satin shawl lapels and covered satin buttons.",
+  "brand": "Gucci",
+  "category": "jackets",
+  "subcategory": "formal",
+  "gender": "men",
+  "srcUrl": "/images/products/jackets/product-139.jpg",
+  "gallery": [
+    "/images/products/jackets/product-139.jpg",
+    "/images/products/jackets/product-139-1.jpg"
+  ],
+  "price": 890,
+  "originalPrice": 890,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 5,
+  "reviewCount": 30,
+  "sizes": [
+    {
+      "id": "s",
+      "name": "Small (46)",
+      "label": "S"
+    },
+    {
+      "id": "m",
+      "name": "Medium (48)",
+      "label": "M"
+    },
+    {
+      "id": "l",
+      "name": "Large (50)",
+      "label": "L"
+    },
+    {
+      "id": "xl",
+      "name": "X-Large (52)",
+      "label": "XL"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Midnight Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Wool Barathea, 100% Silk Lapel",
+  "careInstructions": "Professional dry clean only",
+  "fit": "Tailored Fit",
+  "pattern": "Solid",
+  "style": "Formal",
+  "tags": [
+    "tuxedo",
+    "gucci",
+    "black tie",
+    "formal jacket",
+    "luxury"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": false,
+  "stock": 9,
+  "sku": "GC-JK-139",
+  "createdAt": "2024-03-08",
+  "variants": [
+    {
+      "id": "var-139-s-black",
+      "sku": "GC-JK-139-S-BLACK",
+      "size": "Small (46)",
+      "color": "Midnight Black",
+      "colorCode": "bg-black",
+      "price": 890,
+      "stock": 2,
+      "image": "/images/products/jackets/product-139.jpg"
+    },
+    {
+      "id": "var-139-m-black",
+      "sku": "GC-JK-139-M-BLACK",
+      "size": "Medium (48)",
+      "color": "Midnight Black",
+      "colorCode": "bg-black",
+      "price": 890,
+      "stock": 2,
+      "image": "/images/products/jackets/product-139.jpg"
+    },
+    {
+      "id": "var-139-l-black",
+      "sku": "GC-JK-139-L-BLACK",
+      "size": "Large (50)",
+      "color": "Midnight Black",
+      "colorCode": "bg-black",
+      "price": 890,
+      "stock": 2,
+      "image": "/images/products/jackets/product-139.jpg"
+    },
+    {
+      "id": "var-139-xl-black",
+      "sku": "GC-JK-139-XL-BLACK",
+      "size": "X-Large (52)",
+      "color": "Midnight Black",
+      "colorCode": "bg-black",
+      "price": 890,
+      "stock": 2,
+      "image": "/images/products/jackets/product-139.jpg"
+    }
+  ]
+},
+{
+  "id": 140,
+  "slug": "prada-italian-saffiano-leather-tote-bag",
+  "title": "Prada Italian Saffiano Leather Tote Bag",
+  "description": "Iconic cross-hatch textured Saffiano leather tote with double handles, detachable shoulder strap, and gold-plated triangle logo.",
+  "brand": "Prada",
+  "category": "accessories",
+  "subcategory": "bags",
+  "gender": "women",
+  "srcUrl": "/images/products/accessories/product-140.jpg",
+  "gallery": [
+    "/images/products/accessories/product-140.jpg",
+    "/images/products/accessories/product-140-1.jpg"
+  ],
+  "price": 890,
+  "originalPrice": 890,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.9,
+  "reviewCount": 55,
+  "sizes": [
+    {
+      "id": "one-size",
+      "name": "One Size",
+      "label": "OS"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Nero",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Calfskin Saffiano Leather",
+  "careInstructions": "Wipe clean with soft dry cloth, store in dustbag",
+  "style": "Formal",
+  "tags": [
+    "prada",
+    "tote bag",
+    "saffiano",
+    "luxury handbag",
+    "accessories"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 12,
+  "sku": "PR-AC-140",
+  "createdAt": "2024-03-01",
+  "variants": [
+    {
+      "id": "var-140-one-size-black",
+      "sku": "PR-AC-140-OS-BLACK",
+      "size": "One Size",
+      "color": "Nero",
+      "colorCode": "bg-black",
+      "price": 890,
+      "stock": 12,
+      "image": "/images/products/accessories/product-140.jpg"
+    }
+  ]
+},
+{
+  "id": 141,
+  "slug": "gucci-monogram-reversible-leather-belt",
+  "title": "Gucci Monogram Reversible Leather Belt",
+  "description": "Reversible smooth calfskin belt switching from sleek black to chocolate brown, secured with an interlocking GG palladium buckle.",
+  "brand": "Gucci",
+  "category": "accessories",
+  "subcategory": "belts",
+  "gender": "unisex",
+  "srcUrl": "/images/products/accessories/product-141.jpg",
+  "gallery": [
+    "/images/products/accessories/product-141.jpg",
+    "/images/products/accessories/product-141-1.jpg"
+  ],
+  "price": 390,
+  "originalPrice": 460,
+  "discount": {
+    "amount": 70,
+    "percentage": 15
+  },
+  "rating": 4.9,
+  "reviewCount": 88,
+  "sizes": [
+    {
+      "id": "85",
+      "name": "85 cm",
+      "label": "32"
+    },
+    {
+      "id": "90",
+      "name": "90 cm",
+      "label": "34"
+    },
+    {
+      "id": "95",
+      "name": "95 cm",
+      "label": "36"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Black / Brown",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "100% Italian Calf Leather",
+  "careInstructions": "Store rolled in dustbag",
+  "style": "Formal",
+  "tags": [
+    "gucci",
+    "belt",
+    "leather belt",
+    "reversible",
+    "accessories"
+  ],
+  "isNew": false,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 22,
+  "sku": "GC-AC-141",
+  "createdAt": "2024-01-28",
+  "variants": [
+    {
+      "id": "var-141-85-black",
+      "sku": "GC-AC-141-32-BLACK",
+      "size": "85 cm",
+      "color": "Black / Brown",
+      "colorCode": "bg-black",
+      "price": 390,
+      "stock": 7,
+      "image": "/images/products/accessories/product-141.jpg"
+    },
+    {
+      "id": "var-141-90-black",
+      "sku": "GC-AC-141-34-BLACK",
+      "size": "90 cm",
+      "color": "Black / Brown",
+      "colorCode": "bg-black",
+      "price": 390,
+      "stock": 7,
+      "image": "/images/products/accessories/product-141.jpg"
+    },
+    {
+      "id": "var-141-95-black",
+      "sku": "GC-AC-141-36-BLACK",
+      "size": "95 cm",
+      "color": "Black / Brown",
+      "colorCode": "bg-black",
+      "price": 390,
+      "stock": 7,
+      "image": "/images/products/accessories/product-141.jpg"
+    }
+  ]
+},
+{
+  "id": 142,
+  "slug": "versace-polarized-acetate-aviator-sunglasses",
+  "title": "Versace Polarized Acetate Aviator Sunglasses",
+  "description": "Sculpted Italian acetate frames with gold Medusa studs at the temples and UV400 gradient polarized lenses.",
+  "brand": "Versace",
+  "category": "accessories",
+  "subcategory": "eyewear",
+  "gender": "unisex",
+  "srcUrl": "/images/products/accessories/product-142.jpg",
+  "gallery": [
+    "/images/products/accessories/product-142.jpg",
+    "/images/products/accessories/product-142-1.jpg"
+  ],
+  "price": 280,
+  "originalPrice": 350,
+  "discount": {
+    "amount": 70,
+    "percentage": 20
+  },
+  "rating": 4.8,
+  "reviewCount": 43,
+  "sizes": [
+    {
+      "id": "one-size",
+      "name": "One Size",
+      "label": "OS"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Gloss Black",
+      "code": "bg-black",
+      "hex": "#000000"
+    }
+  ],
+  "material": "Acetate with Polarized Polycarbonate Lenses",
+  "careInstructions": "Clean with microfiber cloth only",
+  "style": "Casual",
+  "tags": [
+    "sunglasses",
+    "aviator",
+    "versace",
+    "eyewear",
+    "accessories"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": false,
+  "isOnSale": true,
+  "stock": 25,
+  "sku": "VS-AC-142",
+  "createdAt": "2024-03-05",
+  "variants": [
+    {
+      "id": "var-142-one-size-black",
+      "sku": "VS-AC-142-OS-BLACK",
+      "size": "One Size",
+      "color": "Gloss Black",
+      "colorCode": "bg-black",
+      "price": 280,
+      "stock": 25,
+      "image": "/images/products/accessories/product-142.jpg"
+    }
+  ]
+},
+{
+  "id": 143,
+  "slug": "luxe-ribbed-pure-cashmere-beanie",
+  "title": "LUXE Ribbed Pure Cashmere Beanie",
+  "description": "Ultra-plush 100% Mongolian cashmere knit in a classic fisherman rib with an adjustable folded cuff for thermal luxury.",
+  "brand": "LUXE Studio",
+  "category": "accessories",
+  "subcategory": "hats",
+  "gender": "unisex",
+  "srcUrl": "/images/products/accessories/product-143.jpg",
+  "gallery": [
+    "/images/products/accessories/product-143.jpg",
+    "/images/products/accessories/product-143-1.jpg"
+  ],
+  "price": 110,
+  "originalPrice": 110,
+  "discount": {
+    "amount": 0,
+    "percentage": 0
+  },
+  "rating": 4.9,
+  "reviewCount": 51,
+  "sizes": [
+    {
+      "id": "one-size",
+      "name": "One Size",
+      "label": "OS"
+    }
+  ],
+  "colors": [
+    {
+      "id": "black",
+      "name": "Charcoal",
+      "code": "bg-black",
+      "hex": "#000000"
+    },
+    {
+      "id": "white",
+      "name": "Oatmeal",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "100% Grade-A Cashmere",
+  "careInstructions": "Hand wash cold, dry flat",
+  "style": "Casual",
+  "tags": [
+    "beanie",
+    "cashmere",
+    "winter hat",
+    "luxe studio"
+  ],
+  "isNew": false,
+  "isFeatured": false,
+  "isBestSeller": true,
+  "isOnSale": false,
+  "stock": 35,
+  "sku": "LX-AC-143",
+  "createdAt": "2024-02-01",
+  "variants": [
+    {
+      "id": "var-143-one-size-black",
+      "sku": "LX-AC-143-OS-BLACK",
+      "size": "One Size",
+      "color": "Charcoal",
+      "colorCode": "bg-black",
+      "price": 110,
+      "stock": 17,
+      "image": "/images/products/accessories/product-143.jpg"
+    },
+    {
+      "id": "var-143-one-size-white",
+      "sku": "LX-AC-143-OS-WHITE",
+      "size": "One Size",
+      "color": "Oatmeal",
+      "colorCode": "bg-white",
+      "price": 110,
+      "stock": 17,
+      "image": "/images/products/accessories/product-143.jpg"
+    }
+  ]
+},
+{
+  "id": 144,
+  "slug": "luxe-chronograph-stainless-steel-watch",
+  "title": "LUXE Chronograph Stainless Steel Watch",
+  "description": "Swiss quartz precision movement enclosed in a 41mm 316L brushed stainless steel case with sapphire crystal glass and butterfly deployant clasp.",
+  "brand": "LUXE Studio",
+  "category": "accessories",
+  "subcategory": "jewelry",
+  "gender": "men",
+  "srcUrl": "/images/products/accessories/product-144.jpg",
+  "gallery": [
+    "/images/products/accessories/product-144.jpg",
+    "/images/products/accessories/product-144-1.jpg"
+  ],
+  "price": 490,
+  "originalPrice": 580,
+  "discount": {
+    "amount": 90,
+    "percentage": 16
+  },
+  "rating": 4.9,
+  "reviewCount": 62,
+  "sizes": [
+    {
+      "id": "41mm",
+      "name": "41mm Case",
+      "label": "41"
+    }
+  ],
+  "colors": [
+    {
+      "id": "white",
+      "name": "Silver Sunray",
+      "code": "bg-white",
+      "hex": "#FFFFFF"
+    }
+  ],
+  "material": "316L Stainless Steel, Sapphire Crystal",
+  "careInstructions": "Water resistant 50m / 5 ATM",
+  "style": "Formal",
+  "tags": [
+    "watch",
+    "chronograph",
+    "stainless steel",
+    "timepiece",
+    "luxury"
+  ],
+  "isNew": true,
+  "isFeatured": true,
+  "isBestSeller": true,
+  "isOnSale": true,
+  "stock": 18,
+  "sku": "LX-AC-144",
+  "createdAt": "2024-03-08",
+  "variants": [
+    {
+      "id": "var-144-41mm-white",
+      "sku": "LX-AC-144-41-WHITE",
+      "size": "41mm Case",
+      "color": "Silver Sunray",
+      "colorCode": "bg-white",
+      "price": 490,
+      "stock": 18,
+      "image": "/images/products/accessories/product-144.jpg"
+    }
+  ]
+}
+];
+
 const outOfStockDemo: Product = {
   id: 42,
   slug: "classic-oxford-polo-out-of-stock",
@@ -1743,17 +14001,44 @@ const outOfStockDemo: Product = {
   createdAt: "2024-02-01",
 };
 
-export const products: Product[] = [...legacyProducts, outOfStockDemo];
 
-export const newArrivalsData: Product[] = products.filter((p) =>
-  [1, 2, 3, 4].includes(p.id)
-);
 
-export const topSellingData: Product[] = products.filter((p) =>
-  [5, 6, 7, 8].includes(p.id)
-);
+export const products: Product[] = [
+  ...legacyProducts,
+  ...expandedCatalogue,
+  outOfStockDemo,
+];
+
+// Diverse cross-category collections for homepage
+const categoriesOrder = ['t-shirts', 'shirts', 'jeans', 'pants', 'shorts', 'hoodies', 'jackets', 'accessories'];
+
+function pickDiverse(filterFn: (p: Product) => boolean, exclude: Set<number>): Product[] {
+  const res: Product[] = [];
+  for (const c of categoriesOrder) {
+    const cand = products.find((p) => p.category === c && filterFn(p) && !exclude.has(p.id));
+    if (cand) {
+      res.push(cand);
+      exclude.add(cand.id);
+    }
+  }
+  return res;
+}
+
+const usedIds = new Set<number>([42]);
+export const featuredData: Product[] = pickDiverse((p) => Boolean(p.isFeatured), usedIds);
+export const newArrivalsData: Product[] = pickDiverse((p) => Boolean(p.isNew), usedIds);
+export const topSellingData: Product[] = pickDiverse((p) => Boolean(p.isBestSeller), usedIds);
+export const trendingData: Product[] = pickDiverse((p) => p.rating >= 4.7, usedIds);
+
+// Category-specific spotlights
+export const outerwearCollection: Product[] = products
+  .filter((p) => p.category === 'jackets' && p.id !== 42)
+  .slice(0, 8);
+
+export const accessoriesCollection: Product[] = products
+  .filter((p) => p.category === 'accessories' && p.id !== 42)
+  .slice(0, 8);
 
 export const relatedProductData: Product[] = products.filter((p) =>
-  [12, 13, 14, 15].includes(p.id)
+  [12, 13, 14, 15, 43, 65, 82, 110, 125].includes(p.id)
 );
-

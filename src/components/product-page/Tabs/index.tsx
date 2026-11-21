@@ -37,17 +37,25 @@ const Tabs = ({ product }: TabsProps) => {
 
   return (
     <div>
-      <div className="flex items-center mb-6 sm:mb-8 overflow-x-auto">
+      <div
+        role="tablist"
+        aria-label="Product information"
+        className="mb-5 flex items-stretch overflow-x-auto border-b border-black/10 scrollbar-none sm:mb-8"
+      >
         {tabBtnData.map((tab) => (
           <Button
             key={tab.id}
             variant="ghost"
             type="button"
+            role="tab"
+            aria-selected={active === tab.id}
+            aria-controls="product-tab-panel"
+            id={`product-tab-${tab.id}`}
             className={cn([
               active === tab.id
                 ? "border-black border-b-2 font-medium"
-                : "border-b border-black/10 text-black/60 font-normal",
-              "p-5 sm:p-6 rounded-none flex-1",
+                : "border-b border-transparent text-black/60 font-normal",
+              "flex-1 flex-shrink-0 whitespace-nowrap rounded-none px-2.5 py-3 text-xs sm:px-6 sm:py-5 sm:text-sm md:text-base",
             ])}
             onClick={() => setActive(tab.id)}
           >
@@ -55,7 +63,12 @@ const Tabs = ({ product }: TabsProps) => {
           </Button>
         ))}
       </div>
-      <div className="mb-12 sm:mb-16">
+      <div
+        id="product-tab-panel"
+        role="tabpanel"
+        aria-labelledby={`product-tab-${active}`}
+        className="mb-12 sm:mb-16"
+      >
         {active === 1 && <ProductDetailsContent product={product} />}
         {active === 2 && <ReviewsContent product={product} />}
         {active === 3 && <FaqContent />}

@@ -33,7 +33,7 @@ const Header = ({ data }: { data: Product }) => {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-5">
         <div>
           <PhotoSection data={data} />
         </div>
@@ -42,7 +42,7 @@ const Header = ({ data }: { data: Product }) => {
             <h1
               className={cn([
                 integralCF.className,
-                "text-2xl md:text-[40px] md:leading-[40px] mb-3 md:mb-3.5 capitalize",
+                "mb-2.5 min-w-0 text-[22px] capitalize leading-[1.1] xs:text-2xl md:mb-3.5 md:text-[40px] md:leading-[40px]",
               ])}
             >
               {data.title}
@@ -52,7 +52,7 @@ const Header = ({ data }: { data: Product }) => {
               onClick={handleWishlistToggle}
               aria-label={isInWishlist ? `Remove ${data.title} from wishlist` : `Add ${data.title} to wishlist`}
               className={cn(
-                "mt-1 p-2 rounded-full transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 shrink-0",
+                "-mr-1.5 mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition-all hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2",
                 isInWishlist ? "text-red-500" : "text-black/40 hover:text-black/60"
               )}
             >
@@ -76,29 +76,29 @@ const Header = ({ data }: { data: Product }) => {
               <span className="text-black/60">/5</span>
             </span>
           </div>
-          <div className="flex items-center space-x-2.5 sm:space-x-3 mb-5">
+          <div className="mb-4 flex flex-wrap items-center gap-x-2.5 gap-y-1.5 sm:mb-5 sm:gap-x-3">
             {data.discount.percentage > 0 ? (
-              <span className="font-bold text-black text-2xl sm:text-[32px]">
+              <span className="text-xl font-bold text-black xs:text-2xl sm:text-[32px]">
                 {`$${Math.round(
                   data.price - (data.price * data.discount.percentage) / 100
                 )}`}
               </span>
             ) : data.discount.amount > 0 ? (
-              <span className="font-bold text-black text-2xl sm:text-[32px]">
+              <span className="text-xl font-bold text-black xs:text-2xl sm:text-[32px]">
                 {`$${data.price - data.discount.amount}`}
               </span>
             ) : (
-              <span className="font-bold text-black text-2xl sm:text-[32px]">
+              <span className="text-xl font-bold text-black xs:text-2xl sm:text-[32px]">
                 ${data.price}
               </span>
             )}
             {data.discount.percentage > 0 && (
-              <span className="font-bold text-black/40 line-through text-2xl sm:text-[32px]">
+              <span className="text-lg font-bold text-black/40 line-through sm:text-[32px]">
                 ${data.price}
               </span>
             )}
             {data.discount.amount > 0 && (
-              <span className="font-bold text-black/40 line-through text-2xl sm:text-[32px]">
+              <span className="text-lg font-bold text-black/40 line-through sm:text-[32px]">
                 ${data.price}
               </span>
             )}
@@ -114,7 +114,7 @@ const Header = ({ data }: { data: Product }) => {
               )
             )}
           </div>
-          <p className="text-sm sm:text-base text-black/60 mb-5">
+          <p className="mb-4 text-sm leading-relaxed text-black/60 sm:mb-5 sm:text-base">
             {data.description}
           </p>
           <div className="flex flex-wrap items-center gap-2 mb-5">

@@ -5,7 +5,7 @@ const nextConfig = {
     serverComponentsExternalPackages: [],
   },
 
-  // Allow remote images and SVGs from placehold.co
+  // Allow remote images and SVGs from placehold.co and Unsplash
   images: {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
@@ -13,6 +13,12 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "placehold.co",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
         port: "",
         pathname: "/**",
       },

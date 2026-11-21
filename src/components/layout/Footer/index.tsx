@@ -64,7 +64,7 @@ const Footer = () => {
           <NewsLetterSection />
         </div>
       </div>
-      <div className="pt-8 md:pt-[50px] bg-[#F0F0F0] px-4 pb-4">
+              <div className="bg-[#F0F0F0] px-4 pb-4 pt-8 md:pt-[50px]">
         <div className="max-w-frame mx-auto">
           <nav className="lg:grid lg:grid-cols-12 mb-8">
             <div className="flex flex-col lg:col-span-3 lg:max-w-[248px]">
@@ -87,7 +87,7 @@ const Footer = () => {
                     key={social.id}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white hover:bg-black hover:text-white transition-all mr-3 w-7 h-7 rounded-full border border-black/20 flex items-center justify-center p-1.5"
+                    className="mr-2.5 flex h-9 w-9 items-center justify-center rounded-full border border-black/20 bg-white p-2 text-sm transition-all hover:bg-black hover:text-white"
                   >
                     {social.icon}
                   </Link>
@@ -108,13 +108,12 @@ const Footer = () => {
               ShopSphere &copy; {new Date().getFullYear()} &mdash; Made by{" "}
               <span className="text-black font-medium">Tejaswini</span>
             </p>
-            <div className="flex items-center">
-              {paymentBadgesData.map((badge, _, arr) => (
+            <div className="flex flex-wrap items-center justify-center gap-2">
+              {paymentBadgesData.map((badge) => (
                 <span
                   key={badge.id}
                   className={cn([
-                    arr.length !== badge.id && "mr-3",
-                    "w-[46px] h-[30px] rounded-[5px] border-[#D6DCE5] bg-white flex items-center justify-center",
+                    "flex h-[30px] w-[46px] items-center justify-center rounded-[5px] border-[#D6DCE5] bg-white",
                   ])}
                 >
                   <Image

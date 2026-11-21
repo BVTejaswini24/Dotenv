@@ -3,7 +3,13 @@ import Brands from "@/components/homepage/Brands";
 import DressStyle from "@/components/homepage/DressStyle";
 import Header from "@/components/homepage/Header";
 import Reviews from "@/components/homepage/Reviews";
-import { newArrivalsData, topSellingData } from "@/lib/data/products";
+import {
+  featuredData,
+  newArrivalsData,
+  topSellingData,
+  trendingData,
+  outerwearCollection,
+} from "@/lib/data/products";
 import { reviewsData } from "@/lib/data/reviews";
 
 export default function Home() {
@@ -11,25 +17,59 @@ export default function Home() {
     <>
       <Header />
       <Brands />
-      <main className="my-[50px] sm:my-[72px]">
+      <main className="mt-9 space-y-10 pb-2 sm:my-[72px] sm:space-y-16">
+        {/* Featured Products Collection */}
+        <ProductListSec
+          title="FEATURED COLLECTION"
+          data={featuredData}
+          viewAllLink="/shop?sort=recommended"
+        />
+
+        <div className="max-w-frame mx-auto px-4 xl:px-0">
+          <hr className="h-[1px] border-t-black/10" />
+        </div>
+
+        {/* New Arrivals */}
         <ProductListSec
           title="NEW ARRIVALS"
           data={newArrivalsData}
-          viewAllLink="/shop#new-arrivals"
+          viewAllLink="/shop?sort=newest"
         />
+
         <div className="max-w-frame mx-auto px-4 xl:px-0">
-          <hr className="h-[1px] border-t-black/10 my-10 sm:my-16" />
+          <hr className="h-[1px] border-t-black/10" />
         </div>
-        <div className="mb-[50px] sm:mb-20">
-          <ProductListSec
-            title="top selling"
-            data={topSellingData}
-            viewAllLink="/shop#top-selling"
-          />
+
+        {/* Top Selling */}
+        <ProductListSec
+          title="TOP SELLING"
+          data={topSellingData}
+          viewAllLink="/shop?sort=rating-desc"
+        />
+
+        <div className="max-w-frame mx-auto px-4 xl:px-0">
+          <hr className="h-[1px] border-t-black/10" />
         </div>
-        <div className="mb-[50px] sm:mb-20">
+
+        {/* Trending Now */}
+        <ProductListSec
+          title="TRENDING NOW"
+          data={trendingData}
+          viewAllLink="/shop"
+        />
+
+        {/* Dress Style Showcase */}
+        <div className="my-10 sm:my-20">
           <DressStyle />
         </div>
+
+        {/* Category-Specific Spotlight: Luxury Outerwear */}
+        <ProductListSec
+          title="LUXURY OUTERWEAR"
+          data={outerwearCollection}
+          viewAllLink="/shop?category=jackets"
+        />
+
         <Reviews data={reviewsData} />
       </main>
     </>

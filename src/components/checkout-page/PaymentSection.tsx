@@ -58,7 +58,7 @@ const PaymentSection = ({
           <label
             key={pm.id}
             className={cn(
-              "flex items-center gap-3 p-4 rounded-lg border-2 cursor-pointer transition-all",
+              "flex min-w-0 items-center gap-3 p-4 rounded-lg border-2 cursor-pointer transition-all",
               method === pm.id
                 ? "border-black bg-black/5"
                 : "border-black/10 hover:border-black/30"
@@ -66,7 +66,7 @@ const PaymentSection = ({
           >
             <div
               className={cn(
-                "w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all",
+                "flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 transition-all",
                 method === pm.id ? "border-black" : "border-black/30"
               )}
             >
@@ -101,6 +101,7 @@ const PaymentSection = ({
             <input
               id="cardHolder"
               type="text"
+              autoComplete="cc-name"
               required
               aria-required="true"
               aria-invalid={!!errors.card.holderName}
@@ -133,6 +134,8 @@ const PaymentSection = ({
             <input
               id="cardNumber"
               type="text"
+              autoComplete="cc-number"
+              inputMode="numeric"
               required
               aria-required="true"
               aria-invalid={!!errors.card.number}
@@ -169,6 +172,8 @@ const PaymentSection = ({
               <input
                 id="cardExpiry"
                 type="text"
+                autoComplete="cc-exp"
+                inputMode="numeric"
                 required
                 aria-required="true"
                 aria-invalid={!!errors.card.expiry}
@@ -203,6 +208,8 @@ const PaymentSection = ({
               <input
                 id="cardCvv"
                 type="password"
+                autoComplete="cc-csc"
+                inputMode="numeric"
                 required
                 aria-required="true"
                 aria-invalid={!!errors.card.cvv}
@@ -247,6 +254,8 @@ const PaymentSection = ({
             <input
               id="upiId"
               type="text"
+              autoComplete="off"
+              inputMode="email"
               required
               aria-required="true"
               aria-invalid={!!errors.upi.upiId}

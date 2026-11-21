@@ -7,7 +7,7 @@ import DressStyleCard from "./DressStyleCard";
 const DressStyle = () => {
   return (
     <div className="px-4 xl:px-0">
-      <section className="max-w-frame mx-auto bg-[#F0F0F0] rounded-[20px] sm:rounded-[40px] px-4 sm:px-6 md:px-[70px] pt-8 sm:pt-10 md:pt-[70px] pb-6 sm:pb-8 md:pb-[70px]">
+      <section className="mx-auto max-w-frame rounded-2xl bg-[#F0F0F0] px-3.5 pb-5 pt-7 xs:px-4 xs:pb-6 xs:pt-8 sm:rounded-[40px] sm:px-6 sm:pb-8 sm:pt-10 md:px-[70px] md:pb-[70px] md:pt-[70px]">
 
         {/* ── Heading ── */}
         <motion.h2
@@ -19,7 +19,7 @@ const DressStyle = () => {
             integralCF.className,
             "text-xl xs:text-2xl sm:text-[32px] md:text-5xl",
             "leading-tight text-center capitalize",
-            "mb-6 sm:mb-8 md:mb-14"
+            "mb-5 sm:mb-8 md:mb-14"
           )}
         >
           BROWSE BY DRESS STYLE
@@ -43,7 +43,7 @@ const DressStyle = () => {
             imagePosition="object-right object-top"
             className={cn(
               /* mobile: equal half-width, fixed height */
-              "h-[130px] xs:h-[150px] sm:h-[180px]",
+              "h-[136px] xs:h-[150px] sm:h-[180px]",
               /* desktop: original narrow proportions */
               "md:h-[289px] md:max-w-[260px] lg:max-w-[360px] xl:max-w-[407px] md:flex-shrink-0"
             )}
@@ -57,7 +57,7 @@ const DressStyle = () => {
             imageHeight={289}
             imagePosition="object-right object-top"
             className={cn(
-              "h-[130px] xs:h-[150px] sm:h-[180px]",
+              "h-[136px] xs:h-[150px] sm:h-[180px]",
               "md:h-[289px] md:flex-1"
             )}
           />
@@ -80,7 +80,7 @@ const DressStyle = () => {
             imageHeight={289}
             imagePosition="object-right object-top"
             className={cn(
-              "h-[130px] xs:h-[150px] sm:h-[180px]",
+              "h-[136px] xs:h-[150px] sm:h-[180px]",
               "md:h-[289px] md:flex-1"
             )}
           />
@@ -93,7 +93,7 @@ const DressStyle = () => {
             imageHeight={289}
             imagePosition="object-right object-top"
             className={cn(
-              "h-[130px] xs:h-[150px] sm:h-[180px]",
+              "h-[136px] xs:h-[150px] sm:h-[180px]",
               "md:h-[289px] md:max-w-[260px] lg:max-w-[360px] xl:max-w-[407px] md:flex-shrink-0"
             )}
           />
