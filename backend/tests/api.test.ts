@@ -3,8 +3,10 @@ import { afterAll, beforeEach, describe, expect, it } from "vitest";
 import { createApp } from "../src/app";
 import { pool } from "../src/db/pool";
 import { seedCatalog } from "../src/db/seed";
+import catalog from "../src/data/catalog.json";
 
 const app = createApp();
+const EXPECTED_PRODUCTS = (catalog.products as unknown[]).length;
 
 const PASSWORD = "Sup3rSecret!";
 let userCounter = 0;
@@ -97,7 +99,7 @@ describe("health and database connection", () => {
       `SELECT (SELECT COUNT(*) FROM products)::text AS products,
               (SELECT COUNT(*) FROM product_variants)::text AS variants`
     );
-    expect(Number(rows[0].products)).toBe(38);
+    expect(Number(rows[0].products)).toBe(EXPECTED_PRODUCTS);
     expect(Number(rows[0].variants)).toBeGreaterThan(38);
   });
 
@@ -110,7 +112,7 @@ describe("health and database connection", () => {
         `SELECT (SELECT COUNT(*) FROM products)::text AS products,
                 (SELECT COUNT(*) FROM product_variants)::text AS variants`
       );
-      expect(Number(counts.rows[0].products)).toBe(38);
+      expect(Number(counts.rows[0].products)).toBe(EXPECTED_PRODUCTS);
       const before = await client.query<{ count: string }>(
         "SELECT COUNT(*)::text AS count FROM product_variants"
       );
@@ -130,8 +132,8 @@ describe("products", () => {
     expect(res.body.pagination).toMatchObject({
       page: 1,
       limit: 12,
-      total: 38,
-      totalPages: 4,
+      total: EXPECTED_PRODUCTS,
+      totalPages: Math.ceil(EXPECTED_PRODUCTS / 12),
       hasNextPage: true,
       hasPrevPage: false,
     });
@@ -213,7 +215,26 @@ describe("categories", () => {
       (sum: number, category: { productCount: number }) => sum + category.productCount,
       0
     );
-    expect(total).toBe(38);
+    expect(total).toBe(EXPECTED_PRODUCTS);
+  });
+});
+
+describe("virtual try-on", () => {
+  it("lists eligible products for try-on", async () => {
+    const res = await request(app).get("/api/tryon/products");
+    expect(res.status).toBe(200);
+    expect(Array.isArray(res.body.data.products)).toBe(true);
+    expect(res.body.data.products.length).toBeGreaterThan(0);
+    const sample = res.body.data.products[0];
+    expect(sample).toHaveProperty("id");
+    expect(sample).toHaveProperty("tryOnCategory");
+    expect(sample).toHaveProperty("tryOnType");
+  });
+
+  it("validates try-on request payload", async () => {
+    const res = await request(app).post("/api/tryon").send({});
+    expect(res.status).toBe(400);
+    expect(res.body.error.code).toBe("VALIDATION_ERROR");
   });
 });
 
