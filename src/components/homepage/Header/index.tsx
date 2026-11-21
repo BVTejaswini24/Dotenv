@@ -9,92 +9,95 @@ import * as motion from "framer-motion/client";
 
 const Header = () => {
   return (
-    <header className="bg-[#F2F0F1] pt-10 md:pt-24 overflow-hidden">
-      <div className="md:max-w-frame mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-        <section className="max-w-frame px-4">
-          <motion.h2
-            initial={{ y: "100px", opacity: 0, rotate: 10 }}
+    <header className="bg-[#F2F0F1] overflow-hidden">
+      <div className="max-w-frame mx-auto grid grid-cols-1 md:grid-cols-2 pt-8 sm:pt-12 md:pt-16 lg:pt-24">
+        {/* Text section */}
+        <section className="px-4 xl:px-0 pb-8 md:pb-0">
+          <motion.h1
+            initial={{ y: "60px", opacity: 0, rotate: 5 }}
             whileInView={{ y: "0", opacity: 1, rotate: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className={cn([
               integralCF.className,
-              "text-4xl lg:text-[64px] lg:leading-[64px] mb-5 lg:mb-8",
+              "text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-[64px] xl:leading-[64px] mb-4 lg:mb-6",
             ])}
           >
-            FIND CLOTHES THAT MATCHES YOUR STYLE
-          </motion.h2>
+            FIND CLOTHES THAT MATCH YOUR STYLE
+          </motion.h1>
           <motion.p
-            initial={{ y: "100px", opacity: 0 }}
+            initial={{ y: "60px", opacity: 0 }}
             whileInView={{ y: "0", opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            className="text-black/60 text-sm lg:text-base mb-6 lg:mb-8 max-w-[545px]"
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="text-black/60 text-sm sm:text-base mb-5 lg:mb-8 max-w-[545px]"
           >
             Browse through our diverse range of meticulously crafted garments,
             designed to bring out your individuality and cater to your sense of
             style.
           </motion.p>
           <motion.div
-            initial={{ y: "100px", opacity: 0 }}
+            initial={{ y: "60px", opacity: 0 }}
             whileInView={{ y: "0", opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 1, duration: 0.6 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
           >
             <Link
               href="/shop"
-              className="w-full md:w-52 mb-5 md:mb-12 inline-block text-center bg-black hover:bg-black/80 transition-all text-white px-14 py-4 rounded-full hover:animate-pulse"
+              className="w-full sm:w-52 mb-6 md:mb-10 inline-block text-center bg-black hover:bg-black/80 transition-all text-white px-10 py-4 rounded-full text-sm sm:text-base font-medium"
             >
               Shop Now
             </Link>
           </motion.div>
           <motion.div
-            initial={{ y: "100px", opacity: 0 }}
+            initial={{ y: "60px", opacity: 0 }}
             whileInView={{ y: "0", opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 1.5, duration: 0.6 }}
-            className="flex md:h-full md:max-h-11 lg:max-h-[52px] xl:max-h-[68px] items-center justify-center md:justify-start flex-wrap sm:flex-nowrap md:space-x-3 lg:space-x-6 xl:space-x-8 md:mb-[116px]"
+            transition={{ delay: 1.2, duration: 0.6 }}
+            className="flex flex-wrap items-center gap-y-4 gap-x-6 sm:gap-x-8 md:mb-16 lg:mb-24"
           >
             <div className="flex flex-col">
-              <span className="font-bold text-2xl md:text-xl lg:text-3xl xl:text-[40px] xl:mb-2">
+              <span className="font-bold text-2xl sm:text-3xl xl:text-[40px] xl:mb-1">
                 <AnimatedCounter from={0} to={200} />+
               </span>
-              <span className="text-xs xl:text-base text-black/60 text-nowrap">
+              <span className="text-xs sm:text-sm text-black/60 whitespace-nowrap">
                 International Brands
               </span>
             </div>
             <Separator
-              className="ml-6 md:ml-0 h-12 md:h-full bg-black/10"
+              className="h-10 sm:h-12 w-px bg-black/10"
               orientation="vertical"
             />
-            <div className="flex flex-col ml-6 md:ml-0">
-              <span className="font-bold text-2xl md:text-xl lg:text-3xl xl:text-[40px] xl:mb-2">
+            <div className="flex flex-col">
+              <span className="font-bold text-2xl sm:text-3xl xl:text-[40px] xl:mb-1">
                 <AnimatedCounter from={0} to={2000} />+
               </span>
-              <span className="text-xs xl:text-base text-black/60 text-nowrap">
+              <span className="text-xs sm:text-sm text-black/60 whitespace-nowrap">
                 High-Quality Products
               </span>
             </div>
             <Separator
-              className="hidden sm:block sm:h-12 md:h-full ml-6 md:ml-0 bg-black/10"
+              className="h-10 sm:h-12 w-px bg-black/10 hidden sm:block"
               orientation="vertical"
             />
-            <div className="flex flex-col w-full text-center sm:w-auto sm:text-left mt-3 sm:mt-0 sm:ml-6 md:ml-0">
-              <span className="font-bold text-2xl md:text-xl lg:text-3xl xl:text-[40px] xl:mb-2">
+            <div className="flex flex-col">
+              <span className="font-bold text-2xl sm:text-3xl xl:text-[40px] xl:mb-1">
                 <AnimatedCounter from={0} to={3000} />+
               </span>
-              <span className="text-xs xl:text-base text-black/60 text-nowrap">
+              <span className="text-xs sm:text-sm text-black/60 whitespace-nowrap">
                 Happy Customers
               </span>
             </div>
           </motion.div>
         </section>
+
+        {/* Image section */}
         <motion.section
-          initial={{ y: "100px", opacity: 0, rotate: 10 }}
+          initial={{ y: "60px", opacity: 0, rotate: 5 }}
           whileInView={{ y: "0", opacity: 1, rotate: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 2.3, duration: 0.8 }}
-          className="relative md:px-4 min-h-[448px] md:min-h-[428px] bg-cover bg-top xl:bg-[center_top_-1.6rem] bg-no-repeat bg-[url('/images/header-res-homepage.png')] md:bg-[url('/images/header-homepage.png')]"
+          transition={{ delay: 1.8, duration: 0.8 }}
+          className="relative min-h-[280px] sm:min-h-[360px] md:min-h-[380px] lg:min-h-[460px] xl:min-h-[530px] bg-cover bg-top xl:bg-[center_top_-1.6rem] bg-no-repeat bg-[url('/images/header-res-homepage.png')] md:bg-[url('/images/header-homepage.png')]"
         >
           <Image
             priority
@@ -102,7 +105,7 @@ const Header = () => {
             height={104}
             width={104}
             alt="big star"
-            className="absolute right-7 xl:right-0 top-12 max-w-[76px] max-h-[76px] lg:max-w-24 lg:max-h-max-w-24 xl:max-w-[104px] xl:max-h-[104px] animate-[spin_4s_infinite]"
+            className="absolute right-6 xl:right-0 top-8 md:top-12 w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 xl:w-[104px] xl:h-[104px] animate-[spin_4s_linear_infinite]"
           />
           <Image
             priority
@@ -110,7 +113,7 @@ const Header = () => {
             height={56}
             width={56}
             alt="small star"
-            className="absolute left-7 md:left-0 top-36 sm:top-64 md:top-44 lg:top-56 max-w-11 max-h-11 md:max-w-14 md:max-h-14 animate-[spin_3s_infinite]"
+            className="absolute left-6 md:left-0 top-32 sm:top-52 md:top-40 lg:top-56 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 xl:w-14 xl:h-14 animate-[spin_3s_linear_infinite]"
           />
         </motion.section>
       </div>

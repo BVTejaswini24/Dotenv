@@ -55,22 +55,22 @@ const ProductCard = ({ data }: ProductCardProps) => {
           />
         </button>
       </div>
-      <strong className="text-black xl:text-xl">{data.title}</strong>
-      <div className="flex items-end mb-1 xl:mb-2">
+      <strong className="text-black text-sm sm:text-base xl:text-xl leading-snug line-clamp-2">{data.title}</strong>
+      <div className="flex items-end mb-1">
         <Rating
           initialValue={data.rating}
           allowFraction
           SVGclassName="inline-block"
           emptyClassName="fill-gray-50"
-          size={19}
+          size={15}
           readonly
         />
-        <span className="text-black text-xs xl:text-sm ml-[11px] xl:ml-[13px] pb-0.5 xl:pb-0">
+        <span className="text-black text-[10px] sm:text-xs xl:text-sm ml-1.5 sm:ml-[11px] pb-0.5">
           {data.rating.toFixed(1)}
           <span className="text-black/60">/5</span>
         </span>
       </div>
-      <div className="flex items-center space-x-[5px] xl:space-x-2.5">
+      <div className="flex items-center flex-wrap gap-1">
         {data.discount.percentage > 0 ? (
           <span className="font-bold text-black text-xl xl:text-2xl">
             {`$${Math.round(

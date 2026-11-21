@@ -25,33 +25,45 @@ const ProductCard = ({ data }: ProductCardProps) => {
   const stock = productData?.stock;
   const isLowStock = typeof stock === "number" && stock > 0 && stock <= 5;
 
+  const effectivePrice =
+    data.discount.percentage > 0
+      ? Math.round(data.price - (data.price * data.discount.percentage) / 100)
+      : data.discount.amount > 0
+        ? data.price - data.discount.amount
+        : data.price;
+
   return (
-    <div className="flex items-start space-x-4">
+    <div className="flex items-start gap-3 sm:gap-4">
+      {/* Product image */}
       <Link
-        href={`/shop/product/${data.id}/${data.name.split(" ").join("-")}`}
-        className="bg-[#F0EEED] rounded-lg w-full min-w-[100px] max-w-[100px] sm:max-w-[124px] aspect-square overflow-hidden"
+        href={`/shop/product/${data.id}/${data.name.toLowerCase().replace(/\s+/g, "-")}`}
+        className="bg-[#F0EEED] rounded-lg shrink-0 w-20 h-20 sm:w-24 sm:h-24 md:w-[124px] md:h-[124px] overflow-hidden"
+        aria-label={data.name}
       >
         <Image
           src={data.srcUrl}
           width={124}
           height={124}
-          className="rounded-md w-full h-full object-cover hover:scale-110 transition-all duration-500"
+          className="w-full h-full object-cover hover:scale-110 transition-all duration-500"
           alt={data.name}
           priority
         />
       </Link>
-      <div className="flex w-full self-stretch flex-col">
-        <div className="flex items-center justify-between">
+
+      {/* Info */}
+      <div className="flex-1 min-w-0 flex flex-col self-stretch">
+        {/* Name + delete */}
+        <div className="flex items-start justify-between gap-2 mb-1">
           <Link
-            href={`/shop/product/${data.id}/${data.name.split(" ").join("-")}`}
-            className="text-black font-bold text-base xl:text-xl"
+            href={`/shop/product/${data.id}/${data.name.toLowerCase().replace(/\s+/g, "-")}`}
+            className="text-black font-bold text-sm sm:text-base leading-snug line-clamp-2"
           >
             {data.name}
           </Link>
           <Button
             variant="ghost"
             size="icon"
-            className="h-5 w-5 md:h-9 md:w-9"
+            className="shrink-0 w-8 h-8 p-0 hover:bg-red-50"
             onClick={() =>
               dispatch(
                 remove({
@@ -61,64 +73,47 @@ const ProductCard = ({ data }: ProductCardProps) => {
                 })
               )
             }
+            aria-label={`Remove ${data.name} from cart`}
           >
-            <PiTrashFill className="text-xl md:text-2xl text-red-600" />
+            <PiTrashFill className="text-lg text-red-500" />
           </Button>
         </div>
-        <div className="-mt-1">
-          <span className="text-black text-xs md:text-sm mr-1">Size:</span>
-          <span className="text-black/60 text-xs md:text-sm">
-            {data.attributes[0]}
-          </span>
+
+        {/* Attributes */}
+        <div className="flex flex-wrap gap-x-3 mb-1">
+          {data.attributes[0] && data.attributes[0] !== "Default" && (
+            <span className="text-black/50 text-xs">
+              Size: <span className="text-black/70">{data.attributes[0]}</span>
+            </span>
+          )}
+          {data.attributes[1] && data.attributes[1] !== "Default" && (
+            <span className="text-black/50 text-xs">
+              Color: <span className="text-black/70">{data.attributes[1]}</span>
+            </span>
+          )}
         </div>
-        <div className="mb-auto -mt-1.5">
-          <span className="text-black text-xs md:text-sm mr-1">Color:</span>
-          <span className="text-black/60 text-xs md:text-sm">
-            {data.attributes[1]}
-          </span>
-        </div>
-        <div className="flex items-center flex-wrap justify-between">
-          <div className="flex items-center space-x-[5px] xl:space-x-2.5">
-            {data.discount.percentage > 0 ? (
-              <span className="font-bold text-black text-xl xl:text-2xl">
-                {`$${Math.round(
-                  data.price - (data.price * data.discount.percentage) / 100
-                )}`}
-              </span>
-            ) : data.discount.amount > 0 ? (
-              <span className="font-bold text-black text-xl xl:text-2xl">
-                {`$${data.price - data.discount.amount}`}
-              </span>
-            ) : (
-              <span className="font-bold text-black text-xl xl:text-2xl">
+
+        {/* Price + counter */}
+        <div className="flex items-center justify-between flex-wrap gap-2 mt-auto">
+          <div className="flex items-center gap-1.5">
+            <span className="font-bold text-black text-base sm:text-lg">
+              ${effectivePrice}
+            </span>
+            {(data.discount.percentage > 0 || data.discount.amount > 0) && (
+              <span className="font-medium text-black/40 line-through text-sm">
                 ${data.price}
               </span>
             )}
             {data.discount.percentage > 0 && (
-              <span className="font-bold text-black/40 line-through text-xl xl:text-2xl">
-                ${data.price}
+              <span className="text-[10px] font-medium py-0.5 px-2 rounded-full bg-[#FF3333]/10 text-[#FF3333]">
+                -{data.discount.percentage}%
               </span>
-            )}
-            {data.discount.amount > 0 && (
-              <span className="font-bold text-black/40 line-through text-xl xl:text-2xl">
-                ${data.price}
-              </span>
-            )}
-            {data.discount.percentage > 0 ? (
-              <span className="font-medium text-[10px] xl:text-xs py-1.5 px-3.5 rounded-full bg-[#FF3333]/10 text-[#FF3333]">
-                {`-${data.discount.percentage}%`}
-              </span>
-            ) : (
-              data.discount.amount > 0 && (
-                <span className="font-medium text-[10px] xl:text-xs py-1.5 px-3.5 rounded-full bg-[#FF3333]/10 text-[#FF3333]">
-                  {`-$${data.discount.amount}`}
-                </span>
-              )
             )}
           </div>
+
           <div className="flex items-center gap-2">
             {isLowStock && (
-              <span className="text-[10px] xl:text-xs text-amber-600 font-medium whitespace-nowrap">
+              <span className="text-[10px] text-amber-600 font-medium whitespace-nowrap hidden sm:inline">
                 Only {stock} left
               </span>
             )}
@@ -140,7 +135,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
                     )
               }
               isZeroDelete
-              className="px-5 py-3 max-h-8 md:max-h-10 min-w-[105px] max-w-[105px] sm:max-w-32"
+              className="px-3 sm:px-5 py-2 max-h-9 min-w-[90px] max-w-[110px]"
             />
           </div>
         </div>

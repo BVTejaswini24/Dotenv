@@ -3,8 +3,7 @@
 import { cn } from "@/lib/utils";
 import { integralCF } from "@/styles/fonts";
 import Link from "next/link";
-import React, { useState, useCallback } from "react";
-import { useRouter } from "next/navigation";
+import React from "react";
 import { NavMenu } from "../navbar.types";
 import { MenuList } from "./MenuList";
 import {
@@ -12,7 +11,6 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { MenuItem } from "./MenuItem";
-import Image from "next/image";
 import ResTopNavbar from "./ResTopNavbar";
 import CartBtn from "./CartBtn";
 import WishlistBtn from "./WishlistBtn";
@@ -46,23 +44,26 @@ const data: NavMenu = [
 
 const TopNavbar = () => {
   return (
-    <nav className="sticky top-0 bg-white z-20">
-      <div className="flex relative max-w-frame mx-auto items-center justify-between md:justify-start py-5 md:py-6 px-4 xl:px-0">
-        <div className="flex items-center">
-          <div className="block md:hidden mr-4">
+    <nav className="sticky top-0 bg-white z-20 border-b border-black/5 shadow-sm">
+      <div className="flex relative max-w-frame mx-auto items-center justify-between py-3 sm:py-4 md:py-5 px-4 xl:px-0">
+        {/* Left group: hamburger + logo */}
+        <div className="flex items-center min-w-0 shrink-0">
+          <div className="block md:hidden mr-2 sm:mr-3">
             <ResTopNavbar data={data} />
           </div>
           <Link
             href="/"
             className={cn([
               integralCF.className,
-              "text-2xl lg:text-[32px] mb-2 mr-3 lg:mr-10",
+              "text-lg sm:text-xl md:text-2xl lg:text-[28px] xl:text-[32px] leading-none mr-3 md:mr-5 lg:mr-10 tracking-tight whitespace-nowrap",
             ])}
           >
-            LUXE
+            ShopSphere
           </Link>
         </div>
-        <NavigationMenu className="hidden md:flex mr-2 lg:mr-7">
+
+        {/* Center: desktop nav links */}
+        <NavigationMenu className="hidden md:flex mr-2 lg:mr-7 shrink-0">
           <NavigationMenuList>
             {data.map((item) => (
               <React.Fragment key={item.id}>
@@ -76,10 +77,14 @@ const TopNavbar = () => {
             ))}
           </NavigationMenuList>
         </NavigationMenu>
-        <div className="hidden md:flex mr-3 lg:mr-10 flex-1 max-w-md">
+
+        {/* Search bar: desktop only, flexible */}
+        <div className="hidden md:flex flex-1 min-w-0 mr-3 lg:mr-6 max-w-xs lg:max-w-md xl:max-w-lg">
           <SearchBar />
         </div>
-        <div className="flex items-center">
+
+        {/* Right group: icons */}
+        <div className="flex items-center gap-0.5 sm:gap-1 shrink-0">
           <MobileSearchSheet />
           <WishlistBtn />
           <CartBtn />

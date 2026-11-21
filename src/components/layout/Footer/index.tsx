@@ -71,14 +71,14 @@ const Footer = () => {
               <h1
                 className={cn([
                   integralCF.className,
-                  "text-[28px] lg:text-[32px] mb-6",
+                  "text-[28px] lg:text-[32px] mb-6 tracking-tight",
                 ])}
               >
-                LUXE
+                ShopSphere
               </h1>
               <p className="text-black/60 text-sm mb-9">
-                We have clothes that suits your style and which you’re proud to
-                wear. From women to men.
+                We have clothes that suit your style and which you&apos;re proud to
+                wear. From women to men, discover your next favourite piece.
               </p>
               <div className="flex items-center">
                 {socialsData.map((social) => (
@@ -105,7 +105,7 @@ const Footer = () => {
           <hr className="h-[1px] border-t-black/10 mb-6" />
           <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center mb-2">
             <p className="text-sm text-center sm:text-left text-black/60 mb-4 sm:mb-0 sm:mr-1">
-              LUXE © Made by{" "}
+              ShopSphere &copy; {new Date().getFullYear()} &mdash; Made by{" "}
               <span className="text-black font-medium">Tejaswini</span>
             </p>
             <div className="flex items-center">

@@ -7,7 +7,7 @@ const legacyProducts: Product[] = [
     title: "T-shirt with Tape Details",
     description:
       "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "t-shirts",
     subcategory: "casual",
     gender: "unisex",
@@ -44,7 +44,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: false,
     stock: 20,
-    sku: "LX-TS-001",
+    sku: "SS-TS-001",
     createdAt: "2023-08-14",
   },
   {
@@ -53,7 +53,7 @@ const legacyProducts: Product[] = [
     title: "Skinny Fit Jeans",
     description:
       "Sleek skinny fit jeans crafted from premium stretch denim. Designed for a modern silhouette with all-day comfort.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "jeans",
     subcategory: "skinny",
     gender: "men",
@@ -89,7 +89,7 @@ const legacyProducts: Product[] = [
     isBestSeller: true,
     isOnSale: true,
     stock: 15,
-    sku: "LX-JN-002",
+    sku: "SS-JN-002",
     createdAt: "2023-08-14",
   },
   {
@@ -98,7 +98,7 @@ const legacyProducts: Product[] = [
     title: "Chechered Shirt",
     description:
       "Classic checkered shirt with a refined pattern. Perfect for smart-casual occasions, crafted from premium cotton.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "shirts",
     subcategory: "casual",
     gender: "men",
@@ -134,7 +134,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: false,
     stock: 25,
-    sku: "LX-SH-003",
+    sku: "SS-SH-003",
     createdAt: "2023-08-14",
   },
   {
@@ -143,7 +143,7 @@ const legacyProducts: Product[] = [
     title: "Sleeve Striped T-shirt",
     description:
       "Bold striped sleeve t-shirt with a contemporary design. Made from soft cotton for everyday comfort and effortless style.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "t-shirts",
     subcategory: "casual",
     gender: "unisex",
@@ -180,7 +180,7 @@ const legacyProducts: Product[] = [
     isBestSeller: true,
     isOnSale: true,
     stock: 18,
-    sku: "LX-TS-004",
+    sku: "SS-TS-004",
     createdAt: "2023-08-14",
   },
   {
@@ -189,7 +189,7 @@ const legacyProducts: Product[] = [
     title: "Vertical Striped Shirt",
     description:
       "Elegant vertical striped shirt for a polished look. Premium fabric ensures comfort while the pattern adds visual interest.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "shirts",
     subcategory: "formal",
     gender: "men",
@@ -225,7 +225,7 @@ const legacyProducts: Product[] = [
     isBestSeller: true,
     isOnSale: true,
     stock: 12,
-    sku: "LX-SH-005",
+    sku: "SS-SH-005",
     createdAt: "2023-08-14",
   },
   {
@@ -234,7 +234,7 @@ const legacyProducts: Product[] = [
     title: "Courage Graphic T-shirt",
     description:
       "Make a statement with this bold graphic tee. High-quality print on soft cotton fabric for comfort that lasts all day.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "t-shirts",
     subcategory: "graphic",
     gender: "unisex",
@@ -271,7 +271,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: false,
     stock: 22,
-    sku: "LX-TS-006",
+    sku: "SS-TS-006",
     createdAt: "2023-08-14",
   },
   {
@@ -280,7 +280,7 @@ const legacyProducts: Product[] = [
     title: "Loose Fit Bermuda Shorts",
     description:
       "Relaxed-fit bermuda shorts perfect for warm weather. Lightweight fabric with a comfortable loose cut for effortless style.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "shorts",
     subcategory: "casual",
     gender: "men",
@@ -316,7 +316,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: false,
     stock: 30,
-    sku: "LX-SH-007",
+    sku: "SS-SH-007",
     createdAt: "2023-08-14",
   },
   {
@@ -325,7 +325,7 @@ const legacyProducts: Product[] = [
     title: "Faded Skinny Jeans",
     description:
       "Vintage-inspired faded skinny jeans with a worn-in look. Stretch denim provides comfort while maintaining a sleek silhouette.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "jeans",
     subcategory: "skinny",
     gender: "men",
@@ -360,7 +360,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: false,
     stock: 16,
-    sku: "LX-JN-008",
+    sku: "SS-JN-008",
     createdAt: "2023-08-14",
   },
   {
@@ -369,7 +369,7 @@ const legacyProducts: Product[] = [
     title: "Polo with Contrast Trims",
     description:
       "Refined polo shirt featuring contrast trim details. Crafted from premium pique cotton for a sophisticated yet relaxed look.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "shirts",
     subcategory: "polo",
     gender: "men",
@@ -405,7 +405,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: true,
     stock: 14,
-    sku: "LX-SH-012",
+    sku: "SS-SH-012",
     createdAt: "2023-08-14",
   },
   {
@@ -414,7 +414,7 @@ const legacyProducts: Product[] = [
     title: "Gradient Graphic T-shirt",
     description:
       "Eye-catching gradient graphic t-shirt with a modern artistic print. Soft cotton construction ensures all-day comfort.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "t-shirts",
     subcategory: "graphic",
     gender: "unisex",
@@ -450,7 +450,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: false,
     stock: 20,
-    sku: "LX-TS-013",
+    sku: "SS-TS-013",
     createdAt: "2023-08-14",
   },
   {
@@ -459,7 +459,7 @@ const legacyProducts: Product[] = [
     title: "Polo with Tipping Details",
     description:
       "Classic polo enhanced with tipping details on the collar and sleeves. Premium cotton for a polished everyday essential.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "shirts",
     subcategory: "polo",
     gender: "men",
@@ -495,7 +495,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: false,
     stock: 18,
-    sku: "LX-SH-014",
+    sku: "SS-SH-014",
     createdAt: "2023-08-14",
   },
   {
@@ -504,7 +504,7 @@ const legacyProducts: Product[] = [
     title: "Black Striped T-shirt",
     description:
       "Versatile black striped t-shirt with a sleek monochrome design. Premium cotton blend for a comfortable, modern fit.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "t-shirts",
     subcategory: "casual",
     gender: "unisex",
@@ -541,7 +541,7 @@ const legacyProducts: Product[] = [
     isBestSeller: true,
     isOnSale: true,
     stock: 24,
-    sku: "LX-TS-015",
+    sku: "SS-TS-015",
     createdAt: "2023-08-14",
   },
   {
@@ -550,7 +550,7 @@ const legacyProducts: Product[] = [
     title: "Women's Crew Neck T-Shirt",
     description:
       "Effortlessly soft crew neck t-shirt designed for everyday comfort. Cut from premium cotton with a relaxed feminine silhouette.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "t-shirts",
     subcategory: "casual",
     gender: "women",
@@ -588,7 +588,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: false,
     stock: 25,
-    sku: "LX-TS-016",
+    sku: "SS-TS-016",
     createdAt: "2024-01-10",
   },
   {
@@ -597,7 +597,7 @@ const legacyProducts: Product[] = [
     title: "Women's Linen Blend Shirt",
     description:
       "Lightweight linen blend shirt with a relaxed fit. Perfect for warm-weather styling with a breathable, effortless drape.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "shirts",
     subcategory: "casual",
     gender: "women",
@@ -634,7 +634,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: false,
     stock: 18,
-    sku: "LX-SH-017",
+    sku: "SS-SH-017",
     createdAt: "2024-01-10",
   },
   {
@@ -643,7 +643,7 @@ const legacyProducts: Product[] = [
     title: "Women's High-Rise Skinny Jeans",
     description:
       "Flattering high-rise skinny jeans with premium stretch denim. Sculpted fit that hugs your curves for a sleek silhouette.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "jeans",
     subcategory: "skinny",
     gender: "women",
@@ -680,7 +680,7 @@ const legacyProducts: Product[] = [
     isBestSeller: true,
     isOnSale: true,
     stock: 20,
-    sku: "LX-JN-018",
+    sku: "SS-JN-018",
     createdAt: "2023-10-05",
   },
   {
@@ -689,7 +689,7 @@ const legacyProducts: Product[] = [
     title: "Women's Wide Leg Pants",
     description:
       "Sophisticated wide leg pants with a high waist and fluid drape. Tailored for a polished look that transitions from office to evening.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "pants",
     subcategory: "formal",
     gender: "women",
@@ -726,7 +726,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: false,
     stock: 16,
-    sku: "LX-PN-019",
+    sku: "SS-PN-019",
     createdAt: "2023-09-20",
   },
   {
@@ -735,7 +735,7 @@ const legacyProducts: Product[] = [
     title: "Women's Cropped Hoodie",
     description:
       "Trendy cropped hoodie with a soft brushed interior. Relaxed fit with ribbed cuffs and a kangaroo pocket for laid-back style.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "hoodies",
     subcategory: "casual",
     gender: "women",
@@ -772,7 +772,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: false,
     stock: 22,
-    sku: "LX-HD-020",
+    sku: "SS-HD-020",
     createdAt: "2024-01-10",
   },
   {
@@ -781,7 +781,7 @@ const legacyProducts: Product[] = [
     title: "Women's Oversized Bomber Jacket",
     description:
       "Statement oversized bomber jacket with a satin lining. Ribbed collar and cuffs with a zip closure for an effortlessly cool layer.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "jackets",
     subcategory: "casual",
     gender: "women",
@@ -818,7 +818,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: true,
     stock: 12,
-    sku: "LX-JK-021",
+    sku: "SS-JK-021",
     createdAt: "2023-11-15",
   },
   {
@@ -827,7 +827,7 @@ const legacyProducts: Product[] = [
     title: "Kids Dino Graphic T-Shirt",
     description:
       "Fun dinosaur graphic tee that kids will love. Soft breathable cotton with a durable print that stands up to playground adventures.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "t-shirts",
     subcategory: "graphic",
     gender: "kids",
@@ -869,7 +869,7 @@ const legacyProducts: Product[] = [
     isBestSeller: true,
     isOnSale: false,
     stock: 35,
-    sku: "LX-TS-022",
+    sku: "SS-TS-022",
     createdAt: "2024-01-10",
   },
   {
@@ -878,7 +878,7 @@ const legacyProducts: Product[] = [
     title: "Kids Classic Oxford Shirt",
     description:
       "Timeless oxford shirt for kids in a durable cotton blend. Button-down collar and a clean finish for school or special occasions.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "shirts",
     subcategory: "casual",
     gender: "kids",
@@ -920,7 +920,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: false,
     stock: 28,
-    sku: "LX-SH-023",
+    sku: "SS-SH-023",
     createdAt: "2023-10-12",
   },
   {
@@ -929,7 +929,7 @@ const legacyProducts: Product[] = [
     title: "Kids Stretch Skinny Jeans",
     description:
       "Comfortable skinny jeans with added stretch for active kids. Durable denim that keeps its shape wash after wash.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "jeans",
     subcategory: "skinny",
     gender: "kids",
@@ -971,7 +971,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: false,
     stock: 30,
-    sku: "LX-JN-024",
+    sku: "SS-JN-024",
     createdAt: "2023-10-12",
   },
   {
@@ -980,7 +980,7 @@ const legacyProducts: Product[] = [
     title: "Kids Elastic Waist Pants",
     description:
       "Easy-wear pants with an elasticated waistband for all-day comfort. Soft cotton twill that's perfect for school or weekend play.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "pants",
     subcategory: "casual",
     gender: "kids",
@@ -1022,7 +1022,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: false,
     stock: 32,
-    sku: "LX-PN-025",
+    sku: "SS-PN-025",
     createdAt: "2023-10-12",
   },
   {
@@ -1031,7 +1031,7 @@ const legacyProducts: Product[] = [
     title: "Kids Colorblock Hoodie",
     description:
       "Vibrant colorblock hoodie with a cozy fleece lining. Adjustable drawstring hood and front pocket for everyday adventures.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "hoodies",
     subcategory: "casual",
     gender: "kids",
@@ -1073,7 +1073,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: false,
     stock: 24,
-    sku: "LX-HD-026",
+    sku: "SS-HD-026",
     createdAt: "2024-01-10",
   },
   {
@@ -1082,7 +1082,7 @@ const legacyProducts: Product[] = [
     title: "Kids Lightweight Puffer Jacket",
     description:
       "Packable lightweight puffer jacket for on-the-go warmth. Water-resistant shell with a zip closure and elasticated cuffs.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "jackets",
     subcategory: "casual",
     gender: "kids",
@@ -1124,7 +1124,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: true,
     stock: 20,
-    sku: "LX-JK-027",
+    sku: "SS-JK-027",
     createdAt: "2023-11-20",
   },
   {
@@ -1133,7 +1133,7 @@ const legacyProducts: Product[] = [
     title: "Leather Crossbody Bag",
     description:
       "Sleek leather crossbody bag with an adjustable strap and brass hardware. Compact interior with card slots and a zip pocket for everyday essentials.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "accessories",
     subcategory: "bags",
     gender: "women",
@@ -1164,7 +1164,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: true,
     stock: 20,
-    sku: "LX-AC-028",
+    sku: "SS-AC-028",
     createdAt: "2024-02-05",
   },
   {
@@ -1173,7 +1173,7 @@ const legacyProducts: Product[] = [
     title: "Classic Leather Belt",
     description:
       "Timeless full-grain leather belt with a brushed nickel buckle. A wardrobe essential that pairs equally well with denim or tailored trousers.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "accessories",
     subcategory: "belts",
     gender: "men",
@@ -1209,7 +1209,7 @@ const legacyProducts: Product[] = [
     isBestSeller: true,
     isOnSale: false,
     stock: 40,
-    sku: "LX-AC-029",
+    sku: "SS-AC-029",
     createdAt: "2023-09-15",
   },
   {
@@ -1218,7 +1218,7 @@ const legacyProducts: Product[] = [
     title: "Minimalist Shoulder Bag",
     description:
       "Clean-lined shoulder bag in smooth faux leather with a magnetic snap closure. Spacious main compartment with an interior zip pocket.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "accessories",
     subcategory: "bags",
     gender: "women",
@@ -1250,7 +1250,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: false,
     stock: 25,
-    sku: "LX-AC-030",
+    sku: "SS-AC-030",
     createdAt: "2024-02-05",
   },
   {
@@ -1259,7 +1259,7 @@ const legacyProducts: Product[] = [
     title: "Classic Baseball Cap",
     description:
       "Everyday baseball cap in washed cotton twill with an adjustable back strap. Unstructured crown and curved brim for a relaxed fit.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "accessories",
     subcategory: "hats",
     gender: "men",
@@ -1291,7 +1291,7 @@ const legacyProducts: Product[] = [
     isBestSeller: true,
     isOnSale: false,
     stock: 50,
-    sku: "LX-AC-031",
+    sku: "SS-AC-031",
     createdAt: "2023-10-01",
   },
   {
@@ -1300,7 +1300,7 @@ const legacyProducts: Product[] = [
     title: "Kids Mini Backpack",
     description:
       "Compact mini backpack sized for little adventurers. Durable nylon shell with a front zip pocket and padded shoulder straps.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "accessories",
     subcategory: "bags",
     gender: "kids",
@@ -1332,7 +1332,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: true,
     stock: 30,
-    sku: "LX-AC-032",
+    sku: "SS-AC-032",
     createdAt: "2024-02-05",
   },
   {
@@ -1341,7 +1341,7 @@ const legacyProducts: Product[] = [
     title: "Classic Sunglasses",
     description:
       "Retro-inspired acetate frame sunglasses with polarized UV400 lenses. Lightweight spring hinges for a comfortable all-day fit.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "accessories",
     subcategory: "eyewear",
     gender: "unisex",
@@ -1372,7 +1372,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: true,
     stock: 35,
-    sku: "LX-AC-033",
+    sku: "SS-AC-033",
     createdAt: "2023-12-10",
   },
   {
@@ -1381,7 +1381,7 @@ const legacyProducts: Product[] = [
     title: "Minimal Gold Necklace",
     description:
       "Delicate 14k gold-plated chain with a small pendant. A versatile everyday piece that layers effortlessly or stands alone for understated elegance.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "accessories",
     subcategory: "jewelry",
     gender: "women",
@@ -1411,7 +1411,7 @@ const legacyProducts: Product[] = [
     isBestSeller: true,
     isOnSale: false,
     stock: 45,
-    sku: "LX-AC-034",
+    sku: "SS-AC-034",
     createdAt: "2024-03-01",
   },
   {
@@ -1420,7 +1420,7 @@ const legacyProducts: Product[] = [
     title: "Classic Silver Chain",
     description:
       "Robust sterling silver curb chain with a lobster clasp. A timeless men's chain that works solo or paired with a pendant.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "accessories",
     subcategory: "jewelry",
     gender: "men",
@@ -1450,7 +1450,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: true,
     stock: 30,
-    sku: "LX-AC-035",
+    sku: "SS-AC-035",
     createdAt: "2023-11-20",
   },
   {
@@ -1459,7 +1459,7 @@ const legacyProducts: Product[] = [
     title: "Pearl Drop Earrings",
     description:
       "Elegant freshwater pearl drop earrings on a gold-plated hook. Subtle lustre that elevates both day and evening looks.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "accessories",
     subcategory: "jewelry",
     gender: "women",
@@ -1490,7 +1490,7 @@ const legacyProducts: Product[] = [
     isBestSeller: true,
     isOnSale: false,
     stock: 25,
-    sku: "LX-AC-036",
+    sku: "SS-AC-036",
     createdAt: "2024-03-01",
   },
   {
@@ -1499,7 +1499,7 @@ const legacyProducts: Product[] = [
     title: "Minimal Gold Hoop Earrings",
     description:
       "Classic 14k gold-plated hoop earrings with a lightweight hinged closure. A versatile staple that pairs with everything.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "accessories",
     subcategory: "jewelry",
     gender: "women",
@@ -1529,7 +1529,7 @@ const legacyProducts: Product[] = [
     isBestSeller: true,
     isOnSale: false,
     stock: 55,
-    sku: "LX-AC-037",
+    sku: "SS-AC-037",
     createdAt: "2023-10-15",
   },
   {
@@ -1538,7 +1538,7 @@ const legacyProducts: Product[] = [
     title: "Stainless Steel Bracelet",
     description:
       "Polished stainless steel link bracelet with a fold-over clasp. A bold yet refined piece for everyday wear.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "accessories",
     subcategory: "jewelry",
     gender: "men",
@@ -1568,7 +1568,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: false,
     stock: 35,
-    sku: "LX-AC-038",
+    sku: "SS-AC-038",
     createdAt: "2023-11-01",
   },
   {
@@ -1577,7 +1577,7 @@ const legacyProducts: Product[] = [
     title: "Classic Signet Ring",
     description:
       "Solid sterling silver signet ring with a smooth flat top. A heritage-inspired piece that can be engraved for a personal touch.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "accessories",
     subcategory: "jewelry",
     gender: "men",
@@ -1612,7 +1612,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: true,
     stock: 20,
-    sku: "LX-AC-039",
+    sku: "SS-AC-039",
     createdAt: "2023-10-20",
   },
   {
@@ -1621,7 +1621,7 @@ const legacyProducts: Product[] = [
     title: "Layered Pendant Necklace",
     description:
       "Two-tier gold-plated chain with mixed-length pendants. Pre-layered for effortless styling with any neckline.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "accessories",
     subcategory: "jewelry",
     gender: "women",
@@ -1651,7 +1651,7 @@ const legacyProducts: Product[] = [
     isBestSeller: false,
     isOnSale: false,
     stock: 30,
-    sku: "LX-AC-040",
+    sku: "SS-AC-040",
     createdAt: "2024-03-01",
   },
   {
@@ -1660,7 +1660,7 @@ const legacyProducts: Product[] = [
     title: "Minimal Chain Bracelet",
     description:
       "Fine gold-plated cable chain bracelet with a toggle clasp. Delicate enough to stack, polished enough to wear solo.",
-    brand: "LUXE",
+    brand: "ShopSphere",
     category: "accessories",
     subcategory: "jewelry",
     gender: "unisex",
@@ -1691,12 +1691,59 @@ const legacyProducts: Product[] = [
     isBestSeller: true,
     isOnSale: true,
     stock: 40,
-    sku: "LX-AC-041",
+    sku: "SS-AC-041",
     createdAt: "2023-12-05",
   },
 ];
 
-export const products: Product[] = [...legacyProducts];
+// Demo product: out-of-stock to showcase Smart Alternatives feature
+const outOfStockDemo: Product = {
+  id: 42,
+  slug: "classic-oxford-polo-out-of-stock",
+  title: "Classic Oxford Polo (Out of Stock Demo)",
+  description:
+    "A premium oxford polo shirt crafted from 100% piqué cotton. Features a classic collar, two-button placket, and a refined regular fit — perfect for smart-casual occasions.",
+  brand: "ShopSphere",
+  category: "shirts",
+  subcategory: "polo",
+  gender: "men",
+  srcUrl: "/images/product-12.jpg",
+  gallery: ["/images/product-12.jpg"],
+  price: 220,
+  originalPrice: 275,
+  discount: {
+    amount: 0,
+    percentage: 20,
+  },
+  rating: 4.5,
+  reviewCount: 62,
+  sizes: [
+    { id: "s", name: "Small", label: "S" },
+    { id: "m", name: "Medium", label: "M" },
+    { id: "l", name: "Large", label: "L" },
+    { id: "xl", name: "X-Large", label: "XL" },
+  ],
+  colors: [
+    { id: "white", name: "White", code: "bg-white", hex: "#FFFFFF" },
+    { id: "blue", name: "Blue", code: "bg-[#31344F]", hex: "#31344F" },
+  ],
+  variants: [],
+  material: "100% Cotton Piqué",
+  careInstructions: "Machine wash cold, tumble dry low",
+  fit: "Regular Fit",
+  pattern: "Solid",
+  style: "Smart Casual",
+  tags: ["polo", "oxford", "casual", "shirt"],
+  isNew: false,
+  isFeatured: true,
+  isBestSeller: false,
+  isOnSale: true,
+  stock: 0, // Out of stock — triggers Smart Alternatives
+  sku: "SS-SH-042",
+  createdAt: "2024-02-01",
+};
+
+export const products: Product[] = [...legacyProducts, outOfStockDemo];
 
 export const newArrivalsData: Product[] = products.filter((p) =>
   [1, 2, 3, 4].includes(p.id)
@@ -1709,3 +1756,4 @@ export const topSellingData: Product[] = products.filter((p) =>
 export const relatedProductData: Product[] = products.filter((p) =>
   [12, 13, 14, 15].includes(p.id)
 );
+

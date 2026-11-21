@@ -14,7 +14,7 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
   const specsData: SpecItem[] = [
     {
       label: "Brand",
-      value: product?.brand ?? "LUXE",
+      value: product?.brand ?? "ShopSphere",
     },
     {
       label: "Category",

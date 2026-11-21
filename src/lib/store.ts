@@ -8,12 +8,13 @@ import discountReducer from "./features/discount/discountSlice";
 import authReducer from "./features/auth/authSlice";
 import ordersReducer from "./features/orders/ordersSlice";
 import reviewsReducer from "./features/reviews/reviewsSlice";
+import watchlistReducer from "./features/watchlist/watchlistSlice";
 
 const persistConfig = {
   key: "root",
   storage,
   version: 1,
-  whitelist: ["carts", "wishlist", "discount", "auth", "orders", "reviews"],
+  whitelist: ["carts", "wishlist", "discount", "auth", "orders", "reviews", "watchlist"],
 };
 
 const rootReducer = combineReducers({
@@ -24,6 +25,7 @@ const rootReducer = combineReducers({
   auth: authReducer,
   orders: ordersReducer,
   reviews: reviewsReducer,
+  watchlist: watchlistReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

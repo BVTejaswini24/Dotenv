@@ -19,18 +19,38 @@ const AddToCartSection = ({
   const [quantity, setQuantity] = useState<number>(1);
 
   return (
-    <div className="fixed md:relative w-full bg-white border-t md:border-none border-black/5 bottom-0 left-0 p-4 md:p-0 z-10 flex items-center justify-between sm:justify-start md:justify-center">
-      <CartCounter
-        onAdd={setQuantity}
-        onRemove={setQuantity}
-        max={typeof data.stock === "number" ? data.stock : undefined}
-      />
-      <AddToCartBtn
-        data={{ ...data, quantity }}
-        selectedSize={selectedSize}
-        selectedColor={selectedColor}
-      />
-    </div>
+    <>
+      {/* Mobile: fixed bottom bar */}
+      <div className="fixed md:hidden bottom-0 left-0 right-0 bg-white border-t border-black/10 shadow-lg z-30 px-4 py-3 flex items-center gap-3">
+        <CartCounter
+          onAdd={setQuantity}
+          onRemove={setQuantity}
+          max={typeof data.stock === "number" ? data.stock : undefined}
+          className="shrink-0"
+        />
+        <div className="flex-1">
+          <AddToCartBtn
+            data={{ ...data, quantity }}
+            selectedSize={selectedSize}
+            selectedColor={selectedColor}
+          />
+        </div>
+      </div>
+
+      {/* Desktop: inline */}
+      <div className="hidden md:flex items-center gap-4 mt-5">
+        <CartCounter
+          onAdd={setQuantity}
+          onRemove={setQuantity}
+          max={typeof data.stock === "number" ? data.stock : undefined}
+        />
+        <AddToCartBtn
+          data={{ ...data, quantity }}
+          selectedSize={selectedSize}
+          selectedColor={selectedColor}
+        />
+      </div>
+    </>
   );
 };
 

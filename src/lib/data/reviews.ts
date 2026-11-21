@@ -6,7 +6,7 @@ export const reviewsData: Review[] = [
     productId: 1,
     user: "Alex K.",
     content:
-      '"Finding clothes that align with my personal style used to be a challenge until I discovered LUXE. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions."',
+      '"Finding clothes that align with my personal style used to be a challenge until I discovered ShopSphere. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions."',
     rating: 5,
     date: "August 14, 2023",
   },
@@ -14,7 +14,7 @@ export const reviewsData: Review[] = [
     id: 2,
     productId: 2,
     user: "Sarah M.",
-    content: '"I am blown away by the quality and style of the clothes I received from LUXE. From casual wear to elegant dresses, every piece I have bought has exceeded my expectations."',
+    content: '"I am blown away by the quality and style of the clothes I received from ShopSphere. From casual wear to elegant dresses, every piece I have bought has exceeded my expectations."',
     rating: 5,
     date: "August 15, 2023",
   },

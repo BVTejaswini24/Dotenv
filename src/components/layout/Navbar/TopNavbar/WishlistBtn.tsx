@@ -10,11 +10,18 @@ const WishlistBtn = () => {
   const count = useAppSelector(selectWishlistCount);
 
   return (
-    <Link href="/wishlist" className="relative p-1">
-      <Heart size={22} className={cn("max-w-[22px] max-h-[22px]", count > 0 ? "fill-black text-black" : "text-black")} />
+    <Link
+      href="/wishlist"
+      aria-label={`Wishlist${count > 0 ? `, ${count} items` : ""}`}
+      className="relative flex items-center justify-center w-9 h-9 rounded-full hover:bg-black/5 transition-colors"
+    >
+      <Heart
+        size={20}
+        className={cn("text-black", count > 0 && "fill-black")}
+      />
       {count > 0 && (
-        <span className="border bg-black text-white rounded-full w-fit-h-fit px-1 text-xs absolute -top-3 left-1/2 -translate-x-1/2">
-          {count}
+        <span className="absolute -top-0.5 -right-0.5 bg-black text-white rounded-full min-w-[18px] h-[18px] flex items-center justify-center px-0.5 text-[10px] font-bold leading-none">
+          {count > 99 ? "99+" : count}
         </span>
       )}
     </Link>
