@@ -39,21 +39,43 @@ import { OrderPlacedPayload } from "../types";
 // ---------------------------------------------------------------------------
 
 /**
- * Minimal provisional payload that satisfies the OrderPlacedPayload type.
- * All values are synthetic test data only.
- * Field names and types are PROVISIONAL — confirm with the backend teammate
- * before using this structure in production.
+ * Synthetic test payload conforming to the backend OrderPlacedPayload contract.
  */
 const TEST_PAYLOAD: OrderPlacedPayload = {
-  orderId: "TEST-ORDER-001",
-  customerId: "TEST-CUSTOMER-001",
-  totalAmount: 0,
-  status: "test",
+  event_id: "test-event-uuid-001",
+  event_type: "order.placed",
+  event_version: 1,
+  occurred_at: new Date().toISOString(),
+  order: {
+    id: "TEST-ORDER-001",
+    order_number: "SS-TEST-001",
+    user_id: "TEST-CUSTOMER-001",
+    status: "confirmed",
+    currency: "USD",
+    subtotal: 0,
+    discount: 0,
+    delivery_fee: 0,
+    total: 0,
+  },
   items: [
     {
-      productId: "TEST-PRODUCT-001",
+      product_id: 1,
+      product_uuid: "test-prod-uuid",
+      variant_id: "test-var-uuid",
+      sku: "TEST-PRODUCT-001",
+      title: "Test Product",
+      size: "M",
+      color: "Black",
       quantity: 1,
-      unitPrice: 0,
+      unit_price: 0,
+      line_total: 0,
+    },
+  ],
+  inventory: [
+    {
+      variant_id: "test-var-uuid",
+      sku: "TEST-PRODUCT-001",
+      quantity_change: -1,
     },
   ],
 };
@@ -72,8 +94,8 @@ const TEST_OCCURRED_AT = new Date().toISOString();
 async function main(): Promise<void> {
   console.log("------------------------------------------------------------");
   console.log("[ShopSphere Kafka] TEST PRODUCER — Aiven connectivity test");
-  console.log(`[ShopSphere Kafka] Topic  : ${process.env.KAFKA_TOPIC_ORDER_PLACED ?? "order_placed (default)"}`);
-  console.log(`[ShopSphere Kafka] Payload: orderId=${TEST_PAYLOAD.orderId}`);
+  console.log(`[ShopSphere Kafka] Topic  : ${process.env.KAFKA_TOPIC_ORDERS ?? process.env.KAFKA_TOPIC_ORDER_PLACED ?? "shopsphere.orders (default)"}`);
+  console.log(`[ShopSphere Kafka] Payload: orderId=${TEST_PAYLOAD.order.id}`);
   console.log("------------------------------------------------------------");
 
   try {

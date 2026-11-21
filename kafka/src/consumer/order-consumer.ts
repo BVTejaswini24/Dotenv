@@ -1,48 +1,33 @@
 /**
- * order-consumer.ts
+ * consumer/order-consumer.ts
  *
- * Subscribes to the order_placed Kafka topic and dispatches each event
- * to the registered handlers asynchronously.
+ * Kafka consumer for ShopSphere.
  *
- * RETRY AND ERROR HANDLING STRATEGY
- * -----------------------------------
- * Each handler is retried up to MAX_RETRIES times with exponential backoff.
- * A failed message is NEVER silently acknowledged or marked as processed.
+ * Subscribes to all three event topics:
+ *   shopsphere.orders     — order.placed events
+ *   shopsphere.inventory  — inventory.updated events
+ *   shopsphere.products   — product.updated events
  *
- * Dead-letter strategy (implemented):
- *   - After all retries are exhausted, the raw message is forwarded to the
- *     dead-letter topic (order_placed.DLT) via publishToDlt().
- *   - The DLT topic must be pre-created in the Aiven console.
- *   - If the DLT publish also fails, the consumer halts at that offset
- *     (does not commit), so the message is re-delivered on restart.
- *   - The consumer logs all dead-letter events for manual inspection.
+ * Event envelope uses the backend's snake_case contract (EVENT_CONTRACT.md):
+ *   event_id, event_type, event_version, occurred_at
  *
- * IDEMPOTENCY — IMPORTANT CORRECTNESS NOTE
- * ------------------------------------------
- * This consumer performs an idempotency check using IdempotencyStore before
- * processing each event. HOWEVER, a check-then-process sequence alone does NOT
- * guarantee exactly-once processing:
+ * IDEMPOTENCY
+ * -----------
+ * Each event is deduplicated by (consumer_id, event_id) using the
+ * processed_events PostgreSQL table (migration 002_extend_schema.sql).
+ * Provide a createPgIdempotencyStore() instance from pg-idempotency-store.ts
+ * for production. For testing, any object satisfying IdempotencyStore works.
  *
- *   - If the consumer crashes between processing and recording the eventId,
- *     the event will be re-delivered and processed again.
- *   - True duplicate safety requires either:
- *       A) Atomicity between the side effect and the processed_events record
- *          (e.g., both inside a single PostgreSQL transaction), OR
- *       B) Naturally idempotent side effects (e.g., OpenSearch upsert by orderId).
+ * DEAD-LETTER
+ * -----------
+ * Failed messages after MAX_RETRIES are forwarded to <topic>.DLT via
+ * relay/publisher.ts publishToDlt(). The DLT topics must be pre-created
+ * in the Aiven console.
  *
- * The IdempotencyStore interface below is a placeholder. The backend teammate
- * must provide the durable implementation backed by PostgreSQL.
- *
- * INTERFACE POINTS REQUIRING BACKEND TEAMMATE CONFIRMATION
- * ---------------------------------------------------------
- * 1. The processed_events table definition:
- *      CREATE TABLE processed_events (
- *        event_id    TEXT PRIMARY KEY,
- *        processed_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
- *      );
- * 2. Whether the consumer gets a direct DB connection or calls a backend API.
- * 3. For non-idempotent handlers: whether the side effect and the
- *    processed_events INSERT can be wrapped in the same transaction.
+ * OPENSEARCH
+ * ----------
+ * Pass null for openSearchAdapter to skip indexing until the OpenSearch
+ * teammate provides a concrete adapter.
  */
 
 import {
@@ -53,41 +38,38 @@ import {
 } from "kafkajs";
 import { createKafkaClient } from "../kafka-client";
 import { loadConfig } from "../config";
-import { OrderPlacedEvent, validateOrderPlacedEvent } from "../types";
-import { publishToDlt } from "../producer/order-producer";
+import {
+  validateOutboxPayload,
+  OrderPlacedPayload,
+  InventoryUpdatedPayload,
+  ProductUpdatedPayload,
+} from "../types";
+import { publishToDlt } from "../relay/publisher";
 import {
   handleOrderPlacedForSearch,
   OpenSearchAdapter,
 } from "./handlers/search-sync.handler";
 
 // ---------------------------------------------------------------------------
-// Idempotency interface — to be implemented by backend teammate
+// Idempotency interface
 // ---------------------------------------------------------------------------
 
 /**
  * Durable store for recording processed event IDs.
- *
- * The backend teammate must provide a concrete implementation backed by
- * PostgreSQL. An in-memory implementation is NOT acceptable for production
- * because it does not survive restarts and does not provide atomicity with
- * database side effects.
- *
- * See correctness note in the file header above.
- * See kafka/src/contracts/backend-integration.ts for the exact interface contract.
+ * Production implementation: createPgIdempotencyStore() from pg-idempotency-store.ts
+ * Test implementation: any in-memory object satisfying this interface.
  */
 export interface IdempotencyStore {
   /**
-   * Returns true if this eventId has already been successfully processed.
-   * Must query a durable store (PostgreSQL processed_events table).
+   * Returns true if this (eventId, eventType) pair has already been processed.
    */
-  hasBeenProcessed(eventId: string): Promise<boolean>;
+  hasBeenProcessed(eventId: string, eventType: string): Promise<boolean>;
 
   /**
-   * Records that this eventId was successfully processed.
-   * For non-idempotent handlers, this MUST be atomic with the handler's
-   * side effect (same DB transaction). Coordinate with the backend teammate.
+   * Records that this event was successfully processed.
+   * For non-idempotent handlers this must be atomic with the side effect.
    */
-  markAsProcessed(eventId: string): Promise<void>;
+  markAsProcessed(eventId: string, eventType: string): Promise<void>;
 }
 
 // ---------------------------------------------------------------------------
@@ -110,10 +92,7 @@ async function getConsumer(): Promise<Consumer> {
   const config = loadConfig();
   _kafka = createKafkaClient();
 
-  _consumer = _kafka.consumer({
-    groupId: config.groupId,
-  });
-
+  _consumer = _kafka.consumer({ groupId: config.groupId });
   await _consumer.connect();
   console.log(
     `[ShopSphere Kafka] Consumer connected | groupId=${config.groupId}`
@@ -123,7 +102,7 @@ async function getConsumer(): Promise<Consumer> {
 
 /**
  * Gracefully disconnects the consumer.
- * Call this during process shutdown (SIGTERM/SIGINT).
+ * Call during process shutdown (SIGTERM/SIGINT).
  */
 export async function disconnectConsumer(): Promise<void> {
   if (_consumer) {
@@ -134,15 +113,26 @@ export async function disconnectConsumer(): Promise<void> {
 }
 
 // ---------------------------------------------------------------------------
-// Message parsing and validation
+// Message parsing
 // ---------------------------------------------------------------------------
 
 /**
- * Parses and validates an incoming Kafka message.
- * Returns the typed event on success, or null if the message is malformed.
- * Logs a detailed error including the validation failure reason.
+ * Parsed result from a Kafka message.
+ * event_type drives downstream dispatch.
  */
-function parseMessage(message: KafkaMessage): OrderPlacedEvent | null {
+type ParsedEvent = {
+  event_id: string;
+  event_type: string;
+  event_version: number;
+  occurred_at: string;
+  payload: Record<string, unknown>;
+};
+
+/**
+ * Parses and validates an incoming Kafka message.
+ * Returns a typed ParsedEvent on success, or null if the message is malformed.
+ */
+function parseMessage(message: KafkaMessage): ParsedEvent | null {
   if (!message.value) {
     console.error("[ShopSphere Kafka] Received message with null/empty value.");
     return null;
@@ -159,8 +149,19 @@ function parseMessage(message: KafkaMessage): OrderPlacedEvent | null {
     return null;
   }
 
-  // Run structural + field-level validation.
-  const validationError = validateOrderPlacedEvent(parsed);
+  if (typeof parsed !== "object" || parsed === null) {
+    console.error("[ShopSphere Kafka] Parsed message is not an object.");
+    return null;
+  }
+
+  const p = parsed as Record<string, unknown>;
+
+  // Read event_type from the payload (the backend embeds it in the payload).
+  const eventType =
+    typeof p.event_type === "string" ? p.event_type : "";
+
+  // Use the generic validateOutboxPayload which checks all envelope fields.
+  const validationError = validateOutboxPayload(eventType, parsed);
   if (validationError) {
     console.error(
       `[ShopSphere Kafka] Message failed validation: ${validationError}`,
@@ -169,11 +170,17 @@ function parseMessage(message: KafkaMessage): OrderPlacedEvent | null {
     return null;
   }
 
-  return parsed as OrderPlacedEvent;
+  return {
+    event_id:      p.event_id as string,
+    event_type:    p.event_type as string,
+    event_version: p.event_version as number,
+    occurred_at:   p.occurred_at as string,
+    payload:       p,
+  };
 }
 
 // ---------------------------------------------------------------------------
-// Handler dispatch with retry
+// Retry helper
 // ---------------------------------------------------------------------------
 
 async function withRetry(
@@ -197,46 +204,80 @@ async function withRetry(
         { err }
       );
       await new Promise((resolve) => setTimeout(resolve, delayMs));
-      delayMs *= 2; // exponential backoff
+      delayMs *= 2;
     }
   }
 }
 
 // ---------------------------------------------------------------------------
-// Per-message processor
+// Per-event processing — dispatches by event_type
 // ---------------------------------------------------------------------------
 
-async function processMessage(
-  event: OrderPlacedEvent,
+async function processEvent(
+  event: ParsedEvent,
   idempotencyStore: IdempotencyStore,
   openSearchAdapter: OpenSearchAdapter | null
 ): Promise<void> {
-  // Idempotency check — see correctness note in the file header.
-  const alreadyProcessed = await idempotencyStore.hasBeenProcessed(event.eventId);
+  // Idempotency check using the actual backend schema: PRIMARY KEY (consumer, event_id)
+  const alreadyProcessed = await idempotencyStore.hasBeenProcessed(
+    event.event_id,
+    event.event_type
+  );
   if (alreadyProcessed) {
     console.log(
-      `[ShopSphere Kafka] Duplicate event skipped | eventId=${event.eventId} | orderId=${event.payload.orderId}`
+      `[ShopSphere Kafka] Duplicate event skipped | event_id=${event.event_id} | event_type=${event.event_type}`
     );
     return;
   }
 
-  if (openSearchAdapter) {
-    await withRetry("search-sync.handler", () =>
-      handleOrderPlacedForSearch(event, openSearchAdapter)
-    );
-  } else {
-    console.warn(
-      `[ShopSphere Kafka] No OpenSearchAdapter provided. OpenSearch sync skipped for eventId=${event.eventId}.`
-    );
+  switch (event.event_type) {
+    case "order.placed": {
+      const orderPayload = event.payload as unknown as OrderPlacedPayload;
+      if (openSearchAdapter) {
+        await withRetry("search-sync.handler", () =>
+          // search-sync handler still uses the OrderPlacedEvent alias shape;
+          // pass the full payload which satisfies OrderPlacedPayload.
+          handleOrderPlacedForSearch(orderPayload as any, openSearchAdapter)
+        );
+      } else {
+        console.warn(
+          `[ShopSphere Kafka] No OpenSearchAdapter — skipping search sync for order.placed event_id=${event.event_id}`
+        );
+      }
+      break;
+    }
+
+    case "inventory.updated": {
+      const invPayload = event.payload as unknown as InventoryUpdatedPayload;
+      console.log(
+        `[ShopSphere Kafka] inventory.updated received | variant_id=${invPayload.variant_id} | qty_change=${invPayload.quantity_change} | event_id=${event.event_id}`
+      );
+      // OpenSearch inventory update: future implementation by OpenSearch teammate.
+      break;
+    }
+
+    case "product.updated": {
+      const prodPayload = event.payload as unknown as ProductUpdatedPayload;
+      console.log(
+        `[ShopSphere Kafka] product.updated received | product_uuid=${prodPayload.product?.uuid ?? "unknown"} | event_id=${event.event_id}`
+      );
+      // OpenSearch product re-index: future implementation by OpenSearch teammate.
+      break;
+    }
+
+    default:
+      console.warn(
+        `[ShopSphere Kafka] Unrecognised event_type="${event.event_type}" | event_id=${event.event_id}. Skipping.`
+      );
+      // Still mark as processed so we don't retry an unknown type forever.
+      break;
   }
 
   // Record successful processing AFTER all handlers complete.
-  // NOTE: For non-idempotent handlers this must be atomic with the handler's
-  // DB side effect. See IdempotencyStore documentation above.
-  await idempotencyStore.markAsProcessed(event.eventId);
+  await idempotencyStore.markAsProcessed(event.event_id, event.event_type);
 
   console.log(
-    `[ShopSphere Kafka] Event processed | eventId=${event.eventId} | orderId=${event.payload.orderId}`
+    `[ShopSphere Kafka] Event processed | event_id=${event.event_id} | event_type=${event.event_type}`
   );
 }
 
@@ -244,19 +285,8 @@ async function processMessage(
 // Dead-letter handling
 // ---------------------------------------------------------------------------
 
-/**
- * Attempts to publish the failed message to the DLT, then throws to prevent
- * the offset from being committed.
- *
- * If the DLT publish succeeds: the offset IS committed (we return normally)
- * so the consumer can advance past the poison message without halting.
- *
- * If the DLT publish fails: we still throw so the offset is NOT committed.
- * The consumer halts at this message until the DLT topic is available or
- * the underlying cause is fixed.
- */
 async function handleDeadLetter(
-  event: OrderPlacedEvent | null,
+  event: ParsedEvent | null,
   rawMessage: KafkaMessage,
   originalTopic: string,
   err: unknown
@@ -267,27 +297,30 @@ async function handleDeadLetter(
   console.error(
     "[ShopSphere Kafka] DEAD LETTER — event exhausted all retries.",
     {
-      eventId: event?.eventId ?? "UNKNOWN",
-      orderId: event?.payload?.orderId ?? "UNKNOWN",
+      event_id:   event?.event_id   ?? "UNKNOWN",
+      event_type: event?.event_type ?? "UNKNOWN",
+      originalTopic,
       reason,
     }
   );
 
   try {
-    await publishToDlt(rawMessage.value, reason, originalTopic);
-    // DLT publish succeeded — log and return normally so the offset is committed.
-    // The consumer can safely advance to the next message.
+    // publishToDlt is from relay/publisher.ts — the working relay publisher.
+    await publishToDlt(
+      null,                              // OutboxEventRow not available here
+      rawMessage.value?.toString() ?? null,
+      reason,
+      originalTopic
+    );
     console.log(
-      `[ShopSphere Kafka] Dead-letter handled — offset will be committed. eventId=${event?.eventId ?? "UNKNOWN"}`
+      `[ShopSphere Kafka] Dead-letter published — offset committed. event_id=${event?.event_id ?? "UNKNOWN"}`
     );
   } catch (dltErr) {
-    // DLT publish also failed. Do not commit the offset.
-    // The consumer will halt here until the DLT topic is available.
     console.error(
-      "[ShopSphere Kafka] CRITICAL: Failed to publish to DLT. Offset NOT committed. Consumer halted.",
+      "[ShopSphere Kafka] CRITICAL: Failed to publish to DLT. Offset NOT committed.",
       { dltErr }
     );
-    throw err; // throw the original processing error
+    throw err; // rethrow original error; offset not committed
   }
 }
 
@@ -296,12 +329,12 @@ async function handleDeadLetter(
 // ---------------------------------------------------------------------------
 
 /**
- * Starts the order_placed consumer.
+ * Starts the consumer and subscribes to all three ShopSphere topics.
  *
- * @param idempotencyStore  Durable idempotency adapter (backend teammate provides this).
- *                          Use noopIdempotencyStore from test scripts for Aiven testing only.
- * @param openSearchAdapter OpenSearch adapter (Teammate 2 provides this). Pass null
- *                          to skip OpenSearch sync until the contract is agreed.
+ * @param idempotencyStore  Production: createPgIdempotencyStore(pool).
+ *                          Testing: any in-memory IdempotencyStore.
+ * @param openSearchAdapter Pass null until the OpenSearch teammate provides
+ *                          a concrete adapter.
  */
 export async function startOrderConsumer(
   idempotencyStore: IdempotencyStore,
@@ -310,35 +343,38 @@ export async function startOrderConsumer(
   const consumer = await getConsumer();
   const config = loadConfig();
 
+  // Subscribe to all three configured topics.
   await consumer.subscribe({
-    topic: config.topics.orderPlaced,
+    topics: [
+      config.topics.orders,
+      config.topics.inventory,
+      config.topics.products,
+    ],
     fromBeginning: true,
   });
 
   console.log(
-    `[ShopSphere Kafka] Subscribed to topic: ${config.topics.orderPlaced}`
+    `[ShopSphere Kafka] Subscribed to topics: ${config.topics.orders}, ${config.topics.inventory}, ${config.topics.products}`
   );
 
   await consumer.run({
     // Offsets are committed only after eachMessage resolves without throwing.
-    // If this function throws, the offset is NOT committed and Kafka re-delivers.
     eachMessage: async ({ topic, message }: EachMessagePayload) => {
       const event = parseMessage(message);
 
       if (!event) {
-        // Malformed or invalid message — send to DLT so we can advance past it.
-        // If DLT is unavailable this throws, halting the consumer at this offset.
+        // Malformed message — forward to DLT so we can advance past it.
         await handleDeadLetter(
           null,
           message,
           topic,
-          new Error("Message failed parsing/validation — see logs above for details")
+          new Error("Message failed parsing/validation — see logs above")
         );
         return;
       }
 
       try {
-        await processMessage(event, idempotencyStore, openSearchAdapter);
+        await processEvent(event, idempotencyStore, openSearchAdapter);
       } catch (err) {
         await handleDeadLetter(event, message, topic, err);
       }

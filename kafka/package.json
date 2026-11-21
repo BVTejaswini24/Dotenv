@@ -10,9 +10,13 @@
     "dev:consumer": "ts-node src/consumer/order-consumer.ts",
     "test:producer": "ts-node src/scripts/test-producer.ts",
     "test:consumer": "ts-node src/scripts/test-consumer.ts",
-    "test:local": "ts-node src/scripts/test-local.ts"
+    "test:local": "ts-node src/scripts/test-local.ts",
+    "test:integration": "ts-node src/scripts/test-integration.ts",
+    "test:opensearch": "ts-node src/scripts/test-opensearch.ts",
+    "init:opensearch": "ts-node src/scripts/init-opensearch-index.ts"
   },
   "dependencies": {
+    "@opensearch-project/opensearch": "^3.10.0",
     "dotenv": "^16.4.5",
     "kafkajs": "^2.2.4",
     "uuid": "^9.0.1"

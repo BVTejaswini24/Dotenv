@@ -73,9 +73,7 @@ export async function disconnectProducer(): Promise<void> {
 /**
  * Publishes a single order_placed event to Kafka.
  *
- * @param payload  The order payload. All fields are PROVISIONAL — do not
- *                 finalise the shape until the backend teammate confirms
- *                 the actual order object from their PostgreSQL schema.
+ * @param payload  The order payload.
  * @param occurredAt  ISO 8601 string of when the order was committed to the DB.
  *                    Must be supplied by the backend, not generated here.
  * @returns         Kafka RecordMetadata (partition, offset) for logging.
@@ -95,13 +93,15 @@ export async function publishOrderPlaced(
     payload,
   };
 
+  const orderId = payload.order?.id ?? (payload as any).orderId ?? "order";
+
   const result = await producer.send({
-    topic: config.topics.orderPlaced,
+    topic: config.topics.orders,
     messages: [
       {
         // Using orderId as the message key ensures all events for the same
         // order land on the same partition, preserving per-order ordering.
-        key: payload.orderId,
+        key: orderId,
         value: JSON.stringify(event),
         headers: {
           eventVersion: event.eventVersion,
@@ -117,7 +117,7 @@ export async function publishOrderPlaced(
   const offset = result[0]?.offset ?? "unknown";
 
   console.log(
-    `[ShopSphere Kafka] Published order_placed | orderId=${payload.orderId} | eventId=${event.eventId} | partition=${partition} | offset=${offset}`
+    `[ShopSphere Kafka] Published order_placed | orderId=${orderId} | eventId=${event.eventId} | partition=${partition} | offset=${offset}`
   );
 
   return result;
@@ -150,7 +150,7 @@ export async function publishToDlt(
 ): Promise<void> {
   const producer = await getProducer();
   const config = loadConfig();
-  const dltTopic = `${config.topics.orderPlaced}.DLT`;
+  const dltTopic = `${config.topics.orders}.DLT`;
 
   const dltMessage = JSON.stringify({
     originalTopic,

@@ -1,38 +1,15 @@
 /**
  * search-sync.handler.ts
  *
- * Handler stub: synchronises an order_placed event into the OpenSearch index.
+ * Handler stub: synchronises an order.placed event into the OpenSearch index.
  *
  * STATUS: STUB — awaiting Teammate 2 (OpenSearch) contract.
  *
- * INTERFACE POINTS REQUIRING OPENSEARCH TEAMMATE CONFIRMATION
- * ------------------------------------------------------------
- * Before this handler can be implemented, Teammate 2 must provide:
- *
- *   1. Aiven OpenSearch endpoint URL             → stored in env var OPENSEARCH_URL
- *   2. OpenSearch index name for orders          → e.g. "orders" or "shopsphere_orders"
- *   3. Authentication method                     → API key or basic auth?
- *   4. Document mapping / schema for an order    → which fields does the index expect?
- *   5. The OpenSearch client they are using      → @opensearch-project/opensearch?
- *   6. Desired upsert behaviour on duplicate     → index (overwrite) or update (merge)?
- *
- * IDEMPOTENCY NOTE
- * ----------------
- * An OpenSearch index-by-id (upsert) is naturally idempotent: indexing the same
- * orderId twice produces the same document. This handler therefore does NOT require
- * a database transaction for correctness — but the consumer still records the
- * eventId after success to avoid redundant processing work.
- *
- * HOW TO IMPLEMENT ONCE CONTRACT IS KNOWN
- * ----------------------------------------
- * 1. Add OPENSEARCH_URL and OPENSEARCH_INDEX_ORDERS to kafka/.env.example.
- * 2. Add them to src/config.ts.
- * 3. Install the OpenSearch client package inside kafka/ if Teammate 2 does not
- *    provide a shared client.
- * 4. Replace the TODO body below with the actual upsert call.
+ * Uses the confirmed snake_case backend event contract (EVENT_CONTRACT.md).
+ * OrderPlacedPayload is the canonical type from types.ts.
  */
 
-import { OrderPlacedEvent } from "../../types";
+import { OrderPlacedPayload } from "../../types";
 
 /**
  * Interface defining what this handler needs from an OpenSearch adapter.
@@ -41,39 +18,38 @@ import { OrderPlacedEvent } from "../../types";
 export interface OpenSearchAdapter {
   /**
    * Upserts an order document into the OpenSearch orders index.
-   * Must be idempotent: calling with the same orderId must not create duplicates.
-   * @param event  The full order_placed event.
+   * Must be idempotent: calling with the same order.id must not create duplicates.
+   * @param event  The full order.placed payload (snake_case).
    */
-  indexOrder(event: OrderPlacedEvent): Promise<void>;
+  indexOrder(event: OrderPlacedPayload): Promise<void>;
 }
 
 /**
- * Processes an order_placed event for OpenSearch indexing.
+ * Processes an order.placed event for OpenSearch indexing.
  *
- * @param event    The order event to index.
+ * @param event    The order.placed payload.
  * @param adapter  Injected OpenSearch adapter (provided by Teammate 2).
  */
 export async function handleOrderPlacedForSearch(
-  event: OrderPlacedEvent,
+  event: OrderPlacedPayload,
   adapter: OpenSearchAdapter
 ): Promise<void> {
-  // TODO: Remove this guard once Teammate 2 provides the adapter implementation.
   if (!adapter) {
     console.warn(
       `[ShopSphere Kafka] search-sync.handler: OpenSearchAdapter not yet provided. ` +
-        `Skipping OpenSearch indexing for orderId=${event.payload.orderId}. ` +
+        `Skipping OpenSearch indexing for order.id=${event.order?.id}. ` +
         `Coordinate with the OpenSearch teammate to implement this handler.`
     );
     return;
   }
 
   console.log(
-    `[ShopSphere Kafka] Indexing order in OpenSearch | orderId=${event.payload.orderId} | eventId=${event.eventId}`
+    `[ShopSphere Kafka] Indexing order in OpenSearch | order.id=${event.order?.id} | event_id=${event.event_id}`
   );
 
   await adapter.indexOrder(event);
 
   console.log(
-    `[ShopSphere Kafka] OpenSearch indexing complete | orderId=${event.payload.orderId}`
+    `[ShopSphere Kafka] OpenSearch indexing complete | order.id=${event.order?.id}`
   );
 }

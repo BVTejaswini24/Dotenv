@@ -53,7 +53,10 @@ export interface KafkaConfig {
     password: string;
   };
   topics: {
-    orderPlaced: string;
+    orders:      string;   // order.placed events      → shopsphere.orders
+    inventory:   string;   // inventory.updated events  → shopsphere.inventory
+    products:    string;   // product.updated events   → shopsphere.products
+    orderPlaced: string;   // backward compatibility alias → orders
   };
 }
 
@@ -67,15 +70,17 @@ let _config: KafkaConfig | null = null;
 export function loadConfig(): KafkaConfig {
   if (_config) return _config;
 
+  const ordersTopic =
+    process.env.KAFKA_TOPIC_ORDERS?.trim() ||
+    process.env.KAFKA_TOPIC_ORDER_PLACED?.trim() ||
+    requireEnv("KAFKA_TOPIC_ORDERS");
+
   _config = {
     brokers: requireEnv("KAFKA_BROKERS")
       .split(",")
       .map((b) => b.trim()),
     groupId: requireEnv("KAFKA_GROUP_ID"),
     ssl: {
-      // Aiven provides a CA certificate (ca.pem) for TLS server verification.
-      // It is base64-encoded in the env var so it can be stored as a single line.
-      // No client cert or key is needed — SASL username/password handles identity.
       ca: Buffer.from(requireEnv("KAFKA_SSL_CA"), "base64"),
     },
     sasl: {
@@ -84,7 +89,12 @@ export function loadConfig(): KafkaConfig {
       password: requireEnv("KAFKA_SASL_PASSWORD"),
     },
     topics: {
-      orderPlaced: requireEnv("KAFKA_TOPIC_ORDER_PLACED"),
+      orders:      ordersTopic,
+      inventory:   requireEnv("KAFKA_TOPIC_INVENTORY"),
+      products:    requireEnv("KAFKA_TOPIC_PRODUCTS"),
+      get orderPlaced() {
+        return this.orders;
+      },
     },
   };
 
