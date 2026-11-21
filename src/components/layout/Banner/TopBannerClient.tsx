@@ -20,9 +20,9 @@ const TopBannerClient = () => {
   if (dismissed || signupApplied) return null;
 
   return (
-    <div className="bg-black text-white text-center py-2.5 px-4 sm:px-6 xl:px-0">
-      <div className="relative max-w-frame mx-auto">
-        <p className="text-xs sm:text-sm leading-snug">
+    <div className="bg-black px-4 py-2 text-center text-white sm:px-6 sm:py-2.5 xl:px-0">
+      <div className="relative mx-auto max-w-frame">
+        <p className="px-1 text-[11px] leading-snug xs:text-xs sm:px-8 sm:text-sm">
           Sign up and get 20% off to your first order.{" "}
           {isAuthenticated ? (
             <button

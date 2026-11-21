@@ -41,12 +41,18 @@ const OrderSummary = ({
     });
 
   const productDiscount = Math.round(subtotal - adjustedTotal);
+  const itemCount = items.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <div className="bg-white rounded-[20px] border border-black/10 p-4 sm:p-5 md:p-6 space-y-4 md:sticky md:top-24">
-      <h3 className="text-xl font-bold text-black">Order Summary</h3>
+    <div className="space-y-4 rounded-2xl border border-black/10 bg-white p-4 xs:p-5 sm:rounded-[20px] md:p-6 lg:sticky lg:top-24">
+      <div className="flex items-baseline justify-between gap-3">
+        <h2 className="text-lg font-bold text-black sm:text-xl">Order Summary</h2>
+        <span className="shrink-0 text-xs text-black/50">
+          {itemCount} {itemCount === 1 ? "item" : "items"}
+        </span>
+      </div>
 
-      <div className="space-y-4 max-h-[300px] overflow-y-auto pr-2">
+      <div className="space-y-3.5 md:max-h-[320px] md:overflow-y-auto md:pr-2">
         {items.map((item) => {
           const effectivePrice =
             item.discount.percentage > 0
@@ -57,28 +63,36 @@ const OrderSummary = ({
                 ? item.price - item.discount.amount
                 : item.price;
 
+          const variants = item.attributes
+            .filter((attr) => attr && attr !== "Default")
+            .join(" / ");
+
           return (
-            <div key={`${item.id}-${item.attributes.join("-")}`} className="flex gap-3">
-              <div className="relative bg-[#F0EEED] rounded-lg w-16 h-16 min-w-[64px] overflow-hidden">
+            <div
+              key={`${item.id}-${item.attributes.join("-")}`}
+              className="flex gap-3"
+            >
+              <div className="relative h-16 w-16 min-w-[64px] overflow-hidden rounded-lg bg-[#F0EEED]">
                 <Image
                   src={item.srcUrl}
                   width={64}
                   height={64}
-                  className="w-full h-full object-cover"
+                  sizes="64px"
+                  className="h-full w-full object-cover"
                   alt={item.name}
                 />
-                <span className="absolute -top-1 -right-1 bg-black text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
+                <span className="absolute -right-0.5 -top-0.5 flex h-5 min-w-[20px] items-center justify-center rounded-full bg-black px-1 text-[10px] font-bold leading-none text-white">
                   {item.quantity}
                 </span>
               </div>
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-black truncate">
+              <div className="min-w-0 flex-1">
+                <p className="line-clamp-2 text-[13px] font-medium leading-snug text-black sm:text-sm">
                   {item.name}
                 </p>
-                <p className="text-xs text-black/60">
-                  {item.attributes[0]} / {item.attributes[1]}
-                </p>
-                <div className="flex items-center gap-2 mt-0.5">
+                {variants && (
+                  <p className="mt-0.5 text-[11px] text-black/60">{variants}</p>
+                )}
+                <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5">
                   <span className="text-sm font-bold text-black">
                     ${effectivePrice * item.quantity}
                   </span>
@@ -94,14 +108,14 @@ const OrderSummary = ({
         })}
       </div>
 
-      <div className="border-t border-black/10 pt-4 space-y-3">
-        <div className="flex items-center justify-between">
+      <div className="space-y-3 border-t border-black/10 pt-4">
+        <div className="flex items-center justify-between gap-3">
           <span className="text-sm text-black/60">Subtotal</span>
           <span className="text-sm font-bold text-black">${subtotal}</span>
         </div>
 
         {productDiscount > 0 && (
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-3">
             <span className="text-sm text-black/60">Product Discount</span>
             <span className="text-sm font-bold text-red-600">
               -${productDiscount}
@@ -110,10 +124,10 @@ const OrderSummary = ({
         )}
 
         {signupApplied && (
-          <div className="flex items-center justify-between">
-            <span className="text-sm text-black/60 flex items-center gap-1">
-              <Tag size={12} />
-              20% Sign-up Discount
+          <div className="flex items-center justify-between gap-3">
+            <span className="flex min-w-0 items-center gap-1 text-sm text-black/60">
+              <Tag size={12} className="shrink-0" />
+              <span className="truncate">20% Sign-up Discount</span>
             </span>
             <span className="text-sm font-bold text-red-600">
               -${signupDiscount}
@@ -122,10 +136,10 @@ const OrderSummary = ({
         )}
 
         {promoCode && (
-          <div className="flex items-center justify-between">
-            <span className="text-sm text-black/60 flex items-center gap-1">
-              <Tag size={12} />
-              Promo Code ({promoCode})
+          <div className="flex items-center justify-between gap-3">
+            <span className="flex min-w-0 items-center gap-1 text-sm text-black/60">
+              <Tag size={12} className="shrink-0" />
+              <span className="truncate">Promo Code ({promoCode})</span>
             </span>
             <span className="text-sm font-bold text-red-600">
               -${promoDiscount}
@@ -133,15 +147,20 @@ const OrderSummary = ({
           </div>
         )}
 
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-black/60">Delivery</span>
-          <span className={cn("text-sm font-bold", deliveryFee === 0 ? "text-green-600" : "text-black")}>
+        <div className="flex items-center justify-between gap-3">
+          <span className="text-sm text-black/60">Shipping</span>
+          <span
+            className={cn(
+              "text-sm font-bold",
+              deliveryFee === 0 ? "text-green-600" : "text-black"
+            )}
+          >
             {deliveryFee === 0 ? "Free" : `$${deliveryFee}`}
           </span>
         </div>
 
         <div className="border-t border-black/10 pt-3">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-3">
             <span className="text-base font-bold text-black">Total</span>
             <span className="text-xl font-bold text-black">${total}</span>
           </div>

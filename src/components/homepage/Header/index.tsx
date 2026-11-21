@@ -9,10 +9,10 @@ import * as motion from "framer-motion/client";
 
 const Header = () => {
   return (
-    <header className="bg-[#F2F0F1] overflow-hidden">
-      <div className="max-w-frame mx-auto grid grid-cols-1 md:grid-cols-2 pt-8 sm:pt-12 md:pt-16 lg:pt-24">
+    <header className="overflow-hidden bg-[#F2F0F1]">
+      <div className="mx-auto grid max-w-frame grid-cols-1 pt-7 xs:pt-8 sm:pt-12 md:grid-cols-2 md:pt-16 lg:pt-24">
         {/* Text section */}
-        <section className="px-4 xl:px-0 pb-8 md:pb-0">
+        <section className="px-4 pb-8 md:pb-0 xl:px-0">
           <motion.h1
             initial={{ y: "60px", opacity: 0, rotate: 5 }}
             whileInView={{ y: "0", opacity: 1, rotate: 0 }}
@@ -20,7 +20,7 @@ const Header = () => {
             transition={{ duration: 0.6 }}
             className={cn([
               integralCF.className,
-              "text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-[64px] xl:leading-[64px] mb-4 lg:mb-6",
+              "mb-3 text-[30px] leading-[1.05] xs:text-[34px] sm:text-4xl md:mb-4 md:text-4xl lg:mb-6 lg:text-5xl xl:text-[64px] xl:leading-[64px]",
             ])}
           >
             FIND CLOTHES THAT MATCH YOUR STYLE
@@ -30,7 +30,7 @@ const Header = () => {
             whileInView={{ y: "0", opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-black/60 text-sm sm:text-base mb-5 lg:mb-8 max-w-[545px]"
+            className="mb-5 max-w-[545px] text-sm leading-relaxed text-black/60 xs:text-[15px] sm:mb-6 sm:text-base lg:mb-8"
           >
             Browse through our diverse range of meticulously crafted garments,
             designed to bring out your individuality and cater to your sense of
@@ -44,7 +44,7 @@ const Header = () => {
           >
             <Link
               href="/shop"
-              className="w-full sm:w-52 mb-6 md:mb-10 inline-block text-center bg-black hover:bg-black/80 transition-all text-white px-10 py-4 rounded-full text-sm sm:text-base font-medium"
+              className="mb-6 inline-flex h-12 w-full items-center justify-center rounded-full bg-black px-10 text-sm font-medium text-white transition-all hover:bg-black/80 sm:mb-8 sm:w-52 sm:text-base md:mb-10"
             >
               Shop Now
             </Link>
@@ -54,37 +54,37 @@ const Header = () => {
             whileInView={{ y: "0", opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 1.2, duration: 0.6 }}
-            className="flex flex-wrap items-center gap-y-4 gap-x-6 sm:gap-x-8 md:mb-16 lg:mb-24"
+            className="flex flex-wrap items-center gap-x-5 gap-y-4 xs:gap-x-6 sm:gap-x-8 md:mb-16 lg:mb-24"
           >
-            <div className="flex flex-col">
-              <span className="font-bold text-2xl sm:text-3xl xl:text-[40px] xl:mb-1">
+            <div className="flex min-w-0 flex-col">
+              <span className="text-xl font-bold xs:text-2xl sm:text-3xl xl:mb-1 xl:text-[40px]">
                 <AnimatedCounter from={0} to={200} />+
               </span>
-              <span className="text-xs sm:text-sm text-black/60 whitespace-nowrap">
+              <span className="whitespace-nowrap text-[11px] text-black/60 xs:text-xs sm:text-sm">
                 International Brands
               </span>
             </div>
             <Separator
-              className="h-10 sm:h-12 w-px bg-black/10"
+              className="hidden h-10 w-px bg-black/10 sm:block sm:h-12"
               orientation="vertical"
             />
-            <div className="flex flex-col">
-              <span className="font-bold text-2xl sm:text-3xl xl:text-[40px] xl:mb-1">
+            <div className="flex min-w-0 flex-col">
+              <span className="text-xl font-bold xs:text-2xl sm:text-3xl xl:mb-1 xl:text-[40px]">
                 <AnimatedCounter from={0} to={2000} />+
               </span>
-              <span className="text-xs sm:text-sm text-black/60 whitespace-nowrap">
+              <span className="whitespace-nowrap text-[11px] text-black/60 xs:text-xs sm:text-sm">
                 High-Quality Products
               </span>
             </div>
             <Separator
-              className="h-10 sm:h-12 w-px bg-black/10 hidden sm:block"
+              className="hidden h-10 w-px bg-black/10 sm:block sm:h-12"
               orientation="vertical"
             />
-            <div className="flex flex-col">
-              <span className="font-bold text-2xl sm:text-3xl xl:text-[40px] xl:mb-1">
+            <div className="flex min-w-0 flex-col">
+              <span className="text-xl font-bold xs:text-2xl sm:text-3xl xl:mb-1 xl:text-[40px]">
                 <AnimatedCounter from={0} to={3000} />+
               </span>
-              <span className="text-xs sm:text-sm text-black/60 whitespace-nowrap">
+              <span className="whitespace-nowrap text-[11px] text-black/60 xs:text-xs sm:text-sm">
                 Happy Customers
               </span>
             </div>
@@ -97,7 +97,7 @@ const Header = () => {
           whileInView={{ y: "0", opacity: 1, rotate: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 1.8, duration: 0.8 }}
-          className="relative min-h-[280px] sm:min-h-[360px] md:min-h-[380px] lg:min-h-[460px] xl:min-h-[530px] bg-cover bg-top xl:bg-[center_top_-1.6rem] bg-no-repeat bg-[url('/images/header-res-homepage.png')] md:bg-[url('/images/header-homepage.png')]"
+          className="relative min-h-[300px] bg-[url('/images/header-res-homepage.png')] bg-cover bg-top bg-no-repeat xs:min-h-[340px] sm:min-h-[360px] md:min-h-[380px] md:bg-[url('/images/header-homepage.png')] lg:min-h-[460px] xl:min-h-[530px] xl:bg-[center_top_-1.6rem]"
         >
           <Image
             priority
@@ -105,7 +105,7 @@ const Header = () => {
             height={104}
             width={104}
             alt="big star"
-            className="absolute right-6 xl:right-0 top-8 md:top-12 w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 xl:w-[104px] xl:h-[104px] animate-[spin_4s_linear_infinite]"
+            className="absolute right-5 top-7 h-12 w-12 animate-[spin_4s_linear_infinite] xs:right-6 xs:top-8 xs:h-14 xs:w-14 sm:h-16 sm:w-16 md:top-12 lg:h-20 lg:w-20 xl:right-0 xl:h-[104px] xl:w-[104px]"
           />
           <Image
             priority
@@ -113,7 +113,7 @@ const Header = () => {
             height={56}
             width={56}
             alt="small star"
-            className="absolute left-6 md:left-0 top-32 sm:top-52 md:top-40 lg:top-56 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 xl:w-14 xl:h-14 animate-[spin_3s_linear_infinite]"
+            className="absolute left-5 top-32 h-9 w-9 animate-[spin_3s_linear_infinite] xs:left-6 xs:top-36 sm:top-52 sm:h-10 sm:w-10 md:left-0 md:top-40 md:h-12 md:w-12 lg:top-56 xl:h-14 xl:w-14"
           />
         </motion.section>
       </div>

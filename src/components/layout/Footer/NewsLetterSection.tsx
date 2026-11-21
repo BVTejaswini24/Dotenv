@@ -33,11 +33,11 @@ const NewsLetterSection = () => {
   };
 
   return (
-    <div className="relative grid grid-cols-1 md:grid-cols-2 py-8 md:py-11 px-5 sm:px-8 md:px-16 max-w-frame mx-auto bg-black rounded-[20px]">
+    <div className="relative mx-auto grid max-w-frame grid-cols-1 gap-5 rounded-2xl bg-black px-4 py-7 xs:px-5 xs:py-8 sm:gap-6 sm:rounded-[20px] sm:px-8 md:grid-cols-2 md:gap-0 md:px-16 md:py-11">
       <p
         className={cn([
           integralCF.className,
-          "font-bold text-2xl sm:text-[32px] md:text-[40px] text-white mb-6 md:mb-0",
+          "mb-0 text-[22px] font-bold leading-tight text-white xs:text-2xl sm:text-[32px] md:text-[40px]",
         ])}
       >
         STAY UP TO DATE ABOUT OUR LATEST OFFERS

@@ -28,9 +28,11 @@ const ColorSelection = ({
           <button
             key={color.id}
             type="button"
+            aria-label={`Select color ${color.name}`}
+            aria-pressed={selectedColor === color.name}
             className={cn([
               color.code,
-              "rounded-full w-9 sm:w-10 h-9 sm:h-10 flex items-center justify-center",
+              "flex h-9 w-9 items-center justify-center rounded-full ring-offset-2 transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-black sm:h-10 sm:w-10",
             ])}
             onClick={() => onSelectColor(color.name)}
           >

@@ -28,32 +28,37 @@ const MobileFilters = ({ filters, onUpdate, onClear }: MobileFiltersProps) => {
         <DrawerTrigger asChild>
           <button
             type="button"
-            className="h-8 w-8 rounded-full bg-[#F0F0F0] text-black p-1 md:hidden"
+            aria-label="Open filters"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#F0F0F0] text-black transition-colors hover:bg-black/10 md:hidden"
           >
-            <FiSliders className="text-base mx-auto" />
+            <FiSliders className="text-base" aria-hidden />
           </button>
         </DrawerTrigger>
-        <DrawerContent className="max-h-[90%]">
+        <DrawerContent className="max-h-[92vh] rounded-t-[20px]">
           <DrawerHeader>
             <div className="flex items-center justify-between">
               <span className="font-bold text-black text-xl">Filters</span>
               <DrawerClose asChild>
-                <button type="button" className="text-black/40 hover:text-black">
-                  <FiSliders className="text-2xl" />
+                <button
+                  type="button"
+                  aria-label="Close filters"
+                  className="flex h-10 w-10 items-center justify-center rounded-full text-black/40 transition-colors hover:bg-black/5 hover:text-black"
+                >
+                  <FiSliders className="text-xl" aria-hidden />
                 </button>
               </DrawerClose>
             </div>
             <DrawerTitle className="hidden">filters</DrawerTitle>
             <DrawerDescription className="hidden">filters</DrawerDescription>
           </DrawerHeader>
-          <div className="max-h-[90%] overflow-y-auto w-full px-5 md:px-6 py-5 space-y-5 md:space-y-6">
+          <div className="w-full space-y-5 overflow-y-auto px-4 py-4 md:space-y-6 md:px-6 md:py-5">
             <Filters filters={filters} onUpdate={onUpdate} onClear={onClear} />
           </div>
           <DrawerFooter>
             <DrawerClose asChild>
               <button
                 type="button"
-                className="bg-black w-full rounded-full text-sm font-medium py-3 h-11 text-white"
+                className="h-12 w-full rounded-full bg-black text-sm font-medium text-white transition-colors hover:bg-black/85"
               >
                 Apply Filters
               </button>

@@ -42,10 +42,13 @@ const CartCounter = ({
     setCounter(counter - 1);
   };
 
+  const atMax = max !== undefined && counter >= max;
+  const atMin = counter <= 1 && !isZeroDelete;
+
   return (
     <div
       className={cn(
-        "bg-[#F0F0F0] w-full min-w-[110px] max-w-[110px] sm:max-w-[170px] py-3 md:py-3.5 px-4 sm:px-5 rounded-full flex items-center justify-between",
+        "flex w-full min-w-[104px] max-w-[170px] items-center justify-between gap-1 rounded-full bg-[#F0F0F0] px-2.5 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-3",
         className
       )}
     >
@@ -53,24 +56,30 @@ const CartCounter = ({
         variant="ghost"
         size="icon"
         type="button"
-        className="h-5 w-5 sm:h-6 sm:w-6 text-xl hover:bg-transparent"
+        disabled={atMin}
+        className="h-9 w-9 shrink-0 rounded-full text-[11px] hover:bg-black/5 disabled:opacity-40 sm:text-xs"
         onClick={() => remove()}
+        aria-label="Decrease quantity"
       >
         <FaMinus />
       </Button>
-      <span className="font-medium text-sm sm:text-base">
+      <span
+        className="min-w-[1.25rem] text-center text-sm font-medium tabular-nums sm:text-base"
+        aria-live="polite"
+      >
         {counter}
       </span>
       <Button
         variant="ghost"
         size="icon"
         type="button"
-        disabled={max !== undefined && counter >= max}
+        disabled={atMax}
         className={cn(
-          "h-5 w-5 sm:h-6 sm:w-6 text-xl hover:bg-transparent",
-          max !== undefined && counter >= max && "opacity-30 cursor-not-allowed"
+          "h-9 w-9 shrink-0 rounded-full text-[11px] hover:bg-black/5 sm:text-xs",
+          atMax && "cursor-not-allowed opacity-30"
         )}
         onClick={() => addToCart()}
+        aria-label="Increase quantity"
       >
         <FaPlus />
       </Button>

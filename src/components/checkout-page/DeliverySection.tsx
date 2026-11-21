@@ -21,16 +21,16 @@ const DeliverySection = ({ selected, onSelect }: DeliverySectionProps) => {
           <label
             key={option.id}
             className={cn(
-              "flex items-center justify-between p-4 rounded-lg border-2 cursor-pointer transition-all",
+              "flex items-center justify-between gap-3 rounded-lg border-2 p-4 cursor-pointer transition-all",
               selected === option.id
                 ? "border-black bg-black/5"
                 : "border-black/10 hover:border-black/30"
             )}
           >
-            <div className="flex items-center gap-3">
+            <div className="flex min-w-0 flex-1 items-center gap-3">
               <div
                 className={cn(
-                  "w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all",
+                  "flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 transition-all",
                   selected === option.id ? "border-black" : "border-black/30"
                 )}
               >
@@ -49,7 +49,7 @@ const DeliverySection = ({ selected, onSelect }: DeliverySectionProps) => {
                   option.price === 0 ? "Free" : `$${option.price}`
                 }`}
               />
-              <div className="flex items-center gap-2">
+              <div className="flex min-w-0 items-center gap-2">
                 {option.id === "standard" ? (
                   <Truck size={18} className="text-black/60" />
                 ) : (
@@ -63,7 +63,7 @@ const DeliverySection = ({ selected, onSelect }: DeliverySectionProps) => {
                 </div>
               </div>
             </div>
-            <span className="text-sm font-bold text-black">
+            <span className="shrink-0 text-sm font-bold text-black">
               {option.price === 0 ? "Free" : `$${option.price}`}
             </span>
           </label>

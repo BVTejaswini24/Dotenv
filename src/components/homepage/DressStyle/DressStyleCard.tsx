@@ -40,8 +40,8 @@ const DressStyleCard = ({
       <span
         className={cn(
           "relative z-10 font-bold leading-tight",
-          "text-lg xs:text-xl sm:text-2xl md:text-[28px] lg:text-4xl",
-          "pt-4 pl-4 md:pt-[25px] md:pl-9"
+          "text-base xs:text-lg sm:text-2xl md:text-[28px] lg:text-4xl",
+          "pl-3.5 pt-3.5 sm:pl-5 sm:pt-5 md:pl-9 md:pt-[25px]"
         )}
       >
         {title}

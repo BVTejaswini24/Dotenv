@@ -7,6 +7,7 @@ import React from "react";
 import { toast } from "sonner";
 import { RootState } from "@/lib/store";
 import { compareArrays } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 type AddToCartBtnProps = {
   data: Product & { quantity: number };
@@ -21,6 +22,7 @@ const AddToCartBtn = ({
 }: AddToCartBtnProps) => {
   const dispatch = useAppDispatch();
   const cart = useAppSelector((state: RootState) => state.carts.cart);
+  const isOutOfStock = typeof data.stock === "number" && data.stock <= 0;
 
   const handleAddToCart = () => {
     if (data.sizes && data.sizes.length > 0 && !selectedSize) {
@@ -89,10 +91,16 @@ const AddToCartBtn = ({
   return (
     <button
       type="button"
-      className="bg-black w-full ml-3 sm:ml-5 rounded-full h-11 md:h-[52px] text-sm sm:text-base text-white hover:bg-black/80 transition-all"
+      disabled={isOutOfStock}
+      className={cn(
+        "h-11 w-full rounded-full px-3 text-[13px] font-medium transition-all xs:text-sm md:h-[52px] md:px-6 md:text-base",
+        isOutOfStock
+          ? "cursor-not-allowed bg-black/10 text-black/40"
+          : "bg-black text-white hover:bg-black/80 active:bg-black/90"
+      )}
       onClick={handleAddToCart}
     >
-      Add to Cart
+      {isOutOfStock ? "Out of Stock" : "Add to Cart"}
     </button>
   );
 };

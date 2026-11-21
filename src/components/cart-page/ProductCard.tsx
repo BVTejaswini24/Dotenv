@@ -5,7 +5,6 @@ import { PiTrashFill } from "react-icons/pi";
 import Image from "next/image";
 import Link from "next/link";
 import CartCounter from "@/components/ui/CartCounter";
-import { Button } from "../ui/button";
 import {
   addToCart,
   CartItem,
@@ -32,112 +31,107 @@ const ProductCard = ({ data }: ProductCardProps) => {
         ? data.price - data.discount.amount
         : data.price;
 
+  const hasDiscount = data.discount.percentage > 0 || data.discount.amount > 0;
+  const productHref = `/shop/product/${data.id}/${data.name
+    .toLowerCase()
+    .replace(/\s+/g, "-")}`;
+
+  const handleRemove = () =>
+    dispatch(
+      remove({
+        id: data.id,
+        attributes: data.attributes,
+        quantity: data.quantity,
+      })
+    );
+
   return (
     <div className="flex items-start gap-3 sm:gap-4">
       {/* Product image */}
       <Link
-        href={`/shop/product/${data.id}/${data.name.toLowerCase().replace(/\s+/g, "-")}`}
-        className="bg-[#F0EEED] rounded-lg shrink-0 w-20 h-20 sm:w-24 sm:h-24 md:w-[124px] md:h-[124px] overflow-hidden"
+        href={productHref}
+        className="relative h-[92px] w-[84px] shrink-0 overflow-hidden rounded-xl bg-[#F0EEED] xs:h-24 xs:w-24 sm:rounded-2xl md:h-[124px] md:w-[124px]"
         aria-label={data.name}
       >
         <Image
           src={data.srcUrl}
           width={124}
           height={124}
-          className="w-full h-full object-cover hover:scale-110 transition-all duration-500"
+          sizes="(max-width: 639px) 92px, 124px"
+          className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
           alt={data.name}
           priority
         />
       </Link>
 
       {/* Info */}
-      <div className="flex-1 min-w-0 flex flex-col self-stretch">
+      <div className="flex min-w-0 flex-1 flex-col self-stretch">
         {/* Name + delete */}
-        <div className="flex items-start justify-between gap-2 mb-1">
+        <div className="flex items-start gap-1.5">
           <Link
-            href={`/shop/product/${data.id}/${data.name.toLowerCase().replace(/\s+/g, "-")}`}
-            className="text-black font-bold text-sm sm:text-base leading-snug line-clamp-2"
+            href={productHref}
+            className="line-clamp-2 min-w-0 flex-1 text-[13px] font-semibold leading-snug text-black xs:text-sm sm:text-base"
           >
             {data.name}
           </Link>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="shrink-0 w-8 h-8 p-0 hover:bg-red-50"
-            onClick={() =>
-              dispatch(
-                remove({
-                  id: data.id,
-                  attributes: data.attributes,
-                  quantity: data.quantity,
-                })
-              )
-            }
+          <button
+            type="button"
+            className="-mr-1.5 -mt-1.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-red-500 transition-colors hover:bg-red-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-1 active:bg-red-100"
+            onClick={handleRemove}
             aria-label={`Remove ${data.name} from cart`}
           >
-            <PiTrashFill className="text-lg text-red-500" />
-          </Button>
+            <PiTrashFill className="text-base" aria-hidden />
+          </button>
         </div>
 
         {/* Attributes */}
-        <div className="flex flex-wrap gap-x-3 mb-1">
+        <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
           {data.attributes[0] && data.attributes[0] !== "Default" && (
-            <span className="text-black/50 text-xs">
-              Size: <span className="text-black/70">{data.attributes[0]}</span>
+            <span className="rounded-full bg-[#F0F0F0] px-2 py-0.5 text-[11px] text-black/60">
+              Size <span className="font-medium text-black/80">{data.attributes[0]}</span>
             </span>
           )}
           {data.attributes[1] && data.attributes[1] !== "Default" && (
-            <span className="text-black/50 text-xs">
-              Color: <span className="text-black/70">{data.attributes[1]}</span>
+            <span className="rounded-full bg-[#F0F0F0] px-2 py-0.5 text-[11px] text-black/60">
+              Color <span className="font-medium text-black/80">{data.attributes[1]}</span>
             </span>
           )}
         </div>
 
         {/* Price + counter */}
-        <div className="flex items-center justify-between flex-wrap gap-2 mt-auto">
-          <div className="flex items-center gap-1.5">
-            <span className="font-bold text-black text-base sm:text-lg">
-              ${effectivePrice}
-            </span>
-            {(data.discount.percentage > 0 || data.discount.amount > 0) && (
-              <span className="font-medium text-black/40 line-through text-sm">
-                ${data.price}
+        <div className="mt-auto flex items-end justify-between gap-2 pt-2.5">
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-baseline gap-x-1.5">
+              <span className="text-sm font-bold text-black xs:text-base sm:text-lg">
+                ${effectivePrice}
               </span>
-            )}
-            {data.discount.percentage > 0 && (
-              <span className="text-[10px] font-medium py-0.5 px-2 rounded-full bg-[#FF3333]/10 text-[#FF3333]">
-                -{data.discount.percentage}%
-              </span>
+              {hasDiscount && (
+                <span className="text-xs font-medium text-black/40 line-through">
+                  ${data.price}
+                </span>
+              )}
+            </div>
+            {isLowStock && (
+              <p className="mt-0.5 text-[10px] font-medium text-amber-600">
+                Only {stock} left
+              </p>
             )}
           </div>
 
-          <div className="flex items-center gap-2">
-            {isLowStock && (
-              <span className="text-[10px] text-amber-600 font-medium whitespace-nowrap hidden sm:inline">
-                Only {stock} left
-              </span>
-            )}
-            <CartCounter
-              initialValue={data.quantity}
-              max={typeof stock === "number" ? stock : undefined}
-              onAdd={() => dispatch(addToCart({ ...data, quantity: 1, stock }))}
-              onRemove={() =>
-                data.quantity === 1
-                  ? dispatch(
-                      remove({
-                        id: data.id,
-                        attributes: data.attributes,
-                        quantity: data.quantity,
-                      })
-                    )
-                  : dispatch(
-                      removeCartItem({ id: data.id, attributes: data.attributes })
-                    )
-              }
-              isZeroDelete
-              className="px-3 sm:px-5 py-2 max-h-9 min-w-[90px] max-w-[110px]"
-            />
-          </div>
+          <CartCounter
+            initialValue={data.quantity}
+            max={typeof stock === "number" ? stock : undefined}
+            onAdd={() => dispatch(addToCart({ ...data, quantity: 1, stock }))}
+            onRemove={() =>
+              data.quantity === 1
+                ? handleRemove()
+                : dispatch(
+                    removeCartItem({ id: data.id, attributes: data.attributes })
+                  )
+            }
+            isZeroDelete
+            className="h-10 w-[112px] min-w-[112px] max-w-[112px] shrink-0 px-1.5 py-0 md:px-2.5"
+          />
         </div>
       </div>
     </div>

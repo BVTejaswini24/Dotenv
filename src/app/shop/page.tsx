@@ -337,7 +337,9 @@ function ShopContent() {
           <div className="flex flex-col w-full space-y-5">
             <div className="flex flex-col lg:flex-row lg:justify-between">
               <div className="flex items-center justify-between">
-                <h1 className="font-bold text-2xl md:text-[32px]">{heading}</h1>
+                <h1 className="line-clamp-2 min-w-0 pr-2 text-xl font-bold leading-tight xs:text-2xl md:text-[32px]">
+                  {heading}
+                </h1>
                 <MobileFilters
                   filters={filters}
                   onUpdate={updateFilter}
@@ -350,7 +352,7 @@ function ShopContent() {
                   aria-live="polite"
                 >
                   {isLoading
-                    ? "Loading products…"
+                    ? "Loading productsâ€¦"
                     : error
                       ? "Products unavailable"
                       : totalCount === 0
@@ -464,6 +466,7 @@ function ShopContent() {
                 </button>
               </div>
             )}
+
             {isLoading ? (
               <div
                 className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5"

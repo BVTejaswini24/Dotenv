@@ -46,6 +46,7 @@ const ShippingSection = ({ data, errors, onChange }: ShippingSectionProps) => {
             <input
               id="firstName"
               type="text"
+              autoComplete="given-name"
               required
               aria-required="true"
               aria-invalid={!!errors.firstName}
@@ -71,6 +72,7 @@ const ShippingSection = ({ data, errors, onChange }: ShippingSectionProps) => {
             <input
               id="lastName"
               type="text"
+              autoComplete="family-name"
               required
               aria-required="true"
               aria-invalid={!!errors.lastName}
@@ -98,6 +100,7 @@ const ShippingSection = ({ data, errors, onChange }: ShippingSectionProps) => {
           <input
             id="address"
             type="text"
+            autoComplete="street-address"
             required
             aria-required="true"
             aria-invalid={!!errors.address}
@@ -124,6 +127,7 @@ const ShippingSection = ({ data, errors, onChange }: ShippingSectionProps) => {
           <input
             id="apartment"
             type="text"
+            autoComplete="address-line2"
             value={data.apartment}
             onChange={(e) => onChange("apartment", e.target.value)}
             placeholder="Apt 4B"
@@ -142,6 +146,7 @@ const ShippingSection = ({ data, errors, onChange }: ShippingSectionProps) => {
             <input
               id="city"
               type="text"
+              autoComplete="address-level2"
               required
               aria-required="true"
               aria-invalid={!!errors.city}
@@ -167,6 +172,7 @@ const ShippingSection = ({ data, errors, onChange }: ShippingSectionProps) => {
             {availableStates.length > 0 ? (
               <select
                 id="state"
+                autoComplete="address-level1"
                 required
                 aria-required="true"
                 aria-invalid={!!errors.state}
@@ -186,6 +192,7 @@ const ShippingSection = ({ data, errors, onChange }: ShippingSectionProps) => {
               <input
                 id="state"
                 type="text"
+                autoComplete="address-level1"
                 required
                 aria-required="true"
                 aria-invalid={!!errors.state}
@@ -215,6 +222,8 @@ const ShippingSection = ({ data, errors, onChange }: ShippingSectionProps) => {
             <input
               id="pinCode"
               type="text"
+              autoComplete="postal-code"
+              inputMode="numeric"
               required
               aria-required="true"
               aria-invalid={!!errors.pinCode}
@@ -239,6 +248,7 @@ const ShippingSection = ({ data, errors, onChange }: ShippingSectionProps) => {
             </label>
             <select
               id="country"
+              autoComplete="country-name"
               required
               aria-required="true"
               aria-invalid={!!errors.country}

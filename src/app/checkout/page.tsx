@@ -104,6 +104,15 @@ export default function CheckoutPage() {
   const [savedOrderTotal, setSavedOrderTotal] = useState<number | null>(null);
   const [showSignupPrompt, setShowSignupPrompt] = useState(!signupApplied);
 
+  // Totals are also shown in the mobile sticky checkout bar
+  const orderTotals = calculateOrderTotal({
+    adjustedTotal: adjustedTotalPrice,
+    signupApplied,
+    promoCode,
+    promoDiscountPercent,
+    delivery: form.delivery,
+  });
+
   const updateContact = useCallback(
     (field: string, value: string) => {
       setForm((prev) => ({
@@ -245,12 +254,15 @@ export default function CheckoutPage() {
       <main className="pb-20">
         <div className="max-w-frame mx-auto px-4 xl:px-0">
           <BreadcrumbCheckout />
-          <div className="flex items-center flex-col text-gray-300 mt-32">
+          <div className="mt-24 flex flex-col items-center px-4 text-center text-gray-300">
             <TbBasketExclamation strokeWidth={1} className="text-6xl" />
-            <span className="block mb-4 text-black/40">
-              Your cart is empty. Add some items before checking out.
-            </span>
-            <Button className="rounded-full w-48" asChild>
+            <h1 className="mt-4 text-lg font-bold text-black">
+              Your cart is empty
+            </h1>
+            <p className="mb-6 mt-1 max-w-xs text-sm text-black/50">
+              Add some items before checking out.
+            </p>
+            <Button className="h-12 w-48 rounded-full" asChild>
               <Link href="/shop">Continue Shopping</Link>
             </Button>
           </div>
@@ -281,7 +293,7 @@ export default function CheckoutPage() {
               payment was processed.
             </p>
 
-            <div className="w-full bg-[#F8F8F8] rounded-xl p-6 mb-8 text-left space-y-4">
+            <div className="mb-8 w-full space-y-4 rounded-xl bg-[#F8F8F8] p-4 text-left xs:p-6">
               <div className="flex justify-between">
                 <span className="text-sm text-black/60">Order Number</span>
                 <span className="text-sm font-bold text-black font-mono">
@@ -347,13 +359,13 @@ export default function CheckoutPage() {
 
   // Main checkout form
   return (
-    <main className="pb-20">
+    <main className="pb-28 lg:pb-20">
       <div className="max-w-frame mx-auto px-4 xl:px-0">
         <BreadcrumbCheckout />
         <h1
           className={cn([
             integralCF.className,
-            "font-bold text-[32px] md:text-[40px] text-black uppercase mb-5 md:mb-6",
+            "mb-4 text-[26px] xs:text-[30px] sm:text-[34px] font-bold uppercase leading-none text-black md:mb-6 md:text-[40px]",
           ])}
         >
           Checkout
@@ -361,20 +373,20 @@ export default function CheckoutPage() {
 
         {/* Signup discount prompt */}
         {showSignupPrompt && (
-          <div className="bg-black text-white rounded-xl p-4 mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-            <div>
-              <p className="text-sm font-medium">
+          <div className="mb-5 flex flex-col items-start justify-between gap-3 rounded-xl bg-black p-4 text-white sm:mb-6 sm:flex-row sm:items-center">
+            <div className="min-w-0">
+              <p className="text-sm font-medium leading-snug">
                 Have a promo code? Sign up for 20% off your first order!
               </p>
-              <p className="text-xs text-white/60 mt-0.5">
+              <p className="mt-0.5 text-xs text-white/60">
                 This discount will be applied to your entire order.
               </p>
             </div>
-            <div className="flex gap-2">
+            <div className="flex w-full shrink-0 gap-2 sm:w-auto">
               <Button
                 type="button"
                 size="sm"
-                className="bg-white text-black hover:bg-white/90 rounded-full text-xs h-8"
+                className="h-9 flex-1 rounded-full bg-white text-xs text-black hover:bg-white/90 sm:flex-none"
                 onClick={handleApplySignupDiscount}
               >
                 Apply 20% Off
@@ -383,7 +395,7 @@ export default function CheckoutPage() {
                 type="button"
                 size="sm"
                 variant="ghost"
-                className="text-white/60 hover:text-white hover:bg-white/10 rounded-full text-xs h-8"
+                className="h-9 flex-1 rounded-full text-xs text-white/60 hover:bg-white/10 hover:text-white sm:flex-none"
                 onClick={() => setShowSignupPrompt(false)}
               >
                 Dismiss
@@ -392,10 +404,10 @@ export default function CheckoutPage() {
           </div>
         )}
 
-        <div className="flex flex-col lg:flex-row gap-6 items-start">
+        <div className="flex flex-col items-start gap-5 lg:flex-row lg:gap-6">
           {/* Left: Form */}
-          <div className="flex-1 w-full space-y-8">
-            <div className="bg-white rounded-[20px] border border-black/10 p-5 md:p-6">
+          <div className="w-full min-w-0 flex-1 space-y-5 sm:space-y-6 lg:space-y-8">
+            <div className="rounded-2xl border border-black/10 bg-white p-4 xs:p-5 sm:rounded-[20px] md:p-6">
               <ContactSection
                 data={form.contact}
                 errors={errors.contact}
@@ -403,7 +415,7 @@ export default function CheckoutPage() {
               />
             </div>
 
-            <div className="bg-white rounded-[20px] border border-black/10 p-5 md:p-6">
+            <div className="rounded-2xl border border-black/10 bg-white p-4 xs:p-5 sm:rounded-[20px] md:p-6">
               <ShippingSection
                 data={form.shipping}
                 errors={errors.shipping}
@@ -411,14 +423,14 @@ export default function CheckoutPage() {
               />
             </div>
 
-            <div className="bg-white rounded-[20px] border border-black/10 p-5 md:p-6">
+            <div className="rounded-2xl border border-black/10 bg-white p-4 xs:p-5 sm:rounded-[20px] md:p-6">
               <DeliverySection
                 selected={form.delivery}
                 onSelect={updateDelivery}
               />
             </div>
 
-            <div className="bg-white rounded-[20px] border border-black/10 p-5 md:p-6">
+            <div className="rounded-2xl border border-black/10 bg-white p-4 xs:p-5 sm:rounded-[20px] md:p-6">
               <PaymentSection
                 method={form.paymentMethod}
                 card={form.card}
@@ -444,7 +456,7 @@ export default function CheckoutPage() {
               type="button"
               onClick={handlePlaceOrder}
               disabled={isSubmitting}
-              className="mt-4 w-full text-sm md:text-base font-medium bg-black rounded-full py-4 h-[54px] md:h-[60px] group disabled:opacity-60 disabled:cursor-not-allowed"
+              className="mt-4 hidden w-full text-sm font-medium bg-black rounded-full py-4 h-[54px] group disabled:opacity-60 disabled:cursor-not-allowed lg:flex md:text-base md:h-[60px]"
             >
               {isSubmitting ? (
                 <>
@@ -459,10 +471,42 @@ export default function CheckoutPage() {
               )}
             </Button>
 
-            <p className="text-xs text-center text-black/40 mt-3">
+            <p className="mt-3 hidden text-xs text-center text-black/40 lg:block">
               This is a frontend demo. No real payment will be processed.
             </p>
           </div>
+        </div>
+      </div>
+
+      {/* Mobile: always-reachable checkout action */}
+      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-black/10 bg-white/95 px-4 pb-safe-bar pt-3 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] backdrop-blur-sm lg:hidden">
+        <div className="mx-auto flex max-w-frame items-center gap-3">
+          <div className="min-w-0 flex-1">
+            <p className="text-[11px] uppercase tracking-wide text-black/50">
+              Total
+            </p>
+            <p className="text-lg font-bold leading-tight text-black">
+              ${orderTotals.total}
+            </p>
+          </div>
+          <Button
+            type="button"
+            onClick={handlePlaceOrder}
+            disabled={isSubmitting}
+            className="h-12 max-w-[220px] flex-1 rounded-full bg-black text-sm font-medium disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            {isSubmitting ? (
+              <>
+                <Loader2 className="mr-2 animate-spin" size={16} />
+                Processing...
+              </>
+            ) : (
+              <>
+                Place Order
+                <FaArrowRight className="ml-1.5 text-base" />
+              </>
+            )}
+          </Button>
         </div>
       </div>
     </main>

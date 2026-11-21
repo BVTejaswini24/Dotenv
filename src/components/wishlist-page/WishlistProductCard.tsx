@@ -188,16 +188,17 @@ const WishlistProductCard = ({ data }: WishlistProductCardProps) => {
 
   return (
     <>
-      <div className="flex flex-col">
+      <div className="flex h-full min-w-0 flex-col">
         <Link
           href={`/shop/product/${data.id}/${data.slug}`}
-          className="relative bg-[#F0EEED] rounded-[13px] lg:rounded-[20px] w-full aspect-square mb-2.5 xl:mb-4 overflow-hidden block"
+          className="relative mb-2.5 block aspect-square w-full overflow-hidden rounded-xl bg-[#F0EEED] sm:rounded-[16px] lg:mb-3 lg:rounded-[20px] xl:mb-4"
         >
           <Image
             src={data.srcUrl}
             width={295}
             height={298}
-            className="rounded-md w-full h-full object-contain hover:scale-110 transition-all duration-500"
+            sizes="(max-width: 639px) 45vw, 295px"
+            className="h-full w-full rounded-md object-contain transition-transform duration-500 hover:scale-105"
             alt={data.title}
             priority
           />
@@ -215,7 +216,9 @@ const WishlistProductCard = ({ data }: WishlistProductCardProps) => {
           </button>
         </Link>
         <Link href={`/shop/product/${data.id}/${data.slug}`}>
-          <strong className="text-black xl:text-xl">{data.title}</strong>
+                      <strong className="line-clamp-2 min-h-[2.5em] text-[13px] leading-snug text-black xs:text-sm sm:text-base xl:text-xl">
+              {data.title}
+            </strong>
         </Link>
         <div className="flex items-end mb-1 xl:mb-2">
           <Rating
@@ -231,29 +234,29 @@ const WishlistProductCard = ({ data }: WishlistProductCardProps) => {
             <span className="text-black/60">/5</span>
           </span>
         </div>
-        <div className="flex items-center space-x-[5px] xl:space-x-2.5 mb-3">
+        <div className="mb-2.5 flex flex-wrap items-center gap-x-[5px] gap-y-1 sm:mb-3 xl:space-x-2.5">
           {data.discount.percentage > 0 ? (
-            <span className="font-bold text-black text-xl xl:text-2xl">
+            <span className="text-base font-bold text-black sm:text-xl xl:text-2xl">
               {`$${Math.round(
                 data.price - (data.price * data.discount.percentage) / 100
               )}`}
             </span>
           ) : data.discount.amount > 0 ? (
-            <span className="font-bold text-black text-xl xl:text-2xl">
+            <span className="text-base font-bold text-black sm:text-xl xl:text-2xl">
               {`$${data.price - data.discount.amount}`}
             </span>
           ) : (
-            <span className="font-bold text-black text-xl xl:text-2xl">
+            <span className="text-base font-bold text-black sm:text-xl xl:text-2xl">
               ${data.price}
             </span>
           )}
           {data.discount.percentage > 0 && (
-            <span className="font-bold text-black/40 line-through text-xl xl:text-2xl">
+            <span className="text-sm font-bold text-black/40 line-through sm:text-xl xl:text-2xl">
               ${data.price}
             </span>
           )}
           {data.discount.amount > 0 && (
-            <span className="font-bold text-black/40 line-through text-xl xl:text-2xl">
+            <span className="text-sm font-bold text-black/40 line-through sm:text-xl xl:text-2xl">
               ${data.price}
             </span>
           )}
@@ -269,7 +272,7 @@ const WishlistProductCard = ({ data }: WishlistProductCardProps) => {
           disabled={isOutOfStock || isAdding}
           aria-label={isOutOfStock ? `${data.title} is out of stock` : `Add ${data.title} to cart`}
           className={cn(
-            "flex items-center justify-center gap-2 w-full rounded-full py-2.5 text-sm font-medium transition-all",
+            "flex h-10 w-full items-center justify-center gap-2 rounded-full px-2 text-xs font-medium transition-all xs:text-sm sm:h-11",
             isOutOfStock
               ? "bg-black/10 text-black/40 cursor-not-allowed"
               : "bg-black text-white hover:bg-black/80"

@@ -29,6 +29,8 @@ const ContactSection = ({ data, errors, onChange }: ContactSectionProps) => {
           <input
             id="email"
             type="email"
+            autoComplete="email"
+            inputMode="email"
             required
             aria-required="true"
             aria-invalid={!!errors.email}
@@ -54,6 +56,8 @@ const ContactSection = ({ data, errors, onChange }: ContactSectionProps) => {
           <input
             id="phone"
             type="tel"
+            autoComplete="tel"
+            inputMode="tel"
             required
             aria-required="true"
             aria-invalid={!!errors.phone}
