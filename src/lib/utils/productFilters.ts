@@ -98,17 +98,19 @@ function matchesSearch(product: Product, search: string): boolean {
 
 function matchesCategory(product: Product, categories: string[]): boolean {
   if (categories.length === 0) return true;
-  return categories.includes(product.category);
+  return categories.some((c) => c.toLowerCase() === product.category.toLowerCase());
 }
 
 function matchesGender(product: Product, genders: string[]): boolean {
   if (genders.length === 0) return true;
-  return genders.includes(product.gender || "unisex");
+  const productGender = (product.gender || "unisex").toLowerCase();
+  return genders.some((g) => g.toLowerCase() === productGender);
 }
 
 function matchesStyle(product: Product, styles: string[]): boolean {
   if (styles.length === 0) return true;
-  return styles.includes((product.style || "").toLowerCase());
+  const productStyle = (product.style || "").toLowerCase();
+  return styles.some((s) => s.toLowerCase() === productStyle);
 }
 
 function matchesSize(product: Product, sizes: string[]): boolean {

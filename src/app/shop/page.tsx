@@ -12,6 +12,7 @@ import {
 import MobileFilters from "@/components/shop-page/filters/MobileFilters";
 import Filters from "@/components/shop-page/filters";
 import { FiSliders } from "react-icons/fi";
+import { X } from "lucide-react";
 import ProductCard from "@/components/common/ProductCard";
 import {
   Pagination,
@@ -57,6 +58,20 @@ function readSearchParams(
     }
   });
   return obj;
+}
+
+function FilterChip({ label, onRemove }: { label: string; onRemove: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onRemove}
+      aria-label={`Remove ${label} filter`}
+      className="inline-flex max-w-full items-center gap-1.5 rounded-full bg-black px-3 py-1.5 text-xs font-medium text-white transition-colors hover:bg-black/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
+    >
+      <span className="max-w-[180px] truncate">{label}</span>
+      <X size={12} className="shrink-0" aria-hidden />
+    </button>
+  );
 }
 
 /**
@@ -283,7 +298,7 @@ function ShopContent() {
         <hr className="h-[1px] border-t-black/10 mb-5 sm:mb-6" />
         <BreadcrumbShop />
 
-        <div className="flex items-center gap-2 sm:gap-3 mb-6 overflow-x-auto pb-2 scrollbar-none -mx-4 px-4 xl:mx-0 xl:px-0">
+        <div className="mb-5 flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none -mx-4 px-4 sm:mb-6 sm:gap-3 xl:mx-0 xl:px-0">
           {GENDER_TABS.map((tab) => {
             const isActive =
               tab.value === ""
@@ -299,7 +314,7 @@ function ShopContent() {
                   })
                 }
                 className={cn(
-                  "px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all",
+                  "rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap transition-all sm:px-5",
                   isActive
                     ? "bg-black text-white"
                     : "bg-[#F0F0F0] text-black/60 hover:text-black"
@@ -366,156 +381,89 @@ function ShopContent() {
             </div>
 
             {hasActiveFilters && (
-              <div className="flex items-center flex-wrap gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 {filters.category.map((c) => (
-                  <span
+                  <FilterChip
                     key={`cat-${c}`}
-                    className="inline-flex items-center gap-1 px-3 py-1 text-xs font-medium bg-black text-white rounded-full"
-                  >
-                    {c.replace(/-/g, " ").replace(/\b\w/g, (ch) => ch.toUpperCase())}
-                    <button
-                      type="button"
-                      onClick={() =>
-                        updateFilter({
-                          category: filters.category.filter((x) => x !== c),
-                        })
-                      }
-                      className="ml-1 hover:text-gray-300"
-                      aria-label={`Remove ${c} filter`}
-                    >
-                      ×
-                    </button>
-                  </span>
+                    label={c.replace(/-/g, " ").replace(/\b\w/g, (ch) => ch.toUpperCase())}
+                    onRemove={() =>
+                      updateFilter({
+                        category: filters.category.filter((x) => x !== c),
+                      })
+                    }
+                  />
                 ))}
                 {filters.gender.map((g) => (
-                  <span
+                  <FilterChip
                     key={`gender-${g}`}
-                    className="inline-flex items-center gap-1 px-3 py-1 text-xs font-medium bg-black text-white rounded-full"
-                  >
-                    {g.charAt(0).toUpperCase() + g.slice(1)}
-                    <button
-                      type="button"
-                      onClick={() =>
-                        updateFilter({
-                          gender: filters.gender.filter((x) => x !== g),
-                        })
-                      }
-                      className="ml-1 hover:text-gray-300"
-                      aria-label={`Remove ${g} filter`}
-                    >
-                      ×
-                    </button>
-                  </span>
+                    label={g.charAt(0).toUpperCase() + g.slice(1)}
+                    onRemove={() =>
+                      updateFilter({
+                        gender: filters.gender.filter((x) => x !== g),
+                      })
+                    }
+                  />
                 ))}
                 {filters.size.map((s) => (
-                  <span
+                  <FilterChip
                     key={`size-${s}`}
-                    className="inline-flex items-center gap-1 px-3 py-1 text-xs font-medium bg-black text-white rounded-full"
-                  >
-                    Size: {s}
-                    <button
-                      type="button"
-                      onClick={() =>
-                        updateFilter({
-                          size: filters.size.filter((x) => x !== s),
-                        })
-                      }
-                      className="ml-1 hover:text-gray-300"
-                      aria-label={`Remove size ${s} filter`}
-                    >
-                      ×
-                    </button>
-                  </span>
+                    label={`Size: ${s}`}
+                    onRemove={() =>
+                      updateFilter({
+                        size: filters.size.filter((x) => x !== s),
+                      })
+                    }
+                  />
                 ))}
                 {filters.color.map((c) => (
-                  <span
+                  <FilterChip
                     key={`color-${c}`}
-                    className="inline-flex items-center gap-1 px-3 py-1 text-xs font-medium bg-black text-white rounded-full"
-                  >
-                    Color: {c}
-                    <button
-                      type="button"
-                      onClick={() =>
-                        updateFilter({
-                          color: filters.color.filter((x) => x !== c),
-                        })
-                      }
-                      className="ml-1 hover:text-gray-300"
-                      aria-label={`Remove ${c} colour filter`}
-                    >
-                      ×
-                    </button>
-                  </span>
+                    label={`Color: ${c}`}
+                    onRemove={() =>
+                      updateFilter({
+                        color: filters.color.filter((x) => x !== c),
+                      })
+                    }
+                  />
                 ))}
                 {filters.style.map((s) => (
-                  <span
+                  <FilterChip
                     key={`style-${s}`}
-                    className="inline-flex items-center gap-1 px-3 py-1 text-xs font-medium bg-black text-white rounded-full"
-                  >
-                    {s}
-                    <button
-                      type="button"
-                      onClick={() =>
-                        updateFilter({
-                          style: filters.style.filter((x) => x !== s),
-                        })
-                      }
-                      className="ml-1 hover:text-gray-300"
-                      aria-label={`Remove ${s} style filter`}
-                    >
-                      ×
-                    </button>
-                  </span>
+                    label={s}
+                    onRemove={() =>
+                      updateFilter({
+                        style: filters.style.filter((x) => x !== s),
+                      })
+                    }
+                  />
                 ))}
                 {(filters.minPrice > 0 || filters.maxPrice > 0) && (
-                  <span className="inline-flex items-center gap-1 px-3 py-1 text-xs font-medium bg-black text-white rounded-full">
-                    ${filters.minPrice || 0} – ${filters.maxPrice || "∞"}
-                    <button
-                      type="button"
-                      onClick={() => updateFilter({ minPrice: 0, maxPrice: 0 })}
-                      className="ml-1 hover:text-gray-300"
-                      aria-label="Remove price filter"
-                    >
-                      ×
-                    </button>
-                  </span>
+                  <FilterChip
+                    label={`$${filters.minPrice || 0} – $${filters.maxPrice || "∞"}`}
+                    onRemove={() => updateFilter({ minPrice: 0, maxPrice: 0 })}
+                  />
                 )}
                 {filters.available && (
-                  <span className="inline-flex items-center gap-1 px-3 py-1 text-xs font-medium bg-black text-white rounded-full">
-                    In stock
-                    <button
-                      type="button"
-                      onClick={() => updateFilter({ available: false })}
-                      className="ml-1 hover:text-gray-300"
-                      aria-label="Remove availability filter"
-                    >
-                      ×
-                    </button>
-                  </span>
+                  <FilterChip
+                    label="In stock"
+                    onRemove={() => updateFilter({ available: false })}
+                  />
                 )}
                 {filters.search && (
-                  <span className="inline-flex items-center gap-1 px-3 py-1 text-xs font-medium bg-black text-white rounded-full">
-                    &quot;{filters.search}&quot;
-                    <button
-                      type="button"
-                      onClick={() => updateFilter({ search: "" })}
-                      className="ml-1 hover:text-gray-300"
-                      aria-label="Remove search filter"
-                    >
-                      ×
-                    </button>
-                  </span>
+                  <FilterChip
+                    label={`"${filters.search}"`}
+                    onRemove={() => updateFilter({ search: "" })}
+                  />
                 )}
                 <button
                   type="button"
                   onClick={clearFilters}
-                  className="text-xs font-medium text-black/60 underline hover:text-black ml-1"
+                  className="ml-1 text-xs font-medium text-black/60 underline hover:text-black"
                 >
                   Clear All
                 </button>
               </div>
             )}
-
             {isLoading ? (
               <div
                 className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5"
@@ -551,7 +499,7 @@ function ShopContent() {
                 </button>
               </div>
             ) : displayProducts.length > 0 ? (
-              <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5">
+              <div className="grid w-full grid-cols-2 gap-x-3 gap-y-7 sm:grid-cols-3 sm:gap-x-4 sm:gap-y-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-5">
                 {displayProducts.map((product) => (
                   <ProductCard key={product.id} data={product} />
                 ))}
@@ -577,16 +525,19 @@ function ShopContent() {
             {!isLoading && !error && totalPages > 1 && (
               <>
                 <hr className="border-t-black/10" />
-                <Pagination className="justify-between">
+                <Pagination className="justify-between gap-2">
                   <PaginationPrevious
                     href="#"
-                    className="border border-black/10"
+                    className="h-10 border border-black/10 px-2.5 xs:px-3"
                     onClick={(e) => {
                       e.preventDefault();
                       if (filters.page > 1) handlePageChange(filters.page - 1);
                     }}
                   />
-                  <PaginationContent>
+                  <span className="text-xs font-medium text-black/50 sm:hidden">
+                    Page {filters.page} of {totalPages}
+                  </span>
+                  <PaginationContent className="hidden sm:flex">
                     {Array.from({ length: totalPages }, (_, i) => i + 1)
                       .filter((p) => {
                         if (totalPages <= 5) return true;
@@ -626,7 +577,7 @@ function ShopContent() {
                   </PaginationContent>
                   <PaginationNext
                     href="#"
-                    className="border border-black/10"
+                    className="h-10 border border-black/10 px-2.5 xs:px-3"
                     onClick={(e) => {
                       e.preventDefault();
                       if (filters.page < totalPages)
