@@ -8,6 +8,7 @@ import cartRouter from "./modules/cart/cart.routes";
 import categoriesRouter from "./modules/categories/categories.routes";
 import ordersRouter from "./modules/orders/orders.routes";
 import productsRouter from "./modules/products/products.routes";
+import searchRouter from "./modules/search/search.routes";
 import healthRouter from "./routes/health";
 
 export function createApp() {
@@ -44,6 +45,7 @@ export function createApp() {
 
   app.use("/api", healthRouter);
   app.use("/api", productsRouter);
+  app.use("/api", searchRouter);
   app.use("/api", categoriesRouter);
   app.use("/api", authRouter);
   app.use("/api", cartRouter);

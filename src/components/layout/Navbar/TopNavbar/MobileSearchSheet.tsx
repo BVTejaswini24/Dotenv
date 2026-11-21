@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useCallback, useEffect, useMemo } from "react";
+import React, { useState, useRef, useCallback, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import {
@@ -10,47 +10,13 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { cn } from "@/lib/utils";
-import { products } from "@/lib/data/products";
-import type { Product } from "@/types/product.types";
-import { Search, X } from "lucide-react";
+import { Search, X, Loader2, RefreshCw } from "lucide-react";
+import { useProductAutocomplete } from "@/lib/hooks/useProductAutocomplete";
+import type { ProductSuggestion } from "@/lib/api/search";
 
-const DEBOUNCE_MS = 200;
 const MAX_RESULTS = 8;
 
-function searchProducts(query: string): Product[] {
-  const q = query.toLowerCase().trim();
-  if (!q) return [];
-  return products
-    .filter((p) => {
-      const searchable = [
-        p.title,
-        p.description,
-        p.brand,
-        p.category,
-        p.subcategory,
-        p.style,
-        p.gender,
-        ...(p.tags || []),
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-      return searchable.includes(q);
-    })
-    .slice(0, MAX_RESULTS);
-}
-
-function getEffectivePrice(product: Product): string {
-  if (product.discount.percentage > 0) {
-    const price = Math.round(
-      product.price - (product.price * product.discount.percentage) / 100
-    );
-    return `$${price}`;
-  }
-  if (product.discount.amount > 0) {
-    return `$${product.price - product.discount.amount}`;
-  }
+function getDisplayPrice(product: ProductSuggestion): string {
   return `$${product.price}`;
 }
 
@@ -65,30 +31,14 @@ export default function MobileSearchSheet() {
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
-  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const results = useMemo(() => searchProducts(query), [query]);
+  const { suggestions, isLoading, error, retry } = useProductAutocomplete(
+    query,
+    { limit: MAX_RESULTS }
+  );
 
-  const totalMatchCount = useMemo(() => {
-    const q = query.toLowerCase().trim();
-    if (!q) return 0;
-    return products.filter((p) => {
-      const searchable = [
-        p.title,
-        p.description,
-        p.brand,
-        p.category,
-        p.subcategory,
-        p.style,
-        p.gender,
-        ...(p.tags || []),
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-      return searchable.includes(q);
-    }).length;
-  }, [query]);
+  const trimmedQuery = query.trim();
+  const isTooShort = trimmedQuery.length === 1;
 
   const handleSubmit = useCallback(
     (e: React.FormEvent) => {
@@ -106,7 +56,7 @@ export default function MobileSearchSheet() {
   );
 
   const handleResultClick = useCallback(
-    (product: Product) => {
+    (product: ProductSuggestion) => {
       setIsOpen(false);
       setQuery("");
       router.push(`/shop/product/${product.id}/${product.slug}`);
@@ -125,25 +75,10 @@ export default function MobileSearchSheet() {
     }
   }, [query, router]);
 
-  const handleInputChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      const value = e.target.value;
-      setQuery(value);
-      if (debounceRef.current) clearTimeout(debounceRef.current);
-      debounceRef.current = setTimeout(() => {}, DEBOUNCE_MS);
-    },
-    []
-  );
-
-  useEffect(() => {
-    return () => {
-      if (debounceRef.current) clearTimeout(debounceRef.current);
-    };
-  }, []);
-
   useEffect(() => {
     if (isOpen) {
-      setTimeout(() => inputRef.current?.focus(), 100);
+      const timer = setTimeout(() => inputRef.current?.focus(), 100);
+      return () => clearTimeout(timer);
     }
   }, [isOpen]);
 
@@ -177,9 +112,16 @@ export default function MobileSearchSheet() {
               autoCorrect="off"
               spellCheck={false}
               value={query}
-              onChange={handleInputChange}
+              onChange={(e) => setQuery(e.target.value)}
               aria-label="Search products"
             />
+            {isLoading && (
+              <Loader2
+                size={16}
+                className="mr-2 animate-spin text-black/40 flex-shrink-0"
+                aria-hidden="true"
+              />
+            )}
             {query && (
               <button
                 type="button"
@@ -196,12 +138,41 @@ export default function MobileSearchSheet() {
           </div>
         </form>
 
-        {query.trim() && (
-          <div className="space-y-1">
-            {results.length > 0 ? (
+        {trimmedQuery && (
+          <div className="space-y-1" aria-busy={isLoading}>
+            {isTooShort ? (
+              <div className="py-8 text-center">
+                <p className="text-sm font-medium text-black mb-0.5">
+                  Keep typing…
+                </p>
+                <p className="text-xs text-black/50">
+                  Enter at least 2 characters to see suggestions
+                </p>
+              </div>
+            ) : isLoading && suggestions.length === 0 ? (
+              <div className="py-8 flex items-center justify-center gap-2 text-sm text-black/60">
+                <Loader2 size={18} className="animate-spin" />
+                Searching…
+              </div>
+            ) : error ? (
+              <div className="py-8 text-center px-4">
+                <p className="text-sm font-medium text-black mb-0.5">
+                  Search is unavailable
+                </p>
+                <p className="text-xs text-black/50 mb-4 break-words">{error}</p>
+                <button
+                  type="button"
+                  onClick={retry}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black text-white text-xs font-medium hover:bg-black/80 transition-colors"
+                >
+                  <RefreshCw size={14} />
+                  Try again
+                </button>
+              </div>
+            ) : suggestions.length > 0 ? (
               <>
                 <div className="space-y-1">
-                  {results.map((product) => (
+                  {suggestions.map((product) => (
                     <button
                       key={product.id}
                       type="button"
@@ -210,7 +181,7 @@ export default function MobileSearchSheet() {
                     >
                       <div className="relative w-11 h-11 rounded-lg overflow-hidden bg-[#F0F0F0] flex-shrink-0">
                         <Image
-                          src={product.srcUrl}
+                          src={product.imageUrl}
                           alt={product.title}
                           fill
                           sizes="44px"
@@ -223,26 +194,21 @@ export default function MobileSearchSheet() {
                         </p>
                         <p className="text-xs text-black/50 mt-0.5">
                           {formatCategory(product.category)}
-                          {product.gender && product.gender !== "unisex"
-                            ? ` · ${product.gender.charAt(0).toUpperCase() + product.gender.slice(1)}'s`
-                            : ""}
                         </p>
                       </div>
                       <span className="text-sm font-bold text-black flex-shrink-0">
-                        {getEffectivePrice(product)}
+                        {getDisplayPrice(product)}
                       </span>
                     </button>
                   ))}
                 </div>
-                {totalMatchCount > MAX_RESULTS && (
-                  <button
-                    type="button"
-                    onClick={handleViewAll}
-                    className="w-full px-3 py-2.5 text-center text-sm font-medium text-black/60 hover:text-black rounded-xl hover:bg-[#F0F0F0] transition-colors"
-                  >
-                    View all {totalMatchCount} results →
-                  </button>
-                )}
+                <button
+                  type="button"
+                  onClick={handleViewAll}
+                  className="w-full px-3 py-2.5 text-center text-sm font-medium text-black/60 hover:text-black rounded-xl hover:bg-[#F0F0F0] transition-colors"
+                >
+                  View all results →
+                </button>
               </>
             ) : (
               <div className="py-8 text-center">

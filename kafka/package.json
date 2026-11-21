@@ -7,22 +7,26 @@
     "build": "tsc --noEmit",
     "typecheck": "tsc --noEmit",
     "dev:producer": "ts-node src/producer/order-producer.ts",
-    "dev:consumer": "ts-node src/consumer/order-consumer.ts",
+    "dev:consumer": "ts-node src/consumer/worker.ts",
     "test:producer": "ts-node src/scripts/test-producer.ts",
     "test:consumer": "ts-node src/scripts/test-consumer.ts",
     "test:local": "ts-node src/scripts/test-local.ts",
     "test:integration": "ts-node src/scripts/test-integration.ts",
     "test:opensearch": "ts-node src/scripts/test-opensearch.ts",
-    "init:opensearch": "ts-node src/scripts/init-opensearch-index.ts"
+    "test:live-sync": "ts-node src/scripts/test-live-sync.ts",
+    "init:opensearch": "ts-node src/scripts/init-opensearch-index.ts",
+    "backfill:products": "ts-node src/scripts/backfill-products.ts"
   },
   "dependencies": {
     "@opensearch-project/opensearch": "^3.10.0",
     "dotenv": "^16.4.5",
     "kafkajs": "^2.2.4",
+    "pg": "^8.23.1",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/node": "^20.14.0",
+    "@types/pg": "^8.23.1",
     "@types/uuid": "^9.0.8",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.0"

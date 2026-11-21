@@ -5,52 +5,17 @@ import React, {
   useRef,
   useCallback,
   useEffect,
-  useMemo,
 } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { products } from "@/lib/data/products";
-import type { Product } from "@/types/product.types";
-import { Search, X } from "lucide-react";
+import { Search, X, Loader2, RefreshCw } from "lucide-react";
+import { useProductAutocomplete } from "@/lib/hooks/useProductAutocomplete";
+import type { ProductSuggestion } from "@/lib/api/search";
 
-const DEBOUNCE_MS = 200;
 const MAX_RESULTS = 6;
 
-function searchProducts(query: string): Product[] {
-  const q = query.toLowerCase().trim();
-  if (!q) return [];
-  return products
-    .filter((p) => {
-      const searchable = [
-        p.title,
-        p.description,
-        p.brand,
-        p.category,
-        p.subcategory,
-        p.style,
-        p.gender,
-        ...(p.tags || []),
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-      return searchable.includes(q);
-    })
-    .slice(0, MAX_RESULTS);
-}
-
-function getEffectivePrice(product: Product): string {
-  if (product.discount.percentage > 0) {
-    const price = Math.round(
-      product.price - (product.price * product.discount.percentage) / 100
-    );
-    return `$${price}`;
-  }
-  if (product.discount.amount > 0) {
-    return `$${product.price - product.discount.amount}`;
-  }
+function getDisplayPrice(product: ProductSuggestion): string {
   return `$${product.price}`;
 }
 
@@ -67,33 +32,16 @@ export default function SearchBar() {
   const [activeIndex, setActiveIndex] = useState(-1);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const listRef = useRef<HTMLUListElement>(null);
 
-  const results = useMemo(() => searchProducts(query), [query]);
+  const { suggestions, isLoading, error, retry } = useProductAutocomplete(
+    query,
+    { limit: MAX_RESULTS }
+  );
 
-  const totalMatchCount = useMemo(() => {
-    const q = query.toLowerCase().trim();
-    if (!q) return 0;
-    return products.filter((p) => {
-      const searchable = [
-        p.title,
-        p.description,
-        p.brand,
-        p.category,
-        p.subcategory,
-        p.style,
-        p.gender,
-        ...(p.tags || []),
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-      return searchable.includes(q);
-    }).length;
-  }, [query]);
-
-  const showDropdown = isOpen && query.trim().length > 0;
+  const trimmedQuery = query.trim();
+  const isTooShort = trimmedQuery.length === 1;
+  const showDropdown = isOpen && trimmedQuery.length > 0;
 
   const closeDropdown = useCallback(() => {
     setIsOpen(false);
@@ -115,7 +63,7 @@ export default function SearchBar() {
   );
 
   const handleResultClick = useCallback(
-    (product: Product) => {
+    (product: ProductSuggestion) => {
       closeDropdown();
       setQuery("");
       router.push(`/shop/product/${product.id}/${product.slug}`);
@@ -139,23 +87,12 @@ export default function SearchBar() {
     inputRef.current?.focus();
   }, [closeDropdown]);
 
-  // Debounced input handler
   const handleInputChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const value = e.target.value;
       setQuery(value);
       setActiveIndex(-1);
-
-      if (debounceRef.current) clearTimeout(debounceRef.current);
-
-      if (!value.trim()) {
-        setIsOpen(false);
-        return;
-      }
-
-      debounceRef.current = setTimeout(() => {
-        setIsOpen(true);
-      }, DEBOUNCE_MS);
+      setIsOpen(value.trim().length > 0);
     },
     []
   );
@@ -186,19 +123,12 @@ export default function SearchBar() {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, closeDropdown]);
 
-  // Cleanup debounce on unmount
-  useEffect(() => {
-    return () => {
-      if (debounceRef.current) clearTimeout(debounceRef.current);
-    };
-  }, []);
-
   // Keyboard navigation within dropdown
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent<HTMLInputElement>) => {
-      if (!showDropdown) return;
+      if (!showDropdown || suggestions.length === 0) return;
 
-      const itemCount = results.length;
+      const itemCount = suggestions.length;
       const totalRows = itemCount + 1; // +1 for "View all results"
 
       switch (e.key) {
@@ -213,7 +143,7 @@ export default function SearchBar() {
         case "Enter":
           if (activeIndex >= 0 && activeIndex < itemCount) {
             e.preventDefault();
-            handleResultClick(results[activeIndex]);
+            handleResultClick(suggestions[activeIndex]);
           } else if (activeIndex === itemCount) {
             e.preventDefault();
             handleViewAll();
@@ -224,7 +154,14 @@ export default function SearchBar() {
           break;
       }
     },
-    [showDropdown, results, activeIndex, handleResultClick, handleViewAll, closeDropdown]
+    [
+      showDropdown,
+      suggestions,
+      activeIndex,
+      handleResultClick,
+      handleViewAll,
+      closeDropdown,
+    ]
   );
 
   // Scroll active item into view
@@ -276,6 +213,13 @@ export default function SearchBar() {
             aria-label="Search products"
             aria-autocomplete="list"
           />
+          {isLoading && (
+            <Loader2
+              size={16}
+              className="mr-2 animate-spin text-black/40 flex-shrink-0"
+              aria-hidden="true"
+            />
+          )}
           {query && (
             <button
               type="button"
@@ -290,8 +234,40 @@ export default function SearchBar() {
       </form>
 
       {showDropdown && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-black/10 rounded-2xl shadow-lg z-50 overflow-hidden max-h-[70vh] flex flex-col">
-          {results.length > 0 ? (
+        <div
+          className="absolute top-full left-0 right-0 mt-2 bg-white border border-black/10 rounded-2xl shadow-lg z-50 overflow-hidden max-h-[70vh] flex flex-col"
+          aria-busy={isLoading}
+        >
+          {isTooShort ? (
+            <div className="px-4 py-6 text-center">
+              <p className="text-sm font-medium text-black mb-1">
+                Keep typing…
+              </p>
+              <p className="text-xs text-black/50">
+                Enter at least 2 characters to see suggestions
+              </p>
+            </div>
+          ) : isLoading && suggestions.length === 0 ? (
+            <div className="px-4 py-8 flex items-center justify-center gap-2 text-sm text-black/60">
+              <Loader2 size={18} className="animate-spin" />
+              Searching…
+            </div>
+          ) : error ? (
+            <div className="px-4 py-6 text-center">
+              <p className="text-sm font-medium text-black mb-1">
+                Search is unavailable
+              </p>
+              <p className="text-xs text-black/50 mb-4 break-words">{error}</p>
+              <button
+                type="button"
+                onClick={retry}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black text-white text-xs font-medium hover:bg-black/80 transition-colors"
+              >
+                <RefreshCw size={14} />
+                Try again
+              </button>
+            </div>
+          ) : suggestions.length > 0 ? (
             <>
               <ul
                 ref={listRef}
@@ -300,7 +276,7 @@ export default function SearchBar() {
                 aria-label="Search results"
                 className="overflow-y-auto flex-1 divide-y divide-black/5"
               >
-                {results.map((product, index) => (
+                {suggestions.map((product, index) => (
                   <li
                     key={product.id}
                     id={`search-result-${index}`}
@@ -320,7 +296,7 @@ export default function SearchBar() {
                     >
                       <div className="relative w-12 h-12 rounded-lg overflow-hidden bg-[#F0F0F0] flex-shrink-0">
                         <Image
-                          src={product.srcUrl}
+                          src={product.imageUrl}
                           alt={product.title}
                           fill
                           sizes="48px"
@@ -333,36 +309,31 @@ export default function SearchBar() {
                         </p>
                         <p className="text-xs text-black/50 mt-0.5">
                           {formatCategory(product.category)}
-                          {product.gender && product.gender !== "unisex"
-                            ? ` · ${product.gender.charAt(0).toUpperCase() + product.gender.slice(1)}'s`
-                            : ""}
                         </p>
                       </div>
                       <span className="text-sm font-bold text-black flex-shrink-0">
-                        {getEffectivePrice(product)}
+                        {getDisplayPrice(product)}
                       </span>
                     </button>
                   </li>
                 ))}
               </ul>
-              {totalMatchCount > MAX_RESULTS && (
-                <button
-                  type="button"
-                  className={cn(
-                    "w-full px-4 py-3 text-center text-sm font-medium border-t border-black/10 transition-colors",
-                    activeIndex === results.length
-                      ? "bg-[#F0F0F0] text-black"
-                      : "text-black/60 hover:bg-[#F0F0F0]/60 hover:text-black"
-                  )}
-                  onClick={handleViewAll}
-                  onMouseEnter={() => setActiveIndex(results.length)}
-                  role="option"
-                  aria-selected={activeIndex === results.length}
-                  id={`search-result-${results.length}`}
-                >
-                  View all {totalMatchCount} results →
-                </button>
-              )}
+              <button
+                type="button"
+                className={cn(
+                  "w-full px-4 py-3 text-center text-sm font-medium border-t border-black/10 transition-colors",
+                  activeIndex === suggestions.length
+                    ? "bg-[#F0F0F0] text-black"
+                    : "text-black/60 hover:bg-[#F0F0F0]/60 hover:text-black"
+                )}
+                onClick={handleViewAll}
+                onMouseEnter={() => setActiveIndex(suggestions.length)}
+                role="option"
+                aria-selected={activeIndex === suggestions.length}
+                id={`search-result-${suggestions.length}`}
+              >
+                View all results →
+              </button>
             </>
           ) : (
             <div className="px-4 py-8 text-center">

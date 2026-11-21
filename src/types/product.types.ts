@@ -34,6 +34,7 @@ export type Product = {
   description: string;
   brand: string;
   category: string;
+  categoryName?: string;
   subcategory?: string;
   gender?: "men" | "women" | "kids" | "unisex";
   srcUrl: string;

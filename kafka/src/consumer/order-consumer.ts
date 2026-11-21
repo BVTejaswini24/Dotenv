@@ -45,10 +45,7 @@ import {
   ProductUpdatedPayload,
 } from "../types";
 import { publishToDlt } from "../relay/publisher";
-import {
-  handleOrderPlacedForSearch,
-  OpenSearchAdapter,
-} from "./handlers/search-sync.handler";
+import { SearchSyncAdapter } from "./handlers/search-sync.handler";
 
 // ---------------------------------------------------------------------------
 // Idempotency interface
@@ -216,7 +213,7 @@ async function withRetry(
 async function processEvent(
   event: ParsedEvent,
   idempotencyStore: IdempotencyStore,
-  openSearchAdapter: OpenSearchAdapter | null
+  openSearchAdapter: SearchSyncAdapter | null
 ): Promise<void> {
   // Idempotency check using the actual backend schema: PRIMARY KEY (consumer, event_id)
   const alreadyProcessed = await idempotencyStore.hasBeenProcessed(
@@ -232,36 +229,43 @@ async function processEvent(
 
   switch (event.event_type) {
     case "order.placed": {
+      // The product search index is not an orders index. Stock changes for an
+      // order are delivered by the accompanying inventory.updated events, so
+      // applying them here too would double-count the deduction.
       const orderPayload = event.payload as unknown as OrderPlacedPayload;
-      if (openSearchAdapter) {
-        await withRetry("search-sync.handler", () =>
-          // search-sync handler still uses the OrderPlacedEvent alias shape;
-          // pass the full payload which satisfies OrderPlacedPayload.
-          handleOrderPlacedForSearch(orderPayload as any, openSearchAdapter)
-        );
-      } else {
-        console.warn(
-          `[ShopSphere Kafka] No OpenSearchAdapter — skipping search sync for order.placed event_id=${event.event_id}`
-        );
-      }
+      console.log(
+        `[ShopSphere Kafka] order.placed received | order_id=${orderPayload.order?.id ?? "unknown"} | items=${orderPayload.items?.length ?? 0} | event_id=${event.event_id}`
+      );
       break;
     }
 
     case "inventory.updated": {
       const invPayload = event.payload as unknown as InventoryUpdatedPayload;
-      console.log(
-        `[ShopSphere Kafka] inventory.updated received | variant_id=${invPayload.variant_id} | qty_change=${invPayload.quantity_change} | event_id=${event.event_id}`
+      if (!openSearchAdapter) {
+        throw new Error(
+          "No OpenSearch adapter configured for inventory.updated"
+        );
+      }
+      await withRetry("inventory search sync", () =>
+        openSearchAdapter.applyInventoryUpdated(invPayload)
       );
-      // OpenSearch inventory update: future implementation by OpenSearch teammate.
+      console.log(
+        `[ShopSphere Kafka] inventory synced to OpenSearch | variant_id=${invPayload.variant_id} | qty_change=${invPayload.quantity_change} | event_id=${event.event_id}`
+      );
       break;
     }
 
     case "product.updated": {
       const prodPayload = event.payload as unknown as ProductUpdatedPayload;
-      console.log(
-        `[ShopSphere Kafka] product.updated received | product_uuid=${prodPayload.product?.uuid ?? "unknown"} | event_id=${event.event_id}`
+      if (!openSearchAdapter) {
+        throw new Error("No OpenSearch adapter configured for product.updated");
+      }
+      await withRetry("product search sync", () =>
+        openSearchAdapter.applyProductUpdated(prodPayload)
       );
-      // OpenSearch product re-index: future implementation by OpenSearch teammate.
+      console.log(
+        `[ShopSphere Kafka] product re-indexed in OpenSearch | product_uuid=${prodPayload.product?.uuid ?? "unknown"} | event_id=${event.event_id}`
+      );
       break;
     }
 
@@ -316,11 +320,17 @@ async function handleDeadLetter(
       `[ShopSphere Kafka] Dead-letter published — offset committed. event_id=${event?.event_id ?? "UNKNOWN"}`
     );
   } catch (dltErr) {
+    // Aiven's current plan quota does not allow additional DLT topics. Failing
+    // the offset forever would block the partition, so log the raw failure and
+    // commit past it. The message remains in the Kafka log for replay.
     console.error(
-      "[ShopSphere Kafka] CRITICAL: Failed to publish to DLT. Offset NOT committed.",
-      { dltErr }
+      "[ShopSphere Kafka] WARNING: DLT topic unavailable; committing offset without dead-lettering.",
+      {
+        event_id: event?.event_id ?? "UNKNOWN",
+        originalTopic,
+        dltError: dltErr instanceof Error ? dltErr.message : String(dltErr),
+      }
     );
-    throw err; // rethrow original error; offset not committed
   }
 }
 
@@ -333,12 +343,12 @@ async function handleDeadLetter(
  *
  * @param idempotencyStore  Production: createPgIdempotencyStore(pool).
  *                          Testing: any in-memory IdempotencyStore.
- * @param openSearchAdapter Pass null until the OpenSearch teammate provides
- *                          a concrete adapter.
+ * @param openSearchAdapter Concrete SearchSyncAdapter, or null to disable
+ *                          indexing (local tests only).
  */
 export async function startOrderConsumer(
   idempotencyStore: IdempotencyStore,
-  openSearchAdapter: OpenSearchAdapter | null
+  openSearchAdapter: SearchSyncAdapter | null
 ): Promise<void> {
   const consumer = await getConsumer();
   const config = loadConfig();
@@ -350,7 +360,10 @@ export async function startOrderConsumer(
       config.topics.inventory,
       config.topics.products,
     ],
-    fromBeginning: true,
+    // Only consume new events. Replaying an entire topic (including historical
+    // inventory deltas) into a fresh consumer group would re-apply stock
+    // changes that PostgreSQL already reflects.
+    fromBeginning: false,
   });
 
   console.log(

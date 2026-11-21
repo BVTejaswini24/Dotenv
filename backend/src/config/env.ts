@@ -53,4 +53,11 @@ export const env = {
   authRateLimitMax: optionalInt("AUTH_RATE_LIMIT_MAX", 30),
   writeRateLimitWindowMs: optionalInt("WRITE_RATE_LIMIT_WINDOW_MS", 60 * 1000),
   writeRateLimitMax: optionalInt("WRITE_RATE_LIMIT_MAX", 120),
+
+  // Product search. Optional: when unset the search API degrades to PostgreSQL.
+  opensearchNode: process.env.OPENSEARCH_NODE?.trim() ?? "",
+  opensearchUsername: process.env.OPENSEARCH_USERNAME?.trim() ?? "",
+  opensearchPassword: process.env.OPENSEARCH_PASSWORD?.trim() ?? "",
+  opensearchIndex: process.env.OPENSEARCH_INDEX?.trim() || "shopsphere_products",
+  opensearchTimeoutMs: optionalInt("OPENSEARCH_TIMEOUT_MS", 5000),
 } as const;

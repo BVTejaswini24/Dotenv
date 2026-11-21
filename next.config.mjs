@@ -49,6 +49,19 @@ const nextConfig = {
     }
     return config;
   },
+
+  // Proxy browser API calls to the Express backend on the same origin.
+  // The frontend only ever talks to /api/*; PostgreSQL, Kafka and OpenSearch
+  // stay server-side. Override the target with API_PROXY_TARGET if needed.
+  async rewrites() {
+    const target = process.env.API_PROXY_TARGET ?? "http://localhost:4000";
+    return [
+      {
+        source: "/api/:path*",
+        destination: `${target}/api/:path*`,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
