@@ -1,0 +1,12 @@
+node_modules/
+dist/
+coverage/
+*.log
+
+# Never commit real credentials
+.env
+.env.*
+!.env.example
+
+# embedded test database
+.pgdata-test/
