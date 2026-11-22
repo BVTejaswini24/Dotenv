@@ -29,4 +29,3 @@ export type TryOnStatus =
   | "processing"
   | "completed"
   | "failed";
-

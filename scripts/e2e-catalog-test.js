@@ -67,7 +67,7 @@ for (const p of products) {
     slugErrors++;
   }
   slugSet.add(p.slug);
-  
+
   // Verify detail page lookup simulates src/app/shop/product/[...slug]/page.tsx
   // router looks up product where p.id === Number(slug[0])
   if (!p.id || !p.title || !p.price || !p.srcUrl) {
@@ -83,8 +83,8 @@ console.log('  -> Product detail routing verified for all 141 products.\n');
 console.log('[5] Search Functionality Test:');
 const testKeywords = ['cashmere', 'leather', 'linen', 'chino', 'biker', 'blazer', 'denim', 'hoodie', 'watch', 'chelsea'];
 for (const kw of testKeywords) {
-  const matches = products.filter(p => 
-    p.title.toLowerCase().includes(kw) || 
+  const matches = products.filter(p =>
+    p.title.toLowerCase().includes(kw) ||
     p.description.toLowerCase().includes(kw) ||
     (p.tags && p.tags.some(t => t.toLowerCase().includes(kw))) ||
     (p.material && p.material.toLowerCase().includes(kw))

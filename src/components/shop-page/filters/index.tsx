@@ -5,6 +5,7 @@ import CategoriesSection from "@/components/shop-page/filters/CategoriesSection"
 import ColorsSection from "@/components/shop-page/filters/ColorsSection";
 import DressStyleSection from "@/components/shop-page/filters/DressStyleSection";
 import PriceSection from "@/components/shop-page/filters/PriceSection";
+import AvailabilitySection from "@/components/shop-page/filters/AvailabilitySection";
 import SizeSection from "@/components/shop-page/filters/SizeSection";
 import { Button } from "@/components/ui/button";
 import type { ShopFilters } from "@/lib/utils/productFilters";
@@ -22,6 +23,8 @@ const Filters = ({ filters, onUpdate, onClear }: FiltersProps) => {
       <CategoriesSection filters={filters} onUpdate={onUpdate} />
       <hr className="border-t-black/10" />
       <PriceSection filters={filters} onUpdate={onUpdate} />
+      <hr className="border-t-black/10" />
+      <AvailabilitySection filters={filters} onUpdate={onUpdate} />
       <hr className="border-t-black/10" />
       <ColorsSection filters={filters} onUpdate={onUpdate} />
       <hr className="border-t-black/10" />

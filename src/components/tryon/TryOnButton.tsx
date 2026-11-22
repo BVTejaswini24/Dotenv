@@ -56,7 +56,7 @@ export default function TryOnButton({ product, className }: TryOnButtonProps) {
         }`}
       >
         <span className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-500/10 via-transparent to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-        
+
         {isGlasses ? (
           <Eye size={18} className="text-amber-400 group-hover:scale-110 transition-transform" />
         ) : (
@@ -82,4 +82,3 @@ export default function TryOnButton({ product, className }: TryOnButtonProps) {
     </>
   );
 }
-

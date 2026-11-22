@@ -14,9 +14,11 @@
     "seed:extract": "tsx --tsconfig ../tsconfig.json scripts/extract-catalog.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
+    "test:search": "tsx scripts/test-search.ts",
     "test:watch": "vitest"
   },
   "dependencies": {
+    "@opensearch-project/opensearch": "^3.10.0",
     "bcryptjs": "^3.0.3",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",

@@ -26,6 +26,7 @@ export type ShopFilters = {
   color: string[];
   minPrice: number;
   maxPrice: number;
+  available: boolean;
   sort: SortOption;
   page: number;
 };
@@ -56,6 +57,7 @@ export function getFiltersFromSearchParams(
       typeof searchParams.maxPrice === "string"
         ? Number(searchParams.maxPrice) || 0
         : 0,
+    available: searchParams.available === "true",
     sort:
       typeof searchParams.sort === "string"
         ? (searchParams.sort as SortOption)
@@ -64,7 +66,7 @@ export function getFiltersFromSearchParams(
   };
 }
 
-function getEffectivePrice(product: Product): number {
+export function getEffectivePrice(product: Product): number {
   if (product.discount.percentage > 0) {
     return Math.round(
       product.price - (product.price * product.discount.percentage) / 100
@@ -190,7 +192,10 @@ export function filterProducts(
       matchesStyle(product, filters.style) &&
       matchesSize(product, filters.size) &&
       matchesColor(product, filters.color) &&
-      matchesPrice(product, filters.minPrice, filters.maxPrice)
+      matchesPrice(product, filters.minPrice, filters.maxPrice) &&
+      (!filters.available ||
+        product.stock === undefined ||
+        product.stock > 0)
   );
 
   const sorted = sortProducts(filtered, filters.sort);
@@ -217,10 +222,30 @@ export function getSearchParamsString(
   f.color.forEach((c) => params.append("color", c));
   if (f.minPrice > 0) params.set("minPrice", String(f.minPrice));
   if (f.maxPrice > 0) params.set("maxPrice", String(f.maxPrice));
+  if (f.available) params.set("available", "true");
   if (f.sort !== "recommended") params.set("sort", f.sort);
   if (f.page > 1) params.set("page", String(f.page));
 
   return params.toString();
+}
+
+/** Maps the storefront's sort labels to the backend search sort values. */
+export function toApiSort(
+  sort: SortOption
+): "relevance" | "price_asc" | "price_desc" | "rating" | "newest" {
+  switch (sort) {
+    case "price-asc":
+      return "price_asc";
+    case "price-desc":
+      return "price_desc";
+    case "rating-desc":
+      return "rating";
+    case "newest":
+      return "newest";
+    case "recommended":
+    default:
+      return "relevance";
+  }
 }
 
 export function getEffectivePriceLabel(product: Product): string {

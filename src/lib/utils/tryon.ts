@@ -229,4 +229,3 @@ export function downloadImage(imageUrl: string, filename = "shopsphere-tryon.png
   link.click();
   document.body.removeChild(link);
 }
-

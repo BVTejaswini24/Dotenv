@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import BreadcrumbShop from "@/components/shop-page/BreadcrumbShop";
 import {
   Select,
@@ -13,7 +13,6 @@ import MobileFilters from "@/components/shop-page/filters/MobileFilters";
 import Filters from "@/components/shop-page/filters";
 import { FiSliders } from "react-icons/fi";
 import { X } from "lucide-react";
-import { products } from "@/lib/data/products";
 import ProductCard from "@/components/common/ProductCard";
 import {
   Pagination,
@@ -25,16 +24,18 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import {
-  filterProducts,
+  getEffectivePrice,
   getFiltersFromSearchParams,
   getSearchParamsString,
   SORT_OPTIONS,
   ITEMS_PER_PAGE,
+  toApiSort,
   type ShopFilters,
 } from "@/lib/utils/productFilters";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useCallback, useMemo } from "react";
-import SpinnerLoader from "@/components/ui/SpinnerLoader";
+import { fetchSearch } from "@/lib/api/search";
+import { isAbortError } from "@/lib/api/client";
+import type { Product } from "@/types/product.types";
 import { cn } from "@/lib/utils";
 
 const GENDER_TABS = [
@@ -73,6 +74,67 @@ function FilterChip({ label, onRemove }: { label: string; onRemove: () => void }
   );
 }
 
+/**
+ * The backend search API accepts one category and one gender. Multi-select
+ * categories/genders and the size/colour/style facets are applied to the
+ * returned page set here, so existing filter behaviour is preserved.
+ */
+function matchesClientOnlyFilters(
+  product: Product,
+  filters: ShopFilters
+): boolean {
+  if (
+    filters.category.length > 0 &&
+    !filters.category.includes(product.category)
+  ) {
+    return false;
+  }
+
+  if (
+    filters.gender.length > 0 &&
+    !filters.gender.includes(product.gender ?? "unisex")
+  ) {
+    return false;
+  }
+
+  if (filters.minPrice > 0 || filters.maxPrice > 0) {
+    const price = getEffectivePrice(product);
+    if (filters.minPrice > 0 && price < filters.minPrice) return false;
+    if (filters.maxPrice > 0 && price > filters.maxPrice) return false;
+  }
+
+  if (filters.style.length > 0) {
+    const style = (product.style ?? "").toLowerCase();
+    if (!filters.style.includes(style)) return false;
+  }
+
+  if (filters.size.length > 0) {
+    const sizes = product.sizes ?? [];
+    const matches = filters.size.some((size) =>
+      sizes.some(
+        (productSize) =>
+          productSize.name.toLowerCase() === size.toLowerCase() ||
+          productSize.label.toLowerCase() === size.toLowerCase()
+      )
+    );
+    if (!matches) return false;
+  }
+
+  if (filters.color.length > 0) {
+    const colors = product.colors ?? [];
+    const matches = filters.color.some((color) =>
+      colors.some(
+        (productColor) =>
+          productColor.name.toLowerCase() === color.toLowerCase() ||
+          productColor.id.toLowerCase() === color.toLowerCase()
+      )
+    );
+    if (!matches) return false;
+  }
+
+  return true;
+}
+
 function ShopContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -84,10 +146,98 @@ function ShopContent() {
     [paramsObj]
   );
 
-  const { products: displayProducts, totalCount } = useMemo(
-    () => filterProducts(products, filters),
-    [filters]
-  );
+  const [displayProducts, setDisplayProducts] = useState<Product[]>([]);
+  const [totalCount, setTotalCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [retryToken, setRetryToken] = useState(0);
+
+  const needsClientFiltering =
+    filters.category.length > 1 ||
+    filters.gender.length > 1 ||
+    filters.style.length > 0 ||
+    filters.size.length > 0 ||
+    filters.color.length > 0 ||
+    filters.minPrice > 0 ||
+    filters.maxPrice > 0 ||
+    filters.sort === "price-asc" ||
+    filters.sort === "price-desc";
+
+  useEffect(() => {
+    const controller = new AbortController();
+    const clientFiltered = needsClientFiltering;
+
+    setIsLoading(true);
+    setError(null);
+
+    fetchSearch(
+      {
+        ...(filters.search ? { q: filters.search } : {}),
+        page: clientFiltered ? 1 : filters.page,
+        limit: clientFiltered ? 100 : ITEMS_PER_PAGE,
+        ...(filters.category.length === 1
+          ? { category: filters.category[0] }
+          : {}),
+        ...(filters.gender.length === 1
+          ? {
+              gender: filters.gender[0] as
+                | "men"
+                | "women"
+                | "kids"
+                | "unisex",
+            }
+          : {}),
+        // Price is matched on the discounted price the cards display, so it
+        // is applied client-side rather than by the backend's raw price.
+        ...(!clientFiltered && filters.minPrice > 0
+          ? { minPrice: filters.minPrice }
+          : {}),
+        ...(!clientFiltered && filters.maxPrice > 0
+          ? { maxPrice: filters.maxPrice }
+          : {}),
+        ...(filters.available ? { available: "true" as const } : {}),
+        sort: toApiSort(filters.sort),
+      },
+      controller.signal
+    )
+      .then((response) => {
+        if (controller.signal.aborted) return;
+
+        if (!clientFiltered) {
+          setDisplayProducts(response.data);
+          setTotalCount(response.pagination.total);
+          return;
+        }
+
+        const filtered = response.data.filter((product) =>
+          matchesClientOnlyFilters(product, filters)
+        );
+        if (filters.sort === "price-asc" || filters.sort === "price-desc") {
+          filtered.sort((a, b) => {
+            const delta = getEffectivePrice(a) - getEffectivePrice(b);
+            return filters.sort === "price-asc" ? delta : -delta;
+          });
+        }
+        const start = (filters.page - 1) * ITEMS_PER_PAGE;
+        setDisplayProducts(filtered.slice(start, start + ITEMS_PER_PAGE));
+        setTotalCount(filtered.length);
+      })
+      .catch((err) => {
+        if (controller.signal.aborted || isAbortError(err)) return;
+        setDisplayProducts([]);
+        setTotalCount(0);
+        setError(
+          err instanceof Error
+            ? err.message
+            : "Could not load products. Check that the backend is running."
+        );
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) setIsLoading(false);
+      });
+
+    return () => controller.abort();
+  }, [filters, needsClientFiltering, retryToken]);
 
   const totalPages = Math.max(1, Math.ceil(totalCount / ITEMS_PER_PAGE));
 
@@ -127,7 +277,8 @@ function ShopContent() {
     return "All Clothing";
   }, [filters.search, filters.category, filters.gender]);
 
-  const startItem = totalCount > 0 ? (filters.page - 1) * ITEMS_PER_PAGE + 1 : 0;
+  const startItem =
+    totalCount > 0 ? (filters.page - 1) * ITEMS_PER_PAGE + 1 : 0;
   const endItem = Math.min(filters.page * ITEMS_PER_PAGE, totalCount);
 
   const hasActiveFilters =
@@ -138,7 +289,8 @@ function ShopContent() {
     filters.size.length > 0 ||
     filters.color.length > 0 ||
     filters.minPrice > 0 ||
-    filters.maxPrice > 0;
+    filters.maxPrice > 0 ||
+    filters.available;
 
   return (
     <main className="pb-20">
@@ -195,10 +347,17 @@ function ShopContent() {
                 />
               </div>
               <div className="flex flex-col sm:items-center sm:flex-row">
-                <span className="text-sm md:text-base text-black/60 mr-3">
-                  {totalCount === 0
-                    ? "No products"
-                    : `Showing ${startItem}-${endItem} of ${totalCount} Products`}
+                <span
+                  className="text-sm md:text-base text-black/60 mr-3"
+                  aria-live="polite"
+                >
+                  {isLoading
+                    ? "Loading productsâ€¦"
+                    : error
+                      ? "Products unavailable"
+                      : totalCount === 0
+                        ? "No products"
+                        : `Showing ${startItem}-${endItem} of ${totalCount} Products`}
                 </span>
                 <div className="flex items-center">
                   Sort by:{" "}
@@ -286,6 +445,12 @@ function ShopContent() {
                     onRemove={() => updateFilter({ minPrice: 0, maxPrice: 0 })}
                   />
                 )}
+                {filters.available && (
+                  <FilterChip
+                    label="In stock"
+                    onRemove={() => updateFilter({ available: false })}
+                  />
+                )}
                 {filters.search && (
                   <FilterChip
                     label={`"${filters.search}"`}
@@ -302,7 +467,41 @@ function ShopContent() {
               </div>
             )}
 
-            {displayProducts.length > 0 ? (
+            {isLoading ? (
+              <div
+                className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5"
+                aria-busy="true"
+                aria-label="Loading products"
+              >
+                {Array.from({ length: 6 }, (_, index) => (
+                  <div key={index} className="flex flex-col items-start">
+                    <div className="w-full aspect-square rounded-[13px] lg:rounded-[20px] bg-[#F0EEED] animate-pulse mb-2.5 xl:mb-4" />
+                    <div className="h-4 w-3/4 rounded bg-black/5 animate-pulse mb-2" />
+                    <div className="h-4 w-1/3 rounded bg-black/5 animate-pulse" />
+                  </div>
+                ))}
+              </div>
+            ) : error ? (
+              <div className="flex flex-col items-center justify-center py-20">
+                <p className="text-2xl font-bold text-black mb-2">
+                  We couldn&apos;t load products
+                </p>
+                <p className="text-black/60 text-sm sm:text-base mb-2 text-center max-w-md break-words">
+                  {error}
+                </p>
+                <p className="text-black/40 text-xs sm:text-sm mb-6 text-center">
+                  Check your connection and make sure the ShopSphere backend is
+                  running.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setRetryToken((value) => value + 1)}
+                  className="px-8 py-3 bg-black text-white rounded-full text-sm font-medium hover:bg-black/80 transition-all"
+                >
+                  Try Again
+                </button>
+              </div>
+            ) : displayProducts.length > 0 ? (
               <div className="grid w-full grid-cols-2 gap-x-3 gap-y-7 sm:grid-cols-3 sm:gap-x-4 sm:gap-y-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-5">
                 {displayProducts.map((product) => (
                   <ProductCard key={product.id} data={product} />
@@ -326,7 +525,7 @@ function ShopContent() {
               </div>
             )}
 
-            {totalPages > 1 && (
+            {!isLoading && !error && totalPages > 1 && (
               <>
                 <hr className="border-t-black/10" />
                 <Pagination className="justify-between gap-2">
@@ -404,7 +603,7 @@ export default function ShopPage() {
       fallback={
         <main className="pb-20">
           <div className="max-w-frame mx-auto px-4 xl:px-0 flex items-center justify-center h-96">
-            <SpinnerLoader className="w-10 border-2 border-gray-300 border-r-gray-600" />
+            <div className="w-10 h-10 rounded-full border-2 border-gray-300 border-r-gray-600 animate-spin" />
           </div>
         </main>
       }

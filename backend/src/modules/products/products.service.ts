@@ -207,6 +207,7 @@ export const listProductsQuerySchema = z.object({
   q: z.string().min(1).max(100).optional(),
   featured: z.enum(["true", "false"]).optional(),
   onSale: z.enum(["true", "false"]).optional(),
+  available: z.enum(["true", "false"]).optional(),
 });
 
 export type ListProductsQuery = z.infer<typeof listProductsQuerySchema>;
@@ -231,6 +232,20 @@ export async function listProducts(query: ListProductsQuery) {
   }
   if (query.featured === "true") conditions.push("p.is_featured = true");
   if (query.onSale === "true") conditions.push("p.is_on_sale = true");
+  if (query.available === "true") {
+    conditions.push(
+      `EXISTS (SELECT 1 FROM product_variants av
+                 JOIN inventory ai ON ai.variant_id = av.id
+                WHERE av.product_id = p.id AND av.is_active = true AND ai.quantity > 0)`
+    );
+  }
+  if (query.available === "false") {
+    conditions.push(
+      `NOT EXISTS (SELECT 1 FROM product_variants av
+                     JOIN inventory ai ON ai.variant_id = av.id
+                    WHERE av.product_id = p.id AND av.is_active = true AND ai.quantity > 0)`
+    );
+  }
   if (query.q) {
     push(
       (i) => `(p.title ILIKE '%' || $${i} || '%' OR p.description ILIKE '%' || $${i} || '%'
@@ -274,6 +289,44 @@ export async function listProducts(query: ListProductsQuery) {
     products: rows.map((row) => mapProduct(row, byProduct.get(row.id) ?? [])),
     total,
   };
+}
+
+/**
+ * Loads full ProductDto rows in the caller's order (used to hydrate search
+ * hits from PostgreSQL while OpenSearch supplies ranking and pagination).
+ */
+export async function getProductsByLegacyIds(
+  legacyIds: number[]
+): Promise<ProductDto[]> {
+  if (legacyIds.length === 0) return [];
+
+  const { rows } = await pool.query<ProductRow>(
+    `SELECT p.*, c.slug AS category_slug, c.name AS category_name
+       FROM products p
+       JOIN categories c ON c.id = p.category_id
+      WHERE p.legacy_id = ANY($1::int[])`,
+    [legacyIds]
+  );
+
+  const variants = await loadVariants(rows.map((row) => row.id));
+  const byProduct = new Map<string, VariantRow[]>();
+  for (const variant of variants) {
+    const bucket = byProduct.get(variant.product_id) ?? [];
+    bucket.push(variant);
+    byProduct.set(variant.product_id, bucket);
+  }
+
+  const byLegacyId = new Map<number, ProductDto>();
+  for (const row of rows) {
+    byLegacyId.set(
+      row.legacy_id,
+      mapProduct(row, byProduct.get(row.id) ?? [])
+    );
+  }
+
+  return legacyIds
+    .map((id) => byLegacyId.get(id))
+    .filter((product): product is ProductDto => Boolean(product));
 }
 
 const UUID_RE =

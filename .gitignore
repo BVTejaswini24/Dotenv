@@ -31,6 +31,12 @@ yarn-error.log*
 .env.*
 !.env.example
 
+# Kafka module secrets — never commit real credentials
+kafka/.env
+
+# Kafka module dependencies — never commit node_modules
+kafka/node_modules/
+
 # vercel
 .vercel
 
