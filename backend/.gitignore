@@ -10,3 +10,4 @@ coverage/
 
 # embedded test database
 .pgdata-test/
+tests/.test-database.json

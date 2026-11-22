@@ -60,4 +60,12 @@ export const env = {
   opensearchPassword: process.env.OPENSEARCH_PASSWORD?.trim() ?? "",
   opensearchIndex: process.env.OPENSEARCH_INDEX?.trim() || "shopsphere_products",
   opensearchTimeoutMs: optionalInt("OPENSEARCH_TIMEOUT_MS", 5000),
+
+  // Virtual Try-On API credentials (optional, for AI clothing try-on)
+  fashnApiKey: process.env.FASHN_API_KEY || undefined,
+  replicateApiToken: process.env.REPLICATE_API_TOKEN || undefined,
+  // Optional token for the free FASHN VTON v1.5 Hugging Face Space provider.
+  // Server-only: it is never sent to the frontend.
+  hfToken: process.env.HF_TOKEN || undefined,
+  falKey: process.env.FAL_KEY || undefined,
 } as const;

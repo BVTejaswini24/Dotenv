@@ -11,6 +11,7 @@ import SizeSelection from "./SizeSelection";
 import AddToCartSection from "./AddToCartSection";
 import { Heart } from "lucide-react";
 import TrackPriceButton from "@/components/product-page/PriceWatchlist/TrackPriceButton";
+import TryOnButton from "@/components/tryon/TryOnButton";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks/redux";
 import { toggleWishlist, selectIsInWishlist } from "@/lib/features/wishlist/wishlistSlice";
 import { toast } from "sonner";
@@ -159,7 +160,8 @@ const Header = ({ data }: { data: Product }) => {
             onSelectSize={setSelectedSize}
           />
           <hr className="hidden md:block h-[1px] border-t-black/10 my-5" />
-          <div className="mb-3">
+          <div className="mb-3 space-y-2.5">
+            <TryOnButton product={data} />
             <TrackPriceButton product={data} />
           </div>
           <AddToCartSection
